@@ -1,0 +1,6 @@
+name: "Patient Logs"
+navbar:
+  title: "Navigation"
+  left:
+    - text: "Cases"
+      href: cases/12-14-20_biatrial-enlargement/biatrial-enlargement.html

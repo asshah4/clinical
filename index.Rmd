@@ -1,0 +1,14 @@
+---
+title: "Cases"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+During residency, training, and further clinical practice, I've given conferences based on clinical cases of interest. I have produced or created them here.
+
+## Cardiology Fellowship
+
+An interesting case of [restrictive cardiomyopathy](http://asshah4-github.io/patient-log/cases/12-14-20_biatrial-enlargement/biatrial-enlargement.html), including the work-up and a brief differential on etiologies. 
