@@ -5,7 +5,6 @@ date: December 14, 2020
 author: "Anish Sanjay Shah, MD<br><span style = 'font-size: 70%;'>University of Illinois at Chicago<br>Division of Cardiology</span>"
 output:
   xaringan::moon_reader:
-    self_contained: true
     nature:
       titleSlideClass: [left, middle, inverse]
       highlightLines: true
@@ -454,12 +453,75 @@ class: center, middle, inverse
 # Diagnosis
 
 ---
-background-image: url("restrictive-echo-findings.png")
+background-image: url("restrictive-wu.jpg")
 background-size: contain
 
 ---
-background-image: url("restrictive-wu.jpg")
+## Key Findings in Restrictive Cardiomyopathy
+
+.footnote[
+Cooper et al. 2007
+]
+
+.pull-left[
+**Exam**
+- Exercise intolerance
+- Prominent `x` and `y` descents without respiratory variation (negative Kussmaul's)
+- S4 gallop
+
+**Echo**
+- Normal LVEF, BAE
+- Restrictive diastolic filling 
+	- $\uparrow$ E wave, $\downarrow$ A wave
+	- E/A ratios $> 1.5$
+	- $\downarrow$ mitral DT
+	- $\downarrow$ IVRT (AV close...MV open)
+- $\pm \uparrow$ LV wall thickness
+]
+
+--
+
+.pull-right[
+**CMR**
+- T2 may show...
+	- hyperintense, e.g. edema
+	- decreased signal, e.g. iron overload
+- LGE for infiltrative disease
+
+**Cardiac Cath**
+-  Reduced CI
+- Elevated right/left pressures
+- Square Root Sign 
+
+**Endomyocardial Biopsy**
+- Important, Class IIa recommendation
+
+]
+
+
+???
+
+Square root sign = prominent early decrease in ventricular diastolic pressure with rapid rise to plateau
+
+---
+background-image: url("restrictive-echo-findings.png")
 background-size: contain
+
+???
+
+Here are the key echo findings visualized
+
+---
+background-image: url("rv-tracing.png")
+background-size: contain
+
+.footnote[
+Pereira et al. 2018
+]
+
+???
+
+See square root sign here
 
 ---
 ## Cardiac Amyloidosis
@@ -488,7 +550,7 @@ We do have abnormal light changes, but not slam dunk
 The CMRI is not necessarily 100% sensitive  
 
 ---
-## Idiopathic Resrictive Cardiomyopathy
+## Idiopathic Restrictive Cardiomyopathy
 
 .pull-left[
 - Rare disease that can present at any age 
@@ -496,6 +558,10 @@ The CMRI is not necessarily 100% sensitive
 - $>15%$ are diagnosed $> 80$ years of age  
 - No infiltrative component on imaging  
 - Atrial fibrillation present in $3/4$ patients 
+- Mutations: 
+	- cardiac troponin I - *TNNI3*
+	- beta-myosin heavy - *MYH7*
+	- HCM
 ]
 
 .pull-right[
@@ -554,14 +620,37 @@ In older adults, can occur with iron supplementation d/t underlying myelodysplas
 ![](iron-overload.png)
 ]
 
-.footnote[
-Murphy et al. 2010
-]
+.footnote[Murphy et al. 2010]
 
 ???
 
 Not our patient once again, however does have thrombocytopenia  
 May have thalassemia, from Asian descent  
+
+---
+## MOGES Classification
+
+WHO adopted a new classification system for cardiomyopathies in 2013
+
+.pull-left[
+**M**orphological functional characteristics  
+**O**rgan involvement  
+**G**enetic inheritance pattern  
+**E**tiological category  
+**S**tatus by NYHA class and AHA stages  
+]
+
+.pull-right[
+**Desmin-related RCM**
+
+$M_{R(AVB)} O_{H+M} G_{AD} E_{G-Des} S_{C-III}$
+
+- M = RCM with AV block
+- O = Heart and Skeletal Muscle
+- G = Autosomal Dominant
+- E = mutation in desmin 
+- S = AHA stage C, NYHA class III
+]
 
 ---
 class: center, middle, inverse
