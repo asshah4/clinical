@@ -5,6 +5,7 @@ date: December 14, 2020
 author: "Anish Sanjay Shah, MD<br><span style = 'font-size: 70%;'>University of Illinois at Chicago<br>Division of Cardiology</span>"
 output:
   xaringan::moon_reader:
+    self_contained: true
     nature:
       titleSlideClass: [left, middle, inverse]
       highlightLines: true
