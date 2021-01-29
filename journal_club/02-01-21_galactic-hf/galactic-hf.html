@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>GALACTIC-HF</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Anish Sanjay Shah, MD University of Illinois at Chicago Division of Cardiology" />
+    <meta name="date" content="2021-02-01" />
+    <script src="galactic-hf_files/header-attrs-2.6/header-attrs.js"></script>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: left, middle, inverse, title-slide
+
+# <span style="font-size: 150%;">GALACTIC-HF</span>
+## Journal Club on Myocardial Contractility
+### Anish Sanjay Shah, MD<br><span style="font-size: 70%;">University of Illinois at Chicago<br>Division of Cardiology</span>
+### February 1, 2021
+
+---
+
+
+
+
+
+
+class: center, middle, inverse
+# Introduction
+
+---
+## Objectives
+
+1. Obtain a general background in the cellular mechanics of myocardial contractility 
+
+1. Be aware of the current pharmacological therapies for improving myocardial inotropy
+
+1. Understand the methods and statistical techniques in survival analysis and mixed models.
+
+1. Critically assess the results of a randomized clinical trial
+
+---
+## Study Overview
+
+**GALACTIC-HF** = Global Approach to Lowering Adverse Cardiac Outcomes Through Improving Contractility in Heart Failure
+
+.pull-left[
+#### Intervention
+- Selective cardiac myosin activator, **omecamtiv mecarbil (OM)**, improves cardiac function
+- Randomized to medicine or placebo
+
+#### Population
+- Chronic systolic heart failure on GDMT
+]
+
+.pull-right[
+#### Methods
+- Long-term follow-up (median ~ 2 years) for all events
+
+#### Outcomes
+- Heart-failure recurrence or cardiovascular mortality
+
+]
+
+---
+class: center, middle, inverse
+# History and Background
+
+---
+
+.pull-left[
+### Inotropy
+]
+
+.pull-right[
+### Aferload
+]
+
+---
+## Omecamtiv Mecarbil
+
+
+---
+background-image: url("actin-mechanism.png")
+background-size: contain
+
+---
+background-image: url("actin-sliding.png")
+background-size: contain
+
+---
+class: center, middle, inverse
+# Methods
+
+---
+
+.pull-left[
+### Inclusion
+- Eligibility age between 18 - 85 years 
+- NYHA `\(\geq\)` II
+- LVEF `\(\leq\)` 35%
+- Inpatients or outpatients with hospitalization within last 1 year
+- Sinus rhythm
+  - NT-proBNP `\(\geq\)` 400 pg/mL
+  - BNP `\(\geq\)` 125 pg/mL
+- Atrial fibrillation/flutter
+  - NT-proBNP `\(\geq\)` 1200 pg/mL
+  - BNP `\(\geq\)` 375 pg/mL
+- Receiving or eligible for GDMT
+]
+
+.pull-right[
+### Exclusion
+- Acute need for hemodynamic support (either chemical or mechanical)
+- Systolic pressures `\(&lt;\)` 85 mm Hg
+- Indexed GFR `\(\leq\)` 20 mL/min
+- Recent ACS or cardiovascular interventional procedure
+]
+
+---
+### Trial Design
+
+- Randomized in 1:1 ratio of **OM** or **placebo**, with intent-to-treat analysis
+- Balanced blocks within strata of enrollment location (inpatient v. outpatient)
+- Dosage:
+  - Either 25 mg, 37.5 mg, or 50 mg 
+  - Dosage based on clearance (plasma levels checked)
+  - Post-randomization checks performed at 2-16 week intervals (increasing)
+  - Dosing held temporarily in those with ACS
+
+### Outcomes
+
+- Primary: first heart-failure event or CV death composite
+- Secondary: CV death, Kansas City Cardiomyopathy Questionnaire (KCCQ), all-cause mortality, MACE
+
+---
+## Statistics
+
+- To achieve 90% power to detect `\(HR=0.80\)`, expected `\(N=8000\)` subjects and `\(N=1600\)` events
+- `\(\alpha\)` spending function with **Haybittle-Peto** approach, with final `\(\alpha=0.05\)`
+- Evaluated time-to-event using Kaplan-Meier estimates and Cox proportional hazards models
+  - Major exposure was trial drug (either **OM** or **placebo**)
+  - Stratified with baseline hazards by randomization setting, geographic region
+  - Adjusted for baseline GFR
+- KCCQ symptom change evaluated using mixed models 
+  - Fixed effects: baseline KCCQ, geographic region, GFR, visit, trial group, and interaction between trial group and visit
+  - Random effects: randomization setting, repeat visits
+
+---
+
+.pull-left[
+### `\(\alpha\)` spending function
+- Multiple interim analyses, and multiple secondary outcomes, lead to multiple hypothesis testing
+- `\(\alpha\)` can be "spent" in several ways to lead to an overall `\(\alpha=0.05\)` 
+- Using *Haybittle-Peto boundary*, can adjust p-value for overall testing
+- In this study, 96% of the `\(\alpha\)` was spent on CV death, and 4% on KCCQ/symptom burden, thus a final `\(\alpha=0.05\)` was used
+
+]
+
+
+.pull-right[
+![alpha spending](haybittle-peto.png)
+]
+
+---
+### Cox Proportional Hazard Models
+
+$$ 
+h(t) = h_{0}(t) ^ {\beta1 X1}
+$$
+
+- Assumes baseline hazard is proportional between groups
+- Covariates are not assumed to vary with time (e.g. GFR is presumed to stay stable)
+- Baseline hazard can be stratified 
+
+.center[*Limitations*]
+
+- The hazard is not necessarily proportional, as age and comorbidities are not encompassed
+- The hazard ratio may actually be exponential (e.g. **Weibull** distribution - worsening HF will lead to increased events at an accelerating rate)
+
+---
+### Mixed Effect Models
+
+- International study with different population/treatment strategies; inpatient/outpatient populations of different risk pools
+- Using these as *random effects*, can measure the effect of the intervention and controlling for the differences in populations
+- Allows for different slopes (or `\(\beta\)` coefficients) by group
+
+![mixed models](mixed-models.png)
+
+---
+class: center, middle, inverse
+# Results
+
+---
+## Patient Characteristics
+![tbl 1 HF](galactic-clinical-characteristics.png)
+
+- 3% of patient had NYHA IV symptoms
+
+---
+## Goal-Directed Medical Therapy
+![tbl 1 gdmt](galactic-gdmt.png)
+
+- Rare users of SGLT-2 inhibitors in all groups. 
+- Use of ICD are much lower than expected in population with EF `\(\leq\)` 35%
+- Only 20% are on ARNI
+
+---
+background-image: url("survival-curves.png")
+background-size: contain
+
+---
+background-image: url("outcomes.png")
+background-size: contain
+
+---
+background-image: url("subgroup-demographics.png")
+background-size: contain
+
+---
+
+.left-column[
+&lt;br&gt;
+Protective: 
+- Increased symptom burden, with NYHA III-IV having benefit
+- Ischemic etiology of heart failure
+]
+
+.right-column[
+&lt;img src="subgroup-nyha.png" width="90%" /&gt;
+
+Is ischemic cardiomyopathy different?
+- homogenous cohort
+- not all myocardiocytes are damaged
+]
+
+---
+.left-column[
+&lt;br&gt;
+Protective:
+- Sinus rhythm
+- Severely reduced EF
+- Volume overloaded
+- Decreased systolic pressures
+- Kidney function 
+]
+
+.right-column[
+&lt;img src="subgroup-disease.png" width="90%" /&gt;
+]
+
+---
+
+.left-column[
+&lt;br&gt;
+Protective:
+- Being on higher levels of GDMT (including ACEI, MRA)
+- Severe cardiomyopathy, based on need for ICD/CRT
+]
+
+.right-column[
+&lt;img src="subgroup-meds.png" width="90%" /&gt;
+
+**However** ARNI not protective... potential *effect modifier* for primary outcomes.
+]
+
+---
+class: center
+## Medication Effects
+
+![lab effects](lab-effects.png)
+
+---
+.center[
+## Safety
+
+![safety](safety.png)
+]
+
+No apparent differences in adverse events between groups.
+
+**Note**: Stroke risk is reduced in those on **OM**. 
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightLines": true
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
