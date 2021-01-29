@@ -6,7 +6,7 @@ author: "Anish Sanjay Shah, MD<br><span style = 'font-size: 70%;'>University of 
 output:
   xaringan::moon_reader:
     css: xaringan-themer.css
-    self_contained: false
+    self_contained: true
     nature:
       titleSlideClass: [left, middle, inverse]
       highlightLines: true
@@ -73,14 +73,56 @@ class: center, middle, inverse
 # History and Background
 
 ---
+## Systolic Heart Failure
+
+- Characterized from dysfunction or loss of cardiomyocytes, resulting in...
+	- Reduced contractility
+	- Increased cardiac wall stress
+- Compensatory mechanisms include:
+	- neurohormal activation (both acute autonomic changes and persistent hormonal changes)
+	- ventricular remodeling (leading to a negative feedback cycle of ever increasing myocardial oxygen demand and decreased efficiency)
+
+#### Treatment
+
+Currently majority of drugs focus on blocking neurhormonal activation, not on improving systolic function directly.
+
+---
 
 .pull-left[
-### Inotropy
+### Calcitropes for inotropy
+
+Calcitropes (raises intracellular $Ca^{++}$) have been the mainstay of improving systolic function.
+
+Examples:
+- Milrinone
+- Dobutamine
+- Digoxin
+- Xamoterol
+- Flosequinan
+- Pimobendan
+- Ibopamine
+- Vesnarinone
+- Enoximone
+
 ]
 
 .pull-right[
-### Aferload
+### Others
+- Angiotensin-converting-enzyme inhibitors (ACEI)
+
+- Beta-adrenergic receptor blockers (BB)
+
+- Mineralocorticoid antagonists (MRA)
+
+- Angiotensin receptor-neprilysin inhibitors (ARNI)
+
+- Sodium-glucose cotransporter 2 inhibitors (SGLT2) 
 ]
+
+---
+
+background-image: url("calcitropy-failure.png")
+background-size: contain
 
 ---
 ## Omecamtiv Mecarbil
