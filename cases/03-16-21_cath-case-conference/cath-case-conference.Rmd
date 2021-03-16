@@ -233,3 +233,13 @@ Avoid right radial d/t arteria lusoria in future
 Staged PCI of LCX/OM  
 May need RCA CTO PCI as outpatient  
 ]
+
+---
+
+class: center, middle
+![icd-therapy](icd-therapy.png)
+<font color="red">Should this person get an ICD?</font>
+
+.left[
+.footnote[Ladejobi et al. 2018, Circulation: Arrhythmia & Electrophysiology]
+]
