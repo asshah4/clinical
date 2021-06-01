@@ -157,7 +157,7 @@ background-image: url("NP-left-lao-caud.gif")
 background-size: contain
 
 ---
-background-image: url("NP-left-lau-cran.gif")
+background-image: url("NP-left-lao-cran.gif")
 background-size: contain
 
 ---
