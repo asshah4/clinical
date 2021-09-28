@@ -17,6 +17,9 @@ During residency, training, and further clinical practice, I've given conference
 1. A journal club on [GALACTIC-HF](https://asshah4.github.io/clinical/journal_club/02-01-21_galactic-hf/galactic-hf.html)
 1. Short cardiac catheterization case conference, with a focus on [three PCI cases](https://asshah4.github.io/clinical/cases/03-16-21_cath-case-conference/cath-case-conference.html).
 1. Short cardiac catheterization case conference, with a focus on [STEMI from call](https://asshah4.github.io/clinical/cases/06-01-21_cath-case-conference/cath-case-conference.html).
+1. Short cardiac catheterization case conference, with a focus on [CABG revascularization](https://asshah4.github.io/clinical/cases/09-21-21_cath-case-conference/cath-case-conference.html)
+1. Short cardiac catheterization case conference, with a focus on [severe disease](https://asshah4.github.io/clinical/cases/09-28-21_cath-case-conference/cath-case-conference.html)
+1. An introduction to [femoral access](https://asshah4.github.io/clinical/talks/09-28-21_femoral-access/femoral-access.html)
 
 **Clinical Volume**
 

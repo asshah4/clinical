@@ -1,2 +1,24 @@
-name: "Patient Logs"
-output_dir: "docs"
+name: "Clinical"
+navbar:
+  title: "Clinical Summary"
+  left:
+    - text: "Back"
+      href: https://asshah4.github.io
+    - text: "Summary"
+      href: index.html
+  right:
+    - icon: fa-envelope fa-lg
+      href: mailto:asshah4@emory.edu
+    - icon: fa-github fa-lg
+      href: http://github.com/asshah4
+    - icon: fa-twitter fa-lg
+      href: https://twitter.com/shah_in_boots
+    - icon: fa-linkedin fa-lg
+      href: https://www.linkedin.com/in/anish-shah-326991177/
+output_dir: "."
+
+output:
+  html_document:
+    theme: flatly
+    highlight: tango
+    css: styles.css 
