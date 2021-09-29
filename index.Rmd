@@ -2,65 +2,23 @@
 title: "Clinical Cases"
 ---
 
-```{r setup, include = FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-library(tidyverse)
-library(gt)
-```
+These are a list of all the conferences and talks that I have given during clinical training, ranging from residency, fellowship, and in practice. Most of these are focused on clinical cases, which have all been de-identified.
 
-During residency, training, and further clinical practice, I've given conferences based on clinical cases of interest. I have produced or created them here.
+## Cardiology Fellowship
 
-**Cardiology Fellowship**
+1. __September 28, 2021__ Short cardiac catheterization case conference, with a focus on [severe disease](https://asshah4.github.io/clinical/cases/09-28-21_cath-case-conference/cath-case-conference.html)
+1. __September 28, 2021__ An introduction to [femoral access](https://asshah4.github.io/clinical/talks/09-28-21_femoral-access/femoral-access.html) for new cardiology fellows. 
+1. __September 09, 2021__ Short cardiac catheterization case conference, with a focus on [CABG revascularization](https://asshah4.github.io/clinical/cases/09-21-21_cath-case-conference/cath-case-conference.html)
+1. __June 01, 2021__ Cardiac catheterization lab conference, with a few [STEMIs from call](https://asshah4.github.io/clinical/cases/06-01-21_cath-case-conference/cath-case-conference.html).
+1. __March 16, 2021__ Cardiac catheterization lab conference, with a focus of [three PCI cases](https://asshah4.github.io/clinical/cases/03-16-21_cath-case-conference/cath-case-conference.html).
+1. __February 01, 2021__ A journal club on [GALACTIC-HF](https://asshah4.github.io/clinical/journal_club/02-01-21_galactic-hf/galactic-hf.html)
+1. __December 23, 2020__  A brief overview of [cardiac tamponade](https://asshah4.github.io/clinical/cases/12-23-20_pocus-cardiac-tamponade/pocus-cardiac-tamponade.html) for the POCUS curriculum for internal medicine residents.
+1. __December 14, 2020__ An interesting case of [restrictive cardiomyopathy](https://asshah4.github.io/clinical/cases/12-14-20_biatrial-enlargement/biatrial-enlargement.html), including workup and consideration of alternative etiologies.
 
-1.  An interesting case of [restrictive cardiomyopathy](https://asshah4.github.io/clinical/cases/12-14-20_biatrial-enlargement/biatrial-enlargement.html), including workup and consideration of alternative etiologies.
-1.  A brief overview of [cardiac tamponade](https://asshah4.github.io/clinical/cases/12-23-20_pocus-cardiac-tamponade/pocus-cardiac-tamponade.html) for the POCUS curriculum for internal medicine residents.
-1. A journal club on [GALACTIC-HF](https://asshah4.github.io/clinical/journal_club/02-01-21_galactic-hf/galactic-hf.html)
-1. Short cardiac catheterization case conference, with a focus on [three PCI cases](https://asshah4.github.io/clinical/cases/03-16-21_cath-case-conference/cath-case-conference.html).
-1. Short cardiac catheterization case conference, with a focus on [STEMI from call](https://asshah4.github.io/clinical/cases/06-01-21_cath-case-conference/cath-case-conference.html).
-1. Short cardiac catheterization case conference, with a focus on [CABG revascularization](https://asshah4.github.io/clinical/cases/09-21-21_cath-case-conference/cath-case-conference.html)
-1. Short cardiac catheterization case conference, with a focus on [severe disease](https://asshah4.github.io/clinical/cases/09-28-21_cath-case-conference/cath-case-conference.html)
-1. An introduction to [femoral access](https://asshah4.github.io/clinical/talks/09-28-21_femoral-access/femoral-access.html)
+## Internal Medicine Residency
 
-**Clinical Volume**
-
-As part of both residency and fellowship training, clinical volumes are important as they correlate with clinical aptitude.
-
-```{r, echo = FALSE}
-# Main log
-log <- readxl::read_excel("log.xlsx") %>%
-	janitor::clean_names() %>%
-	mutate(date = as.Date(date)) 
-
-# Columns = site | mrn | date | dx1:3 | procedure | location | notes
-
-# Obtain summaries of types
-what <- unique(log$procedure)
-where <- unique(log$location)
-
-# Some procedures need specific modifiers, located in the location name
-	# Caths -> needs modifier for site
-	# TTE -> needs modifier for bedside or not
-	# TEE -> needs modifier for if bedside or not
-	# EPS -> needs modifier for type
-	# DCCV -> modifier for joules, not really needed
-	# TVP -> modifier
-	# AL/CVL -> lines with locations in modifier
-
-procedures <- c("RHC", "LHC", "PCI", "TEE", "TTE", "DCCV", "stress", "MRI", "TVP", "device interrogation", "pacemaker/ICD", "EPS", "pericardiocentesis")
-
-# Summarize
-log %>%
-	filter(procedure %in% procedures & !is.na(location)) %>%
-	group_by(procedure) %>%
-	count() %>%
-	ungroup() %>%
-	gt(rowname_col = "procedure") %>%
-	tab_header(
-		title = "Procedure Log",
-		subtitle = "UIC Cardiology Fellowship"
-	) %>%
-	tab_source_note(
-		source_note = "PGY-4, July 2020 to December 2020"
-	) %>%
-	tab_stubhead("Procedures") 
-```
+1. __February 18, 2019__ As a medical resident, we complete a _senior grand rounds_, a summative talk of an area of our choosing. I researched psychological triggers for sudden cardiac death, and gave a "chalk talk" style [presentation](https://docs.google.com/presentation/d/e/2PACX-1vSc3jQ0INW8dfKsb2zgs9LrizLf0MRCf4s9W2n9AomYL8B3YtAoYxoo-inxdrMaAV4xAE6Q_dtvFRP9/pub?start=false&loop=false&delayms=3000). There was an associated [handout](https://docs.google.com/document/d/e/2PACX-1vQsGMyGGko6u8kAF8u6C1lmFUjJE7DW_uhN0tqfCNkvOFMv2Pgpwqx3d2kpAKroxW7jDS5LsqKXhaYm/pub) and [notes with references](https://docs.google.com/document/d/e/2PACX-1vRPOH1kDLA1RfL7xJYRLJ5oqbpriSM_gkW04Z76_4hOboBKY7twWt4rUsiqjz6dKzePgkQ9w1iTDEg1/pub). The concept of psychological triggers as affecting the ventricular substrate is fascinating, particularly as we learn more of the role of the autonomic nervous system in cardiovascular disease.
+1. __September 26, 2018__ Another bite-sized teaching mode talk on [transfusions in sickle cell](https://docs.google.com/presentation/d/1MrrWmaZ1-U76AK7TtutUDGz8sJ4nyse467jfHpRR4O4/present#slide=id.p1). Gave this talk again on __October 4, 2018__ at the Southern Hospital Medicine conference as an example of alternative teaching methods.
+1. __March 21, 2018__ With literature from early-terminated trials during 2018, I gave a [journal club lecture](https://docs.google.com/presentation/d/e/2PACX-1vRsD-2d4edr4G1Y5pEBvGMnDoG5PErGIJu8_F1jrJlso9DwvfCo5rwKINpn16_boiHfJa_wkRmgZGQH/pub?start=false&loop=false&delayms=3000) on the updated guidelines on thrombectomy for ischemic strokes. My [notes](https://docs.google.com/document/d/e/2PACX-1vRJx-3n9nAP1oSieonEs8mmPcsoHwyvUtJNcRJTTiARtNxQuGfIxJwMtK-FJFVrs2nOOMvcC_0243-O/pub) for it serve as a reference and series of citations, with a [handout](https://docs.google.com/document/d/e/2PACX-1vTUNgylVolLVZ9YkrqkADNB9s2XM6Ee9OFvUYprZ-T7FxPEKJTmI9M0YhTuKeO12xbwFswCmV-j_oP4/pub) to improve viewer interaction. The largest issue I find was in the interpretation of their __Table 1__ showing non-adjusted odds ratios for an ordinal scale, listed next to a P-value.
+1. __March 15, 2018__ As a resident, there is a shift into becoming a teacher to both medical students and near-peers while being a learner as well. A significant amount of residents actually develop critical failures in the learning process. Here is an approach I [presented](https://docs.google.com/presentation/d/e/2PACX-1vSKWQvLnS7C12s44EHJAk4ewrdwYM7WvJrLigndn9uZCz8m16cqDPvPtYMkwosxTG-7Cw3QEWkR-fHT/pub?start=false&loop=false&delayms=3000), with supporting [literature](https://docs.google.com/document/d/e/2PACX-1vQoE0lM5dsy5r3Vtm9iwJtxXZccCqN7zW7yVkhLhWVlLgvjPfe30Ud-Z27E0ngE3GiyMP727JxF8IlB/pub) and an [outline](https://docs.google.com/document/d/e/2PACX-1vQd5LzOgEjZi2kNC5XwvUrxU1IzpFmt6fiP8MoppCfwYrpEASLHa4R-5J0CHpz7zvWVZIIXrryYSao_/pub) to be shared.
+1. __February 28, 2018__ I gave a _bite-sized teaching mode_ talk on [treating rashes](https://docs.google.com/presentation/d/e/2PACX-1vQRVke_1-uvStSty5mo0Q2dh_WjeMdnDgQ8-nt8Vff8Gqd4J0Pzn3ZomxVyb8LcWf2yYYAuRl5TO_cp/pub?start=false&loop=false&delayms=3000). The purpose of this style of talk is to explain and actually teach a topic in less than 8 minutes. Giving the talk itself emphasized learning _how_ to teach.

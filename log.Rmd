@@ -1,0 +1,65 @@
+---
+title: "Clinical Volume"
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(gt)
+```
+
+As part of both residency and fellowship training, clinical volumes are important as they correlate with clinical aptitude.  
+
+```{r, procedures, echo = FALSE}
+# Main log
+log <- 
+	readxl::read_excel("log.xlsx") %>%
+	janitor::clean_names() %>%
+	mutate(date = as.Date(date)) 
+
+# Columns = site | mrn | date | dx1:3 | procedure | location | modifier | notes | special
+# Can be broken down into groups based on procedures versus clinical 
+procedures <- subset(log, !is.na(procedure))
+procedure
+
+# Obtain summaries of types
+what <- unique(log$procedure)
+where <- unique(log$location)
+
+# Some procedures need specific modifiers, located in the location name
+	# Caths -> needs modifier for site
+	# TTE -> needs modifier for bedside or not
+	# TEE -> needs modifier for if bedside or not
+	# EPS -> needs modifier for type
+	# DCCV -> modifier for joules, not really needed
+	# TVP -> modifier
+	# AL/CVL -> lines with locations in modifier
+
+procedures <- c("RHC", "LHC", "PCI", "TEE", "TTE", "DCCV", "stress", "MRI", "TVP", "device interrogation", "pacemaker/ICD", "EPS", "pericardiocentesis")
+
+# Summarize
+log %>%
+	filter(procedure %in% procedures & !is.na(location)) %>%
+	group_by(procedure) %>%
+	count() %>%
+	ungroup() %>%
+	gt(rowname_col = "procedure") %>%
+	tab_header(
+		title = "Procedure Log",
+		subtitle = "UIC Cardiology Fellowship"
+	) %>%
+	tab_source_note(
+		source_note = "PGY-4, July 2020 to December 2020"
+	) %>%
+	tab_stubhead("Procedures") 
+```
+
+```{r, clinical, echo = FALSE}
+# Columns = site | mrn | date | dx1:3 | procedure | location | modifier | notes | special
+# Can be broken down into groups based on procedures versus clinical 
+clinical <- subset(log, is.na(procedure))
+clinic_types <- unique(clinical$location)
+
+subset(clinical, is.na(location))
+```
+
