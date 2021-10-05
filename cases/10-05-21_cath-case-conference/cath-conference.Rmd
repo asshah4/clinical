@@ -29,6 +29,8 @@ library(xaringanthemer)
 style_duo_accent(primary_color = "#091F40", secondary_color = "#AC1E2D")
 ```
 
+---
+
 class: center, middle, inverse
 # Case 1
 
