@@ -26,7 +26,6 @@ jobs:
       
       - name: Install Packages
         run: Rscript -e 'install.packages("rmarkdown")'
-        run: Rscript -e 'install.packages("tidyverse")'
       
       - name: Render Rmarkdown files
         run: |
