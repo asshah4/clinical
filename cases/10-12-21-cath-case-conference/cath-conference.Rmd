@@ -306,6 +306,6 @@ None
 .pull-right[
 ### Outcomes
 - Nonobstructive CAD, diminutive AV LCX
-- Short LCX with large OM system s/p MVR
+- Short LCX with large OM system s/p SMVR
 - High bifurcation of the RPDA  
 ]
