@@ -15,7 +15,11 @@ As part of both residency and fellowship training, clinical volumes are importan
 log <- 
 	readxl::read_excel("log.xlsx") %>%
 	janitor::clean_names() %>%
-	mutate(date = as.Date(date)) 
+	mutate(date = as.Date(date)) %>%
+	tibble::as_tibble()
+
+start <- min(log$date, na.rm = TRUE)
+stop <- max(log$date, na.rm = TRUE)
 
 # Columns = site | mrn | date | dx1:3 | procedure | location | modifier | notes | special
 # Can be broken down into groups based on procedures versus clinical 
@@ -48,7 +52,7 @@ procedures %>%
 		subtitle = "UIC Cardiology Fellowship"
 	) %>%
 	tab_source_note(
-		source_note = "PGY-4, July 2020 to December 2020"
+		source_note = glue::glue("Log from {start} to {stop}")
 	) %>%
 	tab_stubhead("Procedures") 
 ```
