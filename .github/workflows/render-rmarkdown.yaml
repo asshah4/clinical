@@ -26,7 +26,11 @@ jobs:
       - name: Install dependencies
         run: |
           install.packages("rmarkdown")
-          install.packages("tidyverse")
+          install.packages("dplyr")
+          install.packages("janitor")
+          install.packages("gt")
+          install.packages("knitr")
+          install.packages("tibble")
         shell: Rscript {0}
       
       - name: Render Rmarkdown files
