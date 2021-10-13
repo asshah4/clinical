@@ -95,7 +95,7 @@ class: middle
 .left-column[
 - LM, Medina 1,1,1  
 - Mid-LAD 90% 
-- OCT of lesions with $360^\circ$ Ca++
+- OCT of both lesions with $360^\circ$ Ca++
 ]
 
 .center[.right-column[
