@@ -12,11 +12,7 @@ As part of both residency and fellowship training, volume is an important part o
 
 ```{r, procedures, echo = FALSE}
 # Main log
-log <- 
-	readxl::read_excel("log.xlsx") %>%
-	janitor::clean_names() %>%
-	mutate(date = as.Date(date)) %>%
-	tibble::as_tibble()
+log <- readr::read_csv("anonymous.csv") 
 
 start <- min(log$date, na.rm = TRUE)
 stop <- max(log$date, na.rm = TRUE)
