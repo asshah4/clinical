@@ -8,7 +8,7 @@ library(tidyverse)
 library(gt)
 ```
 
-As part of both residency and fellowship training, clinical volumes are important as they correlate with clinical aptitude.  
+As part of both residency and fellowship training, volume is an important part of both procedural competence and clinical skills. 
 
 ```{r, procedures, echo = FALSE}
 # Main log
