@@ -8,7 +8,7 @@ library(dplyr)
 library(gt)
 ```
 
-As part of both residency and fellowship training, volume is an important part of both procedural competence and clinical skills. 
+As part of both residency and fellowship training, volume is an important part of both procedural competence and clinical skills. Below are a personal summary.
 
 ```{r, procedures, echo = FALSE}
 # Main log
