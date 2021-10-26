@@ -41,7 +41,7 @@ BibOptions(
 	check.entries = FALSE,
 	style = "markdown",
 	bib.style = "authoryear",
-	max.names = 3,
+	max.names = 2,
 	hyperlink = FALSE
 )
 # Current directory
@@ -62,7 +62,9 @@ mortality <- list(
   wilkins_high = ">8",
 	dissection = "0.2-0.6%",
   rrt = "15%",
-  pea = "84-90%"
+  pea = "84-90%",
+  cpr_freq = "<2%",
+  cpr = "46%"
 )
 ```
 
@@ -337,11 +339,19 @@ class: inverse, left
 ---
 ## Surgical mitral valve replacement
 
+.pull-left[
 1. Median sternotomy.
 1. Total cardiopulmonary bypass.
 1. Mitral valve replacement with a 31 mm Sorin mechanical valve prosthesis.
 1. Insertion of temporary bipolar ventricular pacing wire.
 1. Insertion of mediastinal and bilateral pleural chest tubes.
+]
+
+.center[.pull-right[
+```{r, echo=FALSE}
+knitr::include_graphics("op-tee-mechanical-0d.gif")
+```
+]]
 
 ---
 class: inverse, left
@@ -427,6 +437,31 @@ _The risk of mortality for PEA arrest is `r mortality$pea` in patients under 50 
 ---
 background-image: url("cpr-after-sternotomy.png")
 background-size: contain
+
+---
+## CPR after Sternotomy
+
+.pull-left[
+#### Basics
+- VF/VT = shock x 3, amiodarone, sternotomy
+- asystole/bradycardia = pacing, sternotomy
+- PEA = turn off pacing to look for VF, sternotomy
+
+]
+
+.pull-right[
+#### Exceptions
+1. No epinephrine per protocol
+1. IABP placed on pressure trigger (instead of electrical)
+1. Compressions should be manual, targeting SBP ~ 60 mm Hg, and automated compressions are contraindicated
+
+The frequency of CPR after cardiac surgery has been quoted `r mortality$cpr_freq`, with mortality rates of reported as approximately `r mortality$cpr`, but other studies have noted that mortality until discharge was 80%.
+
+]
+
+.footnote[
+`r Citet(bib, author = "Wahba", year = "1997")`  
+]
 
 ---
 class: inverse, middle, left
