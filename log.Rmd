@@ -53,7 +53,7 @@ procedures %>%
 	tab_stubhead("Procedures") 
 ```
 
-```{r, clinical, echo = FALSE}
+```{r, clinical, echo = FALSE, include=FALSE}
 # Columns = site | mrn | date | dx1:3 | procedure | location | modifier | notes | special
 # Can be broken down into groups based on procedures versus clinical 
 clinical <- subset(log, is.na(procedure))
