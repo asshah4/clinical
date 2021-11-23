@@ -6,6 +6,7 @@ These are a list of all the conferences and talks that I have given during clini
 
 ## Cardiology Fellowship
 
+1. __November 23, 2021__ Short [cardiac catheterization case conference](https://asshah4.github.io/clinical/cases/11-23-21_cath-case-conference/cath-conference.html) on a late-presenting STEMI at the time of a massive CVA, and a standard peripheral intervention to the left iliac arteries. 
 1. __November 16, 2021__ Short [cardiac catheterization case conference](https://asshah4.github.io/clinical/cases/11-16-21_cath-case-conference/cath-conference.html) with a two-vessel CAD pre-transplant that was revascularized, and two STEMI cases.
 1. __November 16, 2021__ An [introduction to antiplatelet agents](https://asshah4.github.io/clinical/talks/11-16-21_antiplatelet-agents/antiplatelets.html) in atherosclerotic disease.
 1. __November 09, 2021__ Short [cardiac catheterization case conference](https://asshah4.github.io/clinical/cases/11-09-21_cath-case-conference/cath-conference.html) with an anterior STEMI and no-reflow to LAD.
