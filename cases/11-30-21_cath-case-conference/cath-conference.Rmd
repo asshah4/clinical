@@ -1,0 +1,139 @@
+---
+title: "Cath Conference"
+subtitle: "UIC Cardiac Catheterization Lab"
+date: "November 30, 2021"
+author: "Anish Sanjay Shah, MD<br><span style = 'font-size: 70%;'>Cardiology Fellow<br>University of Illinois at Chicago</span>"
+output:
+  xaringan::moon_reader:
+    css: xaringan-themer.css
+    self_contained: false
+    nature:
+      titleSlideClass: [center, middle, inverse]
+      highlightLines: true
+---
+
+```{r setup, echo = FALSE, include = FALSE}
+library(tidyverse)
+
+print.tbl_df <- function(x, ...) {
+	print.data.frame(x, right = FALSE, ...)
+	invisible(x)
+}
+
+# Options
+options(digits = 0)
+```
+
+```{r themer, echo=FALSE, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_duo_accent(primary_color = "#091F40", secondary_color = "#AC1E2D")
+```
+
+class: middle, inverse
+# Case RG
+
+- 64F h/o DM, ESRD
+- p/w HTN urgency/emergency
+- ACS/NSTEMI c/s for coronary angiography
+
+---
+background-image: url("rg-1.gif")
+background-size: contain
+
+---
+background-image: url("rg-2.gif")
+background-size: contain
+
+---
+background-image: url("rg-3.gif")
+background-size: contain
+
+---
+background-image: url("rg-4.gif")
+background-size: contain
+
+---
+background-image: url("rg-5.gif")
+background-size: contain
+
+---
+background-image: url("rg-6.gif")
+background-size: contain
+
+---
+
+.pull-left[
+#### Access
+- 5F right radial 
+- 5F Tiger diagnostic
+
+#### Interventions
+- No interventions
+]
+
+.pull-right[
+#### Outcomes
+- 80% proximal LAD
+- 60% proximal LCX
+- 70% proximal RCA
+- CABG evaluation
+]
+
+---
+class: middle, inverse
+# Case DG
+
+- 63M h/o CAD s/p PCI to RCA, ICM (EF 10%), SQ-ICD, ESRD
+- p/w pre-transplant eval (LHC/RHC)
+
+---
+
+.pull-left[
+#### Access
+- 5F right radial
+- 5F Jacky
+
+#### Interventions
+- IVUS
+- FFR
+]
+
+.pull-right[
+#### Outcomes
+- CTO of LCX
+- 90% distal RCA
+- FFR positive of LM
+- Staged protected PCI
+]
+
+------
+background-image: url("dg-1.gif")
+background-size: contain
+
+---
+background-image: url("dg-2.gif")
+background-size: contain
+
+---
+background-image: url("dg-3.gif")
+background-size: contain
+
+---
+background-image: url("dg-4.gif")
+background-size: contain
+
+---
+background-image: url("dg-5.gif")
+background-size: contain
+
+---
+background-image: url("dg-6.gif")
+background-size: contain
+
+---
+background-image: url("dg-7.gif")
+background-size: contain
+
+---
+background-image: url("dg-8.gif")
+background-size: contain
