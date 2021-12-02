@@ -182,7 +182,7 @@ background-image: url("rb-09-cto-digging.gif")
 background-size: contain
 
 ---
-background-image: url("rb-10-trailblazer-crossed.gif")
+background-image: url("rb-10-trailblazer-crossed-short.gif")
 background-size: contain
 
 ---
