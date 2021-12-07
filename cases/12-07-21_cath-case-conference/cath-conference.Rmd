@@ -1,7 +1,7 @@
 ---
 title: "Cath Conference"
 subtitle: "UIC Cardiac Catheterization Lab"
-date: "November 30, 2021"
+date: "December 07, 2021"
 author: "Anish Sanjay Shah, MD<br><span style = 'font-size: 70%;'>Cardiology Fellow<br>University of Illinois at Chicago</span>"
 output:
   xaringan::moon_reader:
@@ -142,8 +142,8 @@ background-size: contain
 class: middle, inverse
 # Case RB
 
-- 63M h/o CAD s/p PCI to RCA, ICM (EF 10%), SQ-ICD, ESRD
-- p/w pre-transplant eval (LHC/RHC)
+- 47M h/o CAD s/p PCI in 2016, PVD, prior CVA, DM, HTN
+- p/w staged PCI and potential revascularization of RCA CTO
 
 ---
 background-image: url("rb-01-rca-cto-old.gif")
@@ -221,18 +221,22 @@ background-size: contain
 
 .pull-left[
 #### Access
-- 5F right radial
-- 5F Jacky
+- 6F right radial
+- 6F RCFA (antegrade) 
+- JR4 and JL3.5 diagnostic
+- 4F MP1 for peripherals
 
 #### Interventions
-- IVUS
-- FFR
+- DSE of LE
+- Wire escalation of CTO (Glidewire, Asahi, Corsair, Confianza, Turnpike LP, Astato)
+- Spider filter wire
+- Directional atherectomy (Hawk One)
+- DCB
 ]
 
 .pull-right[
 #### Outcomes
-- CTO of LCX
-- 90% distal RCA
-- FFR positive of LM
-- Staged protected PCI
+- Historical revascularization of RCA CTO
+- Successful atherectomy
+- 6.0 x 12 mm DCB 
 ]
