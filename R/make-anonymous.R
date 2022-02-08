@@ -8,4 +8,5 @@ hipaa <-
 	tibble::as_tibble()
 
 # Write to file
-readr::write_csv(hipaa, file = "anonymous.csv")
+readr::write_csv(hipaa, file = "./anonymous.csv")
+

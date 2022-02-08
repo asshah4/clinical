@@ -4,14 +4,18 @@ title: "Clinical Volume"
 
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-library(dplyr)
+library(tidyverse)
 library(gt)
+library(glue)
 ```
 
-As part of both residency and fellowship training, volume is an important part of both procedural competence and clinical skills. Below are a personal summary.
+As part of both residency and fellowship training, volume is an important part of both procedural competence and clinical skills. 
 
-```{r, procedures, echo = FALSE}
+
+
+```{r, files, echo = FALSE}
 # Main log
+source("R/make-anonymous.R", local = knitr::knit_global())
 log <- readr::read_csv("anonymous.csv") 
 
 start <- min(log$date, na.rm = TRUE)
@@ -19,11 +23,41 @@ stop <- max(log$date, na.rm = TRUE)
 
 # Columns = site | mrn | date | dx1:3 | procedure | location | modifier | notes | special
 # Can be broken down into groups based on procedures versus clinical 
-procedures <- subset(log, !is.na(procedure))
+procedures <- subset(log, !is.na(procedure)) |>
+	rename(type = procedure)
+clinical <- subset(log, is.na(procedure))
+```
 
-# Obtain summaries of types
-what <- unique(log$procedure)
-where <- unique(log$location)
+Below is a summary of procedures that have been performed during training.
+
+```{r, procedures}
+# Master list
+types <- list(
+	cath = c("COR", "RHC", "LHC", "PCI", "pericardiocentesis", "MCS"),
+	vascular = c("CVL", "AL", "PIV", "closure"),
+	ep = c("DCCV", "CIED", "EPS", "TVP", "ACLS"),
+	imaging = c("TTE", "TEE", "stress", "MRI", "CT", "US")
+)
+
+# Create categories
+cats <- character()
+for (i in seq_along(types)) {
+	cats <- append(cats, rep(names(types[i]), length(types[[i]])))
+}
+
+# Make table
+tbl <- tibble(
+	category = cats,
+	type = unlist(types)
+)
+
+# Identifiers of procedure modifiers with categorizations
+subtypes <-
+	procedures |>
+	select(type, location, modifier) 
+
+# Master table
+master <- full_join(tbl, subtypes, by = "type")
 
 # Some procedures need specific modifiers, located in the location name
 	# Caths -> needs modifier for site
@@ -34,31 +68,113 @@ where <- unique(log$location)
 	# TVP -> modifier
 	# AL/CVL -> lines with locations in modifier
 
-types <- c("RHC", "LHC", "PCI", "TEE", "TTE", "DCCV", "stress", "MRI", "TVP", "CIED", "EPS", "pericardiocentesis")
-
-# Summarize
-procedures %>%
-	filter(procedure %in% types & !is.na(location)) %>%
-	group_by(procedure) %>%
-	count() %>%
-	ungroup() %>%
-	gt(rowname_col = "procedure") %>%
-	tab_header(
-		title = "Procedure Log",
-		subtitle = "UIC Cardiology Fellowship"
-	) %>%
-	tab_source_note(
-		source_note = glue::glue("Log from {start} to {stop}")
-	) %>%
-	tab_stubhead("Procedures") 
 ```
 
-```{r, clinical, echo = FALSE, include=FALSE}
-# Columns = site | mrn | date | dx1:3 | procedure | location | modifier | notes | special
-# Can be broken down into groups based on procedures versus clinical 
-clinical <- subset(log, is.na(procedure))
-clinic_types <- unique(clinical$location)
 
-subset(clinical, is.na(location))
+```{r, eval = FALSE}
+# Specific counts
+master |>
+	count(category, type, location, modifier)
+
+master |>
+	filter(is.na(modifier) & !is.na(location)) |>
+	count(category, type, location)
+
+master |>
+	filter(is.na(location) & is.na(modifier)) |>
+	count(category, type)
+
+master |>
+	filter(!is.na(location) & is.na(modifier)) |>
+	count(category, type, location)
+
+master |>
+	count(type) 
+
+master |>
+	count(category)
+```	
+
+```{r, cocats}
+# Required COCATS procedures for fellowship
+	# TTE performed (150)
+	# TTE interpreted (300)
+	# Stress echo (100)
+	# TEE performed (50, 100)
+	# Nuclear (300)
+	# Nuclear injections (35)
+	# Cardiac CT interpreted (250)
+	# Cardiac CT performed (65)
+	# CMR performed (50)
+	# CMR interpreted (150)
+	# Caths performed (300)
+	# TVP performed (5)
+	# PPM performed (20, 40)
+	# CIED interrogated (100)
+	# CIED remote interrogated (25)
+	# Cardioversion (20)
+	# PCI
+	# Pericardiocentesis
+	# IABP
+	# Impella
+	# Other
+
+cocats <- 
+	master |>
+	filter(
+		type == "TTE" & location == "bedside" |
+			type == "TTE" & is.na(location) |
+			type == "stress" & modifier == "echo" |
+			type == "TEE" & location == "bedside" |
+			type == "TEE" & is.na(location) |
+			type == "stress" & (modifier == "technetium" | modifier == "thallium") |
+			type == "CT" |
+			type == "CMR" & location == "bedside" |
+			type == "CMR" & is.na(location) |
+			(type == "RHC" | type == "LHC" | type == "COR") |
+			type == "TVP" |
+			type == "CIED" & location != "interrogation" |
+			type == "CIED" & location == "interrogation" |
+			type == "DCCV" |
+			type == "PCI" |
+			type == "pericardiocentesis" |
+			type == "MCS" 
+	) |>
+	mutate(modifier = case_when(
+		type == "COR" ~ NA_character_,
+		type == "RHC" ~ NA_character_,
+		type == "LHC" ~ NA_character_,
+		type == "PCI" ~ NA_character_,
+		type == "DCCV" ~ NA_character_,
+		type == "MCS" ~ NA_character_,
+		type == "CIED" & location == "interrogation" ~ NA_character_,
+		type == "CIED" & !location == "interrogation" ~ NA_character_,
+		type == "TTE" ~ NA_character_,
+		type == "TEE" ~ NA_character_,
+		type == "stress" & modifier == "technetium" ~ "nuclear",
+		type == "stress" & modifier == "thallium" ~ "nuclear",
+		TRUE ~ modifier
+	)) |>
+	mutate(location = case_when(
+		type == "COR" ~ NA_character_,
+		type == "RHC" ~ NA_character_,
+		type == "LHC" ~ NA_character_,
+		type == "PCI" ~ NA_character_,
+		type == "pericardiocentesis" ~ NA_character_,
+		type == "DCCV" ~ NA_character_,
+		type == "MCS" ~ NA_character_,
+		type == "CIED" & !location == "interrogation" ~ NA_character_,
+		type == "TVP" ~ NA_character_,
+		type == "stress" & modifier == "echo" ~ NA_character_,
+		type == "stress" & modifier == "nuclear" ~ NA_character_,
+		TRUE ~ location
+	)) |>
+	mutate(type = case_when(
+		type %in% c("COR", "RHC", "LHC") ~ "CATH",
+		TRUE ~ type
+	)) |>
+	count(type, location, modifier) 
+
+gt(cocats)
 ```
 
