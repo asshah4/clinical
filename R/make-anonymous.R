@@ -1,10 +1,11 @@
 # Save anonymous log file for analysis 
 library(magrittr)
 hipaa <- 
-	readxl::read_excel("log.xlsx") %>%
-	janitor::clean_names() %>%
-	dplyr::mutate(date = as.Date(date)) %>%
-	dplyr::select(-mrn, -site) %>%
+	file.path("..", "..", "OneDrive - University of Illinois at Chicago", "data", "log", "log.xlsx") |>
+	readxl::read_excel() |>
+	janitor::clean_names() |>
+	dplyr::mutate(date = as.Date(date)) |>
+	dplyr::select(-mrn, -site) |>
 	tibble::as_tibble()
 
 # Write to file
