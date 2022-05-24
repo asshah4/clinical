@@ -13,7 +13,7 @@
 
 <title>Clinical Volume</title>
 
-<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
@@ -29,6 +29,9 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
@@ -43,6 +46,101 @@
     </style>
 
 
+
+<style type="text/css">
+  code {
+    white-space: pre;
+  }
+  .sourceCode {
+    overflow: visible;
+  }
+</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  background-color: #f8f8f8; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ef2929; } /* Alert */
+code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #c4a000; } /* Attribute */
+code span.bn { color: #0000cf; } /* BaseN */
+code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4e9a06; } /* Char */
+code span.cn { color: #000000; } /* Constant */
+code span.co { color: #8f5902; font-style: italic; } /* Comment */
+code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code span.dt { color: #204a87; } /* DataType */
+code span.dv { color: #0000cf; } /* DecVal */
+code span.er { color: #a40000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #0000cf; } /* Float */
+code span.fu { color: #000000; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code span.ot { color: #8f5902; } /* Other */
+code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code span.sc { color: #000000; } /* SpecialChar */
+code span.ss { color: #4e9a06; } /* SpecialString */
+code span.st { color: #4e9a06; } /* String */
+code span.va { color: #000000; } /* Variable */
+code span.vs { color: #4e9a06; } /* VerbatimString */
+code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    for (var j = 0; j < rules.length; j++) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") continue;
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') continue;
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
 
 
 
@@ -71,6 +169,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -209,6 +310,69 @@ $(document).ready(function () {
 
 
 
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
 
 </head>
 
@@ -218,12 +382,22 @@ $(document).ready(function () {
 <div class="container-fluid main-container">
 
 
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
 
 
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -281,13 +455,169 @@ $(document).ready(function () {
 </div>
 
 
-<p>As part of both residency and fellowship training, clinical volumes are important as they correlate with clinical aptitude.</p>
-<div id="tbrcuawtsu" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<p>As part of both residency and fellowship training, volume is an important part of both procedural competence and clinical skills.</p>
+<pre><code>## Warning: package &#39;magrittr&#39; was built under R version 4.1.2</code></pre>
+<pre><code>## 
+## Attaching package: &#39;magrittr&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:purrr&#39;:
+## 
+##     set_names</code></pre>
+<pre><code>## The following object is masked from &#39;package:tidyr&#39;:
+## 
+##     extract</code></pre>
+<pre><code>## Rows: 2074 Columns: 9
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: &quot;,&quot;
+## chr  (7): dx1, dx2, dx3, procedure, location, modifier, notes
+## dbl  (1): special
+## date (1): date
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+<p>Below is a summary of procedures that have been performed during training.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Master list</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>types <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">cath =</span> <span class="fu">c</span>(<span class="st">&quot;COR&quot;</span>, <span class="st">&quot;RHC&quot;</span>, <span class="st">&quot;LHC&quot;</span>, <span class="st">&quot;PCI&quot;</span>, <span class="st">&quot;pericardiocentesis&quot;</span>, <span class="st">&quot;MCS&quot;</span>),</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">vascular =</span> <span class="fu">c</span>(<span class="st">&quot;CVL&quot;</span>, <span class="st">&quot;AL&quot;</span>, <span class="st">&quot;PIV&quot;</span>, <span class="st">&quot;closure&quot;</span>),</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">ep =</span> <span class="fu">c</span>(<span class="st">&quot;DCCV&quot;</span>, <span class="st">&quot;CIED&quot;</span>, <span class="st">&quot;EPS&quot;</span>, <span class="st">&quot;TVP&quot;</span>, <span class="st">&quot;ACLS&quot;</span>),</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">imaging =</span> <span class="fu">c</span>(<span class="st">&quot;TTE&quot;</span>, <span class="st">&quot;TEE&quot;</span>, <span class="st">&quot;stress&quot;</span>, <span class="st">&quot;MRI&quot;</span>, <span class="st">&quot;CT&quot;</span>, <span class="st">&quot;US&quot;</span>)</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Create categories</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>cats <span class="ot">&lt;-</span> <span class="fu">character</span>()</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="fu">seq_along</span>(types)) {</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    cats <span class="ot">&lt;-</span> <span class="fu">append</span>(cats, <span class="fu">rep</span>(<span class="fu">names</span>(types[i]), <span class="fu">length</span>(types[[i]])))</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Make table</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>tbl <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">category =</span> cats,</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">type =</span> <span class="fu">unlist</span>(types)</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Identifiers of procedure modifiers with categorizations</span></span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>subtypes <span class="ot">&lt;-</span></span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>    procedures <span class="sc">|&gt;</span></span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(type, location, modifier) </span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Master table</span></span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>master <span class="ot">&lt;-</span> <span class="fu">full_join</span>(tbl, subtypes, <span class="at">by =</span> <span class="st">&quot;type&quot;</span>)</span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a><span class="co"># Some procedures need specific modifiers, located in the location name</span></span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Caths -&gt; needs modifier for site</span></span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>    <span class="co"># TTE -&gt; needs modifier for bedside or not</span></span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>    <span class="co"># TEE -&gt; needs modifier for if bedside or not</span></span>
+<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a>    <span class="co"># EPS -&gt; needs modifier for type</span></span>
+<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a>    <span class="co"># DCCV -&gt; modifier for joules, not really needed</span></span>
+<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a>    <span class="co"># TVP -&gt; modifier</span></span>
+<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a>    <span class="co"># AL/CVL -&gt; lines with locations in modifier</span></span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Specific counts</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>master <span class="sc">|&gt;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">count</span>(category, type, location, modifier)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>master <span class="sc">|&gt;</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(<span class="fu">is.na</span>(modifier) <span class="sc">&amp;</span> <span class="sc">!</span><span class="fu">is.na</span>(location)) <span class="sc">|&gt;</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">count</span>(category, type, location)</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>master <span class="sc">|&gt;</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(<span class="fu">is.na</span>(location) <span class="sc">&amp;</span> <span class="fu">is.na</span>(modifier)) <span class="sc">|&gt;</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">count</span>(category, type)</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>master <span class="sc">|&gt;</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(location) <span class="sc">&amp;</span> <span class="fu">is.na</span>(modifier)) <span class="sc">|&gt;</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">count</span>(category, type, location)</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>master <span class="sc">|&gt;</span></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>    <span class="fu">count</span>(type) </span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>master <span class="sc">|&gt;</span></span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>    <span class="fu">count</span>(category)</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Required COCATS procedures for fellowship</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># TTE performed (150)</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># TTE interpreted (300)</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Stress echo (100)</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># TEE performed (50, 100)</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Nuclear (300)</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Nuclear injections (35)</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Cardiac CT interpreted (250)</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Cardiac CT performed (65)</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># CMR performed (50)</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>    <span class="co"># CMR interpreted (150)</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Caths performed (300)</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>    <span class="co"># TVP performed (5)</span></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>    <span class="co"># PPM performed (20, 40)</span></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>    <span class="co"># CIED interrogated (100)</span></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>    <span class="co"># CIED remote interrogated (25)</span></span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Cardioversion (20)</span></span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>    <span class="co"># PCI</span></span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Pericardiocentesis</span></span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>    <span class="co"># IABP</span></span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Impella</span></span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Other</span></span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>cocats <span class="ot">&lt;-</span> </span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>    master <span class="sc">|&gt;</span></span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(</span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a>        type <span class="sc">==</span> <span class="st">&quot;TTE&quot;</span> <span class="sc">&amp;</span> location <span class="sc">==</span> <span class="st">&quot;bedside&quot;</span> <span class="sc">|</span></span>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a>            type <span class="sc">==</span> <span class="st">&quot;TTE&quot;</span> <span class="sc">&amp;</span> <span class="fu">is.na</span>(location) <span class="sc">|</span></span>
+<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a>            type <span class="sc">==</span> <span class="st">&quot;stress&quot;</span> <span class="sc">&amp;</span> modifier <span class="sc">==</span> <span class="st">&quot;echo&quot;</span> <span class="sc">|</span></span>
+<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a>            type <span class="sc">==</span> <span class="st">&quot;TEE&quot;</span> <span class="sc">&amp;</span> location <span class="sc">==</span> <span class="st">&quot;bedside&quot;</span> <span class="sc">|</span></span>
+<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a>            type <span class="sc">==</span> <span class="st">&quot;TEE&quot;</span> <span class="sc">&amp;</span> <span class="fu">is.na</span>(location) <span class="sc">|</span></span>
+<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a>            type <span class="sc">==</span> <span class="st">&quot;stress&quot;</span> <span class="sc">&amp;</span> (modifier <span class="sc">==</span> <span class="st">&quot;technetium&quot;</span> <span class="sc">|</span> modifier <span class="sc">==</span> <span class="st">&quot;thallium&quot;</span>) <span class="sc">|</span></span>
+<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a>            type <span class="sc">==</span> <span class="st">&quot;CT&quot;</span> <span class="sc">|</span></span>
+<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a>            type <span class="sc">==</span> <span class="st">&quot;CMR&quot;</span> <span class="sc">&amp;</span> location <span class="sc">==</span> <span class="st">&quot;bedside&quot;</span> <span class="sc">|</span></span>
+<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a>            type <span class="sc">==</span> <span class="st">&quot;CMR&quot;</span> <span class="sc">&amp;</span> <span class="fu">is.na</span>(location) <span class="sc">|</span></span>
+<span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a>            (type <span class="sc">==</span> <span class="st">&quot;RHC&quot;</span> <span class="sc">|</span> type <span class="sc">==</span> <span class="st">&quot;LHC&quot;</span> <span class="sc">|</span> type <span class="sc">==</span> <span class="st">&quot;COR&quot;</span>) <span class="sc">|</span></span>
+<span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a>            type <span class="sc">==</span> <span class="st">&quot;TVP&quot;</span> <span class="sc">|</span></span>
+<span id="cb8-38"><a href="#cb8-38" aria-hidden="true" tabindex="-1"></a>            type <span class="sc">==</span> <span class="st">&quot;CIED&quot;</span> <span class="sc">&amp;</span> location <span class="sc">!=</span> <span class="st">&quot;interrogation&quot;</span> <span class="sc">|</span></span>
+<span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a>            type <span class="sc">==</span> <span class="st">&quot;CIED&quot;</span> <span class="sc">&amp;</span> location <span class="sc">==</span> <span class="st">&quot;interrogation&quot;</span> <span class="sc">|</span></span>
+<span id="cb8-40"><a href="#cb8-40" aria-hidden="true" tabindex="-1"></a>            type <span class="sc">==</span> <span class="st">&quot;DCCV&quot;</span> <span class="sc">|</span></span>
+<span id="cb8-41"><a href="#cb8-41" aria-hidden="true" tabindex="-1"></a>            type <span class="sc">==</span> <span class="st">&quot;PCI&quot;</span> <span class="sc">|</span></span>
+<span id="cb8-42"><a href="#cb8-42" aria-hidden="true" tabindex="-1"></a>            type <span class="sc">==</span> <span class="st">&quot;pericardiocentesis&quot;</span> <span class="sc">|</span></span>
+<span id="cb8-43"><a href="#cb8-43" aria-hidden="true" tabindex="-1"></a>            type <span class="sc">==</span> <span class="st">&quot;MCS&quot;</span> </span>
+<span id="cb8-44"><a href="#cb8-44" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">|&gt;</span></span>
+<span id="cb8-45"><a href="#cb8-45" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">modifier =</span> <span class="fu">case_when</span>(</span>
+<span id="cb8-46"><a href="#cb8-46" aria-hidden="true" tabindex="-1"></a>        type <span class="sc">==</span> <span class="st">&quot;COR&quot;</span> <span class="sc">~</span> <span class="cn">NA_character_</span>,</span>
+<span id="cb8-47"><a href="#cb8-47" aria-hidden="true" tabindex="-1"></a>        type <span class="sc">==</span> <span class="st">&quot;RHC&quot;</span> <span class="sc">~</span> <span class="cn">NA_character_</span>,</span>
+<span id="cb8-48"><a href="#cb8-48" aria-hidden="true" tabindex="-1"></a>        type <span class="sc">==</span> <span class="st">&quot;LHC&quot;</span> <span class="sc">~</span> <span class="cn">NA_character_</span>,</span>
+<span id="cb8-49"><a href="#cb8-49" aria-hidden="true" tabindex="-1"></a>        type <span class="sc">==</span> <span class="st">&quot;PCI&quot;</span> <span class="sc">~</span> <span class="cn">NA_character_</span>,</span>
+<span id="cb8-50"><a href="#cb8-50" aria-hidden="true" tabindex="-1"></a>        type <span class="sc">==</span> <span class="st">&quot;DCCV&quot;</span> <span class="sc">~</span> <span class="cn">NA_character_</span>,</span>
+<span id="cb8-51"><a href="#cb8-51" aria-hidden="true" tabindex="-1"></a>        type <span class="sc">==</span> <span class="st">&quot;MCS&quot;</span> <span class="sc">~</span> <span class="cn">NA_character_</span>,</span>
+<span id="cb8-52"><a href="#cb8-52" aria-hidden="true" tabindex="-1"></a>        type <span class="sc">==</span> <span class="st">&quot;CIED&quot;</span> <span class="sc">&amp;</span> location <span class="sc">==</span> <span class="st">&quot;interrogation&quot;</span> <span class="sc">~</span> <span class="cn">NA_character_</span>,</span>
+<span id="cb8-53"><a href="#cb8-53" aria-hidden="true" tabindex="-1"></a>        type <span class="sc">==</span> <span class="st">&quot;CIED&quot;</span> <span class="sc">&amp;</span> <span class="sc">!</span>location <span class="sc">==</span> <span class="st">&quot;interrogation&quot;</span> <span class="sc">~</span> <span class="cn">NA_character_</span>,</span>
+<span id="cb8-54"><a href="#cb8-54" aria-hidden="true" tabindex="-1"></a>        type <span class="sc">==</span> <span class="st">&quot;TTE&quot;</span> <span class="sc">~</span> <span class="cn">NA_character_</span>,</span>
+<span id="cb8-55"><a href="#cb8-55" aria-hidden="true" tabindex="-1"></a>        type <span class="sc">==</span> <span class="st">&quot;TEE&quot;</span> <span class="sc">~</span> <span class="cn">NA_character_</span>,</span>
+<span id="cb8-56"><a href="#cb8-56" aria-hidden="true" tabindex="-1"></a>        type <span class="sc">==</span> <span class="st">&quot;stress&quot;</span> <span class="sc">&amp;</span> modifier <span class="sc">==</span> <span class="st">&quot;technetium&quot;</span> <span class="sc">~</span> <span class="st">&quot;nuclear&quot;</span>,</span>
+<span id="cb8-57"><a href="#cb8-57" aria-hidden="true" tabindex="-1"></a>        type <span class="sc">==</span> <span class="st">&quot;stress&quot;</span> <span class="sc">&amp;</span> modifier <span class="sc">==</span> <span class="st">&quot;thallium&quot;</span> <span class="sc">~</span> <span class="st">&quot;nuclear&quot;</span>,</span>
+<span id="cb8-58"><a href="#cb8-58" aria-hidden="true" tabindex="-1"></a>        <span class="cn">TRUE</span> <span class="sc">~</span> modifier</span>
+<span id="cb8-59"><a href="#cb8-59" aria-hidden="true" tabindex="-1"></a>    )) <span class="sc">|&gt;</span></span>
+<span id="cb8-60"><a href="#cb8-60" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">location =</span> <span class="fu">case_when</span>(</span>
+<span id="cb8-61"><a href="#cb8-61" aria-hidden="true" tabindex="-1"></a>        type <span class="sc">==</span> <span class="st">&quot;COR&quot;</span> <span class="sc">~</span> <span class="cn">NA_character_</span>,</span>
+<span id="cb8-62"><a href="#cb8-62" aria-hidden="true" tabindex="-1"></a>        type <span class="sc">==</span> <span class="st">&quot;RHC&quot;</span> <span class="sc">~</span> <span class="cn">NA_character_</span>,</span>
+<span id="cb8-63"><a href="#cb8-63" aria-hidden="true" tabindex="-1"></a>        type <span class="sc">==</span> <span class="st">&quot;LHC&quot;</span> <span class="sc">~</span> <span class="cn">NA_character_</span>,</span>
+<span id="cb8-64"><a href="#cb8-64" aria-hidden="true" tabindex="-1"></a>        type <span class="sc">==</span> <span class="st">&quot;PCI&quot;</span> <span class="sc">~</span> <span class="cn">NA_character_</span>,</span>
+<span id="cb8-65"><a href="#cb8-65" aria-hidden="true" tabindex="-1"></a>        type <span class="sc">==</span> <span class="st">&quot;pericardiocentesis&quot;</span> <span class="sc">~</span> <span class="cn">NA_character_</span>,</span>
+<span id="cb8-66"><a href="#cb8-66" aria-hidden="true" tabindex="-1"></a>        type <span class="sc">==</span> <span class="st">&quot;DCCV&quot;</span> <span class="sc">~</span> <span class="cn">NA_character_</span>,</span>
+<span id="cb8-67"><a href="#cb8-67" aria-hidden="true" tabindex="-1"></a>        type <span class="sc">==</span> <span class="st">&quot;MCS&quot;</span> <span class="sc">~</span> <span class="cn">NA_character_</span>,</span>
+<span id="cb8-68"><a href="#cb8-68" aria-hidden="true" tabindex="-1"></a>        type <span class="sc">==</span> <span class="st">&quot;CIED&quot;</span> <span class="sc">&amp;</span> <span class="sc">!</span>location <span class="sc">==</span> <span class="st">&quot;interrogation&quot;</span> <span class="sc">~</span> <span class="cn">NA_character_</span>,</span>
+<span id="cb8-69"><a href="#cb8-69" aria-hidden="true" tabindex="-1"></a>        type <span class="sc">==</span> <span class="st">&quot;TVP&quot;</span> <span class="sc">~</span> <span class="cn">NA_character_</span>,</span>
+<span id="cb8-70"><a href="#cb8-70" aria-hidden="true" tabindex="-1"></a>        type <span class="sc">==</span> <span class="st">&quot;stress&quot;</span> <span class="sc">&amp;</span> modifier <span class="sc">==</span> <span class="st">&quot;echo&quot;</span> <span class="sc">~</span> <span class="cn">NA_character_</span>,</span>
+<span id="cb8-71"><a href="#cb8-71" aria-hidden="true" tabindex="-1"></a>        type <span class="sc">==</span> <span class="st">&quot;stress&quot;</span> <span class="sc">&amp;</span> modifier <span class="sc">==</span> <span class="st">&quot;nuclear&quot;</span> <span class="sc">~</span> <span class="cn">NA_character_</span>,</span>
+<span id="cb8-72"><a href="#cb8-72" aria-hidden="true" tabindex="-1"></a>        <span class="cn">TRUE</span> <span class="sc">~</span> location</span>
+<span id="cb8-73"><a href="#cb8-73" aria-hidden="true" tabindex="-1"></a>    )) <span class="sc">|&gt;</span></span>
+<span id="cb8-74"><a href="#cb8-74" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">type =</span> <span class="fu">case_when</span>(</span>
+<span id="cb8-75"><a href="#cb8-75" aria-hidden="true" tabindex="-1"></a>        type <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;COR&quot;</span>, <span class="st">&quot;RHC&quot;</span>, <span class="st">&quot;LHC&quot;</span>) <span class="sc">~</span> <span class="st">&quot;CATH&quot;</span>,</span>
+<span id="cb8-76"><a href="#cb8-76" aria-hidden="true" tabindex="-1"></a>        <span class="cn">TRUE</span> <span class="sc">~</span> type</span>
+<span id="cb8-77"><a href="#cb8-77" aria-hidden="true" tabindex="-1"></a>    )) <span class="sc">|&gt;</span></span>
+<span id="cb8-78"><a href="#cb8-78" aria-hidden="true" tabindex="-1"></a>    <span class="fu">count</span>(type, location, modifier) </span>
+<span id="cb8-79"><a href="#cb8-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-80"><a href="#cb8-80" aria-hidden="true" tabindex="-1"></a><span class="fu">gt</span>(cocats)</span></code></pre></div>
+<div id="unijrqpgzz" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#tbrcuawtsu .gt_table {
+#unijrqpgzz .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -312,7 +642,7 @@ $(document).ready(function () {
   border-left-color: #D3D3D3;
 }
 
-#tbrcuawtsu .gt_heading {
+#unijrqpgzz .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -324,33 +654,37 @@ $(document).ready(function () {
   border-right-color: #D3D3D3;
 }
 
-#tbrcuawtsu .gt_title {
+#unijrqpgzz .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
   padding-top: 4px;
   padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
   border-bottom-color: #FFFFFF;
   border-bottom-width: 0;
 }
 
-#tbrcuawtsu .gt_subtitle {
+#unijrqpgzz .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
   padding-top: 0;
   padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
   border-top-color: #FFFFFF;
   border-top-width: 0;
 }
 
-#tbrcuawtsu .gt_bottom_border {
+#unijrqpgzz .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#tbrcuawtsu .gt_col_headings {
+#unijrqpgzz .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -365,7 +699,7 @@ $(document).ready(function () {
   border-right-color: #D3D3D3;
 }
 
-#tbrcuawtsu .gt_col_heading {
+#unijrqpgzz .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -385,7 +719,7 @@ $(document).ready(function () {
   overflow-x: hidden;
 }
 
-#tbrcuawtsu .gt_column_spanner_outer {
+#unijrqpgzz .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -397,15 +731,15 @@ $(document).ready(function () {
   padding-right: 4px;
 }
 
-#tbrcuawtsu .gt_column_spanner_outer:first-child {
+#unijrqpgzz .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#tbrcuawtsu .gt_column_spanner_outer:last-child {
+#unijrqpgzz .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#tbrcuawtsu .gt_column_spanner {
+#unijrqpgzz .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -417,8 +751,11 @@ $(document).ready(function () {
   width: 100%;
 }
 
-#tbrcuawtsu .gt_group_heading {
-  padding: 8px;
+#unijrqpgzz .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -439,7 +776,7 @@ $(document).ready(function () {
   vertical-align: middle;
 }
 
-#tbrcuawtsu .gt_empty_group_heading {
+#unijrqpgzz .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -454,15 +791,15 @@ $(document).ready(function () {
   vertical-align: middle;
 }
 
-#tbrcuawtsu .gt_from_md > :first-child {
+#unijrqpgzz .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#tbrcuawtsu .gt_from_md > :last-child {
+#unijrqpgzz .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#tbrcuawtsu .gt_row {
+#unijrqpgzz .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -481,7 +818,7 @@ $(document).ready(function () {
   overflow-x: hidden;
 }
 
-#tbrcuawtsu .gt_stub {
+#unijrqpgzz .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -490,10 +827,29 @@ $(document).ready(function () {
   border-right-style: solid;
   border-right-width: 2px;
   border-right-color: #D3D3D3;
-  padding-left: 12px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
-#tbrcuawtsu .gt_summary_row {
+#unijrqpgzz .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#unijrqpgzz .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#unijrqpgzz .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -503,17 +859,26 @@ $(document).ready(function () {
   padding-right: 5px;
 }
 
-#tbrcuawtsu .gt_first_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
+#unijrqpgzz .gt_first_summary_row {
   border-top-style: solid;
-  border-top-width: 2px;
   border-top-color: #D3D3D3;
 }
 
-#tbrcuawtsu .gt_grand_summary_row {
+#unijrqpgzz .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#unijrqpgzz .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#unijrqpgzz .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -523,7 +888,7 @@ $(document).ready(function () {
   padding-right: 5px;
 }
 
-#tbrcuawtsu .gt_first_grand_summary_row {
+#unijrqpgzz .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -533,11 +898,11 @@ $(document).ready(function () {
   border-top-color: #D3D3D3;
 }
 
-#tbrcuawtsu .gt_striped {
+#unijrqpgzz .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#tbrcuawtsu .gt_table_body {
+#unijrqpgzz .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -546,7 +911,7 @@ $(document).ready(function () {
   border-bottom-color: #D3D3D3;
 }
 
-#tbrcuawtsu .gt_footnotes {
+#unijrqpgzz .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -560,13 +925,16 @@ $(document).ready(function () {
   border-right-color: #D3D3D3;
 }
 
-#tbrcuawtsu .gt_footnote {
+#unijrqpgzz .gt_footnote {
   margin: 0px;
   font-size: 90%;
-  padding: 4px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
-#tbrcuawtsu .gt_sourcenotes {
+#unijrqpgzz .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -580,122 +948,163 @@ $(document).ready(function () {
   border-right-color: #D3D3D3;
 }
 
-#tbrcuawtsu .gt_sourcenote {
+#unijrqpgzz .gt_sourcenote {
   font-size: 90%;
-  padding: 4px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
-#tbrcuawtsu .gt_left {
+#unijrqpgzz .gt_left {
   text-align: left;
 }
 
-#tbrcuawtsu .gt_center {
+#unijrqpgzz .gt_center {
   text-align: center;
 }
 
-#tbrcuawtsu .gt_right {
+#unijrqpgzz .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#tbrcuawtsu .gt_font_normal {
+#unijrqpgzz .gt_font_normal {
   font-weight: normal;
 }
 
-#tbrcuawtsu .gt_font_bold {
+#unijrqpgzz .gt_font_bold {
   font-weight: bold;
 }
 
-#tbrcuawtsu .gt_font_italic {
+#unijrqpgzz .gt_font_italic {
   font-style: italic;
 }
 
-#tbrcuawtsu .gt_super {
+#unijrqpgzz .gt_super {
   font-size: 65%;
 }
 
-#tbrcuawtsu .gt_footnote_marks {
+#unijrqpgzz .gt_two_val_uncert {
+  display: inline-block;
+  line-height: 1em;
+  text-align: right;
+  font-size: 60%;
+  vertical-align: -0.25em;
+  margin-left: 0.1em;
+}
+
+#unijrqpgzz .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
-  font-size: 65%;
+  font-size: 75%;
+  vertical-align: 0.4em;
+}
+
+#unijrqpgzz .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#unijrqpgzz .gt_slash_mark {
+  font-size: 0.7em;
+  line-height: 0.7em;
+  vertical-align: 0.15em;
+}
+
+#unijrqpgzz .gt_fraction_numerator {
+  font-size: 0.6em;
+  line-height: 0.6em;
+  vertical-align: 0.45em;
+}
+
+#unijrqpgzz .gt_fraction_denominator {
+  font-size: 0.6em;
+  line-height: 0.6em;
+  vertical-align: -0.05em;
 }
 </style>
 <table class="gt_table">
-  <thead class="gt_header">
-    <tr>
-      <th colspan="2" class="gt_heading gt_title gt_font_normal" style>Procedure Log</th>
-    </tr>
-    <tr>
-      <th colspan="2" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style>UIC Cardiology Fellowship</th>
-    </tr>
-  </thead>
+  
   <thead class="gt_col_headings">
     <tr>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">Procedures</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">type</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">location</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">modifier</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">n</th>
     </tr>
   </thead>
   <tbody class="gt_table_body">
-    <tr><td class="gt_row gt_left gt_stub">CIED</td>
+    <tr><td class="gt_row gt_left">CATH</td>
+<td class="gt_row gt_left">NA</td>
+<td class="gt_row gt_left">NA</td>
+<td class="gt_row gt_right">254</td></tr>
+    <tr><td class="gt_row gt_left">CIED</td>
+<td class="gt_row gt_left">interrogation</td>
+<td class="gt_row gt_left">NA</td>
+<td class="gt_row gt_right">16</td></tr>
+    <tr><td class="gt_row gt_left">CIED</td>
+<td class="gt_row gt_left">NA</td>
+<td class="gt_row gt_left">NA</td>
 <td class="gt_row gt_right">35</td></tr>
-    <tr><td class="gt_row gt_left gt_stub">DCCV</td>
-<td class="gt_row gt_right">37</td></tr>
-    <tr><td class="gt_row gt_left gt_stub">EPS</td>
-<td class="gt_row gt_right">15</td></tr>
-    <tr><td class="gt_row gt_left gt_stub">LHC</td>
-<td class="gt_row gt_right">63</td></tr>
-    <tr><td class="gt_row gt_left gt_stub">MRI</td>
-<td class="gt_row gt_right">9</td></tr>
-    <tr><td class="gt_row gt_left gt_stub">PCI</td>
-<td class="gt_row gt_right">26</td></tr>
-    <tr><td class="gt_row gt_left gt_stub">pericardiocentesis</td>
+    <tr><td class="gt_row gt_left">CT</td>
+<td class="gt_row gt_left">NA</td>
+<td class="gt_row gt_left">NA</td>
 <td class="gt_row gt_right">1</td></tr>
-    <tr><td class="gt_row gt_left gt_stub">RHC</td>
-<td class="gt_row gt_right">20</td></tr>
-    <tr><td class="gt_row gt_left gt_stub">stress</td>
-<td class="gt_row gt_right">180</td></tr>
-    <tr><td class="gt_row gt_left gt_stub">TEE</td>
-<td class="gt_row gt_right">114</td></tr>
-    <tr><td class="gt_row gt_left gt_stub">TTE</td>
-<td class="gt_row gt_right">20</td></tr>
-    <tr><td class="gt_row gt_left gt_stub">TVP</td>
-<td class="gt_row gt_right">2</td></tr>
+    <tr><td class="gt_row gt_left">DCCV</td>
+<td class="gt_row gt_left">NA</td>
+<td class="gt_row gt_left">NA</td>
+<td class="gt_row gt_right">41</td></tr>
+    <tr><td class="gt_row gt_left">MCS</td>
+<td class="gt_row gt_left">NA</td>
+<td class="gt_row gt_left">NA</td>
+<td class="gt_row gt_right">5</td></tr>
+    <tr><td class="gt_row gt_left">PCI</td>
+<td class="gt_row gt_left">NA</td>
+<td class="gt_row gt_left">NA</td>
+<td class="gt_row gt_right">67</td></tr>
+    <tr><td class="gt_row gt_left">pericardiocentesis</td>
+<td class="gt_row gt_left">NA</td>
+<td class="gt_row gt_left">NA</td>
+<td class="gt_row gt_right">3</td></tr>
+    <tr><td class="gt_row gt_left">stress</td>
+<td class="gt_row gt_left">NA</td>
+<td class="gt_row gt_left">echo</td>
+<td class="gt_row gt_right">13</td></tr>
+    <tr><td class="gt_row gt_left">stress</td>
+<td class="gt_row gt_left">NA</td>
+<td class="gt_row gt_left">nuclear</td>
+<td class="gt_row gt_right">166</td></tr>
+    <tr><td class="gt_row gt_left">TEE</td>
+<td class="gt_row gt_left">bedside</td>
+<td class="gt_row gt_left">NA</td>
+<td class="gt_row gt_right">156</td></tr>
+    <tr><td class="gt_row gt_left">TEE</td>
+<td class="gt_row gt_left">NA</td>
+<td class="gt_row gt_left">NA</td>
+<td class="gt_row gt_right">129</td></tr>
+    <tr><td class="gt_row gt_left">TTE</td>
+<td class="gt_row gt_left">bedside</td>
+<td class="gt_row gt_left">NA</td>
+<td class="gt_row gt_right">33</td></tr>
+    <tr><td class="gt_row gt_left">TTE</td>
+<td class="gt_row gt_left">NA</td>
+<td class="gt_row gt_left">NA</td>
+<td class="gt_row gt_right">396</td></tr>
+    <tr><td class="gt_row gt_left">TVP</td>
+<td class="gt_row gt_left">NA</td>
+<td class="gt_row gt_left">NA</td>
+<td class="gt_row gt_right">7</td></tr>
   </tbody>
-  <tfoot class="gt_sourcenotes">
-    <tr>
-      <td class="gt_sourcenote" colspan="2">PGY-4, July 2020 to December 2020</td>
-    </tr>
-  </tfoot>
+  
   
 </table>
 </div>
-<pre><code>## # A tibble: 20 × 11
-##    site  mrn    date       dx1   dx2   dx3   procedure location modifier notes  
-##    &lt;chr&gt; &lt;chr&gt;  &lt;date&gt;     &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;     &lt;chr&gt;    &lt;chr&gt;    &lt;chr&gt;  
-##  1 JBVA  03144… 2021-02-20 dila… NICM  ETOH  &lt;NA&gt;      &lt;NA&gt;     &lt;NA&gt;     &lt;NA&gt;   
-##  2 JBVA  20021… 2021-02-20 aort… NSTE… ADHF  &lt;NA&gt;      &lt;NA&gt;     &lt;NA&gt;     &lt;NA&gt;   
-##  3 JBVA  J6626  2021-02-20 SVT   &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;      &lt;NA&gt;     &lt;NA&gt;     &lt;NA&gt;   
-##  4 ACMC  69506… 2021-02-20 &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;      &lt;NA&gt;     &lt;NA&gt;     &lt;NA&gt;   
-##  5 ACMC  57566… 2021-02-24 &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;      &lt;NA&gt;     &lt;NA&gt;     &lt;NA&gt;   
-##  6 JBVA  Z0866  2021-02-26 &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;      &lt;NA&gt;     &lt;NA&gt;     &lt;NA&gt;   
-##  7 ACMC  74375… 2021-02-26 &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;      &lt;NA&gt;     &lt;NA&gt;     inferi…
-##  8 ACMC  10203… 2021-02-26 &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;      &lt;NA&gt;     &lt;NA&gt;     &lt;NA&gt;   
-##  9 ACMC  51918… 2021-02-26 &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;      &lt;NA&gt;     &lt;NA&gt;     large …
-## 10 ACMC  50916… 2021-02-26 &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;      &lt;NA&gt;     &lt;NA&gt;     &lt;NA&gt;   
-## 11 ACMC  77575… 2021-02-26 &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;      &lt;NA&gt;     &lt;NA&gt;     &lt;NA&gt;   
-## 12 JBVA  D3260  2021-03-09 &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;      &lt;NA&gt;     &lt;NA&gt;     &lt;NA&gt;   
-## 13 JBVA  H8142  2021-07-12 &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;      &lt;NA&gt;     &lt;NA&gt;     &lt;NA&gt;   
-## 14 JBVA  H2109  2021-07-13 &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;      &lt;NA&gt;     &lt;NA&gt;     &lt;NA&gt;   
-## 15 JBVA  D6539  2021-07-13 &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;      &lt;NA&gt;     &lt;NA&gt;     &lt;NA&gt;   
-## 16 JBVA  J2106  2021-07-13 &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;      &lt;NA&gt;     &lt;NA&gt;     &lt;NA&gt;   
-## 17 JBVA  T6460  2021-07-13 &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;      &lt;NA&gt;     &lt;NA&gt;     &lt;NA&gt;   
-## 18 &lt;NA&gt;  &lt;NA&gt;   2021-07-15 &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;      &lt;NA&gt;     &lt;NA&gt;     &lt;NA&gt;   
-## 19 &lt;NA&gt;  &lt;NA&gt;   2021-07-15 &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;      &lt;NA&gt;     &lt;NA&gt;     &lt;NA&gt;   
-## 20 &lt;NA&gt;  &lt;NA&gt;   NA         &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;      &lt;NA&gt;     &lt;NA&gt;     &lt;NA&gt;   
-## # … with 1 more variable: special &lt;dbl&gt;</code></pre>
 
 
 
+</div>
+</div>
 
 </div>
 
@@ -728,6 +1137,35 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

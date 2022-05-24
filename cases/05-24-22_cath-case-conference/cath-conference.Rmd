@@ -1,7 +1,7 @@
 ---
 title: "Cath Conference"
 subtitle: "UIC Cardiac Catheterization Lab"
-date: "May 23, 2022"
+date: "May 24, 2022"
 author: "Anish Sanjay Shah, MD<br><span style = 'font-size: 70%;'>Cardiology Fellow<br>University of Illinois at Chicago</span>"
 output:
   xaringan::moon_reader:
@@ -99,6 +99,18 @@ background-size: contain
 ---
 background-image: url("ivus-still-3.gif")
 background-size: contain
+
+---
+
+## Findings
+
+Distal LM to LAD 60%  
+Mid to distal LAD 90%  
+OM1 90%  
+Proximal RCA 70%  
+Mid RCA 80% ISR  
+CTO of stent in PDA  
+180˚ to 270˚ of calcium by IVUS  
 
 ---
 background-image: url("ct-scan.gif")
