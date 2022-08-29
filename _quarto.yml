@@ -1,0 +1,35 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Clinical"
+  navbar:
+    background: primary
+    left:
+      - icon: fas fa-home fa-lg
+        href: https://asshah4.github.io
+      - text: Cases and Conferences
+        href: cases.qmd
+      - text: Procedures and Skills
+      	href: log.qmd
+    right:
+      - icon: fa-envelope fa-lg
+        href: mailto:ashah282@uic.edu
+      - icon: fa-github fa-lg
+        href: http://github.com/asshah4
+      - icon: fa-twitter fa-lg
+        href: https://twitter.com/shah_in_boots
+      - icon: fa-linkedin fa-lg
+        href: https://www.linkedin.com/in/anish-shah-326991177/
+  page-navigation: true
+  page-footer: "Copyright (c) 2022, Anish. S. Shah, MD, MS"
+
+format:
+  html:
+    theme: flatly
+    highlight: solarized-light
+    css: styles.css
+    toc: true
+    toc_float: true
+
