@@ -10,7 +10,7 @@ website:
   navbar:
     background: primary
     left:
-      - icon: fas fa-home fa-lg
+      - icon: house-door
         href: https://asshah4.github.io
       - text: Cases and Conferences
         href: case.qmd
