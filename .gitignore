@@ -3,3 +3,5 @@
 .DS_store
 log.xlsx
 .Rproj.user
+
+/.quarto/

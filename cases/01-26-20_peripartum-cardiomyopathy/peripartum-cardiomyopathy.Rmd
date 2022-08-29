@@ -3,12 +3,6 @@ title: "<span style = 'font-size: 150%;'>Peripartum Cardiomyopathy</span>"
 subtitle: "Case Conference and Review"
 date: January 26, 2020
 author: "Anish Sanjay Shah, MD<br><span style = 'font-size: 70%;'>University of Illinois at Chicago<br>Advocate Christ Medical Center</span>"
-output:
-  xaringan::moon_reader:
-    self_contained: true
-    nature:
-      titleSlideClass: [left, middle, inverse]
-      highlightLines: true
 ---
 
 ```{r setup, echo = FALSE, include = FALSE}

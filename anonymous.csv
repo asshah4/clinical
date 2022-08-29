@@ -2072,4 +2072,90 @@ NA,VT,CAD,NA,NA,clinic,NA,NA,NA
 2022-05-10,PPM,IE,NA,EPS,RV,NA,NA,NA
 2022-05-10,PPM,IE,NA,closure,femoral,venous,figure of eight stitch,NA
 2022-05-01,IE,PPM,NA,TEE,bedside,NA,NA,NA
-NA,NA,NA,NA,NA,NA,NA,NA,NA
+2022-05-23,AFL,SVT,NA,EPS,AFL,NA,NA,NA
+2022-05-23,AFL,SVT,NA,EPS,stimulator,NA,NA,NA
+2022-05-23,AFL,SVT,NA,closure,venous,femoral,Vascade,NA
+2022-05-23,AFL,SVT,NA,closure,venous,femoral,NA,NA
+2022-05-23,AFL,SVT,NA,closure,venous,femoral,NA,NA
+2022-05-24,CVA,AF,NA,CIED,ILR,NA,Medtronic Linq,NA
+2022-05-25,CHB,NICM,NA,CIED,generator exchange,NA,NA,NA
+2022-05-25,CHB,NICM,NA,CIED,lead revision,RV,NA,NA
+2022-05-25,CHB,NICM,NA,CIED,DC-ICD,NA,Boston Scientific,NA
+2022-05-25,CHB,NICM,NA,CVL,subclavian,venous,NA,NA
+2022-05-26,VHD,NA,NA,NA,clinic,NA,NA,NA
+2022-05-26,HTN,CAD,NA,NA,clinic,NA,NA,NA
+2022-05-26,AS,VHD,obesity,NA,clinic,NA,NA,NA
+2022-05-26,PVD,CAD,NA,NA,clinic,NA,NA,NA
+2022-05-26,CAD,PCI,HLD,NA,clinic,NA,NA,NA
+2022-05-26,STEMI,NA,NA,NA,clinic,NA,NA,NA
+2022-05-26,AFL,NICM,NA,NA,consult,NA,NA,NA
+2022-05-26,bradycardia,NA,NA,NA,consult,NA,NA,NA
+2022-05-26,CVA,NA,NA,NA,consult,NA,NA,NA
+2022-05-26,CVA,NA,NA,NA,consult,NA,NA,NA
+2022-05-26,AF,NA,NA,NA,consult,NA,NA,NA
+2022-06-09,CAD,SVT,ESRD,NA,clinic,NA,NA,NA
+2022-06-09,DMT1,TS,HTN,NA,clinic,NA,NA,NA
+2022-06-09,STEMI,ICM,VT,NA,clinic,NA,NA,NA
+2022-06-09,CAD,CABG,AVB,NA,clinic,NA,NA,NA
+2022-06-09,DMT2,HLD,sarcoidosis,NA,clinic,NA,NA,NA
+2022-06-09,RHD,NICM,AF,NA,clinic,NA,NA,NA
+2022-06-16,HCM,HTN,HLD,NA,clinic,NA,apical hypertrophic cardiomyopathy,1
+2022-06-16,HTN,ESRD,CABG,NA,clinic,NA,NA,NA
+2022-06-16,angina,NA,NA,NA,clinic,NA,NA,NA
+2022-06-16,HCM,HTN,AF,NA,clinic,NA,apical hypertrophic cardiomyopathy,1
+2022-06-16,ESRD,NICM,AF,NA,clinic,NA,NA,NA
+2022-06-16,NICM,NA,NA,NA,clinic,NA,NA,NA
+2022-06-16,ESRD,NA,NA,NA,clinic,NA,NA,NA
+2022-06-16,HTN,NA,NA,NA,clinic,NA,NA,1
+2022-06-19,CAD,ICM,VT,CIED,interrogation,NA,changed sensitivity down to improved 50% decay threshold to reduce A-oversensing,NA
+2022-06-21,NICM,bradycardia,LBBB,CIED,interrogation,NA,"Non-compaction patient. LVEF 35%. no events, short run of AT only",1
+2022-06-22,ICM,STEMI,ileus,AL,radial,NA,NA,NA
+2022-06-22,ICM,STEMI,ileus,COR,radial,NA,NA,NA
+2022-06-22,ICM,STEMI,ileus,LHC,radial,NA,NA,NA
+2022-06-22,ICM,STEMI,ileus,PCI,LAD,NA,mLAD to dLAD for recurrent anterior changes after recent PCI to pLAD,NA
+2022-06-05,SVT,AVRT,NA,EPS,AVRT,NA,slanted or oblique pathway by posterior mitral valve,NA
+2022-06-06,NA,NA,NA,closure,femoral,manual,NA,NA
+2022-06-06,NA,NA,NA,stress,regadenosine,technetium,NA,NA
+2022-06-06,NA,NA,NA,stress,regadenosine,technetium,NA,NA
+2022-06-06,NA,NA,NA,stress,NA,pyrophosphate,"PYP scan positive for amyloid, grade 3 uptake",1
+2022-06-06,NA,NA,NA,stress,regadenosine,technetium,NA,NA
+2022-06-08,NA,NA,NA,stress,regadenosine,technetium,NA,NA
+2022-06-08,NA,NA,NA,stress,regadenosine,technetium,NA,NA
+2022-06-08,NA,NA,NA,stress,regadenosine,technetium,"apical moderate intensity large defect, reversible",NA
+2022-06-08,NA,NA,NA,stress,regadenosine,technetium,NA,NA
+2022-06-23,pre-op,smoker,NA,NA,clinic,NA,NA,NA
+2022-06-23,HTN,HLD,NA,NA,clinic,NA,NA,NA
+2022-06-23,DMT2,NSTEMI,HLD,NA,clinic,NA,NA,NA
+2022-06-23,ICM,CHB,NA,NA,clinic,NA,NA,NA
+2022-06-23,HFrecEF,NICM,amyloidosis,NA,clinic,NA,NA,NA
+2022-06-23,hyperthyroidism,NA,NA,NA,clinic,NA,NA,NA
+2022-06-23,octagenarian,dypsnea,NA,NA,clinic,NA,NA,NA
+2022-06-23,ECG,NA,NA,NA,clinic,NA,"fractionated QRS, no CMR or CEM findings",NA
+2022-06-23,STEMI,HLD,HTN,NA,clinic,NA,NA,NA
+2022-06-30,RCM,NICM,NA,TTE,NA,NA,severe LVH and restrictive pattern,NA
+2022-07-11,NICM,TR,NA,NA,clinic,NA,NA,NA
+NA,ICM,HTN,NA,NA,clinic,NA,NA,NA
+2022-07-11,NA,NA,NA,NA,clinic,NA,NA,NA
+2022-07-15,DMT2,HTN,NA,NA,clinic,NA,NA,NA
+2022-07-15,PH,OSA,AF,NA,clinic,NA,NA,NA
+2022-07-15,ADHF,HTN,HLD,NA,clinic,NA,NA,NA
+2022-07-15,CAD,CABG,ICM,NA,clinic,NA,NA,NA
+2022-07-15,NICM,HTN,NA,NA,clinic,NA,NA,NA
+2022-07-15,angina,DMT2,HFpEF,NA,clinic,NA,NA,NA
+NA,DCM,NICM,HTN,NA,clinic,NA,NA,NA
+2022-07-15,TICM,AF,NA,NA,clinic,NA,NA,NA
+2022-07-25,DHF,AF,NA,NA,clinic,NA,NA,NA
+2022-07-28,ICM,SCD,STEMI,NA,clinic,NA,NA,NA
+NA,SSS,AF,NA,NA,NA,NA,NA,NA
+NA,RBBB,LAFB,CAD,NA,NA,NA,NA,NA
+NA,CAD,psych,NA,NA,NA,NA,NA,NA
+2022-08-15,pericarditis,PE,NA,NA,clinic,NA,NA,NA
+2022-08-15,NICM,NA,NA,NA,clinic,NA,NA,NA
+2022-08-08,NICM,PSA,NA,NA,clinic,NA,NA,NA
+2022-08-08,NICM,ADHF,NA,NA,clinic,NA,NA,NA
+2022-08-18,CHB,NA,NA,CIED,DC-PPM,NA,NA,NA
+2022-08-18,CHB,NA,NA,CVL,femoral,NA,NA,NA
+2022-08-18,CHB,NA,NA,TVP,femoral,NA,NA,NA
+2022-08-18,CHB,NA,NA,closure,femoral,Vascade,NA,NA
+2022-08-22,orthopnea,syncope,NA,NA,clinic,NA,NA,NA
+2022-08-23,CHB,NA,NA,CIED,DC-PPM,NA,NA,NA

@@ -1,6 +1,9 @@
 project:
   type: website
-  output-dir: docs
+  output-dir: .
+  render: 
+    - log.qmd
+    - case.qmd
 
 website:
   title: "Clinical"
@@ -10,9 +13,9 @@ website:
       - icon: fas fa-home fa-lg
         href: https://asshah4.github.io
       - text: Cases and Conferences
-        href: cases.qmd
+        href: case.qmd
       - text: Procedures and Skills
-      	href: log.qmd
+        href: log.qmd
     right:
       - icon: fa-envelope fa-lg
         href: mailto:ashah282@uic.edu
@@ -32,4 +35,3 @@ format:
     css: styles.css
     toc: true
     toc_float: true
-

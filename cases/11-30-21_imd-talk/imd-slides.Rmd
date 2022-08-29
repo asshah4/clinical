@@ -2,7 +2,7 @@
 title: "Types of the Wellen's Syndrome"
 subtitle: "Illinois Medical District Cath Conference"
 author: 
-- Anish Shah, MD/MSCR
+- Anish Shah, MD/MS
 - Marianna Sargsyan, MD
 - Adhir Shroff, MD/MPH
 output:
@@ -11,7 +11,6 @@ output:
     self_contained: false
     nature:
       titleSlideClass: [center, middle, inverse]
-      highlightLines: true
 ---
 
 ```{r setup, echo = FALSE, include = FALSE}
