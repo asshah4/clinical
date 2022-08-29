@@ -17,13 +17,13 @@ website:
       - text: Procedures and Skills
         href: log.qmd
     right:
-      - icon: fa-envelope fa-lg
+      - icon: envelope
         href: mailto:ashah282@uic.edu
-      - icon: fa-github fa-lg
+      - icon: github
         href: http://github.com/asshah4
-      - icon: fa-twitter fa-lg
+      - icon: twitter
         href: https://twitter.com/shah_in_boots
-      - icon: fa-linkedin fa-lg
+      - icon: linkedin
         href: https://www.linkedin.com/in/anish-shah-326991177/
   page-navigation: true
   page-footer: "Copyright (c) 2022, Anish. S. Shah, MD, MS"
