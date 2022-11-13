@@ -35,3 +35,7 @@ format:
     css: styles.css
     toc: true
     toc_float: true
+  revealjs:
+    theme: simple
+
+bibliography: ../bibliography/Cardiology.bib

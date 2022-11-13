@@ -1,9 +1,9 @@
 ---
-title: "AVNRT: Part 1"
+title: "AVNRT: Part 2"
 subtitle: Clinical Electrophysiology Conference
 author: Anish S. Shah, MD, MS
 institute: Division of Cardiology, University of Illinois at Chicago 
-date: December 7, 2022
+date: December 08, 2022
 date-format: long
 format:
   revealjs:
@@ -26,38 +26,15 @@ green <- pal_material("teal", reverse = TRUE)(9)
 grey <- pal_material("blue-grey", reverse = TRUE)(9)
 ```
 
-## Objectives
+### Objectives
 
-## Definition
+1. Review relevant anatomy and physiology of relevant components of conduction system
 
+# Anatomical Structures
 
-## Epidemiology
+# Physiological Properties
 
-Approximately 50% of SVT cases in adults are from an AVNRT mechanism [@Issa2018]
-
----
-
-::: {.attribution}
-@Porter2004
-:::
-
----
-
-# Anatomy
-
-## Nodal Pathways
-
-## Cellular Level
-
-# Mechanisms
-
-## Initiation
-
-## Maintenance
-
-# Diagnosis
-
-# Management
+# Pathways
 
 # References
 

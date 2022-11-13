@@ -26,5 +26,61 @@
     "title": "Clinical Volume",
     "section": "",
     "text": "Attaching package: 'magrittr'\n\n\nThe following object is masked from 'package:purrr':\n\n    set_names\n\n\nThe following object is masked from 'package:tidyr':\n\n    extract\n\n\nRows: 2200 Columns: 9\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr  (7): dx1, dx2, dx3, procedure, location, modifier, notes\ndbl  (1): special\ndate (1): date\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\n\nBelow is a summary of procedures that have been performed during training.\n\n\n\n\n# Specific counts\nmaster |>\n    count(category, type, location, modifier)\n\nmaster |>\n    filter(is.na(modifier) & !is.na(location)) |>\n    count(category, type, location)\n\nmaster |>\n    filter(is.na(location) & is.na(modifier)) |>\n    count(category, type)\n\nmaster |>\n    filter(!is.na(location) & is.na(modifier)) |>\n    count(category, type, location)\n\nmaster |>\n    count(type) \n\nmaster |>\n    count(category)\n\n\n\n\n\n\n\n  \n  \n    \n      type\n      location\n      modifier\n      n\n    \n  \n  \n    CATH\nNA\nNA\n256\n    CIED\ninterrogation\nNA\n18\n    CIED\nNA\nNA\n45\n    CT\nNA\nNA\n1\n    DCCV\nNA\nNA\n45\n    MCS\nNA\nNA\n5\n    PCI\nNA\nNA\n68\n    pericardiocentesis\nNA\nNA\n3\n    stress\nNA\necho\n13\n    stress\nNA\nnuclear\n173\n    TEE\nbedside\nNA\n156\n    TEE\nNA\nNA\n129\n    TTE\nbedside\nNA\n33\n    TTE\nNA\nNA\n402\n    TVP\nNA\nNA\n8"
+  },
+  {
+    "objectID": "talks/12-07-22_avnrt-basics/avnrt_basics.html#epidemiology",
+    "href": "talks/12-07-22_avnrt-basics/avnrt_basics.html#epidemiology",
+    "title": "AVNRT: Part 1",
+    "section": "Epidemiology",
+    "text": "Epidemiology\nApproximately 50% of SVT cases in adults are from an AVNRT mechanism (Issa, Miller, and Zipes 2018)"
+  },
+  {
+    "objectID": "talks/12-08-22_avnrt-advanced/avnrt_advanced.html#objectives",
+    "href": "talks/12-08-22_avnrt-advanced/avnrt_advanced.html#objectives",
+    "title": "AVNRT Mechanisms",
+    "section": "Objectives",
+    "text": "Objectives"
+  },
+  {
+    "objectID": "talks/12-07-22_avnrt-basics/avnrt_basics.html#objectives",
+    "href": "talks/12-07-22_avnrt-basics/avnrt_basics.html#objectives",
+    "title": "AVNRT: Part 1",
+    "section": "Objectives",
+    "text": "Objectives"
+  },
+  {
+    "objectID": "talks/12-07-22_avnrt-basics/avnrt_basics.html#definition",
+    "href": "talks/12-07-22_avnrt-basics/avnrt_basics.html#definition",
+    "title": "AVNRT: Part 1",
+    "section": "Definition",
+    "text": "Definition"
+  },
+  {
+    "objectID": "talks/12-07-22_avnrt-basics/avnrt_basics.html#nodal-pathways",
+    "href": "talks/12-07-22_avnrt-basics/avnrt_basics.html#nodal-pathways",
+    "title": "AVNRT: Part 1",
+    "section": "Nodal Pathways",
+    "text": "Nodal Pathways"
+  },
+  {
+    "objectID": "talks/12-07-22_avnrt-basics/avnrt_basics.html#cellular-level",
+    "href": "talks/12-07-22_avnrt-basics/avnrt_basics.html#cellular-level",
+    "title": "AVNRT: Part 1",
+    "section": "Cellular Level",
+    "text": "Cellular Level"
+  },
+  {
+    "objectID": "talks/12-07-22_avnrt-basics/avnrt_basics.html#initiation",
+    "href": "talks/12-07-22_avnrt-basics/avnrt_basics.html#initiation",
+    "title": "AVNRT: Part 1",
+    "section": "Initiation",
+    "text": "Initiation"
+  },
+  {
+    "objectID": "talks/12-07-22_avnrt-basics/avnrt_basics.html#maintenance",
+    "href": "talks/12-07-22_avnrt-basics/avnrt_basics.html#maintenance",
+    "title": "AVNRT: Part 1",
+    "section": "Maintenance",
+    "text": "Maintenance"
   }
 ]
