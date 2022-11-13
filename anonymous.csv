@@ -324,7 +324,7 @@ NA,NICM,LVAD,NA,NA,clinic,HM3,NA,NA
 2020-08-04,NSTEMI,IBD,NA,NA,consult,NA,NA,NA
 2020-08-17,OSA,obesity,DVT,NA,consult,sinus bradycardia due to vagal tone,NA,NA
 2020-08-19,OSA,obesity,SVT,NA,consult,atrial fibrillation,NA,NA
-2020-08-19,HTN,OSA,"NASH",NA,consult,sinus bradycardia,NA,NA
+2020-08-19,HTN,OSA,NASH,NA,consult,sinus bradycardia,NA,NA
 2020-08-19,NICM,CAD,AF,NA,consult,amiodarone,NA,NA
 2020-08-19,AFRVR,multiple myeloma,NA,NA,consult,NA,NA,NA
 2020-08-20,shock,cirrhosis,HRS,NA,consult,sinus bradycardia,NA,NA
@@ -2159,3 +2159,43 @@ NA,CAD,psych,NA,NA,NA,NA,NA,NA
 2022-08-18,CHB,NA,NA,closure,femoral,Vascade,NA,NA
 2022-08-22,orthopnea,syncope,NA,NA,clinic,NA,NA,NA
 2022-08-23,CHB,NA,NA,CIED,DC-PPM,NA,NA,NA
+2022-09-19,HFrEF,NA,NA,NA,clinic,NA,NA,NA
+2022-09-19,HCM,NA,NA,NA,clinic,NA,NA,NA
+2022-09-19,amyloidosis,NA,NA,NA,clinic,NA,NA,NA
+2022-09-30,HTN,NA,NA,NA,clinic,NA,NA,NA
+2022-09-30,DHF,AF,amyloidosis,NA,clinic,NA,NA,NA
+2022-09-30,NA,NA,NA,NA,NA,NA,NA,NA
+2022-09-30,DHF,AFL,NA,NA,clinic,NA,NA,NA
+2022-09-30,Marfan's syndrome,NA,NA,NA,NA,NA,NA,NA
+2022-09-30,AF,AS,TAVR,NA,clinic,NA,NA,NA
+2022-10-05,VT,syncope,ICM,CIED,SC-ICD,Abbott,NA,NA
+2022-10-05,HFrEF,LBBB,NA,CIED,CRT-D,Abbott,NA,NA
+2022-10-03,NICM,SVT,OSA,NA,clinic,NA,NA,NA
+2022-10-06,amyloidosis,NICM,LVH,NA,clinic,NA,NA,NA
+2022-10-06,ICM,CAD,PCI,NA,clinic,NA,NA,NA
+2022-10-06,AS,HTN,bradycardia,NA,clinic,NA,NA,NA
+2022-10-06,NICM,NA,NA,NA,clinic,NA,NA,NA
+2022-10-05,AF,bradycardia,NA,EPS,CTI,NA,NA,NA
+2022-10-05,AF,bradycardia,NA,EPS,PVI,NA,NA,NA
+2022-10-05,AF,bradycardia,NA,CVL,femoral,NA,NA,NA
+2022-10-05,AF,bradycardia,NA,CVL,femoral,NA,NA,NA
+2022-10-05,AF,bradycardia,NA,CVL,femoral,NA,NA,NA
+2022-10-05,AF,bradycardia,NA,CVL,femoral,NA,NA,NA
+2022-10-05,AF,bradycardia,NA,DCCV,300J,NA,NA,NA
+2022-10-05,AF,bradycardia,NA,DCCV,360J,NA,NA,NA
+2022-10-05,AF,bradycardia,NA,DCCV,360J,NA,NA,NA
+2022-10-05,AF,bradycardia,NA,DCCV,360J,NA,NA,NA
+2022-10-05,AF,bradycardia,NA,CIED,DC-PPM,NA,NA,NA
+2022-10-05,AF,bradycardia,NA,CIED,ILR,explant,NA,NA
+2022-10-14,cardiac ayloidosis,bradycardia,DHF,NA,clinic,NA,NA,NA
+2022-10-14,CAD,CABG,PAF,NA,clinic,NA,NA,NA
+2022-10-14,HTN,HLD,DHF,NA,clinic,NA,NA,NA
+2022-10-14,HTN,DHF,CHB,NA,clinic,NA,NA,NA
+2022-11-03,NA,NA,NA,TTE,NA,NA,NA,NA
+2022-11-03,AS,NA,NA,TTE,NA,NA,dynamic obstruction,NA
+2022-11-03,NA,NA,NA,TTE,NA,NA,NA,NA
+2022-11-03,LVH,HCM,NA,TTE,NA,NA,NA,NA
+2022-11-03,ICM,NA,NA,TTE,NA,NA,NA,NA
+2022-11-03,NA,NA,NA,stress,echo,treadmill,NA,NA
+2022-11-03,NA,NA,NA,stress,echo,treadmill,NA,NA
+2022-11-03,NA,NA,NA,stress,echo,dobutamine,NA,NA

@@ -21,7 +21,7 @@ print.tbl_df <- function(x, ...) {
 }
 
 # Options
-options(digits = 0)
+options(digits = 1)
 ```
 
 ```{r themer, echo=FALSE, include=FALSE, warning=FALSE}

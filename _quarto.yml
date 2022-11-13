@@ -1,9 +1,9 @@
 project:
   type: website
   output-dir: .
-  render: 
-    - log.qmd
-    - case.qmd
+  render:
+    - "*.qmd"
+    - "!*.Rmd"
 
 website:
   title: "Clinical"

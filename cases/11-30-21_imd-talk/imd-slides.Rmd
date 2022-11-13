@@ -1,16 +1,14 @@
 ---
 title: "Types of the Wellen's Syndrome"
 subtitle: "Illinois Medical District Cath Conference"
-author: 
-- Anish Shah, MD/MS
-- Marianna Sargsyan, MD
-- Adhir Shroff, MD/MPH
+author: "Anish Shah, MD/MS<br>Marianna Sargsyan, MD<br>Adhir Shroff, MD/MPH"
 output:
   xaringan::moon_reader:
     css: xaringan-themer.css
     self_contained: false
     nature:
       titleSlideClass: [center, middle, inverse]
+      highlightLines: true
 ---
 
 ```{r setup, echo = FALSE, include = FALSE}
@@ -22,11 +20,7 @@ print.tbl_df <- function(x, ...) {
 }
 
 # Options
-options(digits = 0)
-knitr::opts_chunk$set(
-  echo = FALSE,
-  eval = TRUE
-)
+options(digits = 1)
 ```
 
 ```{r themer, echo=FALSE, include=FALSE, warning=FALSE}
@@ -85,11 +79,13 @@ class: middle
 - 5F JR-4 used for RCA selective angiography
 ]
 
-.center[.right-column[
+.center[
+.right-column[
 ```{r}
 knitr::include_graphics("lb-01-rca.gif")
 ```
-]]
+]
+]
 	
 ---
 class: middle
@@ -99,11 +95,13 @@ class: middle
 - LCA selective angiography performed in multiple views
 ]
 
-.center[.right-column[
+.center[
+.right-column[
 ```{r}
 knitr::include_graphics("lb-02-spider.gif")
 ```
-]]
+]
+]
 
 ---
 class: middle
@@ -116,11 +114,13 @@ class: middle
 - Pilot 50 advanced to distal LAD
 ]
 
-.center[.right-column[
+.center[
+.right-column[
 ```{r}
 knitr::include_graphics("lb-03-wire-lad-d1.gif")
 ```
-]]
+]
+]
 
 ---
 class: middle
@@ -130,11 +130,13 @@ class: middle
 - IVUS performed showing 360 degree of calcium in ostial LAD
 ]
 
-.center[.right-column[
+.center[
+.right-column[
 ```{r}
 knitr::include_graphics("lb-ivus.gif")
 ```
-]]
+]
+]
 	
 ---
 class: middle
@@ -146,11 +148,13 @@ class: middle
 - 1 cycle at 4 atm and 4 cycles at 6 atm performed 
 ]
 
-.center[.right-column[
+.center[
+.right-column[
 ```{r}
 knitr::include_graphics("lb-04-first-balloon.gif")
 ```
-]]
+]
+]
 	
 ---
 class: middle
@@ -159,11 +163,13 @@ class: middle
 - Predilated lesion to 12 atm with NC balloon
 ]
 
-.center[.right-column[
+.center[
+.right-column[
 ```{r}
 knitr::include_graphics("lb-05-stent-position.gif")
 ```
-]]
+]
+]
 	
 ---
 class: middle
@@ -173,11 +179,13 @@ class: middle
 - Post dilated with 4.5 mm NC balloon 
 ]
 
-.center[.right-column[
+.center[
+.right-column[
 ```{r}
 knitr::include_graphics("lb-06-stent-deployed.gif")
 ```
-]]
+]
+]
 	
 ---
 class: middle
@@ -188,11 +196,13 @@ class: middle
 - No evidence of dissection, perforation, or distal embolization
 ]
 
-.center[.right-column[
+.center[
+.right-column[
 ```{r}
 knitr::include_graphics("lb-08-final.gif")
 ```
-]]
+]
+]
 	
 ---
 class: middle, inverse

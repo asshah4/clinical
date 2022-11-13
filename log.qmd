@@ -2,7 +2,9 @@
 title: "Clinical Volume"
 ---
 
-```{r setup, include = FALSE}
+```{r}
+#| label: setup
+#| include: false
 knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 library(gt)
@@ -12,9 +14,9 @@ library(glue)
 As part of both residency and fellowship training, volume is an important part of both procedural competence and clinical skills. 
 
 
-
-```{r, files, echo = FALSE}
-# Main log
+```{r}
+#| label: download
+#| echo: false
 source("R/make-anonymous.R", local = knitr::knit_global())
 log <- readr::read_csv("anonymous.csv") 
 
@@ -30,7 +32,10 @@ clinical <- subset(log, is.na(procedure))
 
 Below is a summary of procedures that have been performed during training.
 
-```{r, procedures}
+```{r}
+#| label: summary
+#| echo: false
+
 # Master list
 types <- list(
 	cath = c("COR", "RHC", "LHC", "PCI", "pericardiocentesis", "MCS"),
@@ -71,7 +76,10 @@ master <- full_join(tbl, subtypes, by = "type")
 ```
 
 
-```{r, eval = FALSE}
+```{r}
+#| label: counts
+#| eval: false
+
 # Specific counts
 master |>
 	count(category, type, location, modifier)
@@ -95,7 +103,9 @@ master |>
 	count(category)
 ```	
 
-```{r, cocats}
+```{r}
+#| label: cocats
+#| echo: false
 # Required COCATS procedures for fellowship
 	# TTE performed (150)
 	# TTE interpreted (300)
