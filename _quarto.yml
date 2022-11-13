@@ -1,6 +1,6 @@
 project:
   type: website
-  output-dir: docs
+  output-dir: .
   render: 
     - log.qmd
     - case.qmd
