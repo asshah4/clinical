@@ -1,0 +1,253 @@
+---
+title: "Typical AVNRT"
+subtitle: Clinical Electrophysiology Conference
+author: Anish S. Shah, MD, MS
+institute: Division of Cardiology, University of Illinois at Chicago 
+date: December 7, 2022
+date-format: long
+engine: knitr
+format:
+  revealjs:
+    transition: fade
+    transition-speed: fast
+    slide-number: true
+    incremental: false
+revealjs-plugins:
+  - attribution
+---
+
+```{r}
+#| label: setup
+#| echo: false
+library(tidyverse)
+library(coraline)
+library(ggsci)
+
+blue <- pal_material("blue", reverse = TRUE)(9)
+orange <- pal_material("yellow", reverse = TRUE)(9)
+red <- pal_material("pink", reverse = TRUE)(9)
+green <- pal_material("teal", reverse = TRUE)(9)
+grey <- pal_material("blue-grey", reverse = TRUE)(9)
+```
+
+> When you come to a fork in the road, take it.
+
+. . .
+
+::: {.right} 
+\~ Yogi Berra
+:::
+
+## Objectives
+
+1. Understand the relevant anatomy and physiology that allow for AVNRT
+1. Know how to diagnose typical AVNRT from ...
+	- Clinical history
+	- Surface ECG
+	- Intracardiac electrograms
+1. Understand the underlying mechanisms behind treatment strategies
+
+
+## {.smaller}
+
+| Abbr. | Abbreviation |
+|:--- |:---- |
+| AAD | antiarrhythmia drugs | 
+| AH | atrial-His |
+| AP | accessory pathway |
+| [AVNRT]{.orange} | AV nodal reentrant tachycardia |
+| d/pCS | distal/proximal coronary sinus |
+| DAD | delayed after-depolarization |
+| EAD | early after-depolarization | 
+| HPS | His-Purkinje system |
+| HB | His bundle |
+| HA | His-atrial interval |
+| HV | His-ventricular interval |
+| ST | sinus tachycardia |
+| SVT | supraventricular tachycardia |
+| TCL | tachycardia cycle length |
+
+## Outline
+
+1. Introduction to AVNRT
+1. Non-invasive diagnosis
+1. Non-invasive treatment approach
+1. Relevant anatomy and physiology
+1. Electrograms
+
+## Definition 
+
+- SVT implies involvement of &ge; 1 structure above the bifurcation of the His bundle (HB).
+- [AVNRT]{.orange} is usually a narrow-complex tachycardia that uses the AV node, and functional/anatomical pathways (slow/fast)
+- [Typical AVNRT]{.orange} uses a [slow]{.red} conducting antegrade pathway and a [fast]{.blue} conducting retrograde limb
+
+. . .
+
+[_Remains unclear if the muscular atrium or structures within the Triangle of Koch are obligate part of reentry or passive bystanders_]{.grey}
+
+# Diagnosis
+
+---
+
+- Most common paroxysmal supraventricular tachycardia [@Kwaku2002]
+- Approximately 50% of SVT cases in adults are from an AVNRT mechanism  [@Issa2018]
+- Woman are affected twice as frequently as men [@Goyal1996]
+- Most patients are between 18-40 years of age [@Goyal1996]
+- [Typical AVNRT]{.orange} accounts for 90% of cases
+
+---
+
+![](svt-incidence-by-age.png){.r-stretch}
+
+::: attribution
+Porter et al 2004, HRS [@Porter2004]
+:::
+
+## {background-image="svt-example.png" background-size="cover"}
+
+::: {.center}
+[What's the rhythm?]{.red}
+:::
+
+---
+
+## A [differential]{.green} for a regular SVT?
+
+::: {.columns}
+
+::: {.column width="45%"}
+__Narrow QRS__
+
+- AVNRT
+- AT
+- Orthodromic AVRT due to an accessory pathway
+- AFL with fixed AV conduction
+- SANRT
+- High septal VT
+- ST
+:::
+
+::: {.column width="45%"}
+__Wide QRS__
+
+- AVNRT or AT  with aberrancy
+- AVNRT with a bystander accessory pathway
+- Antidromic AVRT due to an accessory pathway
+- SVT with wider QRS due to electrolyte/AAD therapies
+:::
+
+:::
+
+---
+
+## Does the history matter?
+
+- Sudden onset and termination (often positional) more often re-entrant
+- Abortive measures such as drinking iced water
+- Dizziness and hypotension occur more commonly in short RP tachycardias
+- Polyuria/diuresis during tachycardia or at termination due to increased ANP secretion [@Abe1997b]
+
+---
+
+What next?
+
+::: {.fragment .highlight-red}
+- Physical exam?
+:::
+- 24-48 hour Holter?
+- 2-4 weeks of cardiac event monitoring?
+- Exercise testing?
+- Echocardiogram?
+- EP testing?
+
+---
+
+![](frog-sign.mp4){.r-stretch}
+
+::: attribution
+https://youtu.be/csVn_kvdeBM
+:::
+
+## Does the exam matter?
+
+- _Neck pounding_ manifests with continuous pulsing cannon A waves, as the RA contracts against a closed tricuspid valve, described as the [frog sign]{.green} [@Sakhuja2009]
+	- Does not occur in orthodromic AVRT, as longer VA interval separates the chamber contractions
+	- 7-fold increase in AVNRT over other SVT with this symptom 
+	
+---
+
+![](esc-narrow-qrs-dx-flowchart.png){.r-stretch}
+
+::: attribution
+2019 ESC SVT Guidelines [@Brugada2020a]
+:::
+
+# Treatment
+
+
+## Guidelines
+
+::: columns
+
+::: {.column width="50%"}
+![](esc-tachycardia-updates.png){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+![](esc-avnrt-updates.png){fig-align="center"}
+:::
+
+:::
+
+::: attribution
+2019 ESC SVT Guidelines [@Brugada2020a]
+:::
+
+---
+
+![](esc-avnrt-treatment-strategy.png){.r-stretch}
+
+::: attribution
+2019 ESC SVT Guidelines [@Brugada2020a]
+:::
+
+## Vagal Maneuvers 
+
+::: columns
+
+::: {.column width="50%"}
+__Valsalva maneuver__
+
+- Leg raise c- blowing at 43%
+XXX
+:::
+
+::: {.column width="50%"}
+__Carotid sinus massage__
+
+- Carotid sinus, 5 seconds
+XXX
+:::
+
+:::
+
+## Adenosine
+
+90% success rate:
+
+1. 6 mg bolus
+1. 12 mg bolus
+1. 18 mg bolus
+
+Adenosine works on Y2a receptor by increasing XXX
+
+::: aside
+Can repeat doses after 1 minute, as end-organ effects are complete within 30 seconds.
+:::
+
+# References
+
+## {.smaller}
+
+::: {#refs}
+:::

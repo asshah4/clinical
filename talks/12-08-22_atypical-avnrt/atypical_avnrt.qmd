@@ -5,9 +5,13 @@ author: Anish S. Shah, MD, MS
 institute: Division of Cardiology, University of Illinois at Chicago 
 date: December 08, 2022
 date-format: long
+engine: knitr
 format:
   revealjs:
-    theme: simple
+    transition: fade
+    transition-speed: fast
+    slide-number: true
+    incremental: false
 revealjs-plugins:
   - attribution
 ---
@@ -26,7 +30,14 @@ green <- pal_material("teal", reverse = TRUE)(9)
 grey <- pal_material("blue-grey", reverse = TRUE)(9)
 ```
 
-### Objectives
+## Differential
+
+1. Atypical AVNRT
+1. Non-reentrant junctional tachycardia (junctional ectopic tachycardia)
+1. Non-paroyxsmal junctional tachycardia (d/t digitalis-induced DADs)
+1. Dual AV nodal tachycardia (repetitive retrograde concealment or "linking" phenomenon)
+
+## Objectives
 
 1. Review relevant anatomy and physiology of relevant components of conduction system
 

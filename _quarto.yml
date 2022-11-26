@@ -32,10 +32,12 @@ format:
   html:
     theme: flatly
     highlight: solarized-light
-    css: styles.css
+    css: styles.scss
     toc: true
     toc_float: true
   revealjs:
-    theme: simple
+    theme: [simple, styles.scss]
+    slide-tone: true
 
 bibliography: ../bibliography/Cardiology.bib
+csl: ../bibliography/jacc.csl
