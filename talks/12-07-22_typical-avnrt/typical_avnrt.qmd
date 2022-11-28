@@ -205,7 +205,7 @@ https://youtu.be/csVn_kvdeBM
 
 ---
 
-![](esc-avnrt-treatment-strategy.png){.r-stretch}
+![](esc-avnrt-treatment-strategy.png){fig-align="center" .r-stretch}
 
 ::: attribution
 2019 ESC SVT Guidelines [@Brugada2020a]
