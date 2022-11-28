@@ -106,7 +106,7 @@ Porter et al 2004, HRS [@Porter2004]
 ## {background-image="svt-example.png" background-size="cover"}
 
 ::: {.center}
-[What's the rhythm?]{.red}
+[What's the rhythm?]{.green}
 :::
 
 ---
@@ -176,11 +176,7 @@ https://youtu.be/csVn_kvdeBM
 	
 ---
 
-![](esc-narrow-qrs-dx-flowchart.png){.r-stretch}
-
-::: attribution
-2019 ESC SVT Guidelines [@Brugada2020a]
-:::
+![](esc-narrow-qrs-dx-flowchart.png){fig-align="center"}
 
 # Treatment
 
@@ -207,43 +203,50 @@ https://youtu.be/csVn_kvdeBM
 
 ![](esc-avnrt-treatment-strategy.png){fig-align="center" .r-stretch}
 
-::: attribution
-2019 ESC SVT Guidelines [@Brugada2020a]
-:::
+## Vagal Maneuvers {.smaller}
 
-## Vagal Maneuvers 
+---
+
+### Valsalva maneuver
+
+- Also called _Flack's test_, where intrapleural pressure is raised to 40 mm Hg (expiration against closed airway)
+- Bradycardia effect seen within first 10-15 seconds
+
+---
+
+### Carotid sinus massage
+
+1. Holding constant pressure (not a "massage") for 5-10 seconds
+1. Increases pressure in carotid body, firing baroreceptors
+1. SNS afferent response leads to PNS efferents via vagus (right = SA, left = AV)
+1. Responses...
+	- _cardioinhibitory_ with &ge; 3s pause
+	- _vasodepressor_ is drop of &ge; 50 mm Hg in pressure
+	- _mixed_
+	
+---
+
+### Adenosine
 
 ::: columns
 
 ::: {.column width="50%"}
-__Valsalva maneuver__
-
-- Leg raise c- blowing at 43%
-XXX
-:::
-
-::: {.column width="50%"}
-__Carotid sinus massage__
-
-- Carotid sinus, 5 seconds
-XXX
-:::
-
-:::
-
-## Adenosine
-
 90% success rate:
 
 1. 6 mg bolus
 1. 12 mg bolus
 1. 18 mg bolus
 
-Adenosine works on Y2a receptor by increasing XXX
-
-::: aside
-Can repeat doses after 1 minute, as end-organ effects are complete within 30 seconds.
+Repeat dosing after 1 minute (30 seconds for complete effect)
 :::
+
+::: {.column width="50%"}
+- an endogenous purine nuceloside, binding to cardiac adenosine A1 receptors 
+- dose-related prolongation of AV conduction at AH interval
+:::
+
+:::
+
 
 # References
 
