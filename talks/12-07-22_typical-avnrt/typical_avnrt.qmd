@@ -16,11 +16,14 @@ revealjs-plugins:
   - attribution
 ---
 
+# Introduction
+
 ```{r}
 #| label: setup
 #| echo: false
 library(tidyverse)
 library(coraline)
+library(sf)
 library(ggsci)
 
 blue <- pal_material("blue", reverse = TRUE)(9)
@@ -48,6 +51,16 @@ grey <- pal_material("blue-grey", reverse = TRUE)(9)
 1. Understand the underlying mechanisms behind treatment strategies
 
 
+## Outline
+
+1. Introduction to AVNRT
+1. Non-invasive diagnosis
+1. Non-invasive treatment approach
+1. Relevant anatomy and physiology
+1. Electrograms
+
+---
+
 ## {.smaller}
 
 | Abbr. | Abbreviation |
@@ -67,23 +80,19 @@ grey <- pal_material("blue-grey", reverse = TRUE)(9)
 | SVT | supraventricular tachycardia |
 | TCL | tachycardia cycle length |
 
-## Outline
-
-1. Introduction to AVNRT
-1. Non-invasive diagnosis
-1. Non-invasive treatment approach
-1. Relevant anatomy and physiology
-1. Electrograms
+---
 
 ## Definition 
 
-- SVT implies involvement of &ge; 1 structure above the bifurcation of the His bundle (HB).
+- SVT implies involvement of &ge; 1 structure above bifurcation of the His bundle (HB).
 - [AVNRT]{.orange} is usually a narrow-complex tachycardia that uses the AV node, and functional/anatomical pathways (slow/fast)
 - [Typical AVNRT]{.orange} uses a [slow]{.red} conducting antegrade pathway and a [fast]{.blue} conducting retrograde limb
 
 . . .
 
 [_Remains unclear if the muscular atrium or structures within the Triangle of Koch are obligate part of reentry or passive bystanders_]{.grey}
+
+---
 
 # Diagnosis
 
@@ -178,8 +187,8 @@ https://youtu.be/csVn_kvdeBM
 
 ![](esc-narrow-qrs-dx-flowchart.png){fig-align="center"}
 
-# Treatment
 
+# Treatment
 
 ## Guidelines
 
@@ -247,6 +256,23 @@ Repeat dosing after 1 minute (30 seconds for complete effect)
 
 :::
 
+# Anatomy and Physiology
+
+## Gross Anatomy
+
+```{r}
+ra <- coraline::cardiac_atlas$right_atrium_rao
+
+ggplot() +
+	geom_sf(data = ra$chambers) +
+	geom_sf(data = ra$vessels) +
+	geom_sf(data = ra$projections) +
+	geom_sf(data = ra$valves) +
+	geom_sf(data = ra$septum) +
+	geom_sf(data = ra$conduction) +
+	theme_void()
+
+```
 
 # References
 
