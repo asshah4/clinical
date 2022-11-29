@@ -221,6 +221,8 @@ https://youtu.be/csVn_kvdeBM
 - Also called _Flack's test_, where intrapleural pressure is raised to 40 mm Hg (expiration against closed airway)
 - Bradycardia effect seen within first 10-15 seconds
 
+![](valsalva-hemodynamics.png)
+
 ---
 
 ### Carotid sinus massage
@@ -246,7 +248,7 @@ https://youtu.be/csVn_kvdeBM
 1. 12 mg bolus
 1. 18 mg bolus
 
-Repeat dosing after 1 minute (30 seconds for complete effect)
+Repeat dosing after 1 minute (30 seconds for complete effect). Better efficacy with "single syringe strategy" [@Kotruchin2022]
 :::
 
 ::: {.column width="50%"}
