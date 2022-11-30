@@ -260,21 +260,64 @@ Repeat dosing after 1 minute (30 seconds for complete effect). Better efficacy w
 
 # Anatomy and Physiology
 
-## Gross Anatomy
+## Right Atrium {auto-animate=true}
 
 ```{r}
-ra <- coraline::cardiac_atlas$right_atrium_rao
+#| include: false
 
-ggplot() +
-	geom_sf(data = ra$chambers) +
-	geom_sf(data = ra$vessels) +
-	geom_sf(data = ra$projections) +
-	geom_sf(data = ra$valves) +
-	geom_sf(data = ra$septum) +
-	geom_sf(data = ra$conduction) +
-	theme_void()
+# SF objects
+chambers <- coraline::cardiac_atlas$right_atrium_rao$chambers
+vessels <- coraline::cardiac_atlas$right_atrium_rao$vessels
+projections <- coraline::cardiac_atlas$right_atrium_rao$projections
+valves <- coraline::cardiac_atlas$right_atrium_rao$valves
+septum <- coraline::cardiac_atlas$right_atrium_rao$septum
+conduction <- coraline::cardiac_atlas$right_atrium_rao$conduction
 
+# figure
+ra <-
+	ggplot() + 
+	geom_sf(data = chambers,
+					fill = grey[5],
+					alpha = 0.5) +
+	geom_sf(data = septum,
+					fill = grey[5],
+					alpha = 0.5) +
+	geom_sf(data = chambers[chambers$view == "cross",],
+					fill = grey[1],
+					alpha = 0.2) +
+	geom_sf(data = septum[septum$view == "cross",],
+					fill = grey[1],
+					alpha = 0.2) +
+	geom_sf(data = vessels[vessels$type == "venous",],
+					fill = blue[1],
+					alpha = 0.7) +
+	geom_sf(data = vessels[vessels$type == "arterial",],
+					fill = red[1],
+					alpha = 0.7) +
+	geom_sf(data = valves,
+					fill = grey[9],
+					alpha = 0.9) +
+	geom_sf(data = projections, 
+					fill = red[7],
+					alpha = 0.8) +
+	theme_void() 
 ```
+
+```{r}
+ra +
+	geom_sf_label(data = chambers, aes(label = label)) + 
+	geom_sf_label(data = valves, aes(label = label)) + 
+	geom_sf_label(data = septum, aes(label = label)) 
+```
+
+## {auto-animate=TRUE}
+
+```{r}
+ra +
+	geom_sf(data = conduction, fill = orange[2], alpha = 0.9) +
+	geom_sf_label(data = conduction, aes(label = label)) 
+```
+
 
 # References
 
