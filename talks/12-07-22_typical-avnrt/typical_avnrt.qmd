@@ -318,6 +318,11 @@ ra +
 	geom_sf_label(data = conduction, aes(label = label)) 
 ```
 
+# TODO
+
+- slow and fast pathways
+- intracardiac EGM
+- needed components for typical AVNRT
 
 # References
 
