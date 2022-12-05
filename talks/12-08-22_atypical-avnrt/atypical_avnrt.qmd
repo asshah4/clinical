@@ -23,27 +23,12 @@ jupyter: python3
 library(tidyverse)
 library(coraline)
 library(ggsci)
-library(JuliaCall)
 
 blue <- pal_material("blue", reverse = TRUE)(9)
 orange <- pal_material("yellow", reverse = TRUE)(9)
 red <- pal_material("pink", reverse = TRUE)(9)
 green <- pal_material("teal", reverse = TRUE)(9)
 grey <- pal_material("blue-grey", reverse = TRUE)(9)
-```
-
-```{julia}
-#| label: fig-covariance
-#| fig-cap: "Covariance ellipses"
-
-using Plots
-
-plot(sin,
-     x -> sin(2x),
-     0,
-     6.28,
-     leg=false,
-     fill=(0,:lavender))
 ```
 
 
