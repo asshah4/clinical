@@ -1,5 +1,5 @@
 ---
-title: "AVNRT: Part 2"
+title: "Atypical AVNRT"
 subtitle: Clinical Electrophysiology Conference
 author: Anish S. Shah, MD, MS
 institute: Division of Cardiology, University of Illinois at Chicago 
@@ -22,6 +22,9 @@ jupyter: python3
 #| echo: false
 library(tidyverse)
 library(coraline)
+library(rhythm)
+library(sf)
+library(scales)
 library(ggsci)
 
 blue <- pal_material("blue", reverse = TRUE)(9)
@@ -29,6 +32,17 @@ orange <- pal_material("yellow", reverse = TRUE)(9)
 red <- pal_material("pink", reverse = TRUE)(9)
 green <- pal_material("teal", reverse = TRUE)(9)
 grey <- pal_material("blue-grey", reverse = TRUE)(9)
+
+find_project_folder <- function() {
+	x <- sessionInfo()$running
+	if (grepl("mac", x)) {
+		file.path("/Users", "asshah4", "projects")
+	} else if (grepl("Windows", x)) {
+		file.path("C:/Users", "asshah4", "projects")
+	}
+}
+
+loc <- file.path(find_project_folder(), "clinical", "talks", "12-08-22_atypical-avnrt")
 ```
 
 
@@ -48,6 +62,17 @@ grey <- pal_material("blue-grey", reverse = TRUE)(9)
 # Physiological Properties
 
 # Pathways
+
+# Electrophysiological Concepts
+
+## Evaluation
+
+1. Mode of initiation of tachycardia
+1. Atrial activation sequence during tachycardia
+1. Influence of bundle branch block on conduction and cycle length during tachycardia
+1. Requirement of atria/ventricle for initiation and maintenance of tachcyardia
+1. Effect of atrial/ventricular stiulation during tachycardia
+1. Effect of drugs or physiological maneuvers on tachycardia
 
 # TODO
 

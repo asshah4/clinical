@@ -25,6 +25,7 @@ library(tidyverse)
 library(coraline)
 library(rhythm)
 library(sf)
+library(scales)
 library(ggsci)
 
 blue <- pal_material("blue", reverse = TRUE)(9)
@@ -270,9 +271,56 @@ Repeat dosing after 1 minute (30 seconds for complete effect). Better efficacy w
 
 :::
 
-# Anatomy and Physiology
+# A Case Study {.r-fit-text}
 
-## Right Atrium
+## Surface Electrocardiograms
+
+---
+
+![](ecg-case-nsr.png)
+
+---
+
+![](ecg-case-svt-old.png)
+
+---
+
+![](ecg-case-svt-new.png)
+
+
+---
+
+::: {.columns}
+
+::: {.column width="50%"}
+__Sinus Rhythm__
+
+- Normal P and R axis
+- RR = 900
+- PP = 900
+- QRS = 80
+- P = 120
+- PR = 160
+- QT = 440
+
+:::
+
+::: {.column width="50%"}
+__SVT__
+
+- Suspected retro-grade P 
+- RR = 350
+- QRS = 70
+- PR = 300 
+::: {.fragment .highlight-red}
+- RP = 40
+:::
+
+:::
+
+:::
+
+## Right Atrial Anatomy 
 
 ```{r}
 #| include: false
@@ -284,57 +332,143 @@ projections <- coraline::cardiac_atlas$right_atrium_rao$projections
 valves <- coraline::cardiac_atlas$right_atrium_rao$valves
 septum <- coraline::cardiac_atlas$right_atrium_rao$septum
 conduction <- coraline::cardiac_atlas$right_atrium_rao$conduction
+reference <- coraline::cardiac_atlas$right_atrium_rao$reference
 
-# figure
+# Base figure
 ra <-
 	ggplot() + 
-	geom_sf(data = chambers,
-					fill = grey[5],
-					alpha = 0.5) +
-	geom_sf(data = septum,
-					fill = grey[5],
-					alpha = 0.5) +
-	geom_sf(data = chambers[chambers$view == "cross",],
-					fill = grey[1],
-					alpha = 0.2) +
-	geom_sf(data = septum[septum$view == "cross",],
-					fill = grey[1],
-					alpha = 0.2) +
-	geom_sf(data = vessels[vessels$type == "venous",],
-					fill = blue[1],
-					alpha = 0.7) +
-	geom_sf(data = vessels[vessels$type == "arterial",],
-					fill = red[1],
-					alpha = 0.7) +
-	geom_sf(data = valves,
-					fill = grey[9],
-					alpha = 0.9) +
-	geom_sf(data = projections, 
-					fill = red[7],
-					alpha = 0.8) +
-	theme_void() 
+	geom_sf(data = chambers, fill = grey[9]) +
+	geom_sf(data = septum, fill = grey[9]) +
+	geom_sf(data = vessels, fill = grey[9]) + 
+	geom_sf(data = projections, fill = grey[9]) +
+	geom_sf(data = valves, fill = grey[9]) +
+	theme_void()
 ```
 
 ---
 
 ```{r}
-#| output-location: fragment
-ra +
-	geom_sf_label(data = chambers, aes(label = label)) + 
-	geom_sf_label(data = valves, aes(label = label)) + 
-	geom_sf_label(data = septum, aes(label = label)) 
+#| label: RA base
+#| cache: true
+ra
 ```
 
 ---
 
 ```{r}
-#| output-location: fragment
+#| label: RA chambers
+#| cache: true
 ra +
-	geom_sf(data = conduction, fill = orange[2], alpha = 0.9) +
-	geom_sf_label(data = conduction, aes(label = label)) 
+	geom_sf(data = chambers, fill = red[5], alpha = 0.5) +
+	geom_sf(data = septum, fill = red[5], alpha = 0.5) +
+	geom_sf_label(data = chambers, aes(label = label)) +
+	geom_sf_label(data = septum, aes(label = label))
 ```
 
-# Intracardiac Electrograms
+---
+
+```{r}
+#| label: RA vessels
+#| cache: true
+ra +
+	geom_sf(data = chambers, fill = red[5], alpha = 0.2) +
+	geom_sf(data = septum, fill = red[5], alpha = 0.2) +
+	geom_sf(data = vessels, fill = blue[5], alpha = 0.5) +
+	geom_sf_label(data = vessels, aes(label = label), nudge_y = 1)
+```
+
+---
+
+```{r}
+#| label: RA projections and structures
+#| cache: true
+ra +
+	geom_sf(data = chambers, fill = red[5], alpha = 0.2) +
+	geom_sf(data = septum, fill = red[5], alpha = 0.2) +
+	geom_sf(data = vessels, fill = blue[5], alpha = 0.2) +
+	geom_sf(data = projections, fill = red[2], alpha = 0.5) +
+	geom_sf_label(data = projections, aes(label = label))
+```
+
+---
+
+```{r}
+#| label: RA valves
+#| cache: true
+ra +
+	geom_sf(data = chambers, fill = red[5], alpha = 0.2) +
+	geom_sf(data = septum, fill = red[5], alpha = 0.2) +
+	geom_sf(data = vessels, fill = blue[5], alpha = 0.2) +
+	geom_sf(data = projections, fill = red[2], alpha = 0.2) +
+	geom_sf(data = valves, fill = grey[9], alpha = 0.9) +
+	geom_sf_label(data = valves, aes(label = label))
+```
+
+---
+
+```{r}
+#| label: RA conduction
+#| cache: true
+ra +
+	geom_sf(data = chambers, fill = red[5], alpha = 0.2) +
+	geom_sf(data = septum, fill = red[5], alpha = 0.2) +
+	geom_sf(data = vessels, fill = blue[5], alpha = 0.2) +
+	geom_sf(data = projections, fill = red[2], alpha = 0.2) +
+	geom_sf(data = valves, fill = grey[9], alpha = 0.2) +
+	geom_sf(data = conduction, fill = orange[2], alpha = 0.5) +
+	geom_sf_label(data = conduction[conduction$component == "whole", ], aes(label = label), nudge_y = c(1.5, 3))
+```
+
+---
+
+```{r}
+#| label: RA AV node parts
+#| cache: true
+ra +
+	geom_sf(data = chambers, fill = red[5], alpha = 0.2) +
+	geom_sf(data = septum, fill = red[5], alpha = 0.2) +
+	geom_sf(data = vessels, fill = blue[5], alpha = 0.2) +
+	geom_sf(data = projections, fill = red[2], alpha = 0.2) +
+	geom_sf(data = valves, fill = grey[9], alpha = 0.2) +
+	geom_sf(data = conduction, fill = orange[1], alpha = 0.2) +
+	geom_sf(data = subset(conduction, structure == "av_node" & component != "whole"), fill = orange[1], alpha = 0.9) +
+	geom_sf_label(data = subset(conduction, structure == "av_node" & component != "whole" & type == "nodal"), aes(label = label), nudge_x = c(-3.5, 3), nudge_y = c(0, 0)) +
+	geom_sf_label(data = subset(conduction, structure == "av_node" & component != "whole" & type == "extension"), aes(label = label), nudge_x = c(-4, 5.5), nudge_y = c(-0.5, -2.5))
+```
+
+---
+
+```{r}
+#| label: RA conduction regions
+#| cache: true
+ra +
+	geom_sf(data = chambers, fill = red[5], alpha = 0.2) +
+	geom_sf(data = septum, fill = red[5], alpha = 0.2) +
+	geom_sf(data = vessels, fill = blue[5], alpha = 0.2) +
+	geom_sf(data = projections, fill = red[2], alpha = 0.2) +
+	geom_sf(data = valves, fill = grey[9], alpha = 0.2) +
+	geom_sf(data = conduction, fill = orange[1], alpha = 0.2) +
+	geom_sf(data = reference, fill = orange[2], alpha = 0.5) +
+	geom_sf_label(data = reference, aes(label = label)) 
+```
+
+## Physiology
+
+- slow pathway identification
+- fast pathway identification
+- describe why the conduction system is different
+- explain refractory perioids
+- describe anterograde/retrograde conduction
+
+1. Mode of intiation of tachycardia
+1. atrial activation sequence during tachycardia
+1. influence of budnel bracnch block on conduction / cycle length during tachycardai
+1. requirement fo atria/ventricle to initiate and sustain tachycardia
+1. atrial/ventricula r stim during tachycardia
+1. drugs/physiological maneuvers on the tachycardia
+
+
+## Intracardiac Electrograms
 
 ---
 
@@ -446,18 +580,6 @@ gg_egm(
 
 # TODO
 
-- slow pathway identification
-- fast pathway identification
-- describe why the conduction system is different
-- explain refractory perioids
-- describe anterograde/retrograde conduction
-
-1. Mode of intiation of tachycardia
-1. atrial activation sequence during tachycardia
-1. influence of budnel bracnch block on conduction / cycle length during tachycardai
-1. requirement fo atria/ventricle to initiate and sustain tachycardia
-1. atrial/ventricula r stim during tachycardia
-1. drugs/physiological maneuvers on the tachycardia
 
 # References
 
