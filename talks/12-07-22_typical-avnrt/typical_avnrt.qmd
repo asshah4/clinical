@@ -271,22 +271,15 @@ Repeat dosing after 1 minute (30 seconds for complete effect). Better efficacy w
 
 :::
 
-# A Case Study {.r-fit-text}
+# The Fork in the Road {.r-fit-text}
 
 ## Surface Electrocardiograms
 
----
+## {background-image="ecg-case-nsr.png" background-size="cover"}
 
-![](ecg-case-nsr.png)
+## {background-image="ecg-case-svt-old.png" background-size="cover"}
 
----
-
-![](ecg-case-svt-old.png)
-
----
-
-![](ecg-case-svt-new.png)
-
+## {background-image="ecg-case-svt-new.png" background-size="cover"}
 
 ---
 
@@ -311,7 +304,8 @@ __SVT__
 - Suspected retro-grade P 
 - RR = 350
 - QRS = 70
-- PR = 300 
+- PR = 300  
+
 ::: {.fragment .highlight-red}
 - RP = 40
 :::
