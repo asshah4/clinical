@@ -445,7 +445,6 @@ ra +
 	geom_sf_label(data = reference, aes(label = label)) 
 ```
 
-## 
 
 ## Physiology
 

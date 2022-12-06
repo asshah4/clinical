@@ -45,6 +45,12 @@ find_project_folder <- function() {
 loc <- file.path(find_project_folder(), "clinical", "lectures", "avnrt-series")
 ```
 
+## Objectives
+
+1. Understand the concepts of dual node physiology
+1. Know the requirements for typical AvNRT
+1. Understand the response of standard EP maneuvers in typical AVNRT
+
 ## Differential
 
 1. Atypical AVNRT
@@ -74,6 +80,7 @@ svt_start <-
 ggm(
 	data = svt_start,
 	channels = c("I", "CS", "RV", "HIS D", "HIS M"),
+	time_frame = c(1.0, 2.5),
 	annotation_channel = "I",
 	intervals = TRUE
 )
@@ -84,7 +91,7 @@ ggm(
 ```{r}
 #| cache: true
 ggm(
-	data = svt_initiation,
+	data = svt_start,
 	channels = c("I", "CS", "CS 1-2", "RV", "HIS D", "HIS M"),
 	annotation_channel = "CS 1-2",
 	intervals = TRUE
@@ -95,8 +102,10 @@ ggm(
 
 ```{r}
 #| cache: true
-x <- read_lspro(file.path(loc, "tmf_data",  "m3916-avn-erp-s1-600ms-s2-220ms.txt"))
-avn_erp <- melt_egm(x$header, x$signal, format = "lspro")
+avn_erp <- 
+	read_lspro(file.path(loc, "tmf_data",  "m3916-avn-erp-s1-600ms-s2-220ms.txt")) |>
+	{\(.x) melt_egm(.x$header, .x$signal, format = "lspro")}()
+
 ggm(
 	data = avn_erp,
 	channels = c("I", "CS", "HIS", "RV")
@@ -107,29 +116,30 @@ ggm(
 
 ```{r}
 decremental_800 <-
-	read_lspro(file.path(loc, "tmf_data", "m3916-cs-pacing-800.txt")) |>
+	read_lspro(file.path(loc, "tmf_data/m3916-cs-pacing-800.txt")) |>
 	{
 		\(.x) melt_egm(.x$header, .x$signal, format = "lspro")
 	}()
 
 decremental_700 <-
-	read_lspro(file.path(loc, "tmf_data", "m3916-cs-pace-decremental-700ms.txt")) |>
+	read_lspro(file.path(loc, "tmf_data/m3916-cs-pace-decremental-700ms.txt")) |>
 	{
 		\(.x) melt_egm(.x$header, .x$signal, format = "lspro")
 	}()
 
 decremental_640 <-
-	read_lspro(file.path(loc, "tmf_data", "m3916-cs-pace-decremental-640ms.txt")) |>
+	read_lspro(file.path(loc, "tmf_data/m3916-cs-pace-decremental-640ms.txt")) |>
 	{
 		\(.x) melt_egm(.x$header, .x$signal, format = "lspro")
 	}()
 
 decremental_400 <-
-	read_lspro(file.path(loc, "tmf_data", "m3916-cs-pace-decremental-400ms-jump.txt")) |>
+	read_lspro(file.path(loc, "tmf_data/m3916-cs-pace-decremental-400ms-jump.txt")) |>
 	{
 		\(.x) melt_egm(.x$header, .x$signal, format = "lspro")
 	}()
 ```
+
 
 ---
 
