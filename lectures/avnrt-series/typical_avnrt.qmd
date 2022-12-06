@@ -1,0 +1,187 @@
+---
+title: "Part 2: Typical AVNRT"
+subtitle: Clinical Electrophysiology Conference
+author: Anish S. Shah, MD, MS
+institute: Division of Cardiology, University of Illinois at Chicago 
+date: December 08, 2022
+date-format: long
+engine: knitr
+format:
+  revealjs:
+    transition: fade
+    transition-speed: fast
+    slide-number: true
+    incremental: false
+revealjs-plugins:
+  - attribution
+jupyter: python3
+---
+
+```{r}
+#| label: setup
+#| echo: false
+library(tidyverse)
+library(coraline)
+library(rhythm)
+library(sf)
+library(scales)
+library(ggsci)
+
+blue <- pal_material("blue", reverse = TRUE)(9)
+orange <- pal_material("yellow", reverse = TRUE)(9)
+red <- pal_material("pink", reverse = TRUE)(9)
+green <- pal_material("teal", reverse = TRUE)(9)
+grey <- pal_material("blue-grey", reverse = TRUE)(9)
+
+find_project_folder <- function() {
+	x <- sessionInfo()$running
+	if (grepl("mac", x)) {
+		file.path("/Users", "asshah4", "projects")
+	} else if (grepl("Windows", x)) {
+		file.path("C:/Users", "asshah4", "projects")
+	}
+}
+
+loc <- file.path(find_project_folder(), "clinical", "lectures", "avnrt-series")
+```
+
+## Differential
+
+1. Atypical AVNRT
+1. Non-reentrant junctional tachycardia (junctional ectopic tachycardia)
+1. Non-paroyxsmal junctional tachycardia (d/t digitalis-induced DADs)
+1. Dual AV nodal tachycardia (repetitive retrograde concealment or "linking" phenomenon)
+
+## Evaluation
+
+1. Mode of initiation of tachycardia
+1. Atrial activation sequence during tachycardia
+1. Influence of bundle branch block on conduction and cycle length during tachycardia
+1. Requirement of atria/ventricle for initiation and maintenance of tachcyardia
+1. Effect of atrial/ventricular stiulation during tachycardia
+1. Effect of drugs or physiological maneuvers on tachycardia
+
+# Intracardiac Electrograms
+
+---
+
+```{r}
+#| cache: true
+svt_start <- 
+	read_lspro(file.path(loc, "tmf_data", "m3916-svt-initiation.txt")) |>
+	{\(.x) melt_egm(.x$header, .x$signal, format = "lspro")}()
+
+ggm(
+	data = svt_start,
+	channels = c("I", "CS", "RV", "HIS D", "HIS M"),
+	annotation_channel = "I",
+	intervals = TRUE
+)
+```
+
+---
+
+```{r}
+#| cache: true
+ggm(
+	data = svt_initiation,
+	channels = c("I", "CS", "CS 1-2", "RV", "HIS D", "HIS M"),
+	annotation_channel = "CS 1-2",
+	intervals = TRUE
+)
+```
+
+---
+
+```{r}
+#| cache: true
+x <- read_lspro(file.path(loc, "tmf_data",  "m3916-avn-erp-s1-600ms-s2-220ms.txt"))
+avn_erp <- melt_egm(x$header, x$signal, format = "lspro")
+ggm(
+	data = avn_erp,
+	channels = c("I", "CS", "HIS", "RV")
+)
+```
+
+## Dual AV Node Physiology
+
+```{r}
+decremental_800 <-
+	read_lspro(file.path(loc, "tmf_data", "m3916-cs-pacing-800.txt")) |>
+	{
+		\(.x) melt_egm(.x$header, .x$signal, format = "lspro")
+	}()
+
+decremental_700 <-
+	read_lspro(file.path(loc, "tmf_data", "m3916-cs-pace-decremental-700ms.txt")) |>
+	{
+		\(.x) melt_egm(.x$header, .x$signal, format = "lspro")
+	}()
+
+decremental_640 <-
+	read_lspro(file.path(loc, "tmf_data", "m3916-cs-pace-decremental-640ms.txt")) |>
+	{
+		\(.x) melt_egm(.x$header, .x$signal, format = "lspro")
+	}()
+
+decremental_400 <-
+	read_lspro(file.path(loc, "tmf_data", "m3916-cs-pace-decremental-400ms-jump.txt")) |>
+	{
+		\(.x) melt_egm(.x$header, .x$signal, format = "lspro")
+	}()
+```
+
+---
+
+```{r}
+#| cache: true
+ggm(
+	data = decremental_800,
+	channels = c("I", "CS", "HIS"),
+	annotation_channel = "I",
+	intervals = TRUE
+)
+```
+
+---
+
+```{r}
+#| cache: true
+ggm(
+	data = decremental_700,
+	channels = c("I", "CS", "HIS"),
+	annotation_channel = "I",
+	intervals = TRUE
+)
+```
+
+---
+
+```{r}
+#| cache: true
+ggm(
+	data = decremental_640,
+	channels = c("I", "CS", "HIS"),
+	annotation_channel = "I",
+	intervals = TRUE
+)
+```
+
+---
+
+```{r}
+#| cache: true
+ggm(
+	data = decremental_400,
+	channels = c("I", "CS", "HIS"),
+	annotation_channel = "I",
+	intervals = TRUE
+)
+```
+
+# References
+
+## {.smaller}
+
+::: {#refs}
+:::
