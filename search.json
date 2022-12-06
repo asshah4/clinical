@@ -320,5 +320,117 @@
     "title": "Typical AVNRT",
     "section": "Intracardiac Electrograms",
     "text": "Intracardiac Electrograms"
+  },
+  {
+    "objectID": "lectures/avnrt-series/intro_avnrt.html#objectives",
+    "href": "lectures/avnrt-series/intro_avnrt.html#objectives",
+    "title": "Part 1: An Intro to AVNRT",
+    "section": "Objectives",
+    "text": "Objectives\n\nUnderstand the relevant anatomy and physiology that allow for AVNRT\nKnow how to diagnose typical AVNRT from …\n\nClinical history\nSurface ECG\nIntracardiac electrograms\n\nUnderstand the underlying mechanisms behind treatment strategies"
+  },
+  {
+    "objectID": "lectures/avnrt-series/intro_avnrt.html#outline",
+    "href": "lectures/avnrt-series/intro_avnrt.html#outline",
+    "title": "Part 1: An Intro to AVNRT",
+    "section": "Outline",
+    "text": "Outline\n\nIntroduction to AVNRT\nNon-invasive diagnosis\nNon-invasive treatment approach\nRelevant anatomy and physiology\nElectrograms"
+  },
+  {
+    "objectID": "lectures/avnrt-series/intro_avnrt.html#section",
+    "href": "lectures/avnrt-series/intro_avnrt.html#section",
+    "title": "Part 1: An Intro to AVNRT",
+    "section": "",
+    "text": "Abbr.\nAbbreviation\n\n\n\n\nAAD\nantiarrhythmia drugs\n\n\nAH\natrial-His\n\n\nAP\naccessory pathway\n\n\nAVNRT\nAV nodal reentrant tachycardia\n\n\nd/pCS\ndistal/proximal coronary sinus\n\n\nDAD\ndelayed after-depolarization\n\n\nEAD\nearly after-depolarization\n\n\nHPS\nHis-Purkinje system\n\n\nHB\nHis bundle\n\n\nHA\nHis-atrial interval\n\n\nHV\nHis-ventricular interval\n\n\nST\nsinus tachycardia\n\n\nSVT\nsupraventricular tachycardia\n\n\nTCL\ntachycardia cycle length"
+  },
+  {
+    "objectID": "lectures/avnrt-series/intro_avnrt.html#definition",
+    "href": "lectures/avnrt-series/intro_avnrt.html#definition",
+    "title": "Part 1: An Intro to AVNRT",
+    "section": "Definition",
+    "text": "Definition\n\nSVT implies involvement of ≥ 1 structure above bifurcation of the His bundle (HB).\nAVNRT is usually a narrow-complex tachycardia that uses the AV node, and functional/anatomical pathways (slow/fast)\n\n\nRemains unclear if there are anatomical correlates with the regions of slow versus fast conduction."
+  },
+  {
+    "objectID": "lectures/avnrt-series/intro_avnrt.html#section-1",
+    "href": "lectures/avnrt-series/intro_avnrt.html#section-1",
+    "title": "Part 1: An Intro to AVNRT",
+    "section": "",
+    "text": "What’s the rhythm?"
+  },
+  {
+    "objectID": "lectures/avnrt-series/intro_avnrt.html#a-differential-for-a-regular-svt",
+    "href": "lectures/avnrt-series/intro_avnrt.html#a-differential-for-a-regular-svt",
+    "title": "Part 1: An Intro to AVNRT",
+    "section": "A differential for a regular SVT?",
+    "text": "A differential for a regular SVT?\n\n\nNarrow QRS\n\nAVNRT\nAT\nOrthodromic AVRT due to an accessory pathway\nAFL with fixed AV conduction\nSANRT\nHigh septal VT\nST\n\n\nWide QRS\n\nAVNRT or AT with aberrancy\nAVNRT with a bystander accessory pathway\nAntidromic AVRT due to an accessory pathway\nSVT with wider QRS due to electrolyte/AAD therapies"
+  },
+  {
+    "objectID": "lectures/avnrt-series/intro_avnrt.html#does-the-history-matter",
+    "href": "lectures/avnrt-series/intro_avnrt.html#does-the-history-matter",
+    "title": "Part 1: An Intro to AVNRT",
+    "section": "Does the history matter?",
+    "text": "Does the history matter?\n\nSudden onset and termination (often positional) more often re-entrant\nAbortive measures such as drinking iced water\nDizziness and hypotension occur more commonly in short RP tachycardias\nPolyuria/diuresis during tachycardia or at termination due to increased ANP secretion (5)"
+  },
+  {
+    "objectID": "lectures/avnrt-series/intro_avnrt.html#does-the-exam-matter",
+    "href": "lectures/avnrt-series/intro_avnrt.html#does-the-exam-matter",
+    "title": "Part 1: An Intro to AVNRT",
+    "section": "Does the exam matter?",
+    "text": "Does the exam matter?\n\nNeck pounding manifests with continuous pulsing cannon A waves, as the RA contracts against a closed tricuspid valve, described as the frog sign (6)\n\nDoes not occur in orthodromic AVRT, as longer VA interval separates the chamber contractions\n7-fold increase in AVNRT over other SVT with this symptom"
+  },
+  {
+    "objectID": "lectures/avnrt-series/intro_avnrt.html#guidelines",
+    "href": "lectures/avnrt-series/intro_avnrt.html#guidelines",
+    "title": "Part 1: An Intro to AVNRT",
+    "section": "Guidelines",
+    "text": "Guidelines\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2019 ESC SVT Guidelines (7)"
+  },
+  {
+    "objectID": "lectures/avnrt-series/intro_avnrt.html#vagal-maneuvers",
+    "href": "lectures/avnrt-series/intro_avnrt.html#vagal-maneuvers",
+    "title": "Part 1: An Intro to AVNRT",
+    "section": "Vagal Maneuvers",
+    "text": "Vagal Maneuvers"
+  },
+  {
+    "objectID": "lectures/avnrt-series/intro_avnrt.html#surface-electrocardiograms",
+    "href": "lectures/avnrt-series/intro_avnrt.html#surface-electrocardiograms",
+    "title": "Part 1: An Intro to AVNRT",
+    "section": "Surface Electrocardiograms",
+    "text": "Surface Electrocardiograms"
+  },
+  {
+    "objectID": "lectures/avnrt-series/intro_avnrt.html#right-atrial-anatomy",
+    "href": "lectures/avnrt-series/intro_avnrt.html#right-atrial-anatomy",
+    "title": "Part 1: An Intro to AVNRT",
+    "section": "Right Atrial Anatomy",
+    "text": "Right Atrial Anatomy"
+  },
+  {
+    "objectID": "lectures/avnrt-series/intro_avnrt.html#physiology",
+    "href": "lectures/avnrt-series/intro_avnrt.html#physiology",
+    "title": "Part 1: An Intro to AVNRT",
+    "section": "Physiology",
+    "text": "Physiology\n\nslow pathway identification\nfast pathway identification\ndescribe why the conduction system is different\nexplain refractory perioids\ndescribe anterograde/retrograde conduction\n\n\nMode of intiation of tachycardia\natrial activation sequence during tachycardia\ninfluence of budnel bracnch block on conduction / cycle length during tachycardai\nrequirement fo atria/ventricle to initiate and sustain tachycardia\natrial/ventricula r stim during tachycardia\ndrugs/physiological maneuvers on the tachycardia"
+  },
+  {
+    "objectID": "lectures/avnrt-series/intro_avnrt.html#intracardiac-electrograms",
+    "href": "lectures/avnrt-series/intro_avnrt.html#intracardiac-electrograms",
+    "title": "Part 1: An Intro to AVNRT",
+    "section": "Intracardiac Electrograms",
+    "text": "Intracardiac Electrograms"
+  },
+  {
+    "objectID": "lectures/avnrt-series/intro_avnrt.html#dual-av-node-physiology",
+    "href": "lectures/avnrt-series/intro_avnrt.html#dual-av-node-physiology",
+    "title": "Part 1: An Intro to AVNRT",
+    "section": "Dual AV Node Physiology",
+    "text": "Dual AV Node Physiology"
+  },
+  {
+    "objectID": "lectures/avnrt-series/intro_avnrt.html#section-7",
+    "href": "lectures/avnrt-series/intro_avnrt.html#section-7",
+    "title": "Part 1: An Intro to AVNRT",
+    "section": "",
+    "text": "1. Kwaku KF, Josephson ME. Typical AVNRT - An update on mechanisms and therapy. 2002;6:414–421. Available at: https://link.springer.com/article/10.1023/A:1021140509804.\n\n\n2. Issa ZF, Miller JM, Zipes DP. Clinical arrhythmology and electrophysiology: A companion to braunwald’s heart disease. Elsevier; 2018:1–752. Available at: https://linkinghub.elsevier.com/retrieve/pii/C20140032935.\n\n\n3. Goyal R, Zivin A, Souza J, et al. Comparison of the ages of tachycardia onset in patients with atrioventricular nodal reentrant tachycardia and accessory pathway-mediated tachycardia. American Heart Journal 1996;132:765–767. Available at: https://pubmed.ncbi.nlm.nih.gov/8831363/.\n\n\n4. Porter MJ, Morton JB, Denman R, et al. Influence of age and gender on the mechanism of supraventricular tachycardia. Heart Rhythm 2004;1:393–396.\n\n\n5. Abe H, Nagatomo T, Kobayashi H, Miura Y, Masaru Araki AK, Nakashima Y. Neurohumoral and hemodynamic mechanisms of diuresis during atrioventricular nodal reentrant tachycardia. PACE - Pacing and Clinical Electrophysiology 1997;20:2783–2788. Available at: https://pubmed.ncbi.nlm.nih.gov/9392809/.\n\n\n6. Sakhuja R, Smith LM, Tseng ZH, et al. Test characteristics of neck fullness and witnessed neck pulsations in the diagnosis of typical AV nodal reentrant tachycardia. Clinical Cardiology 2009;32:E13. Available at: /pmc/articles/mid/NIHMS319317/ /pmc/articles/mid/NIHMS319317/?report=abstract https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3200305/.\n\n\n7. Brugada J, Katritsis DG, Arbelo E, et al. 2019 ESC Guidelines for themanagement of patients with supraventricular tachycardia. European Heart Journal 2020;41:655–720. Available at: www.escardio.org/guidelines."
   }
 ]
