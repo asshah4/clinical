@@ -84,8 +84,25 @@ loc <- file.path(find_project_folder(), "clinical", "lectures", "avnrt-series")
 - 2:1 block in AVNRT
 - ablative approaches for atypical
 
-# Intracardiac Electrograms
+# Electrophysiology Study
 
+## {background-image="dh_data/ecg-svt-120s.png" background-size="contain"}
+
+## {background-image="dh_data/ecg-nsr.png" background-size="contain"}
+
+## {background-image="dh_data/ecg-svt-avblock" background-size="contain"}
+
+## {background-image="dh_data/ecg-svt-long-rp-1.png" background-size="contain"}
+
+## {background-image="dh_data/ecg-svt-long-rp-2.png" background-size="contain"}
+
+---
+
+![](dh_data/cxr-1.gif)
+
+::: aside
+Three catheters - quadrapolar (RA / RV), hexapolar (His), and duodecapolar (RA > His > RV)
+:::
 ---
 
 ```{r}
@@ -139,16 +156,194 @@ ggm(
 ---
 	
 ```{r}
-#| label: dd1 at 600
+#| label: ra s2 with echo
 #| cache: true
-dd1_s1_600 <-
-	read_lspro(file.path(loc, "dh_data/lsp-dd1-pace-600.txt")) |>
+ra_s2_350 <-
+	read_lspro(file.path(loc, "dh_data/lsp-hra-s1-600-s2-350-echo-pac.txt")) |>
 	{\(.x) melt_egm(.x$header, .x$signal, format = "lspro")}()
 
 ggm(
-	data = dd1_s1_600,
+	data = ra_s2_350,
+	channels = c("I", "HIS", "DD", "RA"),
+	annotation_channel = "RA 1-2",
+	intervals = TRUE
+)
+```
+
+---
+	
+```{r}
+#| label: ra s2 with AV delay
+#| cache: true
+ra_s2_400 <-
+	read_lspro(file.path(loc, "dh_data/lsp-hra-s2-400-av-delay.txt")) |>
+	{\(.x) melt_egm(.x$header, .x$signal, format = "lspro")}()
+
+ggm(
+	data = ra_s2_400,
+	channels = c("I", "HIS", "DD", "RA"),
+	annotation_channel = "RA 1-2",
+	intervals = TRUE
+)
+```
+
+---
+
+![](dh_data/cxr-2.gif)
+
+::: aside
+Catheter repositioned such that the duodecapolar has distal in RV and mid against IAS
+:::
+
+---
+	
+```{r}
+#| label: dd1 RV pacing at 600
+#| cache: true
+dd1_rv_s1_600 <-
+	read_lspro(file.path(loc, "dh_data/lsp-dd1-in-rv-pace-600.txt")) |>
+	{\(.x) melt_egm(.x$header, .x$signal, format = "lspro")}()
+
+ggm(
+	data = dd1_rv_s1_600,
 	channels = c("I", "HIS", "DD", "RA"),
 	annotation_channel = "DD 1-2",
+	intervals = TRUE
+)
+```
+
+---
+	
+```{r}
+#| label: dd1 RV s2 at 400 no tach
+#| cache: true
+dd1_rv_s2_400 <-
+	read_lspro(file.path(loc, "dh_data/lsp-dd1-s2-400-no-tach.txt")) |>
+	{\(.x) melt_egm(.x$header, .x$signal, format = "lspro")}()
+
+ggm(
+	data = dd1_rv_s2_400,
+	channels = c("I", "HIS", "DD", "RA"),
+	annotation_channel = "DD 1-2",
+	intervals = TRUE
+)
+```
+
+---
+	
+```{r}
+#| label: ra s1 at 380 gets 2 to 1 wenckebach
+#| cache: true
+ra_s1_380_wb <-
+	read_lspro(file.path(loc, "dh_data/lsp-hra-pace-s1-380-wenckebach-2-to-1.txt")) |>
+	{\(.x) melt_egm(.x$header, .x$signal, format = "lspro")}()
+
+ggm(
+	data = ra_s1_380_wb,
+	channels = c("I", "HIS", "DD", "RA"),
+	annotation_channel = "RA 1-2",
+	intervals = TRUE
+)
+```
+
+---
+	
+```{r}
+#| label: ra s1 at 380 with an echo beat
+#| cache: true
+ra_s1_380_echo <-
+	read_lspro(file.path(loc, "dh_data/lsp-hra-pace-s1-380-echo-beat.txt")) |>
+	{\(.x) melt_egm(.x$header, .x$signal, format = "lspro")}()
+
+ggm(
+	data = ra_s1_380_echo,
+	channels = c("I", "HIS", "DD", "RA"),
+	annotation_channel = "RA 1-2",
+	intervals = TRUE
+)
+```
+
+---
+	
+```{r}
+#| label: ra s4 at 350 initiates 2:1
+#| cache: true
+ra_s4_350_wb <-
+	read_lspro(file.path(loc, "dh_data/lsp-hra-s4-350-initiation-2-to-1.txt")) |>
+	{\(.x) melt_egm(.x$header, .x$signal, format = "lspro")}()
+
+ggm(
+	data = ra_s4_350_wb,
+	channels = c("I", "HIS", "DD", "RA"),
+	annotation_channel = "RA 1-2",
+	intervals = TRUE
+)
+```
+
+---
+	
+```{r}
+#| label: tach going 1 to 1
+#| cache: true
+tach_1_to_1 <-
+	read_lspro(file.path(loc, "dh_data/lsp-tach-goes-1-to-1.txt")) |>
+	{\(.x) melt_egm(.x$header, .x$signal, format = "lspro")}()
+
+ggm(
+	data = tach_1_to_1,
+	channels = c("I", "HIS", "DD", "RA"),
+	annotation_channel = "RA 1-2",
+	intervals = TRUE
+)
+```
+
+---
+	
+```{r}
+#| label: tach breaks into NSR
+#| cache: true
+tach_breaks <-
+	read_lspro(file.path(loc, "dh_data/lsp-tach-breaks-into-sr.txt")) |>
+	{\(.x) melt_egm(.x$header, .x$signal, format = "lspro")}()
+
+ggm(
+	data = tach_breaks,
+	channels = c("I", "HIS", "DD", "RA"),
+	annotation_channel = "RA 1-2",
+	intervals = TRUE
+)
+```
+
+---
+	
+```{r}
+#| label: ra s1 at 350 initiates tach
+#| cache: true
+ra_s1_350_tach <-
+	read_lspro(file.path(loc, "dh_data/lsp-hra-s1-350-initiate-tach.txt")) |>
+	{\(.x) melt_egm(.x$header, .x$signal, format = "lspro")}()
+
+ggm(
+	data = ra_s1_350_tach,
+	channels = c("I", "HIS", "DD", "RA"),
+	annotation_channel = "RA 1-2",
+	intervals = TRUE
+)
+```
+
+---
+	
+```{r}
+#| label: ra s1 at 350 with multiple AHV intervals
+#| cache: true
+ra_s1_350_multi_av <-
+	read_lspro(file.path(loc, "dh_data/lsp-hra-s1-350-multiple-av-intervals.txt")) |>
+	{\(.x) melt_egm(.x$header, .x$signal, format = "lspro")}()
+
+ggm(
+	data = ra_s1_350_multi_av,
+	channels = c("I", "HIS", "DD", "RA"),
+	annotation_channel = "RA 1-2",
 	intervals = TRUE
 )
 ```

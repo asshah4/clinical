@@ -340,7 +340,7 @@
     "href": "lectures/avnrt-series/intro_avnrt.html#section",
     "title": "Part 1: An Intro to AVNRT",
     "section": "",
-    "text": "Abbr.\nAbbreviation\n\n\n\n\nAAD\nantiarrhythmia drugs\n\n\nAH\natrial-His\n\n\nAP\naccessory pathway\n\n\nAVNRT\nAV nodal reentrant tachycardia\n\n\nd/pCS\ndistal/proximal coronary sinus\n\n\nDAD\ndelayed after-depolarization\n\n\nEAD\nearly after-depolarization\n\n\nHPS\nHis-Purkinje system\n\n\nHB\nHis bundle\n\n\nHA\nHis-atrial interval\n\n\nHV\nHis-ventricular interval\n\n\nST\nsinus tachycardia\n\n\nSVT\nsupraventricular tachycardia\n\n\nTCL\ntachycardia cycle length"
+    "text": "Abbr.\nAbbreviation\n\n\n\n\nAAD\nantiarrhythmia drugs\n\n\nAH\natrial-His\n\n\nAP\naccessory pathway\n\n\nAVNRT\nAV nodal reentrant tachycardia\n\n\nCS\ncoronary sinus\n\n\nHPS\nHis-Purkinje system\n\n\nHB\nHis bundle\n\n\nHA\nHis-atrial interval\n\n\nHV\nHis-ventricular interval\n\n\nST\nsinus tachycardia\n\n\nSVT\nsupraventricular tachycardia\n\n\nTCL\ntachycardia cycle length"
   },
   {
     "objectID": "lectures/avnrt-series/intro_avnrt.html#definition",
@@ -432,5 +432,110 @@
     "title": "Part 1: An Intro to AVNRT",
     "section": "",
     "text": "1. Kwaku KF, Josephson ME. Typical AVNRT - An update on mechanisms and therapy. 2002;6:414–421. Available at: https://link.springer.com/article/10.1023/A:1021140509804.\n\n\n2. Issa ZF, Miller JM, Zipes DP. Clinical arrhythmology and electrophysiology: A companion to braunwald’s heart disease. Elsevier; 2018:1–752. Available at: https://linkinghub.elsevier.com/retrieve/pii/C20140032935.\n\n\n3. Goyal R, Zivin A, Souza J, et al. Comparison of the ages of tachycardia onset in patients with atrioventricular nodal reentrant tachycardia and accessory pathway-mediated tachycardia. American Heart Journal 1996;132:765–767. Available at: https://pubmed.ncbi.nlm.nih.gov/8831363/.\n\n\n4. Porter MJ, Morton JB, Denman R, et al. Influence of age and gender on the mechanism of supraventricular tachycardia. Heart Rhythm 2004;1:393–396.\n\n\n5. Abe H, Nagatomo T, Kobayashi H, Miura Y, Masaru Araki AK, Nakashima Y. Neurohumoral and hemodynamic mechanisms of diuresis during atrioventricular nodal reentrant tachycardia. PACE - Pacing and Clinical Electrophysiology 1997;20:2783–2788. Available at: https://pubmed.ncbi.nlm.nih.gov/9392809/.\n\n\n6. Sakhuja R, Smith LM, Tseng ZH, et al. Test characteristics of neck fullness and witnessed neck pulsations in the diagnosis of typical AV nodal reentrant tachycardia. Clinical Cardiology 2009;32:E13. Available at: /pmc/articles/mid/NIHMS319317/ /pmc/articles/mid/NIHMS319317/?report=abstract https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3200305/.\n\n\n7. Brugada J, Katritsis DG, Arbelo E, et al. 2019 ESC Guidelines for themanagement of patients with supraventricular tachycardia. European Heart Journal 2020;41:655–720. Available at: www.escardio.org/guidelines."
+  },
+  {
+    "objectID": "lectures/avnrt-series/atypical_avnrt.html#differential",
+    "href": "lectures/avnrt-series/atypical_avnrt.html#differential",
+    "title": "Part 3: Atypical AVNRT",
+    "section": "Differential",
+    "text": "Differential\n\nAtypical AVNRT\nNon-reentrant junctional tachycardia (junctional ectopic tachycardia)\nNon-paroyxsmal junctional tachycardia (d/t digitalis-induced DADs)\nDual AV nodal tachycardia (repetitive retrograde concealment or “linking” phenomenon)"
+  },
+  {
+    "objectID": "lectures/avnrt-series/atypical_avnrt.html#objectives",
+    "href": "lectures/avnrt-series/atypical_avnrt.html#objectives",
+    "title": "Part 3: Atypical AVNRT",
+    "section": "Objectives",
+    "text": "Objectives\n\nReview relevant anatomy and physiology of relevant components of conduction system"
+  },
+  {
+    "objectID": "lectures/avnrt-series/atypical_avnrt.html#evaluation",
+    "href": "lectures/avnrt-series/atypical_avnrt.html#evaluation",
+    "title": "Part 3: Atypical AVNRT",
+    "section": "Evaluation",
+    "text": "Evaluation\n\nMode of initiation of tachycardia\nAtrial activation sequence during tachycardia\nInfluence of bundle branch block on conduction and cycle length during tachycardia\nRequirement of atria/ventricle for initiation and maintenance of tachcyardia\nEffect of atrial/ventricular stiulation during tachycardia\nEffect of drugs or physiological maneuvers on tachycardia"
+  },
+  {
+    "objectID": "lectures/avnrt-series/intro_avnrt.html#requirements",
+    "href": "lectures/avnrt-series/intro_avnrt.html#requirements",
+    "title": "Part 1: An Intro to AVNRT",
+    "section": "Requirements",
+    "text": "Requirements\nTo initiate and maintain a reentrant rhythm:\n\n≥ 2 functionally/anatomically distinct pathways that join proximally and distally to form a closed circuit of conduction\nunidirectional block in one of those potential pathways\nslow conduction down the unblocked pathway, allowing the previous pathway to recover\n\nSina qua non of reentrant arrhythmia is the ability to reproducibly intiate the tachycardia by timed extrastimuli"
+  },
+  {
+    "objectID": "lectures/avnrt-series/intro_avnrt.html#section-5",
+    "href": "lectures/avnrt-series/intro_avnrt.html#section-5",
+    "title": "Part 1: An Intro to AVNRT",
+    "section": "",
+    "text": "1. Kwaku KF, Josephson ME. Typical AVNRT - An update on mechanisms and therapy. 2002;6:414–421. Available at: https://link.springer.com/article/10.1023/A:1021140509804.\n\n\n2. Issa ZF, Miller JM, Zipes DP. Clinical arrhythmology and electrophysiology: A companion to braunwald’s heart disease. Elsevier; 2018:1–752. Available at: https://linkinghub.elsevier.com/retrieve/pii/C20140032935.\n\n\n3. Goyal R, Zivin A, Souza J, et al. Comparison of the ages of tachycardia onset in patients with atrioventricular nodal reentrant tachycardia and accessory pathway-mediated tachycardia. American Heart Journal 1996;132:765–767. Available at: https://pubmed.ncbi.nlm.nih.gov/8831363/.\n\n\n4. Porter MJ, Morton JB, Denman R, et al. Influence of age and gender on the mechanism of supraventricular tachycardia. Heart Rhythm 2004;1:393–396.\n\n\n5. Abe H, Nagatomo T, Kobayashi H, Miura Y, Masaru Araki AK, Nakashima Y. Neurohumoral and hemodynamic mechanisms of diuresis during atrioventricular nodal reentrant tachycardia. PACE - Pacing and Clinical Electrophysiology 1997;20:2783–2788. Available at: https://pubmed.ncbi.nlm.nih.gov/9392809/.\n\n\n6. Sakhuja R, Smith LM, Tseng ZH, et al. Test characteristics of neck fullness and witnessed neck pulsations in the diagnosis of typical AV nodal reentrant tachycardia. Clinical Cardiology 2009;32:E13. Available at: /pmc/articles/mid/NIHMS319317/ /pmc/articles/mid/NIHMS319317/?report=abstract https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3200305/.\n\n\n7. Brugada J, Katritsis DG, Arbelo E, et al. 2019 ESC Guidelines for themanagement of patients with supraventricular tachycardia. European Heart Journal 2020;41:655–720. Available at: www.escardio.org/guidelines."
+  },
+  {
+    "objectID": "lectures/avnrt-series/typical_avnrt.html#objectives",
+    "href": "lectures/avnrt-series/typical_avnrt.html#objectives",
+    "title": "Part 2: Typical AVNRT",
+    "section": "Objectives",
+    "text": "Objectives\n\nUnderstand the concepts of dual node physiology\nKnow the requirements for typical AVNRT\nEvaluate the response of standard EP maneuvers in typical AVNRT"
+  },
+  {
+    "objectID": "lectures/avnrt-series/typical_avnrt.html#section",
+    "href": "lectures/avnrt-series/typical_avnrt.html#section",
+    "title": "Part 2: Typical AVNRT",
+    "section": "",
+    "text": "Abbr.\nAbbreviation\n\n\n\n\nDAD\ndelayed after-depolarization\n\n\nEAD\nearly after-depolarization\n\n\nAPD\natrial premature depolarization\n\n\nVPD\nventricular premature depolarization"
+  },
+  {
+    "objectID": "lectures/avnrt-series/typical_avnrt.html#criteria",
+    "href": "lectures/avnrt-series/typical_avnrt.html#criteria",
+    "title": "Part 2: Typical AVNRT",
+    "section": "Criteria",
+    "text": "Criteria\n\nInitiation and termination by APD/VPD during AV nodal Wenckebach cycles\nDual AV nodal physiology (differential refractory curves during APD)\nInitiation dependent on critical AH interval during slow pathway conduction\nRetrograde atrial activation with variable VA activation in Triangle of Koch\nInitiated, terminated, or reset without atrial activation\n\n\n\nSlow-fast AVNRT has atrial activation close to QRS complex, such that AH/HA > 1"
+  },
+  {
+    "objectID": "lectures/avnrt-series/typical_avnrt.html#differential",
+    "href": "lectures/avnrt-series/typical_avnrt.html#differential",
+    "title": "Part 2: Typical AVNRT",
+    "section": "Differential",
+    "text": "Differential\n\nAtypical AVNRT\nNon-reentrant junctional tachycardia (junctional ectopic tachycardia)\nNon-paroyxsmal junctional tachycardia (d/t digitalis-induced DADs)\nDual AV nodal tachycardia (repetitive retrograde concealment or “linking” phenomenon)\nAtrial tachycardia always a possibility"
+  },
+  {
+    "objectID": "lectures/avnrt-series/typical_avnrt.html#evaluation",
+    "href": "lectures/avnrt-series/typical_avnrt.html#evaluation",
+    "title": "Part 2: Typical AVNRT",
+    "section": "Evaluation",
+    "text": "Evaluation\n\nMode of initiation of tachycardia\nAtrial activation sequence during tachycardia\nInfluence of bundle branch block on conduction and cycle length during tachycardia\nRequirement of atria/ventricle for initiation and maintenance of tachcyardia\nEffect of atrial/ventricular stiulation during tachycardia\nEffect of drugs or physiological maneuvers on tachycardia"
+  },
+  {
+    "objectID": "lectures/avnrt-series/typical_avnrt.html#svt-features-prior-to-diagnostic-pacing-maneuvers",
+    "href": "lectures/avnrt-series/typical_avnrt.html#svt-features-prior-to-diagnostic-pacing-maneuvers",
+    "title": "Part 2: Typical AVNRT",
+    "section": "SVT features prior to diagnostic pacing maneuvers",
+    "text": "SVT features prior to diagnostic pacing maneuvers\nFor typical AVNRT, there are some findings to help eliminate options.\n\nVA Relationship: any pattern, but most commonly V=A and V<A\nVA Interval: VA ≤ 70\nAtrial Activation Sequence: concentric\nSpontaneous Termination: end either in A or V response\nVA Increase with BBB: no"
+  },
+  {
+    "objectID": "lectures/avnrt-series/typical_avnrt.html#tachycardia-initiation",
+    "href": "lectures/avnrt-series/typical_avnrt.html#tachycardia-initiation",
+    "title": "Part 2: Typical AVNRT",
+    "section": "Tachycardia initiation",
+    "text": "Tachycardia initiation\n\nTachycardia start:\n\nAPD that blocks the fast pathway?\nVPD that blocks retrograde?\n\nActivation sequence changes:\n\nAtrial activation is concentric, eccentric, high-to-low?\nAre the ventricles and atria activated simultaneously?"
+  },
+  {
+    "objectID": "lectures/avnrt-series/typical_avnrt.html#dual-av-node-physiology",
+    "href": "lectures/avnrt-series/typical_avnrt.html#dual-av-node-physiology",
+    "title": "Part 2: Typical AVNRT",
+    "section": "Dual AV Node Physiology",
+    "text": "Dual AV Node Physiology"
+  },
+  {
+    "objectID": "lectures/avnrt-series/typical_avnrt.html#entrainment-and-pacing-maneuvers",
+    "href": "lectures/avnrt-series/typical_avnrt.html#entrainment-and-pacing-maneuvers",
+    "title": "Part 2: Typical AVNRT",
+    "section": "Entrainment and pacing maneuvers",
+    "text": "Entrainment and pacing maneuvers"
+  },
+  {
+    "objectID": "lectures/avnrt-series/typical_avnrt.html#ruling-out-other-mechanisms",
+    "href": "lectures/avnrt-series/typical_avnrt.html#ruling-out-other-mechanisms",
+    "title": "Part 2: Typical AVNRT",
+    "section": "Ruling out other mechanisms",
+    "text": "Ruling out other mechanisms"
   }
 ]

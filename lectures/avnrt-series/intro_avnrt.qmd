@@ -81,9 +81,7 @@ loc <- file.path(find_project_folder(), "clinical", "lectures", "avnrt-series")
 | AH | atrial-His |
 | AP | accessory pathway |
 | [AVNRT]{.orange} | AV nodal reentrant tachycardia |
-| d/pCS | distal/proximal coronary sinus |
-| DAD | delayed after-depolarization |
-| EAD | early after-depolarization | 
+| CS | coronary sinus |
 | HPS | His-Purkinje system |
 | HB | His bundle |
 | HA | His-atrial interval |
@@ -102,6 +100,16 @@ loc <- file.path(find_project_folder(), "clinical", "lectures", "avnrt-series")
 . . .
 
 [_Remains unclear if there are anatomical correlates with the regions of slow versus fast conduction._]{.grey}
+
+## Requirements
+
+To initiate and maintain a reentrant rhythm:
+
+1. &ge; 2 functionally/anatomically distinct pathways that join proximally and distally to form a closed circuit of conduction
+1. unidirectional block in one of those potential pathways
+1. slow conduction down the unblocked pathway, allowing the previous pathway to recover
+
+[Sina qua non]{.green} of reentrant arrhythmia is the ability to _reproducibly_ intiate the tachycardia by timed extrastimuli
 
 ---
 
@@ -272,11 +280,7 @@ Repeat dosing after 1 minute (30 seconds for complete effect). Better efficacy w
 
 ## {background-image="resources/josephsen-avnrt-schematic.png" background-size="contain"}
 
-## Surface Electrocardiograms
-
 ## {background-image="tmf_data/ecg-case-nsr.png" background-size="contain"}
-
-## {background-image="tmf_data/ecg-case-svt-old.png" background-size="contain"}
 
 ## {background-image="tmf_data/ecg-case-svt-new.png" background-size="contain"}
 
@@ -468,7 +472,7 @@ ra +
 
 ```{r}
 #| cache: true
-x <- read_lspro(file.path(loc, "tmf_data/m3916-svt-initiation.txt"))
+x <- read_lspro(file.path(loc, "tmf_data/lsp-svt-initiation.txt"))
 svt_initiation <- melt_egm(x$header, x$signal, format = "lspro")
 
 ggm(
@@ -495,7 +499,7 @@ ggm(
 
 ```{r}
 #| cache: true
-x <- read_lspro(file.path(loc, "tmf_data/m3916-avn-erp-s1-600ms-s2-220ms.txt"))
+x <- read_lspro(file.path(loc, "tmf_data/lsp-avn-erp-s1-600ms-s2-220ms.txt"))
 avn_erp <- melt_egm(x$header, x$signal, format = "lspro")
 ggm(
 	data = avn_erp,
@@ -507,25 +511,25 @@ ggm(
 
 ```{r}
 decremental_800 <-
-	read_lspro(file.path(loc, "tmf_data/m3916-cs-pacing-800.txt")) |>
+	read_lspro(file.path(loc, "tmf_data/lsp-cs-pacing-800.txt")) |>
 	{
 		\(.x) melt_egm(.x$header, .x$signal, format = "lspro")
 	}()
 
 decremental_700 <-
-	read_lspro(file.path(loc, "tmf_data/m3916-cs-pace-decremental-700ms.txt")) |>
+	read_lspro(file.path(loc, "tmf_data/lsp-cs-pace-decremental-700ms.txt")) |>
 	{
 		\(.x) melt_egm(.x$header, .x$signal, format = "lspro")
 	}()
 
 decremental_640 <-
-	read_lspro(file.path(loc, "tmf_data/m3916-cs-pace-decremental-640ms.txt")) |>
+	read_lspro(file.path(loc, "tmf_data/lsp-cs-pace-decremental-640ms.txt")) |>
 	{
 		\(.x) melt_egm(.x$header, .x$signal, format = "lspro")
 	}()
 
 decremental_400 <-
-	read_lspro(file.path(loc, "tmf_data/m3916-cs-pace-decremental-400ms-jump.txt")) |>
+	read_lspro(file.path(loc, "tmf_data/lsp-cs-pace-decremental-400ms-jump.txt")) |>
 	{
 		\(.x) melt_egm(.x$header, .x$signal, format = "lspro")
 	}()

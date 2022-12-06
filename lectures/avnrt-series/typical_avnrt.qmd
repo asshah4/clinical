@@ -18,7 +18,6 @@ jupyter: python3
 ---
 
 ```{r}
-#| label: setup
 #| echo: false
 library(tidyverse)
 library(coraline)
@@ -48,15 +47,41 @@ loc <- file.path(find_project_folder(), "clinical", "lectures", "avnrt-series")
 ## Objectives
 
 1. Understand the concepts of dual node physiology
-1. Know the requirements for typical AvNRT
-1. Understand the response of standard EP maneuvers in typical AVNRT
+1. Know the requirements for [typical AVNRT]{.orange}
+1. Evaluate the response of [standard EP maneuvers]{.green} in [typical AVNRT]{.orange}
+
+## {.smaller}
+
+| Abbr. | Abbreviation |
+|:--- |:---- |
+| DAD | delayed after-depolarization |
+| EAD | early after-depolarization | 
+| APD | atrial premature depolarization | 
+| VPD | ventricular premature depolarization | 
+
+# Typical AVNRT
+
+## {background-image="resources/josephsen-avnrt-schematic.png" background-size="contain"}
+
+## Criteria
+
+- Initiation and termination by APD/VPD during AV nodal Wenckebach cycles
+- Dual AV nodal physiology (differential refractory curves during APD)
+- Initiation dependent on critical AH interval during slow pathway conduction
+- Retrograde atrial activation with variable VA activation in Triangle of Koch
+- Initiated, terminated, or reset without atrial activation
+
+::: aside
+[Slow-fast AVNRT has atrial activation close to QRS complex, such that AH/HA > 1]{.grey}
+:::
 
 ## Differential
 
-1. Atypical AVNRT
-1. Non-reentrant junctional tachycardia (junctional ectopic tachycardia)
-1. Non-paroyxsmal junctional tachycardia (d/t digitalis-induced DADs)
-1. Dual AV nodal tachycardia (repetitive retrograde concealment or "linking" phenomenon)
+- Atypical AVNRT
+- Non-reentrant junctional tachycardia (junctional ectopic tachycardia)
+- Non-paroyxsmal junctional tachycardia (d/t digitalis-induced DADs)
+- Dual AV nodal tachycardia (repetitive retrograde concealment or "linking" phenomenon)
+- Atrial tachycardia _always a possibility_
 
 ## Evaluation
 
@@ -67,20 +92,120 @@ loc <- file.path(find_project_folder(), "clinical", "lectures", "avnrt-series")
 1. Effect of atrial/ventricular stiulation during tachycardia
 1. Effect of drugs or physiological maneuvers on tachycardia
 
-# Intracardiac Electrograms
+# Electrophysiology Study
+
+## {background-image="tmf_data/ecg-case-nsr.png" background-size="contain"}
+
+## {background-image="tmf_data/ecg-case-svt-new.png" background-size="contain"}
+
+---
+
+::: {.columns}
+
+::: {.column width="50%"}
+__Sinus Rhythm__
+
+- Normal P and R axis
+- RR = 900
+- PP = 900
+- QRS = 80
+- P = 120
+- PR = 160
+- QT = 440
+
+:::
+
+::: {.column width="50%"}
+__SVT__
+
+- Suspected retro-grade P 
+- RR = 350
+- QRS = 70
+- PR = 300  
+
+::: {.fragment .highlight-red}
+- RP = 40
+:::
+
+:::
+
+:::
+
+---
+
+::: {.columns} 
+
+::: {.column width="60%"}
+- CS: decapolar catheter
+- His: quadrapolar catheter
+- RV: quadrapolar catheter
+:::
+
+::: {.column width="40%"}
+
+```{r}
+#| label: sinus rhythm from surface
+#| cache: true
+nsr <- 
+	read_lspro(file.path(loc, "tmf_data/lsp-nsr-surface.txt")) |>
+	{\(.x) melt_egm(.x$header, .x$signal, format = "lspro")}()
+
+ggm(
+	data = nsr,
+	channels = c("I", "II", "III" , "AVR", "AVL", "AVF", paste0("V", 1:6)),
+	time_frame = c(1, 2)
+)
+```
+:::
+
+:::
+
+## SVT features prior to diagnostic pacing maneuvers
+
+For typical AVNRT, there are some findings to help eliminate options.
+
+1. VA Relationship: any pattern, but most commonly V=A and V<A
+1. VA Interval: VA &le; 70
+1. Atrial Activation Sequence: concentric
+1. Spontaneous Termination: end either in A or V response
+1. VA Increase with BBB: no
 
 ---
 
 ```{r}
+#| label: continuous tach prior to pacing
 #| cache: true
-svt_start <- 
-	read_lspro(file.path(loc, "tmf_data", "m3916-svt-initiation.txt")) |>
+tach <- 
+	read_lspro(file.path(loc, "tmf_data/lsp-avnrt-ongoing.txt")) |>
 	{\(.x) melt_egm(.x$header, .x$signal, format = "lspro")}()
 
 ggm(
-	data = svt_start,
+	data = tach,
+	channels = c("I", "CS", "HIS", "RV")
+)
+```
+
+## Tachycardia initiation
+
+- Tachycardia start:
+	- APD that [blocks the fast pathway]{.blue}?
+	- VPD that blocks retrograde?
+- Activation sequence changes:
+	- Atrial activation is concentric, eccentric, high-to-low? 
+	- Are the ventricles and atria activated simultaneously?
+
+---
+
+```{r}
+#| label: tach initiation
+#| cache: true
+tach_start <- 
+	read_lspro(file.path(loc, "tmf_data/lsp-tach-initiation.txt")) |>
+	{\(.x) melt_egm(.x$header, .x$signal, format = "lspro")}()
+
+ggm(
+	data = tach_start,
 	channels = c("I", "CS", "RV", "HIS D", "HIS M"),
-	time_frame = c(1.0, 2.5),
 	annotation_channel = "I",
 	intervals = TRUE
 )
@@ -89,11 +214,34 @@ ggm(
 ---
 
 ```{r}
+#| label: tach zoom to APD
 #| cache: true
 ggm(
-	data = svt_start,
-	channels = c("I", "CS", "CS 1-2", "RV", "HIS D", "HIS M"),
+	data = tach_start,
+	channels = c("I", "CS", "RV", "HIS D", "HIS M"),
+	time_frame = c(1.0, 3.0),
 	annotation_channel = "CS 1-2",
+	intervals = TRUE
+)
+```
+
+## Dual AV Node Physiology
+
+---
+
+```{r}
+#| label: cs pacing 800
+#| cache: true
+cs_s1_800_dec <-
+	read_lspro(file.path(loc, "tmf_data/lsp-cs-pacing-800.txt")) |>
+	{
+		\(.x) melt_egm(.x$header, .x$signal, format = "lspro")
+	}()
+
+ggm(
+	data = cs_s1_800_dec,
+	channels = c("I", "CS", "HIS"),
+	annotation_channel = "CS 9-10",
 	intervals = TRUE
 )
 ```
@@ -101,9 +249,189 @@ ggm(
 ---
 
 ```{r}
+#| label: cs pacing 700
+#| cache: true
+cs_s1_700_dec <-
+	read_lspro(file.path(loc, "tmf_data/lsp-cs-pace-decremental-700ms.txt")) |>
+	{
+		\(.x) melt_egm(.x$header, .x$signal, format = "lspro")
+	}()
+ggm(
+	data = cs_s1_700_dec,
+	channels = c("I", "CS", "HIS"),
+	annotation_channel = "CS 9-10",
+	intervals = TRUE
+)
+```
+
+---
+
+```{r}
+#| label: cs pacing 640
+#| cache: true
+cs_s1_640_dec <-
+	read_lspro(file.path(loc, "tmf_data/lsp-cs-pace-decremental-640ms.txt")) |>
+	{
+		\(.x) melt_egm(.x$header, .x$signal, format = "lspro")
+	}()
+
+ggm(
+	data = cs_s1_640_dec,
+	channels = c("I", "CS", "HIS"),
+	annotation_channel = "CS 9-10",
+	intervals = TRUE
+)
+```
+
+---
+
+```{r}
+#| label: cs pacing 400 with jump
+#| cache: true
+cs_s1_400_jump <-
+	read_lspro(file.path(loc, "tmf_data/lsp-cs-pace-decremental-400ms-jump.txt")) |>
+	{
+		\(.x) melt_egm(.x$header, .x$signal, format = "lspro")
+	}()
+
+ggm(
+	data = cs_s1_400_jump,
+	channels = c("I", "CS", "HIS"),
+	annotation_channel = "CS 9-10",
+	intervals = TRUE
+)
+```
+
+## Entrainment and pacing maneuvers
+
+---
+
+```{r}
+#| label: cs entrainment
+#| cache: true
+cs_entrain <- 
+	read_lspro(file.path(loc, "tmf_data/lsp-cs-entrainment.txt")) |>
+	{\(.x) melt_egm(.x$header, .x$signal, format = "lspro")}()
+
+ggm(
+	data = cs_entrain,
+	channels = c("I", "CS", "HIS", "RV"),
+	annotation_channel = "I",
+	intervals = TRUE
+)
+```
+
+---
+
+```{r}
+#| label: cs s1 entrained at attempted at 500
+#| cache: true
+cs_s1_500 <- 
+	read_lspro(file.path(loc, "tmf_data/lsp-s1-500ms.txt")) |>
+	{\(.x) melt_egm(.x$header, .x$signal, format = "lspro")}()
+
+ggm(
+	data = cs_s1_500,
+	channels = c("I", "CS", "HIS", "RV"),
+	annotation_channel = "I",
+	intervals = TRUE
+)
+```
+
+---
+
+```{r}
+#| label: cs s1 entrained at 300
+#| cache: true
+cs_s1_300_entrain <- 
+	read_lspro(file.path(loc, "tmf_data/lsp-entrainment-s1-300ms.txt")) |>
+	{\(.x) melt_egm(.x$header, .x$signal, format = "lspro")}()
+
+ggm(
+	data = cs_s1_300_entrain,
+	channels = c("I", "CS", "HIS", "RV"),
+	annotation_channel = "I",
+	intervals = TRUE
+)
+```
+
+---
+
+```{r}
+#| label: cs s2 breaks
+#| cache: true
+cs_s2_breaks <- 
+	read_lspro(file.path(loc, "tmf_data/lsp-s2-breaks-rhythm.txt")) |>
+	{\(.x) melt_egm(.x$header, .x$signal, format = "lspro")}()
+
+ggm(
+	data = cs_s2_breaks,
+	channels = c("I", "CS", "HIS", "RV"),
+	annotation_channel = "I",
+	intervals = TRUE
+)
+```
+
+---
+
+```{r}
+#| label: cs bursts into afib
+#| cache: true
+cs_burst_af <- 
+	read_lspro(file.path(loc, "tmf_data/lsp-burst-into-af.txt")) |>
+	{\(.x) melt_egm(.x$header, .x$signal, format = "lspro")}()
+
+ggm(
+	data = cs_burst_af,
+	channels = c("I", "CS", "HIS", "RV"),
+	annotation_channel = "I",
+	intervals = TRUE
+)
+```
+
+## Ruling out other mechanisms
+
+---
+
+```{r}
+#| label: his refractory pvc
+#| cache: true
+his_pvc <- 
+	read_lspro(file.path(loc, "tmf_data/lsp-his-refractory-pvc-success.txt")) |>
+	{\(.x) melt_egm(.x$header, .x$signal, format = "lspro")}()
+
+ggm(
+	data = his_pvc,
+	channels = c("I", "CS", "HIS", "RV"),
+	annotation_channel = "I",
+	intervals = TRUE
+)
+```
+
+---
+
+```{r}
+#| label: parahisian pacing
+#| cache: true
+parahis <- 
+	read_lspro(file.path(loc, "tmf_data/lsp-parahisian-pacing.txt")) |>
+	{\(.x) melt_egm(.x$header, .x$signal, format = "lspro")}()
+
+ggm(
+	data = parahis,
+	channels = c("I", "CS", "HIS", "RV"),
+	annotation_channel = "I",
+	intervals = TRUE
+)
+```
+
+---
+
+```{r}
+#| label: avn erp
 #| cache: true
 avn_erp <- 
-	read_lspro(file.path(loc, "tmf_data",  "m3916-avn-erp-s1-600ms-s2-220ms.txt")) |>
+	read_lspro(file.path(loc, "tmf_data/lsp-avn-erp-s1-600ms-s2-220ms.txt")) |>
 	{\(.x) melt_egm(.x$header, .x$signal, format = "lspro")}()
 
 ggm(
@@ -112,43 +440,35 @@ ggm(
 )
 ```
 
-## Dual AV Node Physiology
+---
+
 
 ```{r}
-decremental_800 <-
-	read_lspro(file.path(loc, "tmf_data/m3916-cs-pacing-800.txt")) |>
-	{
-		\(.x) melt_egm(.x$header, .x$signal, format = "lspro")
-	}()
+#| label: post ablation avn erp
+#| cache: true
+abl_avn_erp <- 
+	read_lspro(file.path(loc, "tmf_data/lsp-post-ablation-erp.txt")) |>
+	{\(.x) melt_egm(.x$header, .x$signal, format = "lspro")}()
 
-decremental_700 <-
-	read_lspro(file.path(loc, "tmf_data/m3916-cs-pace-decremental-700ms.txt")) |>
-	{
-		\(.x) melt_egm(.x$header, .x$signal, format = "lspro")
-	}()
-
-decremental_640 <-
-	read_lspro(file.path(loc, "tmf_data/m3916-cs-pace-decremental-640ms.txt")) |>
-	{
-		\(.x) melt_egm(.x$header, .x$signal, format = "lspro")
-	}()
-
-decremental_400 <-
-	read_lspro(file.path(loc, "tmf_data/m3916-cs-pace-decremental-400ms-jump.txt")) |>
-	{
-		\(.x) melt_egm(.x$header, .x$signal, format = "lspro")
-	}()
+ggm(
+	data = abl_avn_erp,
+	channels = c("I", "CS", "HIS", "RV")
+)
 ```
-
 
 ---
 
 ```{r}
+#| label: post ablation s4
 #| cache: true
+cs_s4_no_tach <- 
+	read_lspro(file.path(loc, "tmf_data/lsp-s4-stim-no-tach.txt")) |>
+	{\(.x) melt_egm(.x$header, .x$signal, format = "lspro")}()
+
 ggm(
-	data = decremental_800,
-	channels = c("I", "CS", "HIS"),
-	annotation_channel = "I",
+	data = cs_s4_no_tach,
+	channels = c("I", "CS", "HIS", "RV"),
+	annotation_channel = "CS 9-10",
 	intervals = TRUE
 )
 ```
@@ -156,34 +476,15 @@ ggm(
 ---
 
 ```{r}
+#| label: pvc
 #| cache: true
+pvc <- 
+	read_lspro(file.path(loc, "tmf_data/lsp-single-pvc.txt")) |>
+	{\(.x) melt_egm(.x$header, .x$signal, format = "lspro")}()
+
 ggm(
-	data = decremental_700,
-	channels = c("I", "CS", "HIS"),
-	annotation_channel = "I",
-	intervals = TRUE
-)
-```
-
----
-
-```{r}
-#| cache: true
-ggm(
-	data = decremental_640,
-	channels = c("I", "CS", "HIS"),
-	annotation_channel = "I",
-	intervals = TRUE
-)
-```
-
----
-
-```{r}
-#| cache: true
-ggm(
-	data = decremental_400,
-	channels = c("I", "CS", "HIS"),
+	data = cs_s1_500,
+	channels = c("I", "CS", "HIS", "RV"),
 	annotation_channel = "I",
 	intervals = TRUE
 )
