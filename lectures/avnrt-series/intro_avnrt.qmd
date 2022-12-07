@@ -21,6 +21,7 @@ revealjs-plugins:
 #| echo: false
 library(tidyverse)
 library(coraline)
+library(gganimate)
 library(rhythm)
 library(sf)
 library(scales)
@@ -69,7 +70,7 @@ loc <- file.path(find_project_folder(), "clinical", "lectures", "avnrt-series")
 1. Non-invasive diagnosis
 1. Non-invasive treatment approach
 1. Relevant anatomy and physiology
-1. Electrograms
+1. Intracrdiac electrograms
 
 ---
 
@@ -103,7 +104,7 @@ loc <- file.path(find_project_folder(), "clinical", "lectures", "avnrt-series")
 
 ## Requirements
 
-To initiate and maintain a reentrant rhythm:
+To initiate and maintain a re-entrant rhythm:
 
 1. &ge; 2 functionally/anatomically distinct pathways that join proximally and distally to form a closed circuit of conduction
 1. unidirectional block in one of those potential pathways
@@ -276,9 +277,146 @@ Repeat dosing after 1 minute (30 seconds for complete effect). Better efficacy w
 
 :::
 
-# Fork in the Road {.r-fit-text}
 
-## {background-image="resources/josephsen-avnrt-schematic.png" background-size="contain"}
+# Right Atrial Anatomy 
+
+```{r}
+#| include: false
+
+# SF objects
+chambers <- coraline::cardiac_atlas$right_atrium_rao$chambers
+vessels <- coraline::cardiac_atlas$right_atrium_rao$vessels
+projections <- coraline::cardiac_atlas$right_atrium_rao$projections
+valves <- coraline::cardiac_atlas$right_atrium_rao$valves
+septum <- coraline::cardiac_atlas$right_atrium_rao$septum
+conduction <- coraline::cardiac_atlas$right_atrium_rao$conduction
+reference <- coraline::cardiac_atlas$right_atrium_rao$reference
+pathways <- coraline::cardiac_atlas$right_atrium_rao$pathways
+
+# Basic figure
+ra <- 
+	st_union(chambers, projections, by_feature = TRUE) |>
+	st_union(vessels, by_feature = TRUE) |>
+	st_union(septum, by_feature = TRUE) |>
+	st_union(valves, by_feature = TRUE) |>
+	{\(.x) .x["geometry"]}() |>
+	unique()
+
+ra_grey <-
+	ggplot(ra) +
+	geom_sf(fill = grey[9], alpha = 0.1) +
+	theme_void()
+
+```
+
+---
+
+```{r}
+#| label: RA base
+#| cache: true
+ra_grey
+```
+
+---
+
+```{r}
+#| label: RA chambers
+#| cache: true
+ra_grey +
+	geom_sf(data = chambers, fill = red[5], alpha = 0.5) +
+	geom_sf(data = septum, fill = red[5], alpha = 0.5) +
+	geom_sf_label(data = chambers, aes(label = label)) +
+	geom_sf_label(data = septum, aes(label = label))
+```
+
+---
+
+```{r}
+#| label: RA vessels
+#| cache: true
+ra_grey +
+	geom_sf(data = chambers, fill = red[5], alpha = 0.2) +
+	geom_sf(data = septum, fill = red[5], alpha = 0.2) +
+	geom_sf(data = vessels, fill = blue[5], alpha = 0.5) +
+	geom_sf_label(data = vessels, aes(label = label), nudge_y = 1)
+```
+
+---
+
+```{r}
+#| label: RA projections and structures
+#| cache: true
+ra_grey +
+	geom_sf(data = chambers, fill = red[5], alpha = 0.2) +
+	geom_sf(data = septum, fill = red[5], alpha = 0.2) +
+	geom_sf(data = vessels, fill = blue[5], alpha = 0.2) +
+	geom_sf(data = projections, fill = red[2], alpha = 0.5) +
+	geom_sf_label(data = projections, aes(label = label))
+```
+
+---
+
+```{r}
+#| label: RA valves
+#| cache: true
+ra_grey +
+	geom_sf(data = chambers, fill = red[5], alpha = 0.2) +
+	geom_sf(data = septum, fill = red[5], alpha = 0.2) +
+	geom_sf(data = vessels, fill = blue[5], alpha = 0.2) +
+	geom_sf(data = projections, fill = red[2], alpha = 0.2) +
+	geom_sf(data = valves, fill = grey[9], alpha = 0.9) +
+	geom_sf_label(data = valves, aes(label = label))
+```
+
+---
+
+```{r}
+#| label: RA conduction
+#| cache: true
+ra_grey +
+	geom_sf(data = chambers, fill = red[5], alpha = 0.2) +
+	geom_sf(data = septum, fill = red[5], alpha = 0.2) +
+	geom_sf(data = vessels, fill = blue[5], alpha = 0.2) +
+	geom_sf(data = projections, fill = red[2], alpha = 0.2) +
+	geom_sf(data = valves, fill = grey[9], alpha = 0.2) +
+	geom_sf(data = conduction, fill = orange[2], alpha = 0.5) +
+	geom_sf_label(data = conduction[conduction$component == "whole", ], aes(label = label), nudge_y = c(1.5, 3))
+```
+
+---
+
+```{r}
+#| label: RA AV node parts
+#| cache: true
+ra_grey +
+	geom_sf(data = chambers, fill = red[5], alpha = 0.2) +
+	geom_sf(data = septum, fill = red[5], alpha = 0.2) +
+	geom_sf(data = vessels, fill = blue[5], alpha = 0.2) +
+	geom_sf(data = projections, fill = red[2], alpha = 0.2) +
+	geom_sf(data = valves, fill = grey[9], alpha = 0.2) +
+	geom_sf(data = conduction, fill = orange[1], alpha = 0.2) +
+	geom_sf(data = subset(conduction, structure == "av_node" & component != "whole"), fill = orange[1], alpha = 0.9) +
+	geom_sf_label(data = subset(conduction, structure == "av_node" & component != "whole" & type == "nodal"), aes(label = label), nudge_x = c(-3.5, 3), nudge_y = c(0, 0)) +
+	geom_sf_label(data = subset(conduction, structure == "av_node" & component != "whole" & type == "extension"), aes(label = label), nudge_x = c(-4, 5.5), nudge_y = c(-0.5, -2.5))
+```
+
+---
+
+```{r}
+#| label: RA conduction regions
+#| cache: true
+ra_grey +
+	geom_sf(data = chambers, fill = red[5], alpha = 0.2) +
+	geom_sf(data = septum, fill = red[5], alpha = 0.2) +
+	geom_sf(data = vessels, fill = blue[5], alpha = 0.2) +
+	geom_sf(data = projections, fill = red[2], alpha = 0.2) +
+	geom_sf(data = valves, fill = grey[9], alpha = 0.2) +
+	geom_sf(data = conduction, fill = orange[1], alpha = 0.2) +
+	geom_sf(data = filter(reference, type == "anatomy"), fill = orange[2], alpha = 0.5) +
+	geom_sf_label(data = filter(reference, type == "anatomy"), aes(label = label)) 
+```
+
+# Fork in the Road {.r-fit-text}
 
 ## {background-image="tmf_data/ecg-case-nsr.png" background-size="contain"}
 
@@ -317,270 +455,265 @@ __SVT__
 
 :::
 
-## Right Atrial Anatomy 
+---
+
+## {background-image="resources/josephsen-avnrt-schematic.png" background-size="contain"}
+
+---
 
 ```{r}
-#| include: false
+#| label: normal conduction
+#| cache: true
+ra_colors <-
+	ra_grey +
+	geom_sf(data = chambers, fill = red[5], alpha = 0.1) +
+	geom_sf(data = septum, fill = red[5], alpha = 0.1) +
+	geom_sf(data = vessels, fill = blue[5], alpha = 0.1) +
+	geom_sf(data = projections, fill = red[2], alpha = 0.1) +
+	geom_sf(data = valves, fill = grey[9], alpha = 0.1) +
+	geom_sf(data = conduction, fill = orange[1], alpha = 0.3) 
 
-# SF objects
-chambers <- coraline::cardiac_atlas$right_atrium_rao$chambers
-vessels <- coraline::cardiac_atlas$right_atrium_rao$vessels
-projections <- coraline::cardiac_atlas$right_atrium_rao$projections
-valves <- coraline::cardiac_atlas$right_atrium_rao$valves
-septum <- coraline::cardiac_atlas$right_atrium_rao$septum
-conduction <- coraline::cardiac_atlas$right_atrium_rao$conduction
-reference <- coraline::cardiac_atlas$right_atrium_rao$reference
-
-# Base figure
-ra <-
-	ggplot() + 
-	geom_sf(data = chambers, fill = grey[9]) +
-	geom_sf(data = septum, fill = grey[9]) +
-	geom_sf(data = vessels, fill = grey[9]) + 
-	geom_sf(data = projections, fill = grey[9]) +
-	geom_sf(data = valves, fill = grey[9]) +
-	theme_void()
+ra_colors
 ```
 
 ---
 
 ```{r}
-#| label: RA base
+#| label: normal with pathways
 #| cache: true
-ra
+ra_colors + 
+	geom_sf(data = pathways, fill = "white", color = NA, alpha = 0.8) +
+	geom_sf_label(data = filter(pathways, type == "pathway"), aes(label = label), nudge_y = 1)
 ```
 
 ---
 
 ```{r}
-#| label: RA chambers
+#| label: animated sinus pathways
 #| cache: true
-ra +
-	geom_sf(data = chambers, fill = red[5], alpha = 0.5) +
-	geom_sf(data = septum, fill = red[5], alpha = 0.5) +
-	geom_sf_label(data = chambers, aes(label = label)) +
-	geom_sf_label(data = septum, aes(label = label))
+nsr <-
+	ra_grey +
+	geom_sf(data = pathways, fill = "white", color = NA_character_) +
+	geom_sf(data = filter(pathways, structure == "atrial_extension"),
+					fill = orange[3]) +
+	geom_sf(data = filter(pathways, structure == "upper_common"),
+					fill = orange[3]) +
+	geom_sf(
+		data = filter(
+			pathways,
+			(structure == "fast" & component == "proximal") |
+				(structure == "bridge" & component == "proximal")
+			),
+		fill = orange[3]
+	) +
+	geom_sf(
+		data = filter(
+			pathways,
+			(structure == "fast" & component == "middle") |
+				(structure == "slow" & component == "proximal")
+			),
+		fill = orange[3]
+	) +
+	geom_sf(
+		data = filter(
+			pathways,
+			(structure == "fast" & component == "distal") |
+				(structure == "bridge" & component == "distal")
+			),
+		fill = orange[3]
+	) +
+	geom_sf(
+		data = filter(pathways, structure == "lower_common"),
+		fill = orange[3]
+	) + 
+	geom_sf(
+		data = filter(
+			pathways,
+			(structure == "slow" & component == "distal") |
+				(structure == "slow" & component == "middle")
+			),
+		fill = c(red[2], orange[3])
+	) 
+
+nsr +
+	transition_layers(
+		keep_layers = c(Inf, Inf, rep(2, 7)),
+		layer_length = 1,
+		from_blank = FALSE
+	) +
+	enter_fade() +
+	exit_fade(alpha = 0)
 ```
 
 ---
 
 ```{r}
-#| label: RA vessels
+#| label: sinus beats
 #| cache: true
-ra +
-	geom_sf(data = chambers, fill = red[5], alpha = 0.2) +
-	geom_sf(data = septum, fill = red[5], alpha = 0.2) +
-	geom_sf(data = vessels, fill = blue[5], alpha = 0.5) +
-	geom_sf_label(data = vessels, aes(label = label), nudge_y = 1)
+#| fig-cap: Normal sinus beat on multiple electrodes
+#| fig-cap-location: bottom
+nsr_egm <- read_lspro(file.path(loc, "tmf_data/lsp-single-pvc.txt"))
+
+ggm(data = nsr_egm,
+		channels = c("I", "CS", "RV", "HIS D", "HIS M", "HIS P"),
+		time_frame = c(0.25, 0.7)) 
+```
+
+## {background-image="resources/fluoro-catheter-positions.png" background-size="contain"}
+
+---
+
+```{r}
+#| label: tach start low sweep
+#| cache: true
+#| fig-cap-location: bottom
+#| fig-cap: Tachycardia initiation
+tach_start <- read_lspro(file.path(loc, "tmf_data/lsp-tach-initiation.txt"))
+
+ggm(data = tach_start,
+		channels = c("I", "CS", "RV", "HIS d", "HIS m")) |>
+	add_intervals(channel = "I")
 ```
 
 ---
 
 ```{r}
-#| label: RA projections and structures
+#| label: tach beats with high sweep
 #| cache: true
-ra +
-	geom_sf(data = chambers, fill = red[5], alpha = 0.2) +
-	geom_sf(data = septum, fill = red[5], alpha = 0.2) +
-	geom_sf(data = vessels, fill = blue[5], alpha = 0.2) +
-	geom_sf(data = projections, fill = red[2], alpha = 0.5) +
-	geom_sf_label(data = projections, aes(label = label))
+#| fig-cap-location: bottom
+#| fig-cap: A beat from the tachycardia
+#| output-location: column
+ggm(data = tach_start,
+		channels = c("I", "CS", "RV", "HIS d", "HIS m"),
+		time_frame = c(2.6, 2.9))
 ```
 
 ---
 
 ```{r}
-#| label: RA valves
+#| label: sinus beat with  high sweep
 #| cache: true
-ra +
-	geom_sf(data = chambers, fill = red[5], alpha = 0.2) +
-	geom_sf(data = septum, fill = red[5], alpha = 0.2) +
-	geom_sf(data = vessels, fill = blue[5], alpha = 0.2) +
-	geom_sf(data = projections, fill = red[2], alpha = 0.2) +
-	geom_sf(data = valves, fill = grey[9], alpha = 0.9) +
-	geom_sf_label(data = valves, aes(label = label))
+#| fig-cap-location: bottom
+#| fig-cap: A beat from the sinus
+#| output-location: column
+ggm(data = tach_start,
+		channels = c("I", "CS", "RV", "HIS d", "HIS m"),
+		time_frame = c(0.6, 1.0))
 ```
 
 ---
 
 ```{r}
-#| label: RA conduction
+#| label: initiation
 #| cache: true
-ra +
-	geom_sf(data = chambers, fill = red[5], alpha = 0.2) +
-	geom_sf(data = septum, fill = red[5], alpha = 0.2) +
-	geom_sf(data = vessels, fill = blue[5], alpha = 0.2) +
-	geom_sf(data = projections, fill = red[2], alpha = 0.2) +
-	geom_sf(data = valves, fill = grey[9], alpha = 0.2) +
-	geom_sf(data = conduction, fill = orange[2], alpha = 0.5) +
-	geom_sf_label(data = conduction[conduction$component == "whole", ], aes(label = label), nudge_y = c(1.5, 3))
+#| fig-cap-location: bottom
+#| fig-cap: APD leads to tachycardia
+ggm(data = tach_start,
+		channels = c("I", "CS", "RV", "HIS d", "HIS m"),
+		time_frame = c(1.5, 3.0))
 ```
 
 ---
 
 ```{r}
-#| label: RA AV node parts
+#| label: animated AVNRT
 #| cache: true
-ra +
-	geom_sf(data = chambers, fill = red[5], alpha = 0.2) +
-	geom_sf(data = septum, fill = red[5], alpha = 0.2) +
-	geom_sf(data = vessels, fill = blue[5], alpha = 0.2) +
-	geom_sf(data = projections, fill = red[2], alpha = 0.2) +
-	geom_sf(data = valves, fill = grey[9], alpha = 0.2) +
-	geom_sf(data = conduction, fill = orange[1], alpha = 0.2) +
-	geom_sf(data = subset(conduction, structure == "av_node" & component != "whole"), fill = orange[1], alpha = 0.9) +
-	geom_sf_label(data = subset(conduction, structure == "av_node" & component != "whole" & type == "nodal"), aes(label = label), nudge_x = c(-3.5, 3), nudge_y = c(0, 0)) +
-	geom_sf_label(data = subset(conduction, structure == "av_node" & component != "whole" & type == "extension"), aes(label = label), nudge_x = c(-4, 5.5), nudge_y = c(-0.5, -2.5))
+avnrt <-
+	ra_grey +
+	geom_sf(data = pathways, fill = "white", color = NA_character_) +
+	geom_sf(
+		data = filter(pathways,
+									structure == "slow" & component == "middle"),
+		fill = orange[3]
+	) +
+	geom_sf(
+		data = filter(
+			pathways,
+			(structure == "slow" & component == "distal") |
+				(structure == "bridge" & component == "distal")
+			),
+		fill = orange[3]
+	) +
+	geom_sf(
+		data = filter(pathways, structure == "lower_common"), 
+		fill = orange[3]
+	) +
+	geom_sf(
+		data = filter(pathways,
+									structure == "fast" & component == "distal"),
+		fill = red[2]
+	) +
+	geom_sf(
+		data = filter(pathways,
+									structure == "fast" & component == "middle"),
+		fill = red[2]
+	) +
+	geom_sf(
+		data = filter(
+			pathways,
+			(structure == "fast" & component == "proximal") |
+				(structure == "bridge" & component == "proximal")
+			),
+		fill = red[2]
+	) +
+	geom_sf(
+		data = filter(
+			pathways,
+			(structure == "upper_common" & component == "distal") |
+				(structure == "upper_common" & component == "upper_fast")
+			),
+		fill = red[2]
+	) +
+	geom_sf(
+		data = filter(pathways,
+									structure == "upper_common" & component == "upper_slow"),
+		fill = orange[2]
+	) +
+	geom_sf(
+		data = filter(
+			pathways, 
+			(structure == "atrial_extension") |
+				(structure == "slow" & component == "proximal")
+		),
+		fill = c(red[2], orange[3], rep(red[2], 4))
+	) 
+
+avnrt +
+	transition_layers(
+		keep_layers = c(Inf, Inf, rep(2, 9)),
+		layer_length = 1,
+		from_blank = FALSE
+	) +
+	enter_fade() +
+	exit_fade(alpha = 0)
 ```
 
 ---
 
 ```{r}
-#| label: RA conduction regions
+#| label: decremental at 800
 #| cache: true
-ra +
-	geom_sf(data = chambers, fill = red[5], alpha = 0.2) +
-	geom_sf(data = septum, fill = red[5], alpha = 0.2) +
-	geom_sf(data = vessels, fill = blue[5], alpha = 0.2) +
-	geom_sf(data = projections, fill = red[2], alpha = 0.2) +
-	geom_sf(data = valves, fill = grey[9], alpha = 0.2) +
-	geom_sf(data = conduction, fill = orange[1], alpha = 0.2) +
-	geom_sf(data = reference, fill = orange[2], alpha = 0.5) +
-	geom_sf_label(data = reference, aes(label = label)) 
-```
-
-
-## Physiology
-
-- slow pathway identification
-- fast pathway identification
-- describe why the conduction system is different
-- explain refractory perioids
-- describe anterograde/retrograde conduction
-
-1. Mode of intiation of tachycardia
-1. atrial activation sequence during tachycardia
-1. influence of budnel bracnch block on conduction / cycle length during tachycardai
-1. requirement fo atria/ventricle to initiate and sustain tachycardia
-1. atrial/ventricula r stim during tachycardia
-1. drugs/physiological maneuvers on the tachycardia
-
-
-## Intracardiac Electrograms
-
----
-
-```{r}
-#| cache: true
-x <- read_lspro(file.path(loc, "tmf_data/lsp-svt-initiation.txt"))
-svt_initiation <- melt_egm(x$header, x$signal, format = "lspro")
-
-ggm(
-	data = svt_initiation,
-	channels = c("I", "CS", "RV", "HIS d", "HIS m"),
-	annotation_channel = "I",
-	intervals = TRUE
-)
-```
-
----
-
-```{r}
-#| cache: true
-ggm(
-	data = svt_initiation,
-	channels = c("I", "CS", "CS 1-2", "RV", "HIS d", "HIS m"),
-	annotation_channel = "CS 1-2",
-	intervals = TRUE
-)
-```
-
----
-
-```{r}
-#| cache: true
-x <- read_lspro(file.path(loc, "tmf_data/lsp-avn-erp-s1-600ms-s2-220ms.txt"))
-avn_erp <- melt_egm(x$header, x$signal, format = "lspro")
-ggm(
-	data = avn_erp,
-	channels = c("I", "CS", "HIS", "RV")
-)
-```
-
-## Dual AV Node Physiology
-
-```{r}
+#| fig-cap-location: bottom
+#| fig-cap: Decremental pacing at 800 ms
 decremental_800 <-
-	read_lspro(file.path(loc, "tmf_data/lsp-cs-pacing-800.txt")) |>
-	{
-		\(.x) melt_egm(.x$header, .x$signal, format = "lspro")
-	}()
+	read_lspro(file.path(loc, "tmf_data/lsp-cs-pacing-800.txt")) 
 
-decremental_700 <-
-	read_lspro(file.path(loc, "tmf_data/lsp-cs-pace-decremental-700ms.txt")) |>
-	{
-		\(.x) melt_egm(.x$header, .x$signal, format = "lspro")
-	}()
+ggm(decremental_800, channels = c("I", "CS", "HIS")) |>
+	add_intervals(channel = "CS 9-10")
+```
 
-decremental_640 <-
-	read_lspro(file.path(loc, "tmf_data/lsp-cs-pace-decremental-640ms.txt")) |>
-	{
-		\(.x) melt_egm(.x$header, .x$signal, format = "lspro")
-	}()
+---
 
+```{r}
+#| label: dec and jump
+#| cache: true
+#| fig-cap-location: bottom
+#| fig-cap: Decremental pacing at 400 ms
 decremental_400 <-
-	read_lspro(file.path(loc, "tmf_data/lsp-cs-pace-decremental-400ms-jump.txt")) |>
-	{
-		\(.x) melt_egm(.x$header, .x$signal, format = "lspro")
-	}()
-```
+	read_lspro(file.path(loc, "tmf_data/lsp-cs-pace-decremental-400ms-jump.txt"))
 
----
-
-```{r}
-#| cache: true
-ggm(
-	data = decremental_800,
-	channels = c("I", "CS", "HIS"),
-	annotation_channel = "I",
-	intervals = TRUE
-)
-```
-
----
-
-```{r}
-#| cache: true
-ggm(
-	data = decremental_700,
-	channels = c("I", "CS", "HIS"),
-	annotation_channel = "I",
-	intervals = TRUE
-)
-```
-
----
-
-```{r}
-#| cache: true
-ggm(
-	data = decremental_640,
-	channels = c("I", "CS", "HIS"),
-	annotation_channel = "I",
-	intervals = TRUE
-)
-```
-
----
-
-```{r}
-#| cache: true
-ggm(
-	data = decremental_400,
-	channels = c("I", "CS", "HIS"),
-	annotation_channel = "I",
-	intervals = TRUE
-)
+ggm(decremental_400, channels = c("I", "CS", "HIS")) |>
+	add_intervals(channel = "CS 9-10")
 ```
 
 # References

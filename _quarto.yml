@@ -39,5 +39,5 @@ format:
     theme: [simple, styles.scss]
     slide-tone: true
 
-bibliography: ../bibliography/Cardiology.bib
+bibliography: Cardiology.bib
 csl: ../bibliography/jacc.csl

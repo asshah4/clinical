@@ -12,3 +12,6 @@ rhythm
 sf
 scales
 ggsci
+gganimate
+data.table
+vctrs
