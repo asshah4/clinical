@@ -11,7 +11,7 @@
     "href": "case.html#cardiology-fellowship",
     "title": "Clinical Cases",
     "section": "Cardiology Fellowship",
-    "text": "Cardiology Fellowship\n\nDecember 07-08, 2022 A lecture series on AVNRT, including an introduction, an overview of typical AVNRT, and an additional case study of atypical AVNRT. These include surface ECG, EGM, and pacing maneuvers.\nMay 24, 2022 Brief cardiac catheterization case conference discussion of a triple-vessel disease patient with UGIB that was surgically turned down for bypass, pending surgery for infection.\nFebruary 16, 2022 Pulmonary Embolism Response Team introduction and overview at the Jesse Brown VA system for the internal medicine residency.\nFebruary 08, 2022 Pulmonary Embolism Response Team introduction and overview at the Jesse Brown VA system for both medicine residents and cardiology fellows.\nDecember 07, 2021 Short cardiac catheterization case conference on a NSTEMI that may benefit from CABG, a ICM that may benefit from protected PCI, and a complex, heavily calcific peripheral case.\nNovember 30, 2021 Illinois Medical District Cath Conference presentation on Wellen’s Syndrome in a LAD STEMI patient.\nNovember 23, 2021 Short cardiac catheterization case conference on a late-presenting STEMI at the time of a massive CVA, and a standard peripheral intervention to the left iliac arteries.\nNovember 16, 2021 Short cardiac catheterization case conference with a two-vessel CAD pre-transplant that was revascularized, and two STEMI cases.\nNovember 16, 2021 An introduction to antiplatelet agents in atherosclerotic disease.\nNovember 09, 2021 Short cardiac catheterization case conference with an anterior STEMI and no-reflow to LAD.\nOctober 18, 2021 A mortality and morbidity conference on rheumatic heart disease and mitral stenosis, deferring percutaneous balloon mitral valvuloplasty for surgical mechanical mitral valve replacement.\nOctober 12, 2021 Short cardiac catheterization case conference, with RCA Shockwave, interesting coronary anatomy, and a case of false-positive stress testing with anginal symptoms.\nOctober 05, 2021 Short cardiac catheterization case conference, with LM bifurcation disease using DK crush, a LAD orbital atherectomy case, and a high right radial with severe spasm.\nSeptember 28, 2021 Short cardiac catheterization case conference, with a focus on severe disease\nSeptember 28, 2021 An introduction to femoral access for new cardiology fellows.\nSeptember 09, 2021 Short cardiac catheterization case conference, with a focus on CABG revascularization\nJune 01, 2021 Cardiac catheterization lab conference, with a few STEMIs from call.\nMarch 16, 2021 Cardiac catheterization lab conference, with a focus of three PCI cases.\nFebruary 01, 2021 A journal club on GALACTIC-HF\nDecember 23, 2020 A brief overview of cardiac tamponade for the POCUS curriculum for internal medicine residents.\nDecember 14, 2020 An interesting case of restrictive cardiomyopathy, including workup and consideration of alternative etiologies."
+    "text": "Cardiology Fellowship\n\nDecember 07-08, 2022 A lecture series on AVNRT, including an introduction, an overview of typical AVNRT, These include surface ECG, EGM, and pacing maneuvers.\nMay 24, 2022 Brief cardiac catheterization case conference discussion of a triple-vessel disease patient with UGIB that was surgically turned down for bypass, pending surgery for infection.\nFebruary 16, 2022 Pulmonary Embolism Response Team introduction and overview at the Jesse Brown VA system for the internal medicine residency.\nFebruary 08, 2022 Pulmonary Embolism Response Team introduction and overview at the Jesse Brown VA system for both medicine residents and cardiology fellows.\nDecember 07, 2021 Short cardiac catheterization case conference on a NSTEMI that may benefit from CABG, a ICM that may benefit from protected PCI, and a complex, heavily calcific peripheral case.\nNovember 30, 2021 Illinois Medical District Cath Conference presentation on Wellen’s Syndrome in a LAD STEMI patient.\nNovember 23, 2021 Short cardiac catheterization case conference on a late-presenting STEMI at the time of a massive CVA, and a standard peripheral intervention to the left iliac arteries.\nNovember 16, 2021 Short cardiac catheterization case conference with a two-vessel CAD pre-transplant that was revascularized, and two STEMI cases.\nNovember 16, 2021 An introduction to antiplatelet agents in atherosclerotic disease.\nNovember 09, 2021 Short cardiac catheterization case conference with an anterior STEMI and no-reflow to LAD.\nOctober 18, 2021 A mortality and morbidity conference on rheumatic heart disease and mitral stenosis, deferring percutaneous balloon mitral valvuloplasty for surgical mechanical mitral valve replacement.\nOctober 12, 2021 Short cardiac catheterization case conference, with RCA Shockwave, interesting coronary anatomy, and a case of false-positive stress testing with anginal symptoms.\nOctober 05, 2021 Short cardiac catheterization case conference, with LM bifurcation disease using DK crush, a LAD orbital atherectomy case, and a high right radial with severe spasm.\nSeptember 28, 2021 Short cardiac catheterization case conference, with a focus on severe disease\nSeptember 28, 2021 An introduction to femoral access for new cardiology fellows.\nSeptember 09, 2021 Short cardiac catheterization case conference, with a focus on CABG revascularization\nJune 01, 2021 Cardiac catheterization lab conference, with a few STEMIs from call.\nMarch 16, 2021 Cardiac catheterization lab conference, with a focus of three PCI cases.\nFebruary 01, 2021 A journal club on GALACTIC-HF\nDecember 23, 2020 A brief overview of cardiac tamponade for the POCUS curriculum for internal medicine residents.\nDecember 14, 2020 An interesting case of restrictive cardiomyopathy, including workup and consideration of alternative etiologies."
   },
   {
     "objectID": "case.html#internal-medicine-residency",
@@ -333,7 +333,7 @@
     "href": "lectures/avnrt-series/intro_avnrt.html#outline",
     "title": "Part 1: An Intro to AVNRT",
     "section": "Outline",
-    "text": "Outline\n\nIntroduction to AVNRT\nNon-invasive diagnosis\nNon-invasive treatment approach\nRelevant anatomy and physiology\nIntracrdiac electrograms"
+    "text": "Outline\n\nIntroduction to AVNRT\nNon-invasive diagnosis\nNon-invasive treatment approach\nRelevant anatomy and physiology\nIntracardiac electrograms"
   },
   {
     "objectID": "lectures/avnrt-series/intro_avnrt.html#section",
@@ -471,16 +471,16 @@
   {
     "objectID": "lectures/avnrt-series/typical_avnrt.html#objectives",
     "href": "lectures/avnrt-series/typical_avnrt.html#objectives",
-    "title": "Part 2: Typical AVNRT",
+    "title": "Typical AVNRT",
     "section": "Objectives",
     "text": "Objectives\n\nUnderstand the concepts of dual node physiology\nKnow the requirements for typical AVNRT\nEvaluate the response of standard EP maneuvers in typical AVNRT"
   },
   {
     "objectID": "lectures/avnrt-series/typical_avnrt.html#section",
     "href": "lectures/avnrt-series/typical_avnrt.html#section",
-    "title": "Part 2: Typical AVNRT",
+    "title": "Typical AVNRT",
     "section": "",
-    "text": "Abbr.\nAbbreviation\n\n\n\n\nDAD\ndelayed after-depolarization\n\n\nEAD\nearly after-depolarization\n\n\nAPD\natrial premature depolarization\n\n\nVPD\nventricular premature depolarization"
+    "text": "Abbr.\nAbbreviation\n\n\n\n\nDAD\ndelayed after-depolarization\n\n\nEAD\nearly after-depolarization\n\n\nAPD\natrial premature depolarization\n\n\nVPD\nventricular premature depolarization\n\n\nRAAS\nretrograde atrial activation sequence"
   },
   {
     "objectID": "lectures/avnrt-series/typical_avnrt.html#criteria",
@@ -499,9 +499,9 @@
   {
     "objectID": "lectures/avnrt-series/typical_avnrt.html#evaluation",
     "href": "lectures/avnrt-series/typical_avnrt.html#evaluation",
-    "title": "Part 2: Typical AVNRT",
+    "title": "Typical AVNRT",
     "section": "Evaluation",
-    "text": "Evaluation\n\nMode of initiation of tachycardia\nAtrial activation sequence during tachycardia\nInfluence of bundle branch block on conduction and cycle length during tachycardia\nRequirement of atria/ventricle for initiation and maintenance of tachcyardia\nEffect of atrial/ventricular stiulation during tachycardia\nEffect of drugs or physiological maneuvers on tachycardia"
+    "text": "Evaluation\n\nMode of initiation of tachycardia\nAtrial activation sequence during tachycardia\nInfluence of bundle branch block on conduction and cycle length during tachycardia\nRequirement of atria/ventricle for initiation and maintenance of tachcyardia\nEffect of atrial/ventricular stimulation during tachycardia\nEffect of drugs or physiological maneuvers on tachycardia"
   },
   {
     "objectID": "lectures/avnrt-series/typical_avnrt.html#svt-features-prior-to-diagnostic-pacing-maneuvers",
@@ -513,9 +513,9 @@
   {
     "objectID": "lectures/avnrt-series/typical_avnrt.html#tachycardia-initiation",
     "href": "lectures/avnrt-series/typical_avnrt.html#tachycardia-initiation",
-    "title": "Part 2: Typical AVNRT",
+    "title": "Typical AVNRT",
     "section": "Tachycardia initiation",
-    "text": "Tachycardia initiation\n\nTachycardia start:\n\nAPD that blocks the fast pathway?\nVPD that blocks retrograde?\n\nActivation sequence changes:\n\nAtrial activation is concentric, eccentric, high-to-low?\nAre the ventricles and atria activated simultaneously?"
+    "text": "Tachycardia initiation"
   },
   {
     "objectID": "lectures/avnrt-series/typical_avnrt.html#dual-av-node-physiology",
@@ -544,5 +544,61 @@
     "title": "Part 1: An Intro to AVNRT",
     "section": "",
     "text": "1. Kwaku KF, Josephson ME. Typical AVNRT - An update on mechanisms and therapy. 2002;6:414–421. Available at: https://link.springer.com/article/10.1023/A:1021140509804.\n\n\n2. Issa ZF, Miller JM, Zipes DP. Clinical arrhythmology and electrophysiology: A companion to braunwald’s heart disease. Elsevier; 2018:1–752. Available at: https://linkinghub.elsevier.com/retrieve/pii/C20140032935.\n\n\n3. Goyal R, Zivin A, Souza J, et al. Comparison of the ages of tachycardia onset in patients with atrioventricular nodal reentrant tachycardia and accessory pathway-mediated tachycardia. American Heart Journal 1996;132:765–767. Available at: https://pubmed.ncbi.nlm.nih.gov/8831363/.\n\n\n4. Porter MJ, Morton JB, Denman R, et al. Influence of age and gender on the mechanism of supraventricular tachycardia. Heart Rhythm 2004;1:393–396.\n\n\n5. Abe H, Nagatomo T, Kobayashi H, Miura Y, Masaru Araki AK, Nakashima Y. Neurohumoral and hemodynamic mechanisms of diuresis during atrioventricular nodal reentrant tachycardia. PACE - Pacing and Clinical Electrophysiology 1997;20:2783–2788. Available at: https://pubmed.ncbi.nlm.nih.gov/9392809/.\n\n\n6. Sakhuja R, Smith LM, Tseng ZH, et al. Test characteristics of neck fullness and witnessed neck pulsations in the diagnosis of typical AV nodal reentrant tachycardia. Clinical Cardiology 2009;32:E13. Available at: /pmc/articles/mid/NIHMS319317/ /pmc/articles/mid/NIHMS319317/?report=abstract https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3200305/.\n\n\n7. Brugada J, Katritsis DG, Arbelo E, et al. 2019 ESC Guidelines for themanagement of patients with supraventricular tachycardia. European Heart Journal 2020;41:655–720. Available at: www.escardio.org/guidelines.\n\n\n8. Kotruchin P, Chaiyakhan I on, Kamonsri P, et al. Comparison between the double-syringe and the single-syringe techniques of adenosine administration for terminating supraventricular tachycardia: A pilot, randomized controlled trial. Clinical Cardiology 2022;45:583–589."
+  },
+  {
+    "objectID": "lectures/avnrt-series/typical_avnrt.html#criteria-for-typical-avnrt",
+    "href": "lectures/avnrt-series/typical_avnrt.html#criteria-for-typical-avnrt",
+    "title": "Typical AVNRT",
+    "section": "Criteria for typical AVNRT",
+    "text": "Criteria for typical AVNRT\n\nInitiation and termination by APD/VPD during AV nodal Wenckebach cycles\nDual AV nodal physiology (differential refractory curves during APD)\nInitiation dependent on critical AH interval during slow pathway conduction\nRetrograde atrial activation with variable VA activation in Triangle of Koch\nInitiated, terminated, or reset without atrial activation\n\n\n\nSlow-fast AVNRT has atrial activation close to QRS complex, such that AH/HA > 1"
+  },
+  {
+    "objectID": "lectures/avnrt-series/typical_avnrt.html#differential-for-regular-short-rp-tachycardia",
+    "href": "lectures/avnrt-series/typical_avnrt.html#differential-for-regular-short-rp-tachycardia",
+    "title": "Typical AVNRT",
+    "section": "Differential for regular / short RP tachycardia",
+    "text": "Differential for regular / short RP tachycardia\n\nTypical AVNRT\nOrthodromic AVRT\nAtypical AVNRT\nAtrial tachycardia always a possibility\nNon-reentrant junctional tachycardia (junctional ectopic tachycardia)\nNon-paroyxsmal junctional tachycardia (d/t digitalis-induced DADs)\nDual AV nodal tachycardia (repetitive retrograde concealment or “linking” phenomenon)"
+  },
+  {
+    "objectID": "lectures/avnrt-series/typical_avnrt.html#case-setup",
+    "href": "lectures/avnrt-series/typical_avnrt.html#case-setup",
+    "title": "Typical AVNRT",
+    "section": "Case setup",
+    "text": "Case setup\n\n\nAccess: RCFV x 3\nCatheters: - CS: decapolar catheter - His: quadrapolar catheter - RV: quadrapolar catheter - Ablation: STSF 4 mm\nClosure: collagen-plug x 3\n\nStudy plan: 1. Baseline EP study 1. RA and RV pacing maneuvers (including decremental pacing) 1. His-refractory PVC 1. Induction of tachycardia 1. Entrainment 1. 3D anatomical mapping (CART) with His cloud 1. Ablation 1. Post-ablation testing"
+  },
+  {
+    "objectID": "lectures/avnrt-series/typical_avnrt.html#evaluation-status",
+    "href": "lectures/avnrt-series/typical_avnrt.html#evaluation-status",
+    "title": "Typical AVNRT",
+    "section": "Evaluation Status",
+    "text": "Evaluation Status\n\n\n\nCriteria\nStatus\n\n\n\n\nInitiation\n-\n\n\nDual AV node\n-\n\n\nCritial AH during slow pathway\n-\n\n\nRAAS\n-\n\n\nInvolvement of chambers\n-"
+  },
+  {
+    "objectID": "lectures/avnrt-series/typical_avnrt.html#tachycardia-initiation-1",
+    "href": "lectures/avnrt-series/typical_avnrt.html#tachycardia-initiation-1",
+    "title": "Typical AVNRT",
+    "section": "Tachycardia initiation",
+    "text": "Tachycardia initiation\n\nTachycardia start:\n\nAPD that blocks the fast pathway?\nVPD that blocks retrograde?\n\nActivation sequence changes:\n\nAtrial activation is concentric, eccentric, high-to-low?\nAre the ventricles and atria activated simultaneously?"
+  },
+  {
+    "objectID": "lectures/avnrt-series/typical_avnrt.html#tachycardia-features-prior-to-diagnostic-pacing-maneuvers",
+    "href": "lectures/avnrt-series/typical_avnrt.html#tachycardia-features-prior-to-diagnostic-pacing-maneuvers",
+    "title": "Typical AVNRT",
+    "section": "Tachycardia features prior to diagnostic pacing maneuvers",
+    "text": "Tachycardia features prior to diagnostic pacing maneuvers\nFor typical AVNRT, there are some findings to help eliminate options.\n\nVA Relationship: any pattern, but most commonly V=A and V<A\nVA Interval: VA ≤ 70\nAtrial Activation Sequence: concentric\nSpontaneous Termination: end either in A or V response\nVA Increase with BBB: no"
+  },
+  {
+    "objectID": "lectures/avnrt-series/typical_avnrt.html#his-refractory-vpds",
+    "href": "lectures/avnrt-series/typical_avnrt.html#his-refractory-vpds",
+    "title": "Typical AVNRT",
+    "section": "His refractory VPDs",
+    "text": "His refractory VPDs"
+  },
+  {
+    "objectID": "lectures/avnrt-series/typical_avnrt.html#entrainment",
+    "href": "lectures/avnrt-series/typical_avnrt.html#entrainment",
+    "title": "Typical AVNRT",
+    "section": "Entrainment",
+    "text": "Entrainment"
   }
 ]

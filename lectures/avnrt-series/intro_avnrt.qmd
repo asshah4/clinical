@@ -1,5 +1,5 @@
 ---
-title: "Part 1: An Intro to AVNRT"
+title: "Introduction to AVNRT"
 subtitle: Clinical Electrophysiology Conference
 author: Anish S. Shah, MD, MS
 institute: Division of Cardiology @ UIC
@@ -70,7 +70,7 @@ loc <- file.path(find_project_folder(), "clinical", "lectures", "avnrt-series")
 1. Non-invasive diagnosis
 1. Non-invasive treatment approach
 1. Relevant anatomy and physiology
-1. Intracrdiac electrograms
+1. Intracardiac electrograms
 
 ---
 
@@ -111,8 +111,6 @@ To initiate and maintain a re-entrant rhythm:
 1. slow conduction down the unblocked pathway, allowing the previous pathway to recover
 
 [Sina qua non]{.green} of reentrant arrhythmia is the ability to _reproducibly_ intiate the tachycardia by timed extrastimuli
-
----
 
 # Diagnosis
 
@@ -580,7 +578,6 @@ ggm(data = tach_start,
 ```{r}
 #| label: tach beats with high sweep
 #| cache: true
-#| fig-cap-location: bottom
 #| fig-cap: A beat from the tachycardia
 #| output-location: column
 ggm(data = tach_start,
@@ -595,7 +592,6 @@ ggm(data = tach_start,
 #| cache: true
 #| fig-cap-location: bottom
 #| fig-cap: A beat from the sinus
-#| output-location: column
 ggm(data = tach_start,
 		channels = c("I", "CS", "RV", "HIS d", "HIS m"),
 		time_frame = c(0.6, 1.0))
@@ -606,7 +602,6 @@ ggm(data = tach_start,
 ```{r}
 #| label: initiation
 #| cache: true
-#| fig-cap-location: bottom
 #| fig-cap: APD leads to tachycardia
 ggm(data = tach_start,
 		channels = c("I", "CS", "RV", "HIS d", "HIS m"),
@@ -680,7 +675,7 @@ avnrt <-
 
 avnrt +
 	transition_layers(
-		keep_layers = c(Inf, Inf, rep(2, 9)),
+		keep_layers = c(Inf, Inf, rep(1, 9)),
 		layer_length = 1,
 		from_blank = FALSE
 	) +
@@ -693,7 +688,6 @@ avnrt +
 ```{r}
 #| label: decremental at 800
 #| cache: true
-#| fig-cap-location: bottom
 #| fig-cap: Decremental pacing at 800 ms
 decremental_800 <-
 	read_lspro(file.path(loc, "tmf_data/lsp-cs-pacing-800.txt")) 
@@ -707,7 +701,6 @@ ggm(decremental_800, channels = c("I", "CS", "HIS")) |>
 ```{r}
 #| label: dec and jump
 #| cache: true
-#| fig-cap-location: bottom
 #| fig-cap: Decremental pacing at 400 ms
 decremental_400 <-
 	read_lspro(file.path(loc, "tmf_data/lsp-cs-pace-decremental-400ms-jump.txt"))
