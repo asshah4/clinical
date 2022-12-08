@@ -492,9 +492,9 @@
   {
     "objectID": "lectures/avnrt-series/typical_avnrt.html#differential",
     "href": "lectures/avnrt-series/typical_avnrt.html#differential",
-    "title": "Part 2: Typical AVNRT",
-    "section": "Differential",
-    "text": "Differential\n\nAtypical AVNRT\nNon-reentrant junctional tachycardia (junctional ectopic tachycardia)\nNon-paroyxsmal junctional tachycardia (d/t digitalis-induced DADs)\nDual AV nodal tachycardia (repetitive retrograde concealment or “linking” phenomenon)\nAtrial tachycardia always a possibility"
+    "title": "Typical AVNRT",
+    "section": "Differential…",
+    "text": "Differential…\n\nTypical AVNRT\nOrthodromic AVRT\nAtypical AVNRT\nAtrial tachycardia always a possibility\nNon-reentrant junctional tachycardia (junctional ectopic tachycardia)\nNon-paroyxsmal junctional tachycardia (d/t digitalis-induced DADs)\nDual AV nodal tachycardia (repetitive retrograde concealment or “linking” phenomenon)"
   },
   {
     "objectID": "lectures/avnrt-series/typical_avnrt.html#evaluation",
@@ -564,14 +564,14 @@
     "href": "lectures/avnrt-series/typical_avnrt.html#case-setup",
     "title": "Typical AVNRT",
     "section": "Case setup",
-    "text": "Case setup\n\n\nAccess: RCFV x 3\nCatheters: - CS: decapolar catheter - His: quadrapolar catheter - RV: quadrapolar catheter - Ablation: STSF 4 mm\nClosure: collagen-plug x 3\n\nStudy plan: 1. Baseline EP study 1. RA and RV pacing maneuvers (including decremental pacing) 1. His-refractory PVC 1. Induction of tachycardia 1. Entrainment 1. 3D anatomical mapping (CART) with His cloud 1. Ablation 1. Post-ablation testing"
+    "text": "Case setup\n\n\nAccess: RCFV x 3\nCatheters:\n\nCS: decapolar catheter\nHis: quadrapolar catheter\nRV: quadrapolar catheter\nAblation: STSF 4 mm\n\nClosure: collagen-plug x 3\n\nStudy plan:\n\nBaseline EP study\nRA and RV pacing maneuvers (including decremental pacing)\nHis-refractory PVC\nInduction of tachycardia\nEntrainment\n3D anatomical mapping (CART) with His cloud\nAblation\nPost-ablation testing"
   },
   {
     "objectID": "lectures/avnrt-series/typical_avnrt.html#evaluation-status",
     "href": "lectures/avnrt-series/typical_avnrt.html#evaluation-status",
     "title": "Typical AVNRT",
     "section": "Evaluation Status",
-    "text": "Evaluation Status\n\n\n\nCriteria\nStatus\n\n\n\n\nInitiation\n-\n\n\nDual AV node\n-\n\n\nCritial AH during slow pathway\n-\n\n\nRAAS\n-\n\n\nInvolvement of chambers\n-"
+    "text": "Evaluation Status\n\n\n\nCriteria\nStatus\n\n\n\n\nInitiation\n-\n\n\nDual AV node\n-\n\n\nCritial AH during slow pathway\n-\n\n\nRAAS\nRetrograde P wave on surface\n\n\nInvolvement of chambers\n-"
   },
   {
     "objectID": "lectures/avnrt-series/typical_avnrt.html#tachycardia-initiation-1",

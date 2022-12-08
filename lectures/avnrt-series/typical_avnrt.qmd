@@ -69,7 +69,7 @@ loc <- file.path(find_project_folder(), "clinical", "lectures", "avnrt-series")
 ---
 
 ```{r}
-#| label: animated AVNRT
+#| label: normal with pathways
 #| cache: true
 
 # SF objects
@@ -96,6 +96,22 @@ ra_grey <-
 	geom_sf(fill = grey[9], alpha = 0.1) +
 	theme_void()
 
+ra_grey +
+	geom_sf(data = chambers, fill = red[5], alpha = 0.1) +
+	geom_sf(data = septum, fill = red[5], alpha = 0.1) +
+	geom_sf(data = vessels, fill = blue[5], alpha = 0.1) +
+	geom_sf(data = projections, fill = red[2], alpha = 0.1) +
+	geom_sf(data = valves, fill = grey[9], alpha = 0.1) +
+	geom_sf(data = conduction, fill = orange[1], alpha = 0.3) +
+	geom_sf(data = pathways, fill = "white", color = NA, alpha = 0.8) +
+	geom_sf_label(data = filter(pathways, type == "pathway"), aes(label = label), nudge_y = 1)
+```
+
+---
+
+```{r}
+#| label: animated AVNRT
+#| cache: true
 avnrt <-
 	ra_grey +
 	geom_sf(data = pathways, fill = "white", color = NA_character_) +
@@ -224,7 +240,7 @@ __Tachycardia__
 
 :::
 
-## Differential for regular / short RP tachycardia
+## Differential... {.smaller}
 
 - Typical AVNRT
 - Orthodromic AVRT
@@ -236,13 +252,14 @@ __Tachycardia__
 
 # Electrophysiology Study
 
-## Case setup
+## Case setup {.smaller}
 
 ::: {.columns}
 ::: {.column width="50%"}
 Access: RCFV x 3
 
 Catheters: 
+
 - CS: decapolar catheter
 - His: quadrapolar catheter
 - RV: quadrapolar catheter
@@ -253,6 +270,7 @@ Closure: collagen-plug x 3
 
 ::: {.column width="50%"}
 Study plan:
+
 1. Baseline EP study
 1. RA and RV pacing maneuvers (including decremental pacing)
 1. His-refractory PVC
@@ -263,8 +281,6 @@ Study plan:
 1. Post-ablation testing
 :::
 :::
-
----
 
 # Baseline
 
@@ -323,16 +339,15 @@ ggm(data = his_pvc_win,
 		time_frame = c(1.8, 2.2))
 ```
 
-## Evaluation Status
+---
 
 | Criteria | Status |
 | :--- | --- |
 | Initiation | - |
 | Dual AV node | - |
-| Critial AH during slow pathway | - |
-| RAAS | Appears that there is retrograde conduction |
+| Critical AH during slow pathway | - |
+| RAAS | [Retrograde P wave on surface]{.red} |
 | Involvement of chambers | - |
-
 
 # RA Pacing
 
@@ -380,6 +395,15 @@ ggm(data = cs_s1_400_jump,
 	add_intervals(channel = "CS 9-10")
 ```
 
+---
+
+| Criteria | Status |
+| :--- | --- |
+| Initiation | - |
+| Dual AV node | [AH jump >50 with decremental pacing]{.red} |
+| Critical AH during slow pathway | - |
+| RAAS | [Retrograde P wave on surface]{.blue} |
+| Involvement of chambers | - |
 
 # RV Pacing
 
@@ -417,6 +441,16 @@ ggm(data = parahis,
 		channels = c("I", "CS", "HIS", "RV")) |>
 	add_intervals(channel = "HIS D")
 ```
+
+---
+
+| Criteria | Status |
+| :--- | --- |
+| Initiation | - |
+| Dual AV node | [AH jump >50 with decremental pacing]{.blue} |
+| Critical AH during slow pathway | - |
+| RAAS | [Concentric CS activation]{.red} |
+| Involvement of chambers | - |
 
 # Tachycardia Maneuvers
 
@@ -456,15 +490,6 @@ ggm(data = tach_cycle,
 	add_intervals(channel = "I")
 ```
 
-## Tachycardia initiation
-
-- Tachycardia start:
-	- APD that [blocks the fast pathway]{.blue}?
-	- VPD that blocks retrograde?
-- Activation sequence changes:
-	- Atrial activation is concentric, eccentric, high-to-low? 
-	- Are the ventricles and atria activated simultaneously?
-
 ## Tachycardia features prior to diagnostic pacing maneuvers
 
 For typical AVNRT, there are some findings to help eliminate options.
@@ -476,6 +501,14 @@ For typical AVNRT, there are some findings to help eliminate options.
 1. VA Increase with BBB: no
 
 ---
+
+| Criteria | Status |
+| :--- | --- |
+| Initiation | [APD leads to tach]{.red} |
+| Dual AV node | [AH jump >50 with decremental pacing]{.blue} |
+| Critical AH during slow pathway | [AH interval is prolonging prior to APD]{.red} |
+| RAAS | [Concentric CS activation]{.blue} |
+| Involvement of chambers | - |
 
 ## His refractory VPDs
 
@@ -494,7 +527,7 @@ ggm(data = his_pvc_fail,
 ```{r}
 #| label: his refractory pvc fail zoom
 #| cache: true
-#| fig-cap: PVC however affected the HH interval, thus not refractory, and we get fusion beat
+#| fig-cap: PVC however affected the HH interval, thus not refractory
 ggm(data = his_pvc_fail,
 		channels = c("I", "CS", "HIS", "RV"),
 		time_frame = c(1.2, 2.2))
@@ -520,6 +553,16 @@ ggm(data = his_pvc_win,
 		channels = c("I", "CS", "HIS", "RV"),
 		time_frame = c(0.2, 2.0))
 ```
+
+---
+
+| Criteria | Status |
+| :--- | --- |
+| Initiation | [APD leads to tach]{.blue} |
+| Dual AV node | [AH jump >50 with decremental pacing]{.blue} |
+| Critical AH during slow pathway | [AH interval is prolonging prior to APD]{.red} |
+| RAAS | [Concentric CS activation]{.blue} |
+| Involvement of chambers | [No AP noted, VPD breaks cycle]{.red} |
 
 ## Entrainment
 
@@ -555,7 +598,17 @@ ggm(data = rv_s1_300_entrain,
 		channels = c("I", "CS", "HIS", "RV"))
 ```
 
-# Ablation
+---
+
+| Criteria | Status |
+| :--- | --- |
+| Initiation | [APD leads to tach]{.blue} |
+| Dual AV node | [AH jump >50 with decremental pacing]{.blue} |
+| Critical AH during slow pathway | [AH interval is prolonging prior to APD]{.red} |
+| RAAS | [Concentric CS activation]{.blue} |
+| Involvement of chambers | [VPD breaks, A advances with H]{.red} |
+
+# Conclusion
 
 ---
 
@@ -567,10 +620,14 @@ ggm(data = cs_s4_no_tach,
 		channels = c("I", "CS", "HIS", "RV"))
 ```
 
+---
 
-# References
+| Criteria | Status |
+| :--- | --- |
+| Initiation | [APD leads to tach]{.blue} |
+| Dual AV node | [AH jump >50 with decremental pacing]{.blue} |
+| Critical AH during slow pathway | [AH interval is prolonging prior to APD]{.red} |
+| RAAS | [Concentric CS activation]{.blue} |
+| Involvement of chambers | [VPD breaks, A advances with H]{.blue} |
 
-## {.smaller}
-
-::: {#refs}
-:::
+Evidence supports typical AVNRT using slow fast pathway, without AP.
