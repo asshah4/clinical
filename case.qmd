@@ -6,6 +6,7 @@ These are a list of all the conferences and talks that I have given during clini
 
 ## Cardiology Fellowship
 
+1. __January 24, 2023__ Brief [cardiac catheterization case conference](https://asshah4.github.io/clinical/cases/01-24-23_cath-case-conference/cath-conference.html) on complex/staged PCI.
 1. __December 07-08, 2022__ A lecture series on AVNRT, including an [introduction](https://asshah4.github.io/clinical/lectures/avnrt-series/intro_avnrt.html), an overview of [typical AVNRT](https://asshah4.github.io/clinical/lectures/avnrt-series/typical_avnrt.html), These include surface ECG, EGM, and pacing maneuvers.
 1. __May 24, 2022__ Brief [cardiac catheterization case conference](https://asshah4.github.io/clinical/cases/05-24-22_cath-case-conference/cath-conference.html) discussion of a triple-vessel disease patient with UGIB that was surgically turned down for bypass, pending surgery for infection. 
 1. __February 16, 2022__ Pulmonary Embolism Response Team [introduction and overview](https://asshah4.github.io/pert/R/jbva-pert-residents.html) at the Jesse Brown VA system for the internal medicine residency. 
