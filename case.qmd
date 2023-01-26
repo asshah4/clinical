@@ -1,5 +1,6 @@
 ---
 title: "Clinical Cases"
+format: html
 ---
 
 These are a list of all the conferences and talks that I have given during clinical training, ranging from residency, fellowship, and in practice. Most of these are focused on clinical cases, which have all been de-identified.
