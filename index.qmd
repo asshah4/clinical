@@ -17,7 +17,7 @@ As part of both residency and fellowship training, volume is an important part o
 ```{r}
 #| label: download
 #| echo: false
-source("R/make-anonymous.R", local = knitr::knit_global())
+#source("R/make-anonymous.R", local = knitr::knit_global())
 log <- readr::read_csv("anonymous.csv") 
 
 start <- min(log$date, na.rm = TRUE)

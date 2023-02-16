@@ -12,10 +12,6 @@ website:
     left:
       - icon: house-door
         href: https://asshah4.github.io
-      - text: Cases and Conferences
-        href: case.qmd
-      - text: Procedures and Skills
-        href: log.qmd
     right:
       - icon: envelope
         href: mailto:ashah282@uic.edu
