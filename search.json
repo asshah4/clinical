@@ -999,5 +999,124 @@
     "title": "Clinical Volume",
     "section": "",
     "text": "As part of both residency and fellowship training, volume is an important part of both procedural competence and clinical skills.\n\n\nRows: 2200 Columns: 9\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr  (7): dx1, dx2, dx3, procedure, location, modifier, notes\ndbl  (1): special\ndate (1): date\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\n\nBelow is a summary of procedures that have been performed during training.\n\n\n\n\n# Specific counts\nmaster |>\n    count(category, type, location, modifier)\n\nmaster |>\n    filter(is.na(modifier) & !is.na(location)) |>\n    count(category, type, location)\n\nmaster |>\n    filter(is.na(location) & is.na(modifier)) |>\n    count(category, type)\n\nmaster |>\n    filter(!is.na(location) & is.na(modifier)) |>\n    count(category, type, location)\n\nmaster |>\n    count(type) \n\nmaster |>\n    count(category)\n\n\n\n\n\n\n\n  \n  \n    \n      type\n      location\n      modifier\n      n\n    \n  \n  \n    CATH\nNA\nNA\n256\n    CIED\ninterrogation\nNA\n18\n    CIED\nNA\nNA\n45\n    CT\nNA\nNA\n1\n    DCCV\nNA\nNA\n45\n    MCS\nNA\nNA\n5\n    PCI\nNA\nNA\n68\n    pericardiocentesis\nNA\nNA\n3\n    stress\nNA\necho\n13\n    stress\nNA\nnuclear\n173\n    TEE\nbedside\nNA\n156\n    TEE\nNA\nNA\n129\n    TTE\nbedside\nNA\n33\n    TTE\nNA\nNA\n402\n    TVP\nNA\nNA\n8"
+  },
+  {
+    "objectID": "chalk_talks/02-22-23_hypertrophic-cardiomyopathy/hcm-overview.html#overview",
+    "href": "chalk_talks/02-22-23_hypertrophic-cardiomyopathy/hcm-overview.html#overview",
+    "title": "Hypertrophic Cardiomyopathy",
+    "section": "Overview",
+    "text": "Overview\n\nThought to be more rare, but now diagnosed more commonly\nIncidence of 1:200 to 1:500\nRange of phenotypic presentations, 15 mm to ≥ 30 mm LV wall thickness\nClinical presentation along the spectrum of disease:\n\nstable/benign\nsudden death\nobstructive physiology + heart failure\natrial fibrillation + stroke\n\n\n\n\nMaron et al. JACC 2022"
+  },
+  {
+    "objectID": "chalk_talks/02-22-23_hypertrophic-cardiomyopathy/hcm-overview.html#clinical-evaluation",
+    "href": "chalk_talks/02-22-23_hypertrophic-cardiomyopathy/hcm-overview.html#clinical-evaluation",
+    "title": "Hypertrophic Cardiomyopathy",
+    "section": "Clinical evaluation",
+    "text": "Clinical evaluation\n\nDiscuss: disease and its treatment strategies - genetic conditions necessitate both clinical and psychosocial considerations\nHPI: focuses on syncope, prolonged palpitations, chest pain, family history of HCM or sudden death\nEstablish: LV morphology, stratify sudden death risk, classify if obstructive or not, family screening needs, and follow-up\nEvaluate: TTE, ECG (12-lead + ambulatory), CMR, ESE, genetic testing\nFollow-up: repeat imaging every 1-2 years (based on clinical setting)"
+  },
+  {
+    "objectID": "chalk_talks/02-22-23_hypertrophic-cardiomyopathy/hcm-overview.html#diagnostic-requirements",
+    "href": "chalk_talks/02-22-23_hypertrophic-cardiomyopathy/hcm-overview.html#diagnostic-requirements",
+    "title": "Hypertrophic Cardiomyopathy",
+    "section": "Diagnostic requirements",
+    "text": "Diagnostic requirements\n\nLV wall thickness > 15 mm (13 to 14 mm with other risk features)\nUnassociated with other cardiometabolic or systemic disease\nSarcomere mutation or other genetic variant\n\n\n\nGersh, BJ, et al. JACC 2011"
+  },
+  {
+    "objectID": "chalk_talks/02-22-23_hypertrophic-cardiomyopathy/hcm-overview.html#non-mandatory-findings",
+    "href": "chalk_talks/02-22-23_hypertrophic-cardiomyopathy/hcm-overview.html#non-mandatory-findings",
+    "title": "Hypertrophic Cardiomyopathy",
+    "section": "Non-mandatory findings",
+    "text": "Non-mandatory findings\n\nAsymmetrical septal hypertrophy\nSystolic anterior motion\nDynamic LVOT obstruction"
+  },
+  {
+    "objectID": "chalk_talks/02-22-23_hypertrophic-cardiomyopathy/hcm-overview.html#where-is-the-lvh",
+    "href": "chalk_talks/02-22-23_hypertrophic-cardiomyopathy/hcm-overview.html#where-is-the-lvh",
+    "title": "Hypertrophic Cardiomyopathy",
+    "section": "Where is the LVH?",
+    "text": "Where is the LVH?\n\n\n\n\n\nFigure 2: Frequency of LVH location\n\n\n\n\n\n\nKlues HG, JACC 1995;"
+  },
+  {
+    "objectID": "chalk_talks/02-22-23_hypertrophic-cardiomyopathy/hcm-overview.html#lvh-variant-morphology",
+    "href": "chalk_talks/02-22-23_hypertrophic-cardiomyopathy/hcm-overview.html#lvh-variant-morphology",
+    "title": "Hypertrophic Cardiomyopathy",
+    "section": "LVH variant morphology",
+    "text": "LVH variant morphology\n\n\n\nFigure 3: Variant sub-type correlated with frequency of genetic mutations: sigmoid, reversse, neutral, apical (respectively)\n\n\n\n\nBinder J, et al. Mayo Clin Proc 2006"
+  },
+  {
+    "objectID": "chalk_talks/02-22-23_hcm-overview/hcm-overview.html#overview",
+    "href": "chalk_talks/02-22-23_hcm-overview/hcm-overview.html#overview",
+    "title": "Hypertrophic Cardiomyopathy",
+    "section": "Overview",
+    "text": "Overview\n\nThought to be more rare, but now diagnosed more commonly\nIncidence of 1:200 to 1:500\nRange of phenotypic presentations, 15 mm to ≥ 30 mm LV wall thickness\nClinical presentation along the spectrum of disease:\n\nstable/benign\nsudden death\nobstructive physiology + heart failure\natrial fibrillation + stroke\n\n\n\n\nMaron et al. 2022, JACC"
+  },
+  {
+    "objectID": "chalk_talks/02-22-23_hcm-overview/hcm-overview.html#clinical-evaluation",
+    "href": "chalk_talks/02-22-23_hcm-overview/hcm-overview.html#clinical-evaluation",
+    "title": "Hypertrophic Cardiomyopathy",
+    "section": "Clinical evaluation",
+    "text": "Clinical evaluation\n\nDiscuss: disease and its treatment strategies - genetic conditions necessitate both clinical and psychosocial considerations\nHPI: focuses on syncope, prolonged palpitations, chest pain, family history of HCM or sudden death\nEstablish: LV morphology, stratify sudden death risk, classify if obstructive or not, family screening needs, and follow-up\nEvaluate: TTE, ECG (12-lead + ambulatory), CMR, ESE, genetic testing\nFollow-up: repeat imaging every 1-2 years (based on clinical setting)"
+  },
+  {
+    "objectID": "chalk_talks/02-22-23_hcm-overview/hcm-overview.html#diagnostic-requirements",
+    "href": "chalk_talks/02-22-23_hcm-overview/hcm-overview.html#diagnostic-requirements",
+    "title": "Hypertrophic Cardiomyopathy",
+    "section": "Diagnostic requirements",
+    "text": "Diagnostic requirements\n\nLV wall thickness > 15 mm (13 to 14 mm with other risk features)\nUnassociated with other cardiometabolic or systemic disease\nSarcomere mutation or other genetic variant\n\n\n\nGersh, BJ, et al. 2011, JACC"
+  },
+  {
+    "objectID": "chalk_talks/02-22-23_hcm-overview/hcm-overview.html#non-mandatory-findings",
+    "href": "chalk_talks/02-22-23_hcm-overview/hcm-overview.html#non-mandatory-findings",
+    "title": "Hypertrophic Cardiomyopathy",
+    "section": "Non-mandatory findings",
+    "text": "Non-mandatory findings\n\nAsymmetrical septal hypertrophy\nSystolic anterior motion\nDynamic LVOT obstruction"
+  },
+  {
+    "objectID": "chalk_talks/02-22-23_hcm-overview/hcm-overview.html#where-is-the-lvh",
+    "href": "chalk_talks/02-22-23_hcm-overview/hcm-overview.html#where-is-the-lvh",
+    "title": "Hypertrophic Cardiomyopathy",
+    "section": "Where is the LVH?",
+    "text": "Where is the LVH?\n\n\n\n\n\nFigure 3: Frequency of LVH location\n\n\n\n\n\n\nKlues HG, 1995, JACC"
+  },
+  {
+    "objectID": "chalk_talks/02-22-23_hcm-overview/hcm-overview.html#lvh-variant-morphology",
+    "href": "chalk_talks/02-22-23_hcm-overview/hcm-overview.html#lvh-variant-morphology",
+    "title": "Hypertrophic Cardiomyopathy",
+    "section": "LVH variant morphology",
+    "text": "LVH variant morphology\n\n\n\nFigure 3: Variant sub-type correlated with frequency of genetic mutations: sigmoid, reversse, neutral, apical (respectively)\n\n\n\n\nBinder et al. Mayo Clin Proc 2006"
+  },
+  {
+    "objectID": "chalk_talks/02-22-23_hcm-overview/hcm-overview.html#classify-lvh-morphology",
+    "href": "chalk_talks/02-22-23_hcm-overview/hcm-overview.html#classify-lvh-morphology",
+    "title": "Hypertrophic Cardiomyopathy",
+    "section": "Classify LVH morphology",
+    "text": "Classify LVH morphology\n\n\n\n\n\n\n\n(a) Sigmoid\n\n\n\n\n\n\n\n(b) Reverse\n\n\n\n\n\n\n\n(c) Apical\n\n\n\n\nFigure 4: Location of hypertrophy defines the morphology. No matter where, any region > 30 mm increases risk of SCD, as well as apical pouch.\n\n\n\n\nOmmen et al. 2016, JASE"
+  },
+  {
+    "objectID": "chalk_talks/02-22-23_hcm-overview/hcm-overview.html#sam",
+    "href": "chalk_talks/02-22-23_hcm-overview/hcm-overview.html#sam",
+    "title": "Hypertrophic Cardiomyopathy",
+    "section": "SAM",
+    "text": "SAM\n\n\n\nFigure 5: The Venturi effect. LV ejection → obstruction → MR.\n\n\n\n\nSilbinger 2016, JASE"
+  },
+  {
+    "objectID": "chalk_talks/02-22-23_hcm-overview/hcm-overview.html#lvh-associated-with-genetic-variants",
+    "href": "chalk_talks/02-22-23_hcm-overview/hcm-overview.html#lvh-associated-with-genetic-variants",
+    "title": "Hypertrophic Cardiomyopathy",
+    "section": "LVH associated with genetic variants",
+    "text": "LVH associated with genetic variants\n\n\n\nFigure 2: Variant sub-type correlated with frequency of genetic mutations: sigmoid, reversse, neutral, apical (respectively)\n\n\n\n\nBinder et al. 2006, Mayo Clin Proc"
+  },
+  {
+    "objectID": "chalk_talks/02-22-23_hcm-overview/hcm-overview.html#gradients",
+    "href": "chalk_talks/02-22-23_hcm-overview/hcm-overview.html#gradients",
+    "title": "Hypertrophic Cardiomyopathy",
+    "section": "Gradients",
+    "text": "Gradients\nWe can compare LV systolic pressure with systemic systolic pressure to estimate obstructive gradients:\n\\[ LV\\ Systolic\\ Pressure = 4 \\times (MR\\ velocity)^{2} + LA\\ Pressure\\]\n\nPeak LVOT gradient of ≥ 50 mmHg at rest or with provocation or exercise indicates obstruction\nDifferentiate SAM-mediated LVOT obstruction from mid-ventricular obstruction (MVO; “dagger” shaped)\n\nMR signal is both higher and longer, thus may contaminate LVOT signal"
+  },
+  {
+    "objectID": "chalk_talks/02-22-23_hcm-overview/hcm-overview.html#pre-operative-strategies",
+    "href": "chalk_talks/02-22-23_hcm-overview/hcm-overview.html#pre-operative-strategies",
+    "title": "Hypertrophic Cardiomyopathy",
+    "section": "Pre-operative strategies",
+    "text": "Pre-operative strategies\nSurgical septal myectomy and alcohol septal ablation should have TEE support. Measure:\n\nIVS maximum thickness\nanterior leaflet length\napical extent of the septal “bulge”\ndistance between aortic annulus to mitral-septal continuity\n\nFollow-up TTE in 3-6 months."
   }
 ]
