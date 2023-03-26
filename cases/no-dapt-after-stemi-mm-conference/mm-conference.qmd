@@ -1,0 +1,51 @@
+---
+title: Mortality and Morbidity
+subtitle: Cardiology Conference
+author: Anish S. Shah, MD, MS
+institute: Division of Cardiology, Department of Medicine, University of Illinois Chicago 
+date: March 27, 2023
+---
+
+# Overview
+
+## Outline
+
+## Objectives
+
+# Case 
+
+## Hospital course
+
+Maria D Valdez is a 69 y.o. female with PMH of ESRD s/p DDKT 2018 due to HTN and SLE c/b lupus nephritis, afib on apixaban, IDDM, hypothyroidism, T6-T7 meningioma s/p meningioma resection and laminectomy, and CAD s/p PCI to LAD 1/28/23 who presents from OSH for further management of gross hematuria and recurrent UTI. 
+Pt presented to OSH for chest pain and was found to have STEMI and had PCI placed in LAD and was started on DAPT in addition to home medication of apixaban. Developed gross hematuria and also had some minimal bleeding from access site at groin which had resolved.
+
+Workup revealed UA concerning for UTI, per documentation culture was growing E. Coli and was started on CTX then switched to nitrofurantoin 100mg BID once susceptibilities came back at NW OSH (1 day worth of it). Escalated to impenem here due to concern for ESBL without susceptibilities in hand. Transplant ultrasound without signs of pyelo but there is mild hydronephrosis  Per documentation urology was consulted and signed off since hematuria was resolving and likely from DAPT. Goal was to have patient start losartan but appears blood pressure was low end of normal so this was held and carvedilol was also decreased to 3.25 mg BID. Eliquis has been held since gross hematuria began, but DAPT continued because of high risk given very recent stent placement. Immunosuppressives were continued. 
+ 
+Overall pt feels well and that she is recovering. Reports having worked with physical therapy while at the OSH. States that all day today her urine was not bloody. Denies dysuria. Has had purewick in place. Of note pt tested positive for COVID while at OSH but has remained asymptomatic, she is fully vaccinated. 
+ 
+MEDICINE TEAM E COURSE:
+Escalated to impenem here due to concern for ESBL without susceptibilities in hand. Per ID, de-escalated to nitrofurantoin for appropriate coverage (last day 2/9). Diuretics were held per transplant nephro given possible transplant rejection noted at OSH. Apixaban was continued to be held on admission in setting of gross hematuria, with apixaban restarted on 2/5.
+ 
+On 2/6, patient was noted to have desaturated to 84-86% on RA. Saturating appropriately on 2L O2 NC. CXR obtained showing pulmonary edema, IVF were stopped with plan to diurese if no signs of improvement.
+ 
+When seen in the AM, patient was noted to be hypoxic, desaturating to the mid-80s on 2L O2 NC, improved to low 90s on 6L. Patient endorsed chest pain with exertion that had started overnight. EKG w/ possible ST depressions, troponin elevated to 1900, though difficult to interpret in setting of recent STEMI (last troponin >25000 at OSH on 1/29). It was identified that DAPT had not been re-ordered upon admission. Cardiology was consulted, who recommended urgent cardiac cath and transfer to CCU.
+ 
+CCU COURSE (2/7-2/11): 
+Transferred to CCU, had cardiac cath w/o evidence of stent thrombosis. Briefly hypotensive after cath requiring levophed, now weaned off. Intubated given hypoxemic respiratory failure 2/2 to volume overload, extubated 2/9 now on room air. 
+ 
+TTE on 2/8 showed EF of 29% with RWA, LV mural thrombus. Patient was initially on triple therapy but descalated to Plavix and Eliquis as DAPT. Pt's AKI initially improved after diuresis but worsened in setting of GI losses from diarrhea on 2/10. Felt to be iatrogenic 2/2 medication side effect for constipation. S/p 500 cc bolus NS. Currently holding ACE/ARB given AKI.
+ 
+Medicine Team A Course (2/11-2/13):
+Patient had some hematemesis/hemoptysis with suctioning and went for EGD on 2/12 without an identifiable bleeding lesion. Bleeding thought to be in setting of intubation trauma and has now resolved. On 2/13 AM patient with mild acidosis, worsening LFT and AKI c/f continued congestion and IV depletion. Acute liver workup and transplant nephrology consulted. Patient with decreasing urine output and downtrending Na to 118, necessitating ICU care per Dr. Tang, attending transplant nephrologist. Prior to transfer patient was made NPO since we would like to fluid restrict her (food is ok) and we started a sodium bicarb drip to correct her acidosis.
+ 
+MICU 2 Course (2/13- 2/14):
+Patient transferred to MICU for management of moderate hyponatremia to 120 and AKI (kidney transplant 11/9/18) likely cardiorenal etiology with EF 30% given sacral edema and pulmonary congestion on CXR. POCUS on arrival to MICU demonstrated moderate circumferential pericardial effusion which is larger than noted posterior pericardial effusion on TTE from (2/8). She was diuresed and Cardiology was contacted regarding the effusion where pericardiocentesis was done with 600 cc of bloody fluid with hemodynamic changes suggestive of pericardial tamponade. Of notes, ventricular tachycardia with successful synchronized cardioversion, biventricular overload with normal C.O., and Severe LV dysfx c/w free wall rupture. Patent LAD stent. Transfuse PRBC in lab with plan for cardiac surgery with repair of free wall rupture. R IJ accessed and swan catheter placed. Transferred to OR under cardiothoracic surgery now s/p pericardial window, intubated and on norepinephrine/epinephrine. Accepted and Transferred to CCU service.
+ 
+CCU course (2/14-2/17)
+Per transplant nephrology, pt continued on sodium bicarbonate drip for acidosis and AKI for 1 day. Given concern for volume overload, pt then started on CVVH, D5W added on to prevent sodium from overcorrecting. Pt had worsening lactic acid, started on imipenem and infectious workup sent. Repeat TTE obtained which was similar to prior with EF <20%. Hepatology consulted for worsening LFTs concerning for ischemic hepatitis, recommended supportive care. Pt had worsening INR, started on IV Vitamin K and given FFP. Also noted to have thrombocytopenia, 2 units platelets given and HIT workup sent. Started on dobutamine drip 2/15 given worsening urine output. UOP did not improve, but patient was weaned off norepi, and lactate began to normalize, with LFTs peaking in the thousands presumable secondary to resolving shock liver. Patient overall appeared stable, and eventual transfer for durable LVAD was discussed with advance cardiology providers at NMH.
+ 
+On the morning of 2/17, patient self-extubated and was comfortable on room air, awake/responsive. Pulmonary pressures and lactate had also been improving on dobutamine 2.5, with CVVH pulling 50mL/hr for cardiogenic shock with oliguric patient. Around 11:30am, patient entered Vtach rhythm and pulse was lost. She received CPR and 1mg epi was given prior to ROSC. Sinus rhythm devolved into recurrent Vtach and patient was shocked. Subsequent rhythm was also irregular and devolved into asystole. During this interval, patient was reintubated. During second code, she received another 1mg epi and further CPR was provided. ROSC was obtained again with sinus rhythm, stable. Despite full oxygenation via ventilator, she was saturating in mid 70s, and dobutamine was restarted after previously being held over concern it might have contributed to the initial arrhythmia. Saturation recovered, and norepi was initiated at 40, with appropriate BP obtained. POCUS demonstrated severely reduced LVEF ~10%, similar to prior. Given initial Atach, she began amio loading. Patient's son was at bedside and requested full code until his sister arrived.
+ 
+Upon the daughter's arrival, she and her brother were given the option of pursuing transfer to NMH for possible LVAD, but after discussing, they elected palliative extubation and comfort care. They reported that the patient had previously expressed her wish not to be reintubated, and felt the decision best reflected the patients goals for care when last decisional. Patient was extubated around 5pm with family present and prompty passed away. Family declined autopsy.
+
+# Conclusion

@@ -33,7 +33,7 @@ format:
     toc_float: true
   revealjs:
     theme: [simple, styles.scss]
-    slide-tone: true
+    slide-tone: false
     fig-cap-location: bottom
     fig-align: center
     fig-responsive: true
