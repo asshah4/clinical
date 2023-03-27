@@ -10,6 +10,7 @@ format:
     transition-speed: fast
     slide-number: true
     incremental: false
+suppress-bibliography: true
 ---
 
 # Introduction
@@ -120,7 +121,7 @@ Cardiac catheterization with aortic valve study
 
 ---
 
-## Structural consult (-2y, 4m) {.smaller}
+## Structural consult (-2y, 4m) 
 
 > Given his thorough evaluation his aortic stenosis remains the most likely cause of his symptoms and I would favor proceeding with aortic valve replacement. Given his young age, surgical aortic valve replacement is probably favored. His STS PROM is 1.7%. If TAVR is chosen he will need a TAVR protocol CTA of chest, abdomen and pelvis. I will refer him to be evaluated by cardiac surgery and then we will have a heart team meeting and decide the best route to go. I discussed this with the patient and his wife and they expressed understanding. 
 
@@ -149,7 +150,7 @@ __Recommendations:__
 
 ::::
 
-## CTS consult (-2y, 2m) {.smaller}
+## CTS consult (-2y, 2m) 
 
 > ~~Patient~~ 56-year-old man who has history of hypertension, chronic renal failure status post kidney transplant in 2015 with reasonable function with a recent creatinine of 1.8.  The patient has also history of atrial fibrillation on apixaban and since May he has been experiencing symptoms of shortness of breath on exertion. 
 
@@ -213,7 +214,11 @@ TEE for valvular heart disease re-evaluation
 
 > Severe biatrial enlargement.
 
+. . .
+
 > Aortic valve tricuspid. There is moderate to severe calcification of all three leaflets, resulting in moderate aortic stenosis and moderate aortic regurgitation.
+
+. . .
 
 > Mitral valve is [rheumatic]{.red}. There is significant calcification of the anterior and posterior leaflets, with resulting moderate mitral regurgitation. There is no evidence of significant mitral stenosis. There is significant mitral annular calcificaiton.
 
@@ -329,7 +334,7 @@ OPERATIONS:
 
 > NPO overnight for possible PPM with EP. V paced at 60, has intrinsic rhythm of mid 50s. Feels SOB for the past 6 hours or so. No BM, making good urine. Received 1u plt overnight count is 83 from 51 yesterday. 
 
-## Discharge (+21d) {.smaller}
+## Discharge (+21d) 
 
 > Mr. Powell is a 58 year old male who underwent a mitral and aortic valve replacement for symptomatic moderate mitral regurgitation and moderate aortic stenosis and regurgitation. He received 1 platelet intraop. He was transferred to the ICU in stable condition. He was noted to be baseline bradycardic after surgery and EP was consulted for PPM which was placed on 2/1.
 
@@ -411,11 +416,20 @@ Post-op TEE for left atrial evaluation
 > There is a well seated, bioprosthetic valve in the mitral position (25mm Carpentier Edwards, ~~Surgeon~~). Leaflet tips are not well visualized. Mean transmitral diastolic gradient is 4 mm Hg at a HR of 60 bpm. There is at least some degree of regurgitation, but difficult to visualize due to shadowing.
 > There is a well seated, bioprosthetic valve in the aortic position (23mm Carpentier Edwards; ~~Surgeon~~). Leaflet tips are not well visualized. Mean gradient 26 mmHg and peak velocity of 3.5 m/s. There is trace periprosthetic regurgitation. There is also some degree of intraprosthetic regurgitation, but difficult to quantify on current study.
 
-## TTE prior to discharge (+10d)
+## TTE of AV prior to discharge (+10d) {.smaller}
 
 > There is a well-seated bioprosthetic valve in the aortic position (bioAVR, 23mm Carpentier Edwards). Bioprosthetic leaflets not well seen, though appear to be normally thin and mobile consistent with normal leaflet function. Mean gradient 26 mmHg and peak velocity of 3.5 m/s and acceleration time around 95msec and DI 0.45 suggestive of patient prosthesis mismatch.
+
+. . .
+
 > There appears to be very eccentric, mild-moderate bioAVR regurgitation that is likely periprosthetic, seen along the mitral-aortic continuity.
+
+## TTE of MV prior to discharge (+10d) {.smaller}
+
 > There is a well-seated bioprosthetic valve in the mitral position (bioMVR, 25mm Carpentier Edwards). Bioprosthetic leaflets not well seen, though there appears to be some leaflet thickening and reduced excursion of one of the leaflets. Elevated mean transmitral diastolic gradient 6 mm Hg at a HR of 60 bpm.
+
+. . .
+
 > There is a small highly-mobile echodensity seen along the ventricular surface of the bioMVR measuring approximately 7mm in length and 3mm in width (i.e. image 34); similar echodensity not well seen on prior TTE 1/30/2023 or TEE 1/31/2023. Differential includes residual chordal structure (not seen on prior echos) or possibly a new vegetation. Consider further evaluation with TEE if clinically indicated.
 
 ## Valvular status {.smaller}
@@ -509,7 +523,7 @@ ___
 
 > HR in th 60s by temp pacer, and 40s when turned off. +2 radial pulse. Warm ext, no edema. Bilateral crackles however. Distant S1/S2. Pulmonary edema seen on CXR. ECG c- wide junctional escape in 40s with no P waves ([suspected AF underlying]{.red}). TTE c- potential [LA thrombus noted]{.red} (versus artifact).
 
-## EP Follow-up (+4d) {.smaller}
+## EP Follow-up (+4d) 
 
 > Junctional escape pattern after SMVR/SAVR, concern for high grade AV block, in setting of AF:
 >
@@ -520,7 +534,7 @@ ___
 >     5. Will plan for placement tomorrow AM (NPO @ MN) unless other imaging or interventions are needed for TTE finding.
 >     6. Will call CTS in AM to confirm plan.
 
-## EP follow-up (+5d) {.smaller}
+## EP follow-up (+5d) 
  
 >| High grade AV block in setting of persistent AF after SMVR/SAVR, with new dx of LA thrombus d/t ?HIT:
 > 
@@ -599,15 +613,12 @@ Currently, CHB is managed with RV pacing, however may be benefit to CRT (BLOCK H
 
 ---
 
-| Case | System Issue | Process Improvements |
-| --- | --- | --- |
-| LAA thrombus | Identifying higher risk of thrombus | |
-| LAA occlusion | Complex surgical planning | |
-| Pacemaker timing | Diagnosis |
+| Problem | System Issue | 
+| - | --- | 
+| Incongruency on imaging | CERNER to EPIC switch for orders (TEE, ECG) |
+| Lost to follow-up | Patient follow-up appointment scheduling |
+| LAA occlusion | Interdiscpliniary vs. multidisciplinary evaluation of complex cases |
+| LAA thrombus | Interdisciplinary communication (e.g. Anesthesia, CTS, CV) |
+| Pacemaker timing | Indication for procedure and continuity of care |
 
 
-## Optimal outcome
-
-## Root cause analyses
-
-## Future recommendations
