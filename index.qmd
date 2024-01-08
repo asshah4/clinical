@@ -9,9 +9,27 @@ knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 library(gt)
 library(glue)
+library(clock)
+library(googledrive)
+library(googlesheets4)
 ```
+As part of clinical training (internal medicine residency, cardiovascular disease fellowship, clinical cardiac electrophysiology fellowship), clinical and procedural volume are important in the development of skills/competence. The following is a summary of volume received during training thus far: 
 
-As part of both residency and fellowship training, volume is an important part of both procedural competence and clinical skills. 
+```{r}
+#| label: volume
+#| echo: false
+
+consults <-
+	googledrive::drive_get('clinical_log') |>
+	googlesheets4::read_sheet('consults') |>
+	janitor::clean_names()
+
+procedures <-
+	googledrive::drive_get('clinical_log') |>
+	googlesheets4::read_sheet('procedures') |>
+	janitor::clean_names() |>
+	filter(!is.na(procedure))
+```
 
 
 ```{r}
@@ -33,15 +51,15 @@ clinical <- subset(log, is.na(procedure))
 Below is a summary of procedures that have been performed during training.
 
 ```{r}
-#| label: summary
+#| label: procedures
 #| echo: false
 
 # Master list
 types <- list(
-	cath = c("COR", "RHC", "LHC", "PCI", "pericardiocentesis", "MCS"),
-	vascular = c("CVL", "AL", "PIV", "closure"),
-	ep = c("DCCV", "CIED", "EPS", "TVP", "ACLS"),
-	imaging = c("TTE", "TEE", "stress", "MRI", "CT", "US")
+	cath = c('COR', 'RHC', 'LHC', 'PCI', 'pericardiocentesis', 'MCS'),
+	vascular = c('CVL', 'AL', 'PIV', 'closure'),
+	ep = c('DCCV', 'CIED', 'EPS', 'TVP', 'ACLS', 'defibrillation'),
+	imaging = c('TTE', 'TEE', 'stress', 'MRI', 'CT', 'US')
 )
 
 # Create categories
@@ -53,16 +71,16 @@ for (i in seq_along(types)) {
 # Make table
 tbl <- tibble(
 	category = cats,
-	type = unlist(types)
+	procedure = unlist(types)
 )
 
 # Identifiers of procedure modifiers with categorizations
-subtypes <-
+log <-
 	procedures |>
-	select(type, location, modifier) 
+	select(procedure, type, modifier) 
 
 # Master table
-master <- full_join(tbl, subtypes, by = "type")
+proc <- full_join(tbl, log, by = 'procedure')
 
 # Some procedures need specific modifiers, located in the location name
 	# Caths -> needs modifier for site
@@ -80,26 +98,11 @@ master <- full_join(tbl, subtypes, by = "type")
 #| label: counts
 #| eval: false
 
-# Specific counts
-master |>
-	count(category, type, location, modifier)
 
-master |>
-	filter(is.na(modifier) & !is.na(location)) |>
-	count(category, type, location)
+proc |>
+	count(procedure) 
 
-master |>
-	filter(is.na(location) & is.na(modifier)) |>
-	count(category, type)
-
-master |>
-	filter(!is.na(location) & is.na(modifier)) |>
-	count(category, type, location)
-
-master |>
-	count(type) 
-
-master |>
+proc |>
 	count(category)
 ```	
 
@@ -130,60 +133,60 @@ master |>
 	# Other
 
 cocats <- 
-	master |>
+	proc |>
 	filter(
-		type == "TTE" & location == "bedside" |
-			type == "TTE" & is.na(location) |
-			type == "stress" & modifier == "echo" |
-			type == "TEE" & location == "bedside" |
-			type == "TEE" & is.na(location) |
-			type == "stress" & (modifier == "technetium" | modifier == "thallium") |
-			type == "CT" |
-			type == "CMR" & location == "bedside" |
-			type == "CMR" & is.na(location) |
-			(type == "RHC" | type == "LHC" | type == "COR") |
-			type == "TVP" |
-			type == "CIED" & location != "interrogation" |
-			type == "CIED" & location == "interrogation" |
-			type == "DCCV" |
-			type == "PCI" |
-			type == "pericardiocentesis" |
-			type == "MCS" 
+		procedure == "TTE" & type == "bedside" |
+			procedure == "TTE" & is.na(type) |
+			procedure == "stress" & modifier == "echo" |
+			procedure == "TEE" & type == "bedside" |
+			procedure == "TEE" & is.na(type) |
+			procedure == "stress" & (modifier == "technetium" | modifier == "thallium") |
+			procedure == "CT" |
+			procedure == "CMR" & type == "bedside" |
+			procedure == "CMR" & is.na(type) |
+			(procedure == "RHC" | procedure == "LHC" | procedure == "COR") |
+			procedure == "TVP" |
+			procedure == "CIED" & type != "interrogation" |
+			procedure == "CIED" & type == "interrogation" |
+			procedure == "DCCV" |
+			procedure == "PCI" |
+			procedure == "pericardiocentesis" |
+			procedure == "MCS" 
 	) |>
 	mutate(modifier = case_when(
-		type == "COR" ~ NA_character_,
-		type == "RHC" ~ NA_character_,
-		type == "LHC" ~ NA_character_,
-		type == "PCI" ~ NA_character_,
-		type == "DCCV" ~ NA_character_,
-		type == "MCS" ~ NA_character_,
-		type == "CIED" & location == "interrogation" ~ NA_character_,
-		type == "CIED" & !location == "interrogation" ~ NA_character_,
-		type == "TTE" ~ NA_character_,
-		type == "TEE" ~ NA_character_,
-		type == "stress" & modifier == "technetium" ~ "nuclear",
-		type == "stress" & modifier == "thallium" ~ "nuclear",
+		procedure == "COR" ~ NA_character_,
+		procedure == "RHC" ~ NA_character_,
+		procedure == "LHC" ~ NA_character_,
+		procedure == "PCI" ~ NA_character_,
+		procedure == "DCCV" ~ NA_character_,
+		procedure == "MCS" ~ NA_character_,
+		procedure == "CIED" & type == "interrogation" ~ NA_character_,
+		procedure == "CIED" & !type == "interrogation" ~ NA_character_,
+		procedure == "TTE" ~ NA_character_,
+		procedure == "TEE" ~ NA_character_,
+		procedure == "stress" & modifier == "technetium" ~ "nuclear",
+		procedure == "stress" & modifier == "thallium" ~ "nuclear",
 		TRUE ~ modifier
 	)) |>
-	mutate(location = case_when(
-		type == "COR" ~ NA_character_,
-		type == "RHC" ~ NA_character_,
-		type == "LHC" ~ NA_character_,
-		type == "PCI" ~ NA_character_,
-		type == "pericardiocentesis" ~ NA_character_,
-		type == "DCCV" ~ NA_character_,
-		type == "MCS" ~ NA_character_,
-		type == "CIED" & !location == "interrogation" ~ NA_character_,
-		type == "TVP" ~ NA_character_,
-		type == "stress" & modifier == "echo" ~ NA_character_,
-		type == "stress" & modifier == "nuclear" ~ NA_character_,
-		TRUE ~ location
-	)) |>
 	mutate(type = case_when(
-		type %in% c("COR", "RHC", "LHC") ~ "CATH",
+		procedure == "COR" ~ NA_character_,
+		procedure == "RHC" ~ NA_character_,
+		procedure == "LHC" ~ NA_character_,
+		procedure == "PCI" ~ NA_character_,
+		procedure == "pericardiocentesis" ~ NA_character_,
+		procedure == "DCCV" ~ NA_character_,
+		procedure == "MCS" ~ NA_character_,
+		procedure == "CIED" & !type == "interrogation" ~ NA_character_,
+		procedure == "TVP" ~ NA_character_,
+		procedure == "stress" & modifier == "echo" ~ NA_character_,
+		procedure == "stress" & modifier == "nuclear" ~ NA_character_,
 		TRUE ~ type
 	)) |>
-	count(type, location, modifier) 
+	mutate(procedure = case_when(
+		procedure %in% c("COR", "RHC", "LHC") ~ "CATH",
+		TRUE ~ procedure
+	)) |>
+	count(procedure, type, modifier) 
 
 gt(cocats)
 ```
