@@ -32,11 +32,20 @@ format:
     toc: true
     toc_float: true
   revealjs:
-    theme: [simple, styles.scss]
+    theme:
+      - simple
+      - theme.scss
     slide-tone: false
     fig-cap-location: bottom
     fig-align: center
     fig-responsive: true
 
-bibliography: Cardiology.bib
+
+bibliography:
+  - ../bibliography/publications.bib
+  - ../bibliography/cardiology.bib
+  - ../bibliography/arrhythmia.bib
+  - ../bibliography/computational.bib
+  - ../bibliography/epidemiology.bib
+
 csl: jacc.csl

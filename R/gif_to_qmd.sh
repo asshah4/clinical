@@ -7,7 +7,7 @@
 
 for i in *.gif; do
 	echo "## {background-image='$i' background-size='contain'}\n"
-done >> cath-conference.qmd
+done >> ccc.qmd
 
 # Needs to be made executable with `chmod +x gifs-to-qmd.sh` from terminal
 # Then, runs via `sh ../../R/gifs-to-qmd.sh` (e.g. absolute path needed)
