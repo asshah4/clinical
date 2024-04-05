@@ -13,13 +13,17 @@ format:
     auto-animate-easing: ease-in-out
     auto-animate-unmatched: false
     progress: true
+    chalkboard: true
 ---
+
+# Introduction
 
 ## Objectives
 
 1. Understand the __cognitive processes__ involved in the case-based diagnostic reasoning 
 1. Identify __diagnostic assumptions__ that may lead towards case-specific biases
 1. Practice __contextualizing clinical data__ in the framework of cardiovascular physiology
+
 
 # History & Physical
 
@@ -54,6 +58,73 @@ Electrocardiography and chest roengenography was performed during his ER visit.
 
 ## {background-image="cxr-ap.gif" background-size="contain"}
 
+## Reasoning {.smallest}
+
+:::: {.columns}
+
+::: {.column width="65%"}
+
+::: {.fragment fragment-index=1}
+Sinus tachycardia
+:::
+
+::: {.fragment fragment-index=2}
+::: {.fragment .semi-fade-out fragment-index=6}
+Right axis deviation with inferior [qR]{.red} and lateral [rS]{.red} pattern
+:::
+:::
+
+::: {.fragment fragment-index=3}
+::: {.fragment .semi-fade-out fragment-index=7}
+[Complete interpolation]{.red} of ventricular ectopy with [superior axis]{.red} and inverted [transition at V2-V3]{.red}
+:::
+:::
+
+::: {.fragment fragment-index=4}
+::: {.fragment .semi-fade-out fragment-index=8}
+Enlarged left-sided heart border with narrow vascular pedicle
+:::
+:::
+
+::: {.fragment fragment-index=5}
+::: {.fragment .semi-fade-out fragment-index=9}
+[Earlier]{.red} completely interpolated atrial depolarization, as compared with PVC, at [similar cycle length]{.red}.
+:::
+:::
+
+:::
+
+::: {.column width="35%"}
+
+::: {.fragment fragment-index=6}
+::: {.fragment .highlight-current-red fragment-index=6}
+Left posterior fascicular block
+:::
+:::
+
+::: {.fragment fragment-index=7}
+::: {.fragment .highlight-current-red fragment-index=7}
+Inferior/posterior-septal PVC
+:::
+:::
+
+::: {.fragment fragment-index=8}
+::: {.fragment .highlight-current-red fragment-index=8}
+Cardiomegaly
+:::
+:::
+
+::: {.fragment fragment-index=9}
+::: {.fragment .highlight-current-red fragment-index=9}
+*Poor or abnormal VA conduction?*
+:::
+:::
+
+:::
+
+::::
+
+
 ---
 
 Patient describes a 10+ year history of anabolic steroid usage, initiated by his coach as he trained as a body-builder. 
@@ -68,7 +139,7 @@ He had been on multiple testosterone and anabolic steroid supplements, and had m
 
 . . .
 
-Growth hormone was DC due to lower extremity and hand swelling.
+Growth hormone was stopped due to lower extremity and hand swelling.
 
 ## Additional histories
 
@@ -92,56 +163,48 @@ Has a *1-year old son with his wife*, who are both healthy.
 
 ::: {.column width="50%"}
 
+::: {.fragment fragment-index=1}
 Sodium 138
 
 Potassium 4.0 
 
 Chloride 102 
+
 CO2 24 
+
 BUN 29
 
-::: {.fragment .highlight-red}
+::: {.fragment .highlight-red fragment-index=3}
 Creatinine 1.96 
 :::
 
 :::
 
+:::
+
 ::: {.column width="50%"}
+
+::: {.fragment fragment-index=2}
 Hg 17.5 
+
 PLT 208
+
 AST 35, ALT 52 
+
 Hemoglobin A1c 5.2%  
+
 LDL 165, HDL 34 
 
-::: {.fragment .highlight-red}
+::: {.fragment .highlight-red fragment-index=3}
 Troponin I 105 (ng/L)
 
 BNP 289
+:::
 :::
 
 :::
 
 ::::
-
-## Additional Labs
-
-ACTH 20.4 
-Free cortisol 1.0, AM cortisol 13
-FSH < 0.2
-LH < 0.2
-Testosterone 1445 ng/dL
-SPEP/UPEP negative
-Lp(a) 21, ApoB100 126 (mg/dL)
-Ferritin 194 
-Iron 70 
-TB negative
-HIV negative
-RVP negative
-Hepatitis panel negative
-ANA/Anti-SM negative
-Trypanasoma cruzi IgG negative
-Cystatin 0.9 (eGFR 81)
-
 
 # Surface Echocardiography
 
@@ -208,6 +271,26 @@ Cystatin 0.9 (eGFR 81)
 ## {background-image="tte-rv-outflow-pw-vti.gif" background-size="contain"}
 
 ## {background-image="tte-rv-outflow.gif" background-size="contain"}
+
+
+## Additional Labs
+
+ACTH 20.4 
+Free cortisol 1.0, AM cortisol 13
+FSH < 0.2
+LH < 0.2
+Testosterone 1445 ng/dL
+SPEP/UPEP negative
+Lp(a) 21, ApoB100 126 (mg/dL)
+Ferritin 194 
+Iron 70 
+TB negative
+HIV negative
+RVP negative
+Hepatitis panel negative
+ANA/Anti-SM negative
+Trypanasoma cruzi IgG negative
+Cystatin 0.9 (eGFR 81)
 
 # Coronary Angiography
 

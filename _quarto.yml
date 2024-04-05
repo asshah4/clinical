@@ -28,7 +28,7 @@ format:
   html:
     theme: flatly
     highlight: solarized-light
-    css: styles.scss
+    css: theme.scss
     toc: true
     toc_float: true
   revealjs:
