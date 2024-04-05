@@ -1,6 +1,6 @@
 ---
-title: Clinical Case Conference
-subtitle: General Cardiology Lecture Series
+title: Clinical Case Conference (CPS)
+subtitle: General Cardiology Lecture Series 
 author: Anish S. Shah, MD, MS
 institute: Division of Cardiology, Department of Medicine, University of Illinois Chicago 
 date: April 8, 2024
@@ -9,10 +9,42 @@ format:
     transition: fade
     transition-speed: fast
     slide-number: true
-    incremental: false
+    incremental: true
+    auto-animate-easing: ease-in-out
+    auto-animate-unmatched: false
+    progress: true
 ---
 
-# Electrocardiography
+## Objectives
+
+1. Understand the __cognitive processes__ involved in the case-based diagnostic reasoning 
+1. Identify __diagnostic assumptions__ that may lead towards case-specific biases
+1. Practice __contextualizing clinical data__ in the framework of cardiovascular physiology
+
+# History & Physical
+
+---
+
+30 year old gentleman with a history of acid reflux on PPI therapy, generalized anxiety disorder without long-term therapy, exercise-induced asthma on SABA inhaler therapy.
+
+---
+
+He had recurrent episodes of wheezing and cough over past 4-6 months, and was sent to the emergency room after being found to have a arterial saturation of 87% on room air.
+
+. . .
+
+Reports that he most prominently noted his dyspnea during sexual intercourse with his wife.
+
+---
+
+He improved with nebulizer therapy. 
+Was seen by ENT at similar time, noting no upper respiratory causes for his symptoms.
+
+. . .
+
+Electrocardiography and chest roengenography was performed during his ER visit.
+
+# Electrocardiography 
 
 ## {background-image="ecg-initial-pvc.png" background-size="contain"}
 
@@ -22,76 +54,94 @@ format:
 
 ## {background-image="cxr-ap.gif" background-size="contain"}
 
-# Coronary Angiography
-
-## {background-image="cath-lca-lao-cran.gif" background-size="contain"}
-
-## {background-image="cath-lca-rao-caud.gif" background-size="contain"}
-
-## {background-image="cath-rca-lao-ap.gif" background-size="contain"}
-
-## {background-image="cath-rca-lao-caud.gif" background-size="contain"}
-
-# Cardiac Magnetic Resonance Imaging
-
-## {background-image="cmr-localizer.gif" background-size="contain"}
-
-## {background-image="cmr-2c-cine.gif" background-size="contain"}
-
-## {background-image="cmr-3c-cine.gif" background-size="contain"}
-
-## {background-image="cmr-4c-cine.gif" background-size="contain"}
-
 ---
 
-::: {layout-nrow=2}
-![](cmr-sa-stack-2.gif)
-![](cmr-sa-stack-3.gif)
-![](cmr-sa-stack-4.gif)
-![](cmr-sa-stack-5.gif)
-![](cmr-sa-stack-6.gif)
-![](cmr-sa-stack-7.gif)
+Patient describes a 10+ year history of anabolic steroid usage, initiated by his coach as he trained as a body-builder. 
+
+. . .
+
+He continued as he was unsure on how to taper.
+
+. . .
+
+He had been on multiple testosterone and anabolic steroid supplements, and had most recently (past 3-6 months) trialed growth hormone.
+
+. . .
+
+Growth hormone was DC due to lower extremity and hand swelling.
+
+## Additional histories
+
+Maternal grandfather died of sudden death at age 40, and mother has a potential "mitral valve prolapse". 
+Father was a body-builder and had taken steroids previously.
+No foreign travel, raised in Canada and lives in Chicago currently. 
+Has a *1-year old son with his wife*, who are both healthy.
+
+## Medications
+
+- Chlorodehydromethyltestosterone (CDMT, a.k.a. *turinabol*) 
+- Oxandrolone (active)
+- Testosterone supplementation (active)
+- Growth hormone injections (for 3-6 months prior to presentation)
+- Albuterol inhaler PRN
+- Omeprazole 40 mg PO daily
+
+## Labs
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+Sodium 138
+
+Potassium 4.0 
+
+Chloride 102 
+CO2 24 
+BUN 29
+
+::: {.fragment .highlight-red}
+Creatinine 1.96 
 :::
 
----
-
-::: {layout-nrow=2}
-![](cmr-sa-stack-8.gif)
-![](cmr-sa-stack-9.gif)
-![](cmr-sa-stack-10.gif)
-![](cmr-sa-stack-11.gif)
-![](cmr-sa-stack-12.gif)
-![](cmr-sa-stack-13.gif)
 :::
 
----
+::: {.column width="50%"}
+Hg 17.5 
+PLT 208
+AST 35, ALT 52 
+Hemoglobin A1c 5.2%  
+LDL 165, HDL 34 
 
-::: {layout-nrow=1}
-![](cmr-av-pc-all.gif)
-![](cmr-av-pc-high.gif)
-![](cmr-av-pc-low.gif)
+::: {.fragment .highlight-red}
+Troponin I 105 (ng/L)
+
+BNP 289
 :::
 
----
-
-::: {layout-nrow=1}
-![](cmr-av-cine.gif)
-![](cmr-cor-lvot-cine.gif)
 :::
 
----
+::::
 
-## {background-image="cmr-mag-ir-280-2c.gif" background-size="contain"}
+## Additional Labs
 
-## {background-image="cmr-mag-ir-280-3c.gif" background-size="contain"}
+ACTH 20.4 
+Cortisol 1.0 
+FSH < 0.2
+LH < 0.2
+Testosterone 1445 ng/dL
+SPEP/UPEP negative
+Lp(a) 21, ApoB100 126 (mg/dL)
+Ferritin 194 
+Iron 70 
+TB negative
+HIV negative
+RVP negative
+Hepatitis panel negative
+ANA/Anti-SM negative
+Trypanasoma cruzi IgG negative
+Cystatin 0.9 (eGFR 81)
 
-## {background-image="cmr-mag-ir-280-4c.gif" background-size="contain"}
-
-## {background-image="cmr-mag-ir-280-sa.gif" background-size="contain"}
-
-## {background-image="cmr-psir-fb-avg-sa.gif" background-size="contain"}
-
-## {background-image="cmr-t1-scout.gif" background-size="contain"}
 
 # Surface Echocardiography
 
@@ -159,7 +209,107 @@ format:
 
 ## {background-image="tte-rv-outflow.gif" background-size="contain"}
 
+# Coronary Angiography
+
+## {background-image="cath-lca-lao-cran.gif" background-size="contain"}
+
+## {background-image="cath-lca-rao-caud.gif" background-size="contain"}
+
+## {background-image="cath-rca-lao-ap.gif" background-size="contain"}
+
+## {background-image="cath-rca-lao-caud.gif" background-size="contain"}
+
+# Cardiac Magnetic Resonance Imaging
+
+## {background-image="cmr-localizer.gif" background-size="contain"}
+
+## {background-image="cmr-2c-cine.gif" background-size="contain"}
+
+## {background-image="cmr-3c-cine.gif" background-size="contain"}
+
+## {background-image="cmr-4c-cine.gif" background-size="contain"}
+
+## {.center}
+
+::: {layout-nrow=2}
+![](cmr-sa-stack-2.gif)
+![](cmr-sa-stack-3.gif)
+![](cmr-sa-stack-4.gif)
+![](cmr-sa-stack-5.gif)
+![](cmr-sa-stack-6.gif)
+![](cmr-sa-stack-7.gif)
+:::
+
+## {.center}
+
+::: {layout-nrow=2}
+![](cmr-sa-stack-8.gif)
+![](cmr-sa-stack-9.gif)
+![](cmr-sa-stack-10.gif)
+![](cmr-sa-stack-11.gif)
+![](cmr-sa-stack-12.gif)
+![](cmr-sa-stack-13.gif)
+:::
+
+## {.center}
+
+::: {layout-nrow=1}
+![](cmr-av-pc-all.gif)
+![](cmr-av-pc-high.gif)
+![](cmr-av-pc-low.gif)
+:::
+
+## {.center}
+
+::: {layout-nrow=1}
+![](cmr-av-cine.gif){width=45%}
+![](cmr-cor-lvot-cine.gif){width=45%}
+:::
+
+---
+
+## {background-image="cmr-mag-ir-280-2c.gif" background-size="contain"}
+
+## {background-image="cmr-mag-ir-280-3c.gif" background-size="contain"}
+
+## {background-image="cmr-mag-ir-280-4c.gif" background-size="contain"}
+
+## {background-image="cmr-mag-ir-280-sa.gif" background-size="contain"}
+
+## {background-image="cmr-psir-fb-avg-sa.gif" background-size="contain"}
+
+## {background-image="cmr-t1-scout.gif" background-size="contain"}
+
+# Course
+
+---
+
+:::: {.columns}
+
+::: {.column width="50%"}
+Hospitalization: 
+
+1. Patient was admitted to the cardiology service
+1. Nephrology and endocrine consultation
+1. Underwent coronary angiography and right heart catheterization
+1. Underwent cardiac magnetic resonance imaging
+1. Discharged with LifeVest
+:::
+
+::: {.column width="50%"}
+Treatment: 
+
+- atorvastatin 20
+- apixiban 5 bid
+- sacubitril-valsartan 24/26
+- empagliflozin 10 
+:::
+
+::::
+
+
 # References 
 
 ::: {#refs}
+
 :::
