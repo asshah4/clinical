@@ -126,7 +126,7 @@ BNP 289
 ## Additional Labs
 
 ACTH 20.4 
-Cortisol 1.0 
+Free cortisol 1.0, AM cortisol 13
 FSH < 0.2
 LH < 0.2
 Testosterone 1445 ng/dL
