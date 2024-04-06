@@ -1831,7 +1831,7 @@
     "href": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#additional-histories",
     "title": "Clinical Case Conference (CPS)",
     "section": "Additional histories",
-    "text": "Additional histories\nMaternal grandfather died of sudden death at age 40, and mother has a potential “mitral valve prolapse”. Father was a body-builder and had taken steroids previously. No foreign travel, raised in Canada and lives in Chicago currently. Has a 1-year old son with his wife, who are both healthy."
+    "text": "Additional histories\n\nMaternal grandfather died of sudden death at age 40, and mother has a potential “mitral valve prolapse”. Father was a body-builder and had taken steroids previously. No foreign travel, raised in Canada and lives in Chicago currently.\n\n\nNo pets. Has a 1-year old son with his wife, who are both healthy."
   },
   {
     "objectID": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#medications",
@@ -1852,7 +1852,7 @@
     "href": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#labs",
     "title": "Clinical Case Conference (CPS)",
     "section": "Labs",
-    "text": "Labs\n\n\n\nSodium 138\nPotassium 4.0\nChloride 102\nCO2 24\nBUN 29\n\nCreatinine 1.96\n\n\n\n\nHg 17.5\nPLT 208\nAST 35, ALT 52\nHemoglobin A1c 5.2%\nLDL 165, HDL 34\n\nTroponin I 105 (ng/L)\nBNP 289"
+    "text": "Labs\n\n\n\nSodium 138\nPotassium 4.0\nChloride 102\nCO2 24\nBUN 29\n\nCreatinine 1.96\n\n\n\n\n\nHg 17.5\n\nPLT 208\nAST 35\n\nALT 52\n\nHemoglobin A1c 5.2%\n\nLDL 165, HDL 34\nTroponin I 105 (ng/L)\nBNP 289"
   },
   {
     "objectID": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#ddx",
@@ -1888,5 +1888,12 @@
     "title": "Clinical Case Conference (CPS)",
     "section": "Reasoning",
     "text": "Reasoning\n\n\n\nSinus tachycardia\n\n\n\nRight axis deviation with inferior qR and lateral rS pattern\n\n\n\n\nComplete interpolation of ventricular ectopy with superior axis and inverted transition at V2-V3\n\n\n\n\nEnlarged left-sided heart border with narrow vascular pedicle\n\n\n\n\nEarlier completely interpolated atrial depolarization, as compared with PVC, at similar cycle length.\n\n\n\n\n\nLeft posterior fascicular block\n\n\n\n\nInferior/posterior-septal PVC\n\n\n\n\nCardiomegaly\n\n\n\n\nPoor or abnormal VA conduction?"
+  },
+  {
+    "objectID": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#gadolinium-contrast",
+    "href": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#gadolinium-contrast",
+    "title": "Clinical Case Conference (CPS)",
+    "section": "Gadolinium contrast!",
+    "text": "Gadolinium contrast!\nGadolinium (Gd)is a paramagnetic substance (becomes temporarily magnetized), out of four elements (Fe, Ni, Co). Gd induces T1 relaxation. T1 is the time it takes for net magnetization to return to initial maximum value (shortened by Gd).\n\nInitially, T1 scouting identifies the inversion time at which viable myocardium is “dark”."
   }
 ]
