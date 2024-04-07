@@ -1,5 +1,5 @@
 ---
-title: Clinical Case Conference (CPS)
+title: Clinical Case Conference
 subtitle: General Cardiology Lecture Series 
 author: Anish S. Shah, MD, MS
 institute: Division of Cardiology, Department of Medicine, University of Illinois Chicago 
@@ -14,7 +14,11 @@ format:
     auto-animate-unmatched: false
     progress: true
     chalkboard: true
+    scrollable: true
+
+csl: ../../apa.csl
 ---
+
 
 # Introduction
 
@@ -58,7 +62,7 @@ Electrocardiography and chest roengenography was performed during his ER visit.
 
 ## {background-image="cxr-ap.gif" background-size="contain"}
 
-## Reasoning {.smallest}
+## Problems {.smallest}
 
 :::: {.columns}
 
@@ -162,45 +166,69 @@ No pets. Has a *1-year old son with his wife*, who are both healthy.
 - Albuterol inhaler PRN
 - Omeprazole 40 mg PO daily
 
+## Examination
+
+. . .
+
+Initial vitals of 173/92 and heart rate of 122 bpm that decreased to 137/75 and 109 bpm after rest. SaO2 of 94-96% on room air. BMI 28, 93 kg.
+
+. . .
+
+Anxious appearing young gentleman, mildly pressured speech. Skin is warm and dry, Fitzpatrick class I. Mild androgenic alopecia. Not overly-muscular.
+
+. . .
+
+JVP at level of clavicle at 30˚. Normal carotid upstroke. PMI is laterally displaced. No obvious thrills or heaves. S1 with physiologically split S2. III/VI systolic murmur apparent at axilla. No peripheral edema, with +2 radial and posterior tibialis pulses.
+
+## Labs
+
+:::: {.columns}
+::: {.column width="50%"}
+
+::: {.fragment fragment-index=1}
+Sodium 138  
+Potassium 4.0   
+Chloride 102   
+CO2 24   
+BUN 29  
+
+::: {.fragment .highlight-red fragment-index=3}
+Creatinine 1.96  
+:::   
+
+AST 35  
+
+::: {.fragment .highlight-red fragment-index=3}
+ALT 52   
+:::  
+:::
+
+:::
+::: {.column width="50%"}
+
+::: {.fragment fragment-index=2}
+Hg 17.5   
+WBC 8 (normal differential)  
+PLT 208  
+HbA1c 5.2%
+
+::: {.fragment .highlight-red fragment-index=3}
+LDL 165, HDL 34   
+Troponin I 105 (ng/L)  
+BNP 289  
+:::
+
+UDS negative  
+:::
+
+:::
+::::
+
 # Surface Echocardiography
 
-## {background-image="tte-plax.gif" background-size="contain"}
-## {background-image="tte-plax-zoom.gif" background-size="contain"}
-## {background-image="tte-plax-zoom-color.gif" background-size="contain"}
-## {background-image="tte-plax-lvidd.gif" background-size="contain"}
-## {background-image="tte-psax-mid.gif" background-size="contain"}
-## {background-image="tte-psax-mv.gif" background-size="contain"}
-## {background-image="tte-psax-mv-color.gif" background-size="contain"}
-## {background-image="tte-rv-inflow-color.gif" background-size="contain"}
-## {background-image="tte-rv-inflow-cw.gif" background-size="contain"}
+{{< include _echo.qmd >}}
 
-## {background-image="tte-psax-high.gif" background-size="contain"}
-## {background-image="tte-psax-high-rv-inflow-pw.gif" background-size="contain"}
-## {background-image="tte-psax-high-rv-outflow-cw.gif" background-size="contain"}
-## {background-image="tte-psax-high-rv-outflow-pw.gif" background-size="contain"}
-
-## {background-image="tte-rv-outflow.gif" background-size="contain"}
-## {background-image="tte-rv-outflow-cw-vti.gif" background-size="contain"}
-## {background-image="tte-rv-outflow-pw-vti.gif" background-size="contain"}
-
-## {background-image="tte-a4c.gif" background-size="contain"}
-## {background-image="tte-a4c-color.gif" background-size="contain"}
-## {background-image="tte-a4c-color-2.gif" background-size="contain"}
-## {background-image="tte-a4c-mv-color.gif" background-size="contain"}
-## {background-image="tte-a4c-mitral-inflow-pw.gif" background-size="contain"}
-## {background-image="tte-a4c-td-lateral.gif" background-size="contain"}
-## {background-image="tte-a4c-td-septal.gif" background-size="contain"}
-## {background-image="tte-a4c-m-mode-color.gif" background-size="contain"}
-## {background-image="tte-a4c-zoom.gif" background-size="contain"}
-## {background-image="tte-a4c-thrombus.gif" background-size="contain"}
-## {background-image="tte-a2c.gif" background-size="contain"}
-## {background-image="tte-a3c.gif" background-size="contain"}
-## {background-image="tte-a5c-color.gif" background-size="contain"}
-## {background-image="tte-a5c-cw.gif" background-size="contain"}
-## {background-image="tte-a5c-pw.gif" background-size="contain"}
-## {background-image="tte-a2c-definity.gif" background-size="contain"}
-
-## Reasoning {.smallest}
+## Problems {.smallest}
 
 :::: {.columns}
 ::: {.column width="65%"}
@@ -250,7 +278,7 @@ Grade III diastolic dysfunction
 :::
 ::: {.column width="35%"}
 
-Left posterior fascicular block
+Left posterior fascicular block  
 Inferior/posterior septal PVC
 
 ::: {.fragment .fade-out fragment-index=9}
@@ -290,181 +318,325 @@ Apical thrombus
 :::
 ::::
 
-## Differential
-
-1. Ischemic cardiomyopathy
-  - Obstructive CAD
-  - Spontaneous coronary artery dissection
-1. *Idiopathic* or *genetic* dilated cardiomyopathy 
-1. Inflammatory/viral/immune-mediated cardiomyopathy
-1. Steroid-induced cardiomyopathy
-
-## Labs
+## Differential {.smallest}
 
 :::: {.columns}
-
-::: {.column width="50%"}
+::: {.column width="33%"}
 
 ::: {.fragment fragment-index=1}
-Sodium 138
-
-Potassium 4.0 
-
-Chloride 102 
-
-CO2 24 
-
-BUN 29
-
-::: {.fragment .highlight-red fragment-index=3}
-Creatinine 1.96 
+__[Genetic]{.underline}__
 :::
-
-:::
-
-:::
-
-::: {.column width="50%"}
 
 ::: {.fragment fragment-index=2}
-::: {.fragment .highlight-red fragment-index=3}
-Hg 17.5 
-:::
-
-PLT 208
-
-AST 35
-
-::: {.fragment .highlight-red fragment-index=3}
-ALT 52 
-:::
-
-Hemoglobin A1c 5.2%  
-
-::: {.fragment .highlight-red fragment-index=3}
-LDL 165, HDL 34 
-
-Troponin I 105 (ng/L)
-
-BNP 289
-:::
+TTN   
+LMNA   
+MYH7   
+FLNC (filamin C)  
+RBM20 (RNA-binding motif-20)  
+TNNT2  
+TTNC1  
+PLN (phospholamban)  
+DSP (desmoplakin)  
+ACTC1  
+SCN5A  
+TPM1 (tropomyosin)  
 :::
 
 :::
+::: {.column width="33%"}
 
+::: {.fragment fragment-index=3}
+__[Infectious]{.underline}__
+:::
+
+::: {.fragment fragment-index=4}
+COVID/viral myocarditis  
+Chagas disease  
+Endomyocardial fibrosis  
+:::
+
+::: {.fragment fragment-index=5}
+__[Immune-mediated]{.underline}__
+:::
+
+::: {.fragment fragment-index=6}
+Giant-cell myocarditis  
+Eosinophilic myocarditis  
+Sarcoidosis  
+:::
+
+::: {.fragment fragment-index=7}
+__[Ischemic]{.underline}__
+:::
+
+::: {.fragment fragment-index=8}
+Plaque rupture syndrome  
+Coronary artery spasm  
+Spontaneous coronary artery dissection  
+:::
+
+:::
+::: {.column width="33%"}
+
+
+::: {.fragment fragment-index=9}
+__[Others]{.underline}__
+:::
+
+::: {.fragment fragment-index=10}
+Thiamine deficiency (beri-beri)  
+Selenium deficiency  
+Hypocalcemia  
+Hyper/hypo-thyroidism  
+Tachycardia-induced  
+Alcohol-induced  
+Amphetamine-induced  
+Catecholamine-induced (stress-induced, e.g. *Takotsubo*)  
+Anabolic steroid-induced  
+Hemochromatosis  
+Wilson's disease  
+:::
+
+:::
 ::::
 
-## Additional Labs
+## {background-image="sliwa-2023-tropical-cardiomyopathy-map.jpg" background-size="contain"}
 
-ACTH 20.4 
-Free cortisol 1.0, AM cortisol 13
-FSH < 0.2
-LH < 0.2
-Testosterone 1445 ng/dL
-SPEP/UPEP negative
-Lp(a) 21, ApoB100 126 (mg/dL)
-Ferritin 194 
-Iron 70 
-TB negative
-HIV negative
-RVP negative
-Hepatitis panel negative
-ANA/Anti-SM negative
-Trypanasoma cruzi IgG negative
-Cystatin 0.9 (eGFR 81)
+::: footer
+@Sliwa2023
+:::
 
-# Coronary Angiography
+## Additional Labs {.smaller}
 
-## {background-image="cath-lca-lao-cran.gif" background-size="contain"}
-## {background-image="cath-lca-rao-caud.gif" background-size="contain"}
-## {background-image="cath-rca-lao-ap.gif" background-size="contain"}
-## {background-image="cath-rca-lao-caud.gif" background-size="contain"}
+:::: {.columns}
+::: {.column width="50%"}
+
+TSH/T4 normal  
+
+::: {.fragment .highlight-current-red}
+ACTH 20.4   
+Free cortisol 1.0  
+AM cortisol 13   
+FSH < 0.2  
+LH < 0.2  
+Testosterone 1445 ng/dL  
+:::
+Lp(a) 21, ApoB100 126 (mg/dL)  
+Cystatin 0.9 (eGFR 81)  
+
+:::
+::: {.column width="50%"}
+
+Ferritin 194   
+Iron 70   
+Normal cerruloplasmin  
+TB negative  
+HIV negative  
+RVP negative  
+Hepatitis panel negative  
+Trypanasoma cruzi IgG negative  
+ANA/Anti-SM negative  
+SPEP/UPEP negative  
+
+:::
+::::
+
+## Differential {.smallest}
+
+:::: {.columns}
+::: {.column width="33%"}
+
+::: {.fragment fragment-index=1}
+__[Genetic]{.underline}__
+:::
+
+::: {.fragment fragment-index=1}
+TTN   
+LMNA   
+MYH7   
+FLNC (filamin C)  
+RBM20 (RNA-binding motif-20)  
+TNNT2  
+TTNC1  
+PLN (phospholamban)  
+DSP (desmoplakin)  
+ACTC1  
+SCN5A  
+TPM1 (tropomyosin)  
+:::
+
+:::
+::: {.column width="33%"}
+
+::: {.fragment fragment-index=1}
+__[Infectious]{.underline}__
+:::
+
+::: {.fragment fragment-index=1}
+::: {.fragment .semi-fade-out fragment-index=2}
+COVID/viral myocarditis  
+Chagas disease  
+Endomyocardial fibrosis  
+:::
+:::
+
+::: {.fragment fragment-index=1}
+__[Immune-mediated]{.underline}__
+:::
+
+::: {.fragment fragment-index=1}
+::: {.fragment .semi-fade-out fragment-index=3}
+Giant-cell myocarditis  
+Eosinophilic myocarditis  
+Sarcoidosis  
+:::
+:::
+
+::: {.fragment fragment-index=1}
+__[Ischemic]{.underline}__
+:::
+
+::: {.fragment fragment-index=1}
+Plaque rupture syndrome  
+Coronary artery spasm  
+Spontaneous coronary artery dissection  
+:::
+
+:::
+::: {.column width="33%"}
+
+
+::: {.fragment fragment-index=1}
+__[Others]{.underline}__
+:::
+
+::: {.fragment fragment-index=1}
+::: {.fragment .semi-fade-out fragment-index=4}
+Thiamine deficiency (beri-beri)  
+Selenium deficiency  
+Hypocalcemia  
+Hyper/hypo-thyroidism  
+:::
+Tachycardia-induced  
+
+::: {.fragment .semi-fade-out fragment-index=5}
+Alcohol-induced  
+Amphetamine-induced  
+Catecholamine-induced (stress-induced, e.g. *Takotsubo*)  
+:::
+
+Anabolic steroid-induced  
+
+::: {.fragment .semi-fade-out fragment-index=6}
+Hemochromatosis  
+Wilson's disease  
+:::
+:::
+
+:::
+::::
+
+---
+
+::: {.r-fit-text}
+1. Steroid-induced cardiomyopathy    
+1. Genetic/dilated cardiomyopathy  
+1. Tachycardia-mediated cardiomyopathy   
+1. Ischemic cardiomyopathy  
+:::
+
+## Steroid-induced cardiomyopathy
+
+TODO
+
+# Cardiac catheterization
+
+[Right/left heart catherization with selective coronary angiography]{.center}
+
+{{< include _cath.qmd >}}
+
+## Problems {.smallest}
+
+:::: {.columns}
+::: {.column width="65%"}
+
+::: {.fragment fragment-index=1}
+::: {.fragment .semi-fade-out fragment-index=4}
+Hypovolemic shock [requiring nor epinephrine]{.red} with light sedation
+:::
+:::
+
+::: {.fragment fragment-index=2}
+::: {.fragment .semi-fade-out fragment-index=5}
+Large diameter coronary vessels (4-5 mm) without obstructive disease
+:::
+:::
+
+::: {.fragment fragment-index=3}
+::: {.fragment .semi-fade-out fragment-index=5}
+[Diffuse ectasia of RCA]{.red} with diminutive branch vessels
+:::
+:::
+
+:::
+::: {.column width="35%"}
+
+Left posterior fascicular block  
+Inferior/posterior septal PVC  
+Severe systolic dysfunction   
+Dilated cardiomyopathy  
+Mitral regurgitation IIIb   
+
+::: {.fragment .highlight-current-red fragment-index=4}
+Low cardiac output state  
+:::
+Apical thrombus  
+
+::: {.fragment fragment-index=5}
+::: {.fragment .highlight-current-red fragment-index=5}
+Spontaneous coronary artery dissection?
+:::
+:::
+
+:::
+::::
+
+## Arterial Pressure and Resistance training 
+
+@MacDougall1985 tested the acute hypertensing response to resistance training, with invasive brachial artery pressure transduction.
+
+- Single-arm curls of 255/190
+- Double-leg press of 320/250 (peak 480/350)
+
+---
+
+![Mean pressures during exercise versus rest](macdougall-1985-sbp-exercise.png)
+
+::: footer
+@MacDougall1985
+:::
+
+---
+
+Rare cases of SCAD seen with resistance training [@Aghasadeghi2008]
+
+---
+
+![RCA lesion, likely type 2 SCAD](aghasadeghi-2008-rca-scad.jpg)
+
+::: footer
+@Aghasadeghi2008
+:::
 
 # Cardiac Magnetic Resonance Imaging
 
-## {background-image="cmr-localizer.gif" background-size="contain"}
-## {background-image="cmr-2c-cine.gif" background-size="contain"}
-## {background-image="cmr-3c-cine.gif" background-size="contain"}
-## {background-image="cmr-4c-cine.gif" background-size="contain"}
+{{< include _cmr.qmd >}}
 
-## {.center}
-
-::: {layout-nrow=2}
-![](cmr-sa-stack-2.gif)
-![](cmr-sa-stack-3.gif)
-![](cmr-sa-stack-4.gif)
-![](cmr-sa-stack-5.gif)
-![](cmr-sa-stack-6.gif)
-![](cmr-sa-stack-7.gif)
-:::
-
-## {.center}
-
-::: {layout-nrow=2}
-![](cmr-sa-stack-8.gif)
-![](cmr-sa-stack-9.gif)
-![](cmr-sa-stack-10.gif)
-![](cmr-sa-stack-11.gif)
-![](cmr-sa-stack-12.gif)
-![](cmr-sa-stack-13.gif)
-:::
-
-## {.center}
-
-::: {layout-nrow=1}
-![](cmr-av-pc-all.gif)
-![](cmr-av-pc-high.gif)
-![](cmr-av-pc-low.gif)
-:::
-
-## {.center}
-
-::: {layout-nrow=1}
-![](cmr-av-cine.gif){width=45%}
-![](cmr-cor-lvot-cine.gif){width=45%}
-:::
-
-## Gadolinium contrast!
-
-. . .
-
-Gadolinium (__Gd__)is a *paramagnetic* substance (becomes temporarily magnetized), out of four elements (Fe, Ni, Co).
-__Gd__ induces __T1 relaxation__. 
-
-. . .
-
-__T1__ is the time it takes for net magnetization to return to initial maximum value (shortened by __Gd__).
-
-. . .
-
-Initially, T1 scouting identifies the inversion time at which viable myocardium is "dark".
-
----
-
-## {background-image="cmr-t1-scout.gif" background-size="contain"}
-## {background-image="cmr-mag-ir-280-sa.gif" background-size="contain"}
-## {background-image="cmr-mag-ir-280-4c.gif" background-size="contain"}
-## {background-image="cmr-mag-ir-280-2c.gif" background-size="contain"}
-## {background-image="cmr-mag-ir-280-3c.gif" background-size="contain"}
-
----
-
-Phase-corrected inversion recovery sequences are less reliant on a set inversion time
-
-. . .
-
-Next sequence is done with free-breathing.
-
----
-
-## {background-image="cmr-psir-fb-avg-sa.gif" background-size="contain"}
-
-# Course
+# Clinical Course
 
 ---
 
 :::: {.columns}
-
 ::: {.column width="50%"}
 Hospitalization: 
 
@@ -474,7 +646,6 @@ Hospitalization:
 1. Underwent cardiac magnetic resonance imaging
 1. Discharged with LifeVest
 :::
-
 ::: {.column width="50%"}
 Treatment: 
 
@@ -483,12 +654,9 @@ Treatment:
 - sacubitril-valsartan 24/26
 - empagliflozin 10 
 :::
-
 ::::
-
 
 # References 
 
 ::: {#refs}
-
 :::

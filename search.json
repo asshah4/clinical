@@ -1801,7 +1801,7 @@
   {
     "objectID": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#objectives",
     "href": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#objectives",
-    "title": "Clinical Case Conference (CPS)",
+    "title": "Clinical Case Conference",
     "section": "Objectives",
     "text": "Objectives\n\nUnderstand the cognitive processes involved in the case-based diagnostic reasoning\nIdentify diagnostic assumptions that may lead towards case-specific biases\nPractice contextualizing clinical data in the framework of cardiovascular physiology"
   },
@@ -1829,14 +1829,14 @@
   {
     "objectID": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#additional-histories",
     "href": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#additional-histories",
-    "title": "Clinical Case Conference (CPS)",
+    "title": "Clinical Case Conference",
     "section": "Additional histories",
     "text": "Additional histories\n\nMaternal grandfather died of sudden death at age 40, and mother has a potential “mitral valve prolapse”. Father was a body-builder and had taken steroids previously. No foreign travel, raised in Canada and lives in Chicago currently.\n\n\nNo pets. Has a 1-year old son with his wife, who are both healthy."
   },
   {
     "objectID": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#medications",
     "href": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#medications",
-    "title": "Clinical Case Conference (CPS)",
+    "title": "Clinical Case Conference",
     "section": "Medications",
     "text": "Medications\n\nChlorodehydromethyltestosterone (CDMT, a.k.a. turinabol)\nOxandrolone (active)\nTestosterone supplementation (active)\nGrowth hormone injections (for 3-6 months prior to presentation)\nAlbuterol inhaler PRN\nOmeprazole 40 mg PO daily"
   },
@@ -1850,9 +1850,9 @@
   {
     "objectID": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#labs",
     "href": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#labs",
-    "title": "Clinical Case Conference (CPS)",
+    "title": "Clinical Case Conference",
     "section": "Labs",
-    "text": "Labs\n\n\n\nSodium 138\nPotassium 4.0\nChloride 102\nCO2 24\nBUN 29\n\nCreatinine 1.96\n\n\n\n\n\nHg 17.5\n\nPLT 208\nAST 35\n\nALT 52\n\nHemoglobin A1c 5.2%\n\nLDL 165, HDL 34\nTroponin I 105 (ng/L)\nBNP 289"
+    "text": "Labs\n\n\n\nSodium 138\nPotassium 4.0\nChloride 102\nCO2 24\nBUN 29\n\nCreatinine 1.96\n\nAST 35\n\nALT 52\n\n\n\n\nHg 17.5\nWBC 8 (normal differential)\nPLT 208\nHbA1c 5.2%\n\nLDL 165, HDL 34\nTroponin I 105 (ng/L)\nBNP 289\n\nUDS negative"
   },
   {
     "objectID": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#ddx",
@@ -1871,16 +1871,16 @@
   {
     "objectID": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#additional-labs",
     "href": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#additional-labs",
-    "title": "Clinical Case Conference (CPS)",
+    "title": "Clinical Case Conference",
     "section": "Additional Labs",
-    "text": "Additional Labs\nACTH 20.4 Free cortisol 1.0, AM cortisol 13 FSH &lt; 0.2 LH &lt; 0.2 Testosterone 1445 ng/dL SPEP/UPEP negative Lp(a) 21, ApoB100 126 (mg/dL) Ferritin 194 Iron 70 TB negative HIV negative RVP negative Hepatitis panel negative ANA/Anti-SM negative Trypanasoma cruzi IgG negative Cystatin 0.9 (eGFR 81)"
+    "text": "Additional Labs\n\n\nTSH/T4 normal\n\nACTH 20.4\nFree cortisol 1.0\nAM cortisol 13\nFSH &lt; 0.2\nLH &lt; 0.2\nTestosterone 1445 ng/dL\n\nLp(a) 21, ApoB100 126 (mg/dL)\nCystatin 0.9 (eGFR 81)\n\nFerritin 194\nIron 70\nNormal cerruloplasmin\nTB negative\nHIV negative\nRVP negative\nHepatitis panel negative\nTrypanasoma cruzi IgG negative\nANA/Anti-SM negative\nSPEP/UPEP negative"
   },
   {
     "objectID": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#differential",
     "href": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#differential",
-    "title": "Clinical Case Conference (CPS)",
+    "title": "Clinical Case Conference",
     "section": "Differential",
-    "text": "Differential\n\nIschemic cardiomyopathy\n\n\nObstructive CAD\nSpontaneous coronary artery dissection\n\n\nIdiopathic or genetic dilated cardiomyopathy\nInflammatory/viral/immune-mediated cardiomyopathy\nSteroid-induced cardiomyopathy"
+    "text": "Differential\n\n\n\nGenetic\n\n\nTTN\nLMNA\nMYH7\nFLNC (filamin C)\nRBM20 (RNA-binding motif-20)\nTNNT2\nTTNC1\nPLN (phospholamban)\nDSP (desmoplakin)\nACTC1\nSCN5A\nTPM1 (tropomyosin)\n\n\n\nInfectious\n\n\nCOVID/viral myocarditis\nChagas disease\nEndomyocardial fibrosis\n\n\nImmune-mediated\n\n\nGiant-cell myocarditis\nEosinophilic myocarditis\nSarcoidosis\n\n\nIschemic\n\n\nPlaque rupture syndrome\nCoronary artery spasm\nSpontaneous coronary artery dissection\n\n\n\nOthers\n\n\nThiamine deficiency (beri-beri)\nSelenium deficiency\nHypocalcemia\nHyper/hypo-thyroidism\nTachycardia-induced\nAlcohol-induced\nAmphetamine-induced\nCatecholamine-induced (stress-induced, e.g. Takotsubo)\nAnabolic steroid-induced\nHemochromatosis\nWilson’s disease"
   },
   {
     "objectID": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#reasoning",
@@ -1892,7 +1892,7 @@
   {
     "objectID": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#gadolinium-contrast",
     "href": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#gadolinium-contrast",
-    "title": "Clinical Case Conference (CPS)",
+    "title": "Clinical Case Conference",
     "section": "Gadolinium contrast!",
     "text": "Gadolinium contrast!\n\nGadolinium (Gd)is a paramagnetic substance (becomes temporarily magnetized), out of four elements (Fe, Ni, Co). Gd induces T1 relaxation.\n\n\nT1 is the time it takes for net magnetization to return to initial maximum value (shortened by Gd).\n\n\nInitially, T1 scouting identifies the inversion time at which viable myocardium is “dark”."
   },
@@ -1901,6 +1901,174 @@
     "href": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#reasoning-1",
     "title": "Clinical Case Conference (CPS)",
     "section": "Reasoning",
-    "text": "Reasoning\n\n\n\n\nSeverely reduced LV systolic function with EF &lt; 20%\n\n\n\n\nLV cavity during diastole of ~7.5 cm\n\n\n\n\nLVOT VTI of 9 cm and RVOT VTI of 6 cm\n\n\n\n\nRegional wall motion abnormalities with inferior hypokinesis/akinesis\n\n\n\n\nModerate to severe mitral regurgitation\n\n\n\n\nEchodensity in apex\n\n\n\n\nGrade III diastolic dysfunction\n\n\n\nLeft posterior fascicular block Inferior/posterior septal PVC\n\nCardiomegaly\n\n\n\nSevere systolic dysfunction\n\n\n\n\nDilated cardiomyopathy\n\n\n\n\nMitral regurgitation IIIb\n\n\n\n\nLow cardiac output state\n\n\n\n\nApical thrombus"
+    "text": "Reasoning\n\n\n\n\nSeverely reduced LV systolic function with EF &lt; 20%\n\n\n\n\nLV cavity during diastole of ~7.5 cm\n\n\n\n\nLVOT VTI of 9 cm and RVOT VTI of 6 cm\n\n\n\n\nRegional wall motion abnormalities with inferior hypokinesis/akinesis\n\n\n\n\nModerate to severe mitral regurgitation\n\n\n\n\nEchodensity in apex\n\n\n\n\nGrade III diastolic dysfunction\n\n\n\nLeft posterior fascicular block\nInferior/posterior septal PVC\n\nCardiomegaly\n\n\n\nSevere systolic dysfunction\n\n\n\n\nDilated cardiomyopathy\n\n\n\n\nMitral regurgitation IIIb\n\n\n\n\nLow cardiac output state\n\n\n\n\nApical thrombus"
+  },
+  {
+    "objectID": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#differential-1",
+    "href": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#differential-1",
+    "title": "Clinical Case Conference",
+    "section": "Differential",
+    "text": "Differential\n\n\n\nGenetic\n\n\nTTN\nLMNA\nMYH7\nFLNC (filamin C)\nRBM20 (RNA-binding motif-20)\nTNNT2\nTTNC1\nPLN (phospholamban)\nDSP (desmoplakin)\nACTC1\nSCN5A\nTPM1 (tropomyosin)\n\n\n\nInfectious\n\n\n\nCOVID/viral myocarditis\nChagas disease\nEndomyocardial fibrosis\n\n\n\nImmune-mediated\n\n\n\nGiant-cell myocarditis\nEosinophilic myocarditis\nSarcoidosis\n\n\n\nIschemic\n\n\nPlaque rupture syndrome\nCoronary artery spasm\nSpontaneous coronary artery dissection\n\n\n\nOthers\n\n\n\nThiamine deficiency (beri-beri)\nSelenium deficiency\nHypocalcemia\nHyper/hypo-thyroidism\n\nTachycardia-induced\n\nAlcohol-induced\nAmphetamine-induced\nCatecholamine-induced (stress-induced, e.g. Takotsubo)\n\nAnabolic steroid-induced\n\nHemochromatosis\nWilson’s disease"
+  },
+  {
+    "objectID": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#examination",
+    "href": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#examination",
+    "title": "Clinical Case Conference",
+    "section": "Examination",
+    "text": "Examination\n\nInitial vitals of 173/92 and heart rate of 122 bpm that decreased to 137/75 and 109 bpm after rest. SaO2 of 94-96% on room air. BMI 28, 93 kg.\n\n\nAnxious appearing young gentleman, mildly pressured speech. Skin is warm and dry, Fitzpatrick class I. Mild androgenic alopecia. Not overly-muscular.\n\n\nJVP at level of clavicle at 30˚. Normal carotid upstroke. PMI is laterally displaced. No obvious thrills or heaves. S1 with physiologically split S2. III/VI systolic murmur apparent at axilla. No peripheral edema, with +2 radial and posterior tibialis pulses."
+  },
+  {
+    "objectID": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#another",
+    "href": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#another",
+    "title": "Clinical Case Conference (CPS)",
+    "section": "Another",
+    "text": "Another"
+  },
+  {
+    "objectID": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#plax",
+    "href": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#plax",
+    "title": "Clinical Case Conference (CPS)",
+    "section": "PLAX",
+    "text": "PLAX"
+  },
+  {
+    "objectID": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#plax-1",
+    "href": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#plax-1",
+    "title": "Clinical Case Conference (CPS)",
+    "section": "PLAX",
+    "text": "PLAX"
+  },
+  {
+    "objectID": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#plax-2",
+    "href": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#plax-2",
+    "title": "Clinical Case Conference (CPS)",
+    "section": "PLAX",
+    "text": "PLAX"
+  },
+  {
+    "objectID": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#plax-3",
+    "href": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#plax-3",
+    "title": "Clinical Case Conference (CPS)",
+    "section": "PLAX",
+    "text": "PLAX"
+  },
+  {
+    "objectID": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#psax",
+    "href": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#psax",
+    "title": "Clinical Case Conference (CPS)",
+    "section": "PSAX",
+    "text": "PSAX"
+  },
+  {
+    "objectID": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#more",
+    "href": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#more",
+    "title": "Clinical Case Conference (CPS)",
+    "section": "More",
+    "text": "More"
+  },
+  {
+    "objectID": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#section-2",
+    "href": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#section-2",
+    "title": "Clinical Case Conference (CPS)",
+    "section": ".",
+    "text": "."
+  },
+  {
+    "objectID": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#section-35",
+    "href": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#section-35",
+    "title": "Clinical Case Conference",
+    "section": "",
+    "text": "Sliwa et al. (2023)"
+  },
+  {
+    "objectID": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#differential-2",
+    "href": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#differential-2",
+    "title": "Clinical Case Conference",
+    "section": "Differential",
+    "text": "Differential\n\n\n\nGenetic\n\n\nTTN\nLMNA\nMYH7\nFLNC (filamin C)\nRBM20 (RNA-binding motif-20)\nTNNT2\nTTNC1\nPLN (phospholamban)\nDSP (desmoplakin)\nACTC1\nSCN5A\nTPM1 (tropomyosin)\n\n\n\nInfectious\n\n\nCOVID/viral myocarditis\nChagas disease\n::: {.fragment .semi-fade-out fragment-index=2} Endomyocardial fibrosis\n\n\nImmune-mediated\n\n\nGiant-cell myocarditis\nEosinophilic myocarditis\n\nSarcoidosis\nLupus\n\nIschemic\n\nPlaque rupture syndrome\nCoronary artery spasm\nSpontaneous coronary artery dissection\n\n\n\n\nOthers\n\n\n\nThiamine deficiency (wet/dry beri-beri)\nSelenium deficiency\nHypocalcemia\n\nHyper/hypo-thyroidism\nTachycardia-mediated\n\nAlcohol-induced\nAmphetamine-induced\nCatecholamine-induced (stress-induced, e.g. Takotsubo)\n\nAnabolic steroid-induced\nHemochromatosis\nWilson’s disease\n\n\n::::"
+  },
+  {
+    "objectID": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#section-36",
+    "href": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#section-36",
+    "title": "Clinical Case Conference (CPS)",
+    "section": "",
+    "text": "Ischemic cardiomyopathy"
+  },
+  {
+    "objectID": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#section-37",
+    "href": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#section-37",
+    "title": "Clinical Case Conference (CPS)",
+    "section": "",
+    "text": "Tachycardia-mediated cardiomyopathy\nIschemic cardiomyopathy"
+  },
+  {
+    "objectID": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#section-38",
+    "href": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#section-38",
+    "title": "Clinical Case Conference (CPS)",
+    "section": "",
+    "text": "Genetic/dilated cardiomyopathy\nTachycardia-mediated cardiomyopathy\nIschemic cardiomyopathy"
+  },
+  {
+    "objectID": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#section-39",
+    "href": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#section-39",
+    "title": "Clinical Case Conference (CPS)",
+    "section": "",
+    "text": "Steroid-induced cardiomyopathy\nGenetic/dilated cardiomyopathy\nTachycardia-mediated cardiomyopathy\nIschemic cardiomyopathy"
+  },
+  {
+    "objectID": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#problems",
+    "href": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#problems",
+    "title": "Clinical Case Conference",
+    "section": "Problems",
+    "text": "Problems\n\n\n\nSinus tachycardia\n\n\n\nRight axis deviation with inferior qR and lateral rS pattern\n\n\n\n\nComplete interpolation of ventricular ectopy with superior axis and inverted transition at V2-V3\n\n\n\n\nEnlarged left-sided heart border with narrow vascular pedicle\n\n\n\n\nEarlier completely interpolated atrial depolarization, as compared with PVC, at similar cycle length.\n\n\n\n\n\nLeft posterior fascicular block\n\n\n\n\nInferior/posterior-septal PVC\n\n\n\n\nCardiomegaly\n\n\n\n\nPoor or abnormal VA conduction?"
+  },
+  {
+    "objectID": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#problems-1",
+    "href": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#problems-1",
+    "title": "Clinical Case Conference",
+    "section": "Problems",
+    "text": "Problems\n\n\n\n\nSeverely reduced LV systolic function with EF &lt; 20%\n\n\n\n\nLV cavity during diastole of ~7.5 cm\n\n\n\n\nLVOT VTI of 9 cm and RVOT VTI of 6 cm\n\n\n\n\nRegional wall motion abnormalities with inferior hypokinesis/akinesis\n\n\n\n\nModerate to severe mitral regurgitation\n\n\n\n\nEchodensity in apex\n\n\n\n\nGrade III diastolic dysfunction\n\n\n\nLeft posterior fascicular block\nInferior/posterior septal PVC\n\nCardiomegaly\n\n\n\nSevere systolic dysfunction\n\n\n\n\nDilated cardiomyopathy\n\n\n\n\nMitral regurgitation IIIb\n\n\n\n\nLow cardiac output state\n\n\n\n\nApical thrombus"
+  },
+  {
+    "objectID": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#coronary-pressures-during-exercise",
+    "href": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#coronary-pressures-during-exercise",
+    "title": "Clinical Case Conference",
+    "section": "Coronary pressures during exercise",
+    "text": "Coronary pressures during exercise\nTODO"
+  },
+  {
+    "objectID": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#steroid-induced-cardiomyopathy",
+    "href": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#steroid-induced-cardiomyopathy",
+    "title": "Clinical Case Conference",
+    "section": "Steroid-induced cardiomyopathy",
+    "text": "Steroid-induced cardiomyopathy\nTODO"
+  },
+  {
+    "objectID": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#problems-2",
+    "href": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#problems-2",
+    "title": "Clinical Case Conference",
+    "section": "Problems",
+    "text": "Problems\n\n\n\n\nHypovolemic shock requiring nor epinephrine with light sedation\n\n\n\n\nLarge diameter coronary vessels (4-5 mm) without obstructive disease\n\n\n\n\nDiffuse ectasia of RCA with diminutive branch vessels\n\n\n\nLeft posterior fascicular block\nInferior/posterior septal PVC\nSevere systolic dysfunction\nDilated cardiomyopathy\nMitral regurgitation IIIb\n\nLow cardiac output state\n\nApical thrombus\n\n\nSpontaneous coronary artery dissection?"
+  },
+  {
+    "objectID": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#temporary-slide",
+    "href": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#temporary-slide",
+    "title": "Clinical Case Conference",
+    "section": "TEMPORARY SLIDE",
+    "text": "TEMPORARY SLIDE\nEMPTY"
+  },
+  {
+    "objectID": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#arterial-pressure-during-resistance-training",
+    "href": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#arterial-pressure-during-resistance-training",
+    "title": "Clinical Case Conference",
+    "section": "Arterial Pressure During Resistance Training",
+    "text": "Arterial Pressure During Resistance Training\n\nTesting the acute hypertensing response to resistance training, with invasive brachial artery pressure transduction.\nMacDougall et al. (1985)"
+  },
+  {
+    "objectID": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#arterial-pressure-and-resistance-training",
+    "href": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#arterial-pressure-and-resistance-training",
+    "title": "Clinical Case Conference",
+    "section": "Arterial Pressure and Resistance training",
+    "text": "Arterial Pressure and Resistance training\n\nTesting the acute hypertensing response to resistance training, with invasive brachial artery pressure transduction.\nMacDougall et al. (1985)"
   }
 ]
