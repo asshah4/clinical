@@ -203,106 +203,101 @@ No pets. Has a *1-year old son with his wife*, who are both healthy.
 ## Reasoning {.smallest}
 
 :::: {.columns}
-
 ::: {.column width="65%"}
 
 ::: {.fragment fragment-index=1}
+::: {.fragment .semi-fade-out fragment-index=8}
 Severely reduced LV systolic function with [EF < 20%]{.red}
 :::
-
-::: {.fragment fragment-index=1}
-LV cavity during diastole of [~7.5 cm]{.red}
 :::
-
-::: {.fragment fragment-index=1}
-LVOT VTI of 9 cm and RVOT VTI of 6 cm
-:::
-
-::: {.fragment fragment-index=1}
-Regional wall motion abnormalities with [inferior hypokinesis/akinesis]{.red}
-:::
-
-::: {.fragment fragment-index=1}
-Moderate to [severe mitral regurgitation]{.red}
-:::
-
-::: {.fragment fragment-index=1}
-Apical [thrombus]{.red}
-:::
-
-::: {.fragment fragment-index=1}
-Grade III diastolic dysfunction
-:::
-
 
 ::: {.fragment fragment-index=2}
-::: {.fragment .semi-fade-out fragment-index=6}
-Right axis deviation with inferior [qR]{.red} and lateral [rS]{.red} pattern
+::: {.fragment .semi-fade-out fragment-index=9}
+LV cavity during diastole of [~7.5 cm]{.red}
 :::
 :::
 
 ::: {.fragment fragment-index=3}
-::: {.fragment .semi-fade-out fragment-index=7}
-[Complete interpolation]{.red} of ventricular ectopy with [superior axis]{.red} and inverted [transition at V2-V3]{.red}
+::: {.fragment .semi-fade-out fragment-index=11}
+LVOT VTI of [9 cm]{.red} and RVOT VTI of [6 cm]{.red}
 :::
 :::
 
 ::: {.fragment fragment-index=4}
 ::: {.fragment .semi-fade-out fragment-index=8}
-Enlarged left-sided heart border with narrow vascular pedicle
+Regional wall motion abnormalities with [inferior hypokinesis/akinesis]{.red}
 :::
 :::
 
 ::: {.fragment fragment-index=5}
-::: {.fragment .semi-fade-out fragment-index=9}
-[Earlier]{.red} completely interpolated atrial depolarization, as compared with PVC, at [similar cycle length]{.red}.
+::: {.fragment .semi-fade-out fragment-index=10}
+Moderate to [severe mitral regurgitation]{.red}
 :::
 :::
-
-:::
-
-::: {.column width="35%"}
-
-Left posterior fascicular block
-Inferior/posterior septal PVC
-Cardiomegaly
-Dilated cardiomyopathy
-Severe systolic dysfunction
-Mitral regurgitation IIIb 
-
---
-
-1. ICM
-1. DCM
-1. Steroid-induced CM
 
 ::: {.fragment fragment-index=6}
-::: {.fragment .highlight-current-red fragment-index=6}
-Left posterior fascicular block
+::: {.fragment .semi-fade-out fragment-index=12}
+[Echodensity]{.red} in apex
 :::
 :::
 
 ::: {.fragment fragment-index=7}
-::: {.fragment .highlight-current-red fragment-index=7}
-Inferior/posterior-septal PVC
+::: {.fragment .semi-fade-out fragment-index=8}
+Grade III diastolic dysfunction
 :::
+:::
+
+:::
+::: {.column width="35%"}
+
+Left posterior fascicular block
+Inferior/posterior septal PVC
+
+::: {.fragment .fade-out fragment-index=9}
+Cardiomegaly
 :::
 
 ::: {.fragment fragment-index=8}
 ::: {.fragment .highlight-current-red fragment-index=8}
-Cardiomegaly
+Severe systolic dysfunction 
 :::
 :::
 
 ::: {.fragment fragment-index=9}
 ::: {.fragment .highlight-current-red fragment-index=9}
-*Poor or abnormal VA conduction?*
+Dilated cardiomyopathy
+:::
+:::
+
+::: {.fragment fragment-index=10}
+::: {.fragment .highlight-current-red fragment-index=10}
+Mitral regurgitation IIIb 
+:::
+:::
+
+::: {.fragment fragment-index=11}
+::: {.fragment .highlight-current-red fragment-index=11}
+Low cardiac output state
+:::
+:::
+
+::: {.fragment fragment-index=12}
+::: {.fragment .highlight-current-red fragment-index=12}
+Apical thrombus
 :::
 :::
 
 :::
-
 ::::
+
+## Differential
+
+1. Ischemic cardiomyopathy
+  - Obstructive CAD
+  - Spontaneous coronary artery dissection
+1. *Idiopathic* or *genetic* dilated cardiomyopathy 
+1. Inflammatory/viral/immune-mediated cardiomyopathy
+1. Steroid-induced cardiomyopathy
 
 ## Labs
 
