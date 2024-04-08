@@ -1822,9 +1822,9 @@
   {
     "objectID": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#section",
     "href": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#section",
-    "title": "Clinical Case Conference (CPS)",
-    "section": "",
-    "text": "Animation"
+    "title": "Clinical Case Conference",
+    "section": ".",
+    "text": "."
   },
   {
     "objectID": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#additional-histories",
@@ -1864,9 +1864,9 @@
   {
     "objectID": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#section-1",
     "href": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#section-1",
-    "title": "Clinical Case Conference (CPS)",
-    "section": "",
-    "text": "Implicit\nAnimation"
+    "title": "Clinical Case Conference",
+    "section": ".",
+    "text": "."
   },
   {
     "objectID": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#additional-labs",
@@ -1969,7 +1969,7 @@
   {
     "objectID": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#section-2",
     "href": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#section-2",
-    "title": "Clinical Case Conference (CPS)",
+    "title": "Clinical Case Conference",
     "section": ".",
     "text": "."
   },
@@ -2069,6 +2069,6 @@
     "href": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#arterial-pressure-and-resistance-training",
     "title": "Clinical Case Conference",
     "section": "Arterial Pressure and Resistance training",
-    "text": "Arterial Pressure and Resistance training\n\nTesting the acute hypertensing response to resistance training, with invasive brachial artery pressure transduction.\nMacDougall et al. (1985)"
+    "text": "Arterial Pressure and Resistance training\nMacDougall et al. (1985) tested the acute hypertensing response to resistance training, with invasive brachial artery pressure transduction.\n\nSingle-arm curls of 255/190\nDouble-leg press of 320/250 (peak 480/350)"
   }
 ]

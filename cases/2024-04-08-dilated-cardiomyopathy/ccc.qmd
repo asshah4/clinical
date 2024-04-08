@@ -54,13 +54,13 @@ Electrocardiography and chest roengenography was performed during his ER visit.
 
 # Electrocardiography 
 
-## {background-image="ecg-initial-pvc.png" background-size="contain"}
+## . {background-image="ecg-initial-pvc.png" background-size="contain"}
 
-## {background-image="ecg-subsequent-pac.png" background-size="contain"}
+## . {background-image="ecg-subsequent-pac.png" background-size="contain"}
 
 # Chest Roentgenography
 
-## {background-image="cxr-ap.gif" background-size="contain"}
+## . {background-image="cxr-ap.gif" background-size="contain"}
 
 ## Problems {.smallest}
 
@@ -610,7 +610,7 @@ Spontaneous coronary artery dissection?
 
 ---
 
-![Mean pressures during exercise versus rest](macdougall-1985-sbp-exercise.png)
+![](macdougall-1985-sbp-exercise.png)
 
 ::: footer
 @MacDougall1985
@@ -620,9 +620,18 @@ Spontaneous coronary artery dissection?
 
 Rare cases of SCAD seen with resistance training [@Aghasadeghi2008]
 
+. . .
+
+@Fahmy2016 described a population of men and women with SCAD. Men (v. women) had a higher rate of...
+
+- Being younger
+- Isometric exercise
+- Heavy-weight resistance training
+- Recreational drugs
+
 ---
 
-![RCA lesion, likely type 2 SCAD](aghasadeghi-2008-rca-scad.jpg)
+![](aghasadeghi-2008-rca-scad.jpg)
 
 ::: footer
 @Aghasadeghi2008
