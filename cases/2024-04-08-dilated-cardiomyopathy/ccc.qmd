@@ -54,13 +54,13 @@ Electrocardiography and chest roengenography was performed during his ER visit.
 
 # Electrocardiography 
 
-## . {background-image="ecg-initial-pvc.png" background-size="contain"}
+## {background-image="ecg-initial-pvc.png" background-size="contain"}
 
-## . {background-image="ecg-subsequent-pac.png" background-size="contain"}
+## {background-image="ecg-subsequent-pac.png" background-size="contain"}
 
 # Chest Roentgenography
 
-## . {background-image="cxr-ap.gif" background-size="contain"}
+## {background-image="cxr-ap.gif" background-size="contain"}
 
 ## Problems {.smallest}
 
@@ -581,6 +581,8 @@ Wilson's disease
 :::
 
 ## Steroid-induced cardiomyopathy
+
+. . .
 
 Anabolic-androgenic steroid (__AAS__) misuse, above that of replacement hormone levels, is common - up to 2% of men in the US [@Pope2014]
 
