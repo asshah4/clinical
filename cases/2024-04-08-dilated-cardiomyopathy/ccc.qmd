@@ -226,7 +226,42 @@ UDS negative
 
 # Surface Echocardiography
 
-{{< include _echo.qmd >}}
+## {background-image="tte-plax.gif" background-size="contain"}
+## {background-image="tte-plax-zoom.gif" background-size="contain"}
+## {background-image="tte-plax-zoom-color.gif" background-size="contain"}
+## {background-image="tte-plax-lvidd.gif" background-size="contain"}
+## {background-image="tte-psax-mid.gif" background-size="contain"}
+## {background-image="tte-psax-mv.gif" background-size="contain"}
+## {background-image="tte-psax-mv-color.gif" background-size="contain"}
+## {background-image="tte-rv-inflow-color.gif" background-size="contain"}
+## {background-image="tte-rv-inflow-cw.gif" background-size="contain"}
+
+## {background-image="tte-psax-high.gif" background-size="contain"}
+## {background-image="tte-psax-high-rv-inflow-pw.gif" background-size="contain"}
+## {background-image="tte-psax-high-rv-outflow-cw.gif" background-size="contain"}
+## {background-image="tte-psax-high-rv-outflow-pw.gif" background-size="contain"}
+
+## {background-image="tte-rv-outflow.gif" background-size="contain"}
+## {background-image="tte-rv-outflow-cw-vti.gif" background-size="contain"}
+## {background-image="tte-rv-outflow-pw-vti.gif" background-size="contain"}
+
+## {background-image="tte-a4c.gif" background-size="contain"}
+## {background-image="tte-a4c-color.gif" background-size="contain"}
+## {background-image="tte-a4c-color-2.gif" background-size="contain"}
+## {background-image="tte-a4c-mv-color.gif" background-size="contain"}
+## {background-image="tte-a4c-mitral-inflow-pw.gif" background-size="contain"}
+## {background-image="tte-a4c-td-lateral.gif" background-size="contain"}
+## {background-image="tte-a4c-td-septal.gif" background-size="contain"}
+## {background-image="tte-a4c-m-mode-color.gif" background-size="contain"}
+## {background-image="tte-a4c-zoom.gif" background-size="contain"}
+## {background-image="tte-a4c-thrombus.gif" background-size="contain"}
+## {background-image="tte-a2c.gif" background-size="contain"}
+## {background-image="tte-a3c.gif" background-size="contain"}
+## {background-image="tte-a5c-color.gif" background-size="contain"}
+## {background-image="tte-a5c-cw.gif" background-size="contain"}
+## {background-image="tte-a5c-pw.gif" background-size="contain"}
+## {background-image="tte-a2c-definity.gif" background-size="contain"}
+
 
 ## Problems {.smallest}
 
@@ -604,7 +639,12 @@ In a small study (n = 140), AAS users had an [LVEF 10% lower]{.red} than age-mat
 
 [Right/left heart catherization with selective coronary angiography]{.center}
 
-{{< include _cath.qmd >}}
+## {background-image="cath-pressures.png" background-size="contain"}
+## {background-image="cath-report.png" background-size="contain"}
+## {background-image="cath-lca-lao-cran.gif" background-size="contain"}
+## {background-image="cath-lca-rao-caud.gif" background-size="contain"}
+## {background-image="cath-rca-lao-ap.gif" background-size="contain"}
+## {background-image="cath-rca-lao-caud.gif" background-size="contain"}
 
 ## Problems {.smallest}
 
@@ -692,7 +732,105 @@ Rare cases of SCAD seen with resistance training [@Aghasadeghi2008]
 
 # Cardiac Magnetic Resonance Imaging
 
-{{< include _cmr.qmd >}}
+## Cine imaging {.smaller}
+
+. . .
+
+Generally, steady-state free precession (__SSFP__) is used in the generation of __cine__ imaging.
+
+. . .
+
+RF pulses produce free induction decay curves or signals, and corresponding echos. 
+When in rapid sequence, the signal will began to merge and never reach zero, achieving a *continuous signal of varying amplitude* $\rightarrow$ __SSFP__.
+
+. . .
+
+For CMR, these sequences are repeated throughout a cardiac cycle.
+
+## {background-image="cmr-localizer.gif" background-size="contain"}
+## {background-image="cmr-2c-cine.gif" background-size="contain"}
+## {background-image="cmr-3c-cine.gif" background-size="contain"}
+## {background-image="cmr-4c-cine.gif" background-size="contain"}
+
+## {.center}
+
+::: {layout-nrow=2}
+![](cmr-sa-stack-2.gif)
+![](cmr-sa-stack-3.gif)
+![](cmr-sa-stack-4.gif)
+![](cmr-sa-stack-5.gif)
+![](cmr-sa-stack-6.gif)
+![](cmr-sa-stack-7.gif)
+:::
+
+## {.center}
+
+::: {layout-nrow=2}
+![](cmr-sa-stack-8.gif)
+![](cmr-sa-stack-9.gif)
+![](cmr-sa-stack-10.gif)
+![](cmr-sa-stack-11.gif)
+![](cmr-sa-stack-12.gif)
+![](cmr-sa-stack-13.gif)
+:::
+
+## {.center}
+
+::: {layout-nrow=1}
+![](cmr-av-pc-all.gif)
+![](cmr-av-pc-high.gif)
+![](cmr-av-pc-low.gif)
+:::
+
+## {.center}
+
+::: {layout-nrow=1}
+![](cmr-av-cine.gif){width=45%}
+![](cmr-cor-lvot-cine.gif){width=45%}
+:::
+
+## Gadolinium contrast!
+
+. . .
+
+Gadolinium (__Gd__) is a *paramagnetic* substance (becomes temporarily magnetized), out of four elements (Fe, Ni, Co).
+__Gd__ induces __T1 relaxation__. 
+
+. . .
+
+__T1__ is the time it takes for net magnetization to return to initial maximum value (shortened by __Gd__).
+
+. . .
+
+Initially, T1 scouting identifies the inversion time at which viable myocardium is "dark".
+
+---
+
+![](elster-2015-mri-psir-faq.gif)
+
+::: footer
+https://mriquestions.com/ps-phase-sensitive-ir.html
+:::
+
+---
+
+## {background-image="cmr-t1-scout.gif" background-size="contain"}
+## {background-image="cmr-mag-ir-280-sa.gif" background-size="contain"}
+## {background-image="cmr-mag-ir-280-4c.gif" background-size="contain"}
+## {background-image="cmr-mag-ir-280-2c.gif" background-size="contain"}
+## {background-image="cmr-mag-ir-280-3c.gif" background-size="contain"}
+
+---
+
+Phase-corrected inversion recovery sequences are less reliant on a set inversion time
+
+. . .
+
+Next sequence is done with free-breathing.
+
+---
+
+## {background-image="cmr-psir-fb-avg-sa.gif" background-size="contain"}
 
 ## Problems {.smallest}
 
@@ -879,7 +1017,7 @@ Treatment:
 
 # Thoughts? 
 
-# References 
+# References {.smallest}
 
 ::: {#refs}
 :::
