@@ -33,7 +33,7 @@ csl: ../../apa.csl
 
 ---
 
-30 year old gentleman with a history of acid reflux on PPI therapy, generalized anxiety disorder without long-term therapy, exercise-induced asthma on SABA inhaler therapy.
+[30 year old gentleman with a history of acid reflux on PPI therapy, generalized anxiety disorder without long-term therapy, exercise-induced asthma on SABA inhaler therapy.]{.center}
 
 ---
 
@@ -92,7 +92,7 @@ Enlarged left-sided heart border with narrow vascular pedicle
 
 ::: {.fragment fragment-index=5}
 ::: {.fragment .semi-fade-out fragment-index=9}
-[Earlier]{.red} completely interpolated atrial depolarization, as compared with PVC, at [similar cycle length]{.red}.
+[Earlier]{.red} completely interpolated atrial depolarizations, as compared with PVC, at [similar cycle length]{.red}.
 :::
 :::
 
@@ -131,7 +131,7 @@ Cardiomegaly
 
 ---
 
-Patient describes a 10+ year history of anabolic steroid usage, initiated by his coach as he trained as a body-builder. 
+Patient describes a 10+ year history of anabolic steroid usage, initiated by his coach while he trained as a body-builder. 
 
 . . .
 
@@ -547,7 +547,59 @@ Wilson's disease
 
 ## Steroid-induced cardiomyopathy
 
-TODO
+Anabolic-androgenic steroid (__AAS__) misuse, above that of replacement hormone levels, is common - up to 2% of men in the US [@Pope2014]
+
+. . .
+
+AAS abuse tends to involve dosing 5-30 times greater than recommended by the Endocrine Society [@Garner2018].
+
+. . . 
+
+In a small study (n = 140), AAS users had an [LVEF 10% lower]{.red} than age-matched non-users [@Baggish2017].
+
+---
+
+![](baggish-2017-box-plot-aas-lvef.png)
+
+::: footer
+@Baggish2017
+:::
+
+## AAS agents? {.smaller}
+
+- Testosterone is predominately bound to sex hormone-binding globulin, with only 1-2% being free
+- Once bound to androgen receptors, initiates gene transcription
+- AAS agents mimic testosterone, but maximize *anabolic* effect and minimize *androgenic* effects
+- Available orally or as injectable agents
+- Used in "cycles" however can become dependent, develop tolerance and have withdrawal with cessation [@Garner2018]
+- Additional effect leads to dyslipidemia with high LDL and lower HDL, including increased coronary plaque volume [@Fadah2023]
+
+---
+
+![](fadah-2023-aas-diagram.png)
+
+::: footer
+@Fadah2023
+:::
+
+## But the growth hormone?
+
+- Growth hormone deficiency is common in heart failure
+- @Salzano2018 reviewed studies on the effect on treatment with growth hormone on cardiac function, however mixed results:
+  - Improved functional class and exercise duration/capacity
+  - Improved VO2
+  - Decreased LV size, reverse remodeling, and improved LVEF
+  - Decrease HF-associated inflammatory cytokines
+
+*Did on-and-off growth hormone mask some of the effects of AAS?*
+
+---
+
+![](salzano-2018-gh-mechanism.png)
+
+::: footer
+@Salzano2018
+:::
 
 # Cardiac catheterization
 
@@ -562,7 +614,7 @@ TODO
 
 ::: {.fragment fragment-index=1}
 ::: {.fragment .semi-fade-out fragment-index=4}
-Hypovolemic shock [requiring nor epinephrine]{.red} with light sedation
+Hypovolemic "shock" [requiring nor epinephrine]{.red} with light sedation
 :::
 :::
 
@@ -603,6 +655,8 @@ Spontaneous coronary artery dissection?
 
 ## Arterial Pressure and Resistance training 
 
+. . .
+
 @MacDougall1985 tested the acute hypertensing response to resistance training, with invasive brachial artery pressure transduction.
 
 - Single-arm curls of 255/190
@@ -641,6 +695,164 @@ Rare cases of SCAD seen with resistance training [@Aghasadeghi2008]
 
 {{< include _cmr.qmd >}}
 
+## Problems {.smallest}
+
+:::: {.columns}
+::: {.column width="65%"}
+
+::: {.fragment fragment-index=1}
+::: {.fragment .semi-fade-out fragment-index=5}
+Dilated LV with [severely reduced LV function]{.red}
+:::
+:::
+
+::: {.fragment fragment-index=2}
+::: {.fragment .semi-fade-out fragment-index=5}
+Inferior wall [akinesis]{.red}
+:::
+:::
+
+::: {.fragment fragment-index=3}
+::: {.fragment .semi-fade-out fragment-index=7}
+Inferior wall showed [transmural, from base to apex]{.red} late gadolinium enhancement
+:::
+:::
+
+::: {.fragment fragment-index=4}
+::: {.fragment .semi-fade-out fragment-index=6}
+[Thrombus]{.red} seen in the apex
+:::
+:::
+
+:::
+::: {.column width="35%"}
+
+Left posterior fascicular block  
+Inferior/posterior septal PVC  
+
+::: {.fragment .highlight-current-red fragment-index=5}
+Severe systolic dysfunction   
+Dilated cardiomyopathy  
+:::
+Mitral regurgitation IIIb   
+Low cardiac output state  
+
+::: {.fragment .highlight-current-red fragment-index=6}
+Apical thrombus  
+:::
+
+::: {.fragment .highlight-current-red fragment-index=7}
+Spontaneous coronary artery dissection?
+:::
+
+:::
+::::
+
+## Differential {.smallest}
+
+:::: {.columns}
+::: {.column width="33%"}
+
+::: {.fragment fragment-index=1}
+::: {.fragment .highlight-current-red fragment-index=3}
+__[Genetic]{.underline}__
+:::
+:::
+
+::: {.fragment fragment-index=1}
+TTN   
+LMNA   
+MYH7   
+FLNC (filamin C)  
+RBM20 (RNA-binding motif-20)  
+TNNT2  
+TTNC1  
+PLN (phospholamban)  
+DSP (desmoplakin)  
+ACTC1  
+SCN5A  
+TPM1 (tropomyosin)  
+:::
+
+:::
+::: {.column width="33%"}
+
+::: {.fragment fragment-index=1}
+__[Infectious]{.underline}__
+:::
+
+::: {.fragment fragment-index=1}
+::: {.fragment .semi-fade-out fragment-index=1}
+COVID/viral myocarditis  
+Chagas disease  
+Endomyocardial fibrosis  
+:::
+:::
+
+::: {.fragment fragment-index=1}
+__[Immune-mediated]{.underline}__
+:::
+
+::: {.fragment fragment-index=1}
+::: {.fragment .semi-fade-out fragment-index=1}
+Giant-cell myocarditis  
+Eosinophilic myocarditis  
+Sarcoidosis  
+:::
+:::
+
+::: {.fragment fragment-index=1}
+__[Ischemic]{.underline}__
+:::
+
+::: {.fragment fragment-index=1}
+::: {.fragment .semi-fade-out fragment-index=2}
+Plaque rupture syndrome  
+Coronary artery spasm  
+:::
+::: {.fragment .highlight-current-red fragment-index=3}
+Spontaneous coronary artery dissection  
+:::
+:::
+
+:::
+::: {.column width="33%"}
+
+
+::: {.fragment fragment-index=1}
+__[Others]{.underline}__
+:::
+
+::: {.fragment fragment-index=1}
+::: {.fragment .semi-fade-out fragment-index=1}
+Thiamine deficiency (beri-beri)  
+Selenium deficiency  
+Hypocalcemia  
+Hyper/hypo-thyroidism  
+:::
+::: {.fragment .semi-fade-out fragment-index=2}
+Tachycardia-induced  
+:::
+
+::: {.fragment .semi-fade-out fragment-index=1}
+Alcohol-induced  
+Amphetamine-induced  
+Catecholamine-induced (stress-induced, e.g. *Takotsubo*)  
+:::
+
+::: {.fragment .highlight-current-red fragment-index=3}
+Anabolic steroid-induced  
+:::
+
+::: {.fragment .semi-fade-out fragment-index=1}
+Hemochromatosis  
+Wilson's disease  
+:::
+:::
+
+:::
+::::
+
 # Clinical Course
 
 ---
@@ -659,11 +871,13 @@ Hospitalization:
 Treatment: 
 
 - atorvastatin 20
-- apixiban 5 bid
+- apixaban 5 bid
 - sacubitril-valsartan 24/26
 - empagliflozin 10 
 :::
 ::::
+
+# Thoughts? 
 
 # References 
 

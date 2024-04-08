@@ -6,7 +6,7 @@
 # Run first before adding a YAML to the QMD
 
 for i in *.gif; do
-	echo "## {background-image='$i' background-size='contain'}\n"
+	echo "## {background-image="$i" background-size="contain"}\n"
 done >> ccc.qmd
 
 # Needs to be made executable with `chmod +x gifs-to-qmd.sh` from terminal

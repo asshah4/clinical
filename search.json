@@ -1985,7 +1985,7 @@
     "href": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#differential-2",
     "title": "Clinical Case Conference",
     "section": "Differential",
-    "text": "Differential\n\n\n\nGenetic\n\n\nTTN\nLMNA\nMYH7\nFLNC (filamin C)\nRBM20 (RNA-binding motif-20)\nTNNT2\nTTNC1\nPLN (phospholamban)\nDSP (desmoplakin)\nACTC1\nSCN5A\nTPM1 (tropomyosin)\n\n\n\nInfectious\n\n\nCOVID/viral myocarditis\nChagas disease\n::: {.fragment .semi-fade-out fragment-index=2} Endomyocardial fibrosis\n\n\nImmune-mediated\n\n\nGiant-cell myocarditis\nEosinophilic myocarditis\n\nSarcoidosis\nLupus\n\nIschemic\n\nPlaque rupture syndrome\nCoronary artery spasm\nSpontaneous coronary artery dissection\n\n\n\n\nOthers\n\n\n\nThiamine deficiency (wet/dry beri-beri)\nSelenium deficiency\nHypocalcemia\n\nHyper/hypo-thyroidism\nTachycardia-mediated\n\nAlcohol-induced\nAmphetamine-induced\nCatecholamine-induced (stress-induced, e.g. Takotsubo)\n\nAnabolic steroid-induced\nHemochromatosis\nWilson’s disease\n\n\n::::"
+    "text": "Differential\n\n\n\n\nGenetic\n\n\n\nTTN\nLMNA\nMYH7\nFLNC (filamin C)\nRBM20 (RNA-binding motif-20)\nTNNT2\nTTNC1\nPLN (phospholamban)\nDSP (desmoplakin)\nACTC1\nSCN5A\nTPM1 (tropomyosin)\n\n\n\nInfectious\n\n\n\nCOVID/viral myocarditis\nChagas disease\nEndomyocardial fibrosis\n\n\n\nImmune-mediated\n\n\n\nGiant-cell myocarditis\nEosinophilic myocarditis\nSarcoidosis\n\n\n\nIschemic\n\n\n\nPlaque rupture syndrome\nCoronary artery spasm\n\n\nSpontaneous coronary artery dissection\n\n\n\n\nOthers\n\n\n\nThiamine deficiency (beri-beri)\nSelenium deficiency\nHypocalcemia\nHyper/hypo-thyroidism\n\n\nTachycardia-induced\n\n\nAlcohol-induced\nAmphetamine-induced\nCatecholamine-induced (stress-induced, e.g. Takotsubo)\n\n\nAnabolic steroid-induced\n\n\nHemochromatosis\nWilson’s disease"
   },
   {
     "objectID": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#section-36",
@@ -2020,7 +2020,7 @@
     "href": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#problems",
     "title": "Clinical Case Conference",
     "section": "Problems",
-    "text": "Problems\n\n\n\nSinus tachycardia\n\n\n\nRight axis deviation with inferior qR and lateral rS pattern\n\n\n\n\nComplete interpolation of ventricular ectopy with superior axis and inverted transition at V2-V3\n\n\n\n\nEnlarged left-sided heart border with narrow vascular pedicle\n\n\n\n\nEarlier completely interpolated atrial depolarization, as compared with PVC, at similar cycle length.\n\n\n\n\n\nLeft posterior fascicular block\n\n\n\n\nInferior/posterior-septal PVC\n\n\n\n\nCardiomegaly\n\n\n\n\nPoor or abnormal VA conduction?"
+    "text": "Problems\n\n\n\nSinus tachycardia\n\n\n\nRight axis deviation with inferior qR and lateral rS pattern\n\n\n\n\nComplete interpolation of ventricular ectopy with superior axis and inverted transition at V2-V3\n\n\n\n\nEnlarged left-sided heart border with narrow vascular pedicle\n\n\n\n\nEarlier completely interpolated atrial depolarizations, as compared with PVC, at similar cycle length.\n\n\n\n\n\nLeft posterior fascicular block\n\n\n\n\nInferior/posterior-septal PVC\n\n\n\n\nCardiomegaly\n\n\n\n\nPoor or abnormal VA conduction?"
   },
   {
     "objectID": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#problems-1",
@@ -2041,14 +2041,14 @@
     "href": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#steroid-induced-cardiomyopathy",
     "title": "Clinical Case Conference",
     "section": "Steroid-induced cardiomyopathy",
-    "text": "Steroid-induced cardiomyopathy\nTODO"
+    "text": "Steroid-induced cardiomyopathy\nAnabolic-androgenic steroid (AAS) misuse, above that of replacement hormone levels, is common - up to 2% of men in the US (Pope et al., 2014)\n\nAAS abuse tends to involve dosing 5-30 times greater than recommended by the Endocrine Society (Garner et al., 2018).\n\n\nIn a small study (n = 140), AAS users had an LVEF 10% lower than age-matched non-users (Baggish et al., 2017)."
   },
   {
     "objectID": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#problems-2",
     "href": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#problems-2",
     "title": "Clinical Case Conference",
     "section": "Problems",
-    "text": "Problems\n\n\n\n\nHypovolemic shock requiring nor epinephrine with light sedation\n\n\n\n\nLarge diameter coronary vessels (4-5 mm) without obstructive disease\n\n\n\n\nDiffuse ectasia of RCA with diminutive branch vessels\n\n\n\nLeft posterior fascicular block\nInferior/posterior septal PVC\nSevere systolic dysfunction\nDilated cardiomyopathy\nMitral regurgitation IIIb\n\nLow cardiac output state\n\nApical thrombus\n\n\nSpontaneous coronary artery dissection?"
+    "text": "Problems\n\n\n\n\nHypovolemic “shock” requiring nor epinephrine with light sedation\n\n\n\n\nLarge diameter coronary vessels (4-5 mm) without obstructive disease\n\n\n\n\nDiffuse ectasia of RCA with diminutive branch vessels\n\n\n\nLeft posterior fascicular block\nInferior/posterior septal PVC\nSevere systolic dysfunction\nDilated cardiomyopathy\nMitral regurgitation IIIb\n\nLow cardiac output state\n\nApical thrombus\n\n\nSpontaneous coronary artery dissection?"
   },
   {
     "objectID": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#temporary-slide",
@@ -2069,6 +2069,34 @@
     "href": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#arterial-pressure-and-resistance-training",
     "title": "Clinical Case Conference",
     "section": "Arterial Pressure and Resistance training",
-    "text": "Arterial Pressure and Resistance training\nMacDougall et al. (1985) tested the acute hypertensing response to resistance training, with invasive brachial artery pressure transduction.\n\nSingle-arm curls of 255/190\nDouble-leg press of 320/250 (peak 480/350)"
+    "text": "Arterial Pressure and Resistance training\n\nMacDougall et al. (1985) tested the acute hypertensing response to resistance training, with invasive brachial artery pressure transduction.\n\nSingle-arm curls of 255/190\nDouble-leg press of 320/250 (peak 480/350)"
+  },
+  {
+    "objectID": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#section-3",
+    "href": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#section-3",
+    "title": "Clinical Case Conference",
+    "section": "",
+    "text": "Sliwa et al. (2023)"
+  },
+  {
+    "objectID": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#aas-agents",
+    "href": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#aas-agents",
+    "title": "Clinical Case Conference",
+    "section": "AAS agents?",
+    "text": "AAS agents?\n\nTestosterone is predominately bound to sex hormone-binding globulin, with only 1-2% being free\nOnce bound to androgen receptors, initiates gene transcription\nAAS agents mimic testosterone, but maximize anabolic effect and minimize androgenic effects\nAvailable orally or as injectable agents\nUsed in “cycles” however can become dependent, develop tolerance and have withdrawal with cessation (Garner et al., 2018)\nAdditional effect leads to dyslipidemia with high LDL and lower HDL, including increased coronary plaque volume (Fadah et al., 2023)"
+  },
+  {
+    "objectID": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#but-the-growth-hormone",
+    "href": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#but-the-growth-hormone",
+    "title": "Clinical Case Conference",
+    "section": "But the growth hormone?",
+    "text": "But the growth hormone?\n\nGrowth hormone deficiency is common in heart failure\nSalzano et al. (2018) reviewed studies on the effect on treatment with growth hormone on cardiac function, however mixed results:\n\nImproved functional class and exercise duration/capacity\nImproved VO2\nDecreased LV size, reverse remodeling, and improved LVEF\nDecrease HF-associated inflammatory cytokines\n\n\nDid on-and-off growth hormone mask some of the effects of AAS?"
+  },
+  {
+    "objectID": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#problems-3",
+    "href": "cases/2024-04-08-dilated-cardiomyopathy/ccc.html#problems-3",
+    "title": "Clinical Case Conference",
+    "section": "Problems",
+    "text": "Problems\n\n\n\n\nDilated LV with severely reduced LV function\n\n\n\n\nInferior wall akinesis\n\n\n\n\nInferior wall showed transmural, from base to apex late gadolinium enhancement\n\n\n\n\nThrombus seen in the apex\n\n\n\nLeft posterior fascicular block\nInferior/posterior septal PVC\n\nSevere systolic dysfunction\nDilated cardiomyopathy\n\nMitral regurgitation IIIb\nLow cardiac output state\n\nApical thrombus\n\n\nSpontaneous coronary artery dissection?"
   }
 ]
