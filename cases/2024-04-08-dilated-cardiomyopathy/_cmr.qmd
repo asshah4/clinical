@@ -1,3 +1,18 @@
+## Cine imaging {.smaller}
+
+. . .
+
+Generally, steady-state free precession (__SSFP__) is used in the generation of __cine__ imaging.
+
+. . .
+
+RF pulses produce free induction decay curves or signals, and corresponding echos. 
+When in rapid sequence, the signal will began to merge and never reach zero, achieving a *continuous signal of varying amplitude* $\rightarrow$ __SSFP__.
+
+. . .
+
+For CMR, these sequences are repeated throughout a cardiac cycle.
+
 ## {background-image="cmr-localizer.gif" background-size="contain"}
 ## {background-image="cmr-2c-cine.gif" background-size="contain"}
 ## {background-image="cmr-3c-cine.gif" background-size="contain"}
@@ -44,7 +59,7 @@
 
 . . .
 
-Gadolinium (__Gd__)is a *paramagnetic* substance (becomes temporarily magnetized), out of four elements (Fe, Ni, Co).
+Gadolinium (__Gd__) is a *paramagnetic* substance (becomes temporarily magnetized), out of four elements (Fe, Ni, Co).
 __Gd__ induces __T1 relaxation__. 
 
 . . .
@@ -54,6 +69,14 @@ __T1__ is the time it takes for net magnetization to return to initial maximum v
 . . .
 
 Initially, T1 scouting identifies the inversion time at which viable myocardium is "dark".
+
+---
+
+![](elster-2015-mri-psir-faq.gif)
+
+::: footer
+https://mriquestions.com/ps-phase-sensitive-ir.html
+:::
 
 ---
 

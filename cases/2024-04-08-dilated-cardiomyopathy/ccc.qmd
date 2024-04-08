@@ -582,7 +582,7 @@ In a small study (n = 140), AAS users had an [LVEF 10% lower]{.red} than age-mat
 @Fadah2023
 :::
 
-## But the growth hormone?
+## But the growth hormone? {.smaller}
 
 - Growth hormone deficiency is common in heart failure
 - @Salzano2018 reviewed studies on the effect on treatment with growth hormone on cardiac function, however mixed results:
@@ -590,8 +590,7 @@ In a small study (n = 140), AAS users had an [LVEF 10% lower]{.red} than age-mat
   - Improved VO2
   - Decreased LV size, reverse remodeling, and improved LVEF
   - Decrease HF-associated inflammatory cytokines
-
-*Did on-and-off growth hormone mask some of the effects of AAS?*
+- *Did on-and-off growth hormone mask some of the effects of AAS?*
 
 ---
 
@@ -653,7 +652,7 @@ Spontaneous coronary artery dissection?
 :::
 ::::
 
-## Arterial Pressure and Resistance training 
+## Arterial pressure and resistance training 
 
 . . .
 
@@ -662,7 +661,7 @@ Spontaneous coronary artery dissection?
 - Single-arm curls of 255/190
 - Double-leg press of 320/250 (peak 480/350)
 
----
+## {.center}
 
 ![](macdougall-1985-sbp-exercise.png)
 
@@ -670,7 +669,7 @@ Spontaneous coronary artery dissection?
 @MacDougall1985
 :::
 
----
+## {.smaller}
 
 Rare cases of SCAD seen with resistance training [@Aghasadeghi2008]
 
@@ -855,7 +854,7 @@ Wilson's disease
 
 # Clinical Course
 
----
+## {.smaller}
 
 :::: {.columns}
 ::: {.column width="50%"}
@@ -870,6 +869,7 @@ Hospitalization:
 ::: {.column width="50%"}
 Treatment: 
 
+- [cessation of AAS]{.red}
 - atorvastatin 20
 - apixaban 5 bid
 - sacubitril-valsartan 24/26
