@@ -26,15 +26,16 @@ website:
 
 format:
   html:
-    theme: flatly
+    theme:
+      - flatly
+      - colors.scss
     highlight: solarized-light
-    css: theme.scss
     toc: true
     toc_float: true
   revealjs:
     theme:
       - simple
-      - theme.scss
+      - colors.scss
     slide-tone: false
     fig-cap-location: bottom
     fig-align: center
