@@ -2133,5 +2133,47 @@
     "title": "Clinical Case Conference",
     "section": "Cine imaging",
     "text": "Cine imaging\n\nGenerally, steady-state free precession (SSFP) is used in the generation of cine imaging.\n\n\nRF pulses produce free induction decay curves or signals, and corresponding echos. When in rapid sequence, the signal will began to merge and never reach zero, achieving a continuous signal of varying amplitude \\(\\rightarrow\\) SSFP.\n\n\nFor CMR, these sequences are repeated throughout a cardiac cycle."
+  },
+  {
+    "objectID": "lectures/2024-04-24-mendelian-randomization-lpa/lpa.html#about",
+    "href": "lectures/2024-04-24-mendelian-randomization-lpa/lpa.html#about",
+    "title": "Mendelian Randomization in Practice",
+    "section": "About",
+    "text": "About\nBjörnson, Elias, Martin Adiels, Marja-Riitta Taskinen, Stephen Burgess, M. John Chapman, Chris J. Packard, and Jan Borén. “Lipoprotein(a) Is Markedly More Atherogenic Than LDL: An Apolipoprotein B-Based Genetic Analysis.” Journal of the American College of Cardiology 83, no. 3 (January 23, 2024): 385–95. https://doi.org/10.1016/j.jacc.2023.10.039.\n\nBjörnson et al. (2024)"
+  },
+  {
+    "objectID": "lectures/2024-04-24-mendelian-randomization-lpa/lpa.html#objectives",
+    "href": "lectures/2024-04-24-mendelian-randomization-lpa/lpa.html#objectives",
+    "title": "Mendelian Randomization in Practice",
+    "section": "Objectives",
+    "text": "Objectives"
+  },
+  {
+    "objectID": "lectures/2024-04-24-mendelian-randomization-lpa/lpa.html#outline",
+    "href": "lectures/2024-04-24-mendelian-randomization-lpa/lpa.html#outline",
+    "title": "Mendelian Randomization in Practice",
+    "section": "Outline",
+    "text": "Outline"
+  },
+  {
+    "objectID": "lectures/2024-04-24-mendelian-randomization-lpa/lpa.html#section",
+    "href": "lectures/2024-04-24-mendelian-randomization-lpa/lpa.html#section",
+    "title": "Mendelian Randomization in Practice",
+    "section": "",
+    "text": "::: #refs\n\n\n\n\n\n\n\n\nBjörnson, E., Adiels, M., Taskinen, M.-R., Burgess, S., Chapman, M. J., Packard, C. J., & Borén, J. (2024). Lipoprotein(a) Is Markedly More Atherogenic Than LDL: An Apolipoprotein B-Based Genetic Analysis. Journal of the American College of Cardiology, 83(3), 385–395. https://doi.org/10.1016/j.jacc.2023.10.039"
+  },
+  {
+    "objectID": "lectures/2024-04-24-mendelian-randomization-lpa/lpa.html#article",
+    "href": "lectures/2024-04-24-mendelian-randomization-lpa/lpa.html#article",
+    "title": "Mendelian Randomization in Practice",
+    "section": "Article",
+    "text": "Article\n\n\n\n\n\n\n\nPaper\n\n\nBjörnson, Elias, Martin Adiels, Marja-Riitta Taskinen, Stephen Burgess, M. John Chapman, Chris J. Packard, and Jan Borén. Lipoprotein(a) Is Markedly More Atherogenic Than LDL: An Apolipoprotein B-Based Genetic Analysis Journal of the American College of Cardiology 83, no. 3 (January 23, 2024): 385–95. https://doi.org/10.1016/j.jacc.2023.10.039.\n\n\n\n\n\nBjörnson et al. (2024)"
+  },
+  {
+    "objectID": "lectures/2024-04-24-mendelian-randomization-lpa/lpa.html#references",
+    "href": "lectures/2024-04-24-mendelian-randomization-lpa/lpa.html#references",
+    "title": "Mendelian Randomization in Practice",
+    "section": "References",
+    "text": "References\n\n\nBjörnson, E., Adiels, M., Taskinen, M.-R., Burgess, S., Chapman, M. J., Packard, C. J., & Borén, J. (2024). Lipoprotein(a) Is Markedly More Atherogenic Than LDL: An Apolipoprotein B-Based Genetic Analysis. Journal of the American College of Cardiology, 83(3), 385–395. https://doi.org/10.1016/j.jacc.2023.10.039"
   }
 ]

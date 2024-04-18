@@ -1,0 +1,123 @@
+---
+title: Mendelian Randomization in Practice
+subtitle: AFGen Fellows Lecture Series
+author: Anish S. Shah, MD, MS
+institute: Division of Cardiology, Department of Medicine, University of Illinois Chicago 
+date: April 24, 2024
+format:
+  revealjs:
+    transition: fade
+    transition-speed: fast
+    slide-number: true
+    incremental: true
+    auto-animate-easing: ease-in-out
+    auto-animate-unmatched: false
+    progress: true
+    chalkboard: true
+    height: 1080
+    width: 1920
+
+revealjs-plugins:
+  - attribution
+
+csl: ../../apa.csl
+---
+
+# Introduction
+
+---
+
+::: {.callout-important title="Paper"}
+Björnson, Elias, Martin Adiels, Marja-Riitta Taskinen, Stephen Burgess, M. John Chapman, Chris J. Packard, and Jan Borén. 
+[Lipoprotein(a) Is Markedly More Atherogenic Than LDL: An Apolipoprotein B-Based Genetic Analysis]{.red}
+Journal of the American College of Cardiology 83, no. 3 (January 23, 2024): 385–95. 
+https://doi.org/10.1016/j.jacc.2023.10.039.
+:::
+
+. . .
+
+:::: {.columns}
+::: {.column width="50%"}
+Question:
+
+- Are Lp(a) and LDL equivalent in their atherogenicity?
+:::
+::: {.column width="50%"}
+Approach:
+
+- Using ApoB as a quantification of particles, assess genetic contribution to Lp(a) and LDL and the subsequent CVD risk
+:::
+::::
+
+
+## Objectives
+
+a. Review the role of lipids in atherosclerosis
+a. Understand the effect of genetic variants on lipid particles
+a. Describe the principles of mendelian randomization
+a. Consider the intersection of epidemiology/causality using this methodology
+
+## Outline
+
+1. An overview of lipids
+1. (Re)-introduction to mendelian randomization
+1. Review of the findings from the paper by @Bjornson2024
+
+# Background on Lipids
+
+# Mendelian Randomization
+
+# Findings
+
+---
+
+![Relative atherogenicity of Lp(a) and LDL particles](bjornson-2024-central-illustration.png){#fig-central}
+
+::: attribution
+@Bjornson2024
+:::
+
+---
+
+![Effect of SNP clusters on plasma apoB and Lp(a) levels](bjornson-2024-snp-clusters-lpa.png){#fig-snp}
+
+::: attribution
+@Bjornson2024
+:::
+
+---
+
+![Relationship of CHD risk to apoB from LDL and Lp(a)](bjornson-2024-chd-risk-by-apob-type.png){#fig-chd}
+
+::: attribution
+@Bjornson2024
+:::
+
+---
+
+![Odds for CVD by genetic prediction of variation in apoB](bjornson-2024-odds-ratio.png){#fig-odds}
+
+::: attribution
+@Bjornson2024
+:::
+
+---
+
+![Relative atherogenicity of Lp(a) and LDL associated apoB](bjornson-2024-relative-atherogenicity.png){#fig-relative}
+
+::: attribution
+@Bjornson2024
+:::
+
+---
+
+![ApoB and CHD risk by polygenic scores](bjornson-2024-chd-risk-pgs.png){#fig-pgs}
+
+::: attribution
+@Bjornson2024
+:::
+
+## References {.smallest}
+
+::: {#refs}
+:::

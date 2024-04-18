@@ -28,7 +28,6 @@ csl: ../../apa.csl
 1. Identify __diagnostic assumptions__ that may lead towards case-specific biases
 1. Practice __contextualizing clinical data__ in the framework of cardiovascular physiology
 
-
 # History & Physical
 
 ---

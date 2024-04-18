@@ -36,6 +36,7 @@ format:
     theme:
       - simple
       - colors.scss
+      - revealjs-format.scss
     slide-tone: false
     fig-cap-location: bottom
     fig-align: center
