@@ -1,6 +1,6 @@
 ---
 title: Mendelian Randomization in Practice
-subtitle: AFGen Fellows Lecture Series
+subtitle: AFGen Consortium Fellows Meeting
 author: Anish S. Shah, MD, MS
 institute: Division of Cardiology, Department of Medicine, University of Illinois Chicago 
 date: April 24, 2024
@@ -60,10 +60,17 @@ a. Consider the intersection of epidemiology/causality using this methodology
 ## Outline
 
 1. An overview of lipids
+  a. Lipid molecules and density
+  a. Structure of Lp(a)
 1. (Re)-introduction to mendelian randomization
 1. Review of the findings from the paper by @Bjornson2024
 
-# Background on Lipids
+# Lipids
+
+## Basics of lipids
+
+## Lipoprotein structures
+
 
 # Mendelian Randomization
 
