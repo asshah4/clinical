@@ -55,8 +55,6 @@
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="../../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
-  <link href="../../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-attribution/attribution.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
@@ -367,12 +365,9 @@ Anish S. Shah, MD, MS
   <p class="date">2024-04-24</p>
 </section>
 <section>
-<section id="introduction" class="title-slide slide level1 center">
-<h1>Introduction</h1>
-
-</section>
-<section class="slide level2">
-
+<section id="is-lipoproteina-more-atherogenic-than-ldl" class="title-slide slide level1 center">
+<h1>Is lipoprotein(a) more atherogenic than LDL?</h1>
+<div class="fragment">
 <div title="Paper">
 <div class="callout callout-important callout-titled callout-style-default">
 <div class="callout-body">
@@ -383,68 +378,87 @@ Anish S. Shah, MD, MS
 <p><strong>Paper</strong></p>
 </div>
 <div class="callout-content">
-<p>Björnson, Elias, Martin Adiels, Marja-Riitta Taskinen, Stephen Burgess, M. John Chapman, Chris J. Packard, and Jan Borén. <span class="orange">Lipoprotein(a) Is Markedly More Atherogenic Than LDL: An Apolipoprotein B-Based Genetic Analysis</span> Journal of the American College of Cardiology 83, no. 3 (January 23, 2024): 385–95. https://doi.org/10.1016/j.jacc.2023.10.039.</p>
+<p>Björnson, Elias, Martin Adiels, Marja-Riitta Taskinen, Stephen Burgess, M. John Chapman, Chris J. Packard, and Jan Borén. <span class="red">Lipoprotein(a) Is Markedly More Atherogenic Than LDL: An Apolipoprotein B-Based Genetic Analysis</span> Journal of the American College of Cardiology 83, no. 3 (January 23, 2024): 385–95. https://doi.org/10.1016/j.jacc.2023.10.039.</p>
 </div>
 </div>
-</div>
-</div>
-<div class="fragment">
-<div class="columns">
-<div class="column" style="width:50%;">
-<p>Question:</p>
-<ul>
-<li class="fragment">Are Lp(a) and LDL equivalent in their atherogenicity?</li>
-</ul>
-</div><div class="column" style="width:50%;">
-<p>Approach:</p>
-<ul>
-<li class="fragment">Using ApoB as a quantification of particles, assess genetic contribution to Lp(a) and LDL and the subsequent CVD risk</li>
-</ul>
 </div>
 </div>
 </div>
 </section>
-<section id="objectives" class="slide level2">
-<h2>Objectives</h2>
+<section class="slide level2">
+
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="outline">Outline</h3>
+<div class="non-incremental">
+<ol type="1">
+<li class="fragment">Introduction
+<ol type="a">
+<li class="fragment">Purpose</li>
+<li class="fragment">Background on lipids</li>
+<li class="fragment">Overview of Lp(a)</li>
+</ol></li>
+<li class="fragment">Methods
+<ol type="a">
+<li class="fragment">Statistical approach</li>
+<li class="fragment">Genetics of ApoB100</li>
+<li class="fragment">(Re)-introduction to mendelian randomization</li>
+</ol></li>
+<li class="fragment">Results
+<ol type="a">
+<li class="fragment">Major findings</li>
+<li class="fragment">Supplemental findings</li>
+</ol></li>
+<li class="fragment">Conclusions
+<ol type="a">
+<li class="fragment">Innovation of approach</li>
+<li class="fragment">Validity</li>
+</ol></li>
+</ol>
+</div>
+</div><div class="column" style="width:50%;">
+<h3 id="objectives">Objectives</h3>
+<div class="non-incremental">
 <ol type="a">
 <li class="fragment">Review the role of lipids in atherosclerosis</li>
 <li class="fragment">Understand the effect of genetic variants on lipid particles</li>
 <li class="fragment">Describe the principles of mendelian randomization</li>
 <li class="fragment">Consider the intersection of epidemiology/causality using this methodology</li>
 </ol>
-</section>
-<section id="outline" class="slide level2">
-<h2>Outline</h2>
-<ol type="1">
-<li class="fragment">An overview of lipids</li>
-</ol>
-<ol type="a">
-<li class="fragment">Lipid molecules and density</li>
-<li class="fragment">Structure of Lp(a)</li>
-</ol>
-<ol type="1">
-<li class="fragment">(Re)-introduction to mendelian randomization</li>
-<li class="fragment">Review of the findings from the paper by <span class="citation" data-cites="Bjornson2024">Björnson et al. (<a href="#/references" role="doc-biblioref" onclick="">2024</a>)</span></li>
-</ol>
+</div>
+</div>
+</div>
 </section></section>
 <section>
-<section id="lipids" class="title-slide slide level1 center">
-<h1>Lipids</h1>
+<section id="introduction" class="title-slide slide level1 center">
+<h1>Introduction</h1>
 
+</section>
+<section class="slide level2">
+
+
+<img data-src="bjornson-2024-central-illustration.png" class="img-fluid r-stretch quarto-figure-center"><p class="caption">
+Figure&nbsp;1: Relative atherogenicity of Lp(a) and LDL particles
+</p><div class="attribution">
+<p><span class="citation" data-cites="Bjornson2024">Björnson et al. (<a href="#/references" role="doc-biblioref" onclick="">2024</a>)</span></p>
+</div>
 </section>
 <section id="basics-of-lipids" class="slide level2">
 <h2>Basics of lipids</h2>
 <div class="columns">
 <div class="column" style="width:35%;">
 <div class="fragment" data-fragment-index="1">
-<div class="fragment highlight-current-red" data-fragment-index="4">
+<div class="fragment highlight-current-red" data-fragment-index="3">
+<div class="fragment fade-out" data-fragment-index="4">
 <p>Cholesterol</p>
 </div>
 </div>
+</div>
 <div class="fragment" data-fragment-index="2">
+<div class="fragment fade-out" data-fragment-index="3">
 <p>Triglycerides</p>
 </div>
-</div><div class="column" style="width:65%;">
+</div>
 <div class="fragment" data-fragment-index="3">
 <div class="fragment highlight-current-red" data-fragment-index="4">
 <p>High-density lipoprotein (HDL)<br>
@@ -452,115 +466,238 @@ Low-density lipoprotein (LDL)<br>
 Very low-density lipoprotein (VLDL)</p>
 </div>
 </div>
-</div>
-</div>
+</div><div class="column" style="width:65%;">
 <div class="fragment" data-fragment-index="5">
 <p>Cholesterols (and triglycerides) are insoluble in water, and must be transported via protein structures called <span class="red">lipoproteins</span>.</p>
 </div>
-</section>
-<section class="slide level2">
-
-
-<img data-src="cleveland-clinic-lipoprotein.png" class="img-fluid r-stretch quarto-figure-center"><p class="caption">
-Figure&nbsp;1: Diagram of structure of a lipoprotein particle
-</p><div class="attribution">
+<div class="fragment" data-fragment-index="6">
+<div id="fig-lipoprotein" class="quarto-figure quarto-figure-center quarto-float">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-lipoprotein-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img data-src="cleveland-clinic-lipoprotein.png" class="img-fluid">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lipoprotein-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Diagram of structure of a lipoprotein particle
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div class="attribution">
 <p>https://my.clevelandclinic.org/health/articles/23229-lipoprotein</p>
 </div>
 </section>
 <section id="lipoprotein-classification" class="slide level2">
 <h2>Lipoprotein classification</h2>
 <ul>
-<li class="fragment">Lipoproteins have a core of cholesterol esters and triglycerides</li>
-<li class="fragment">Lipoproteins are surrounded by phospholipid layer which contain <span class="orange">apolipoproteins</span></li>
-<li class="fragment">HDL, usually &lt; 12 nm in size, contain apolipoprotein A1</li>
-<li class="fragment">LDL, usually 18-25 nm in size, contain apolipoprotein B100</li>
-<li class="fragment">IDL is &lt; 50 nm and VLDL &gt; 50 nm are similar to LDL, except do not enter arterial intima</li>
+<li class="fragment">Core of cholesterol &amp; triglycerides wrapped in phospholipid layer containing <span class="red">apolipoproteins</span>
+<ul>
+<li class="fragment">HDL (<code>12 nm</code>) contains <span class="red">ApoA1</span></li>
+<li class="fragment">LDL (<code>18-25 nm</code>) contains <span class="red">ApoB100</span></li>
+<li class="fragment">IDL (<code>&lt; 50 nm</code>) and VLDL (<code>&gt; 50 nm</code>) are similar to LDL, but do not enter arterial intima</li>
+</ul></li>
+<li class="fragment">LDL (IDL &amp; VLDL) contain only <span class="red">one ApoB100 protein</span></li>
 </ul>
 <div class="fragment">
-<div class="callout callout-important callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<div id="fig-cholesterol" class="quarto-figure quarto-figure-center quarto-float">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-cholesterol-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img data-src="holmes-2019-cholesterol-types.png" class="img-fluid">
 </div>
-<p><strong>Important</strong></p>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cholesterol-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Classification of cholesterol types
+</figcaption>
+</figure>
 </div>
-<div class="callout-content">
-<p>Each LDL (including IDL &amp; VLDL) contain only <span class="orange">one ApoB100 protein</span></p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="slide level2">
-
-
-<img data-src="holmes-2019-cholesterol-types.png" class="img-fluid r-stretch quarto-figure-center"><p class="caption">
-Figure&nbsp;2: Classification of cholesterol types
-</p><div class="attribution">
+<div class="attribution">
 <p><span class="citation" data-cites="Holmes2019">Holmes et al. (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span></p>
+</div>
 </div>
 </section>
 <section id="what-is-lipoproteina" class="slide level2">
 <h2>What is lipoprotein(a)?</h2>
-<div class="fragment">
-<p>Lp(a) is a type of LDL particle</p>
-</div>
-<div class="fragment">
-<p>Contains an additional protein called apolipoprotein (a), which binds directly to ApoB100 via a <em>disulfide bond</em></p>
-</div>
-<div class="fragment">
-<div class="fragment highlight-current-red">
-<p>This means that Apo(a) and ApoB100 exist in a 1:1 molar ratio</p>
-</div>
-</div>
-</section></section>
-<section>
-<section id="mendelian-randomization" class="title-slide slide level1 center">
-<h1>Mendelian Randomization</h1>
-
-</section>
-<section id="basic-concepts" class="slide level2">
-<h2>Basic concepts</h2>
-</section>
-<section id="types-of-mr" class="slide level2">
-<h2>Types of MR</h2>
 <ul>
-<li class="fragment">One-sample v. two-sample</li>
+<li class="fragment">Lp(a) is a type of LDL particle</li>
+<li class="fragment">Contains an additional protein called apolipoprotein (a), which binds directly to ApoB100 via a <em>disulfide bond</em></li>
+<li class="fragment">This means that Apo(a) and ApoB100 exist in a <span class="red">1:1 molar ratio</span></li>
+<li class="fragment">Clinical relevance
+<ul>
+<li class="fragment">Increased atherogenicity</li>
+<li class="fragment">Driver of CVD mortality</li>
+<li class="fragment">May represent clinical benefits of PCSK9i (and future siRNA therapies, e.g.&nbsp;<em>pelacarsen</em>)</li>
+</ul></li>
 </ul>
-<div class="attribution">
-<p><span class="citation" data-cites="Sanderson2022">Sanderson et al. (<a href="#/references" role="doc-biblioref" onclick="">2022</a>)</span></p>
-</div>
-</section>
-<section class="slide level2">
-
-
-<img data-src="sanderson-2022-mr-rct.png" class="img-fluid r-stretch quarto-figure-center"><p class="caption">
-Figure&nbsp;3: Comparison of MR and RCT approaches
-</p><div class="attribution">
-<p><span class="citation" data-cites="Sanderson2022">Sanderson et al. (<a href="#/references" role="doc-biblioref" onclick="">2022</a>)</span></p>
-</div>
 </section></section>
 <section>
-<section id="findings" class="title-slide slide level1 center">
-<h1>Findings</h1>
+<section id="methods" class="title-slide slide level1 center">
+<h1>Methods</h1>
 
 </section>
 <section class="slide level2">
 
 
-<img data-src="bjornson-2024-central-illustration.png" class="img-fluid r-stretch quarto-figure-center"><p class="caption">
-Figure&nbsp;4: Relative atherogenicity of Lp(a) and LDL particles
+<img data-src="bjornson-2024-supplement-flowchart.png" class="img-fluid r-stretch quarto-figure-center"><p class="caption">
+Figure&nbsp;4: Flowchart of the GWAS design and SNP selection
 </p><div class="attribution">
-<p><span class="citation" data-cites="Bjornson2024">Björnson et al. (<a href="#/references" role="doc-biblioref" onclick="">2024</a>)</span></p>
+<p><span class="citation" data-cites="Bjornson2024">Björnson et al. (<a href="#/references" role="doc-biblioref" onclick="">2024</a>)</span> (supplement)</p>
+</div>
+</section>
+<section id="approach" class="slide level2">
+<h2>Approach</h2>
+<ol type="1">
+<li class="fragment">Identify SNPs associated with LDL and Lp(a) by GWAS
+<ol type="a">
+<li class="fragment"><span class="orange">LDL cluster</span> of SNPs</li>
+<li class="fragment"><span class="blue">Lp(a) cluster</span> of SNPs</li>
+</ol></li>
+<li class="fragment">Ensure appropriate SNP estimates/weights on LDL/Lp(a)
+<ol type="a">
+<li class="fragment">Check that <span class="orange">LDL-cluster of SNPs</span> not associated with <span class="blue">Lp(a) mass</span></li>
+<li class="fragment">Check that <span class="blue">Lp(a) cluster of SNPs</span> associated in linear manner with apoB and <span class="blue">Lp(a) mass</span></li>
+</ol></li>
+<li class="fragment">Outcomes (CHD events) analysis using exposure of <span class="orange">LDL-apoB</span> or <span class="blue">Lp(a)-apoB</span></li>
+</ol>
+</section>
+<section id="study-populations" class="slide level2">
+<h2>Study populations</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><u>UK Biobank</u></p>
+<ul>
+<li class="fragment"><code>502,000</code> UK residents (primarily European ancestry)</li>
+<li class="fragment"><code>487,202</code> with genetic data</li>
+<li class="fragment"><code>402,387</code> not on lipid lowering agents</li>
+<li class="fragment">Genotyping performed using UK BiLEVE Axiom or UK Biobank Axiom array, which evaluated <code>805,426</code> SNPs</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><u>CARDIoGRAMplusC4D</u></p>
+<ul>
+<li class="fragment"><em>Coronary ARtery DIsease Genome wide Replication and Meta-analysis plust The Coronary Artery Disease Genetics</em> dataset</li>
+<li class="fragment">Used as a replication cohort to test generalizability</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="lipid-measurements" class="slide level2">
+<h2>Lipid measurements</h2>
+<div class="columns">
+<div class="column" style="width:33%;">
+<p><span class="orange">LDL</span></p>
+<ul>
+<li class="fragment">LDL-c was directly measured</li>
+<li class="fragment">Triglyceride-rich lipoprotein cholesterol remnants (TRL) = total cholesterol - (HDL + LDL)</li>
+<li class="fragment">TRL were removed from analysis, <em>including associated SNPs</em></li>
+</ul>
+</div><div class="column" style="width:33%;">
+<p><span class="blue">Lp(a)</span></p>
+<ul>
+<li class="fragment">Lp(a) mass concentration measured in <code>377,572</code> participants</li>
+<li class="fragment">Lp(a) is meausured as a concentration, which is an approximation as Lp(a) has a range of molecular weights</li>
+<li class="fragment"><em>Not used for MR analysis directly, but for validation of SNP effects</em></li>
+</ul>
+</div><div class="column" style="width:33%;">
+<p><strong>ApoB</strong></p>
+<ul>
+<li class="fragment">ApoB measured in g/L</li>
+<li class="fragment">Converted to plasma concentrations in nmol/L by assuming molecular weight of 550 kDa</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="polygenic-scores-pgs" class="slide level2">
+<h2>Polygenic scores (PGS)</h2>
+<ul>
+<li class="fragment">GWAS x2 performed, adjusting for age, sex, and genomic principal components (PC1 - PC5)</li>
+<li class="fragment">SNPs meeting threshold of <span class="math inline">\(p &lt; 5 \times 10^{-8}\)</span> were included</li>
+<li class="fragment">SNPs pruned for linkage disequilibrium (<span class="math inline">\(r^{2} &lt; 0.1\)</span>) and minor allele frequency (<span class="math inline">\(MAF &gt; 0.01\)</span>)
+<ul>
+<li class="fragment">Linkage disequilibrium (LD) is the non-random association of alleles at linked loci</li>
+<li class="fragment"><span class="math inline">\(r^{2}\)</span> is the correlation coefficient between pairs of loci</li>
+</ul></li>
+<li class="fragment">Polygenic scores calculated for the <span class="blue">Lp(a) SNP cluster</span> and the <span class="orange">LDL SNP cluster</span></li>
+<li class="fragment">Each SNP was weighted by effect size on apoB</li>
+<li class="fragment">Each subject received a score as the weighted sum of all the effect sizes present</li>
+</ul>
+</section>
+<section id="statistical-analysis" class="slide level2">
+<h2>Statistical analysis</h2>
+<ul>
+<li class="fragment">Mendelian randomization (MR) using the <code>R</code> package <code>{MendelianRandomization}</code></li>
+<li class="fragment">Cox proportional hazard for incident CHD outcomes</li>
+<li class="fragment">CHD outcomes defined as…
+<ul>
+<li class="fragment">Non-fatal myocardial infarction</li>
+<li class="fragment">Fatal MI</li>
+<li class="fragment">Coronary revascularization</li>
+</ul></li>
+<li class="fragment">PGS terms scaled according to relationshp between PGS and apoB</li>
+<li class="fragment">Hazard ratio calculated per 50 nmol/L increase in apoB</li>
+</ul>
+</section>
+<section id="mendelian-randomization" class="slide level2">
+<h2>Mendelian randomization</h2>
+<ul>
+<li class="fragment"><strong>Instrumental variable (IV)</strong> analysis
+<ul>
+<li class="fragment">IV related to exposure but not to outcome (except <em>through</em> exposure)</li>
+<li class="fragment">Avoids bias from unobserved confounding of <code>outcome ~ exposure</code></li>
+</ul></li>
+<li class="fragment">Use of genetic variant prediction of <span class="blue">Lp(a)-apoB</span> and <span class="orange">LDL-apoB</span> as IV
+<ul>
+<li class="fragment">Does not require actual apo(a) measurement, which is a <em>difficult assay</em></li>
+<li class="fragment">Calibrated on measures of apoB</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+
+<img data-src="jc_files/figure-revealjs/fig-dag-1.png" class="img-fluid r-stretch quarto-figure-center" width="960"><p class="caption">
+Figure&nbsp;5: MR-based DAG with instrumental variables for LDL and Lp(a)
+</p></section></section>
+<section>
+<section id="results" class="title-slide slide level1 center">
+<h1>Results</h1>
+
+</section>
+<section class="slide level2">
+
+<div id="fig-gwas-effect-sizes" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-gwas-effect-sizes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="bjornson-2024-supplement-gwas-effect-size-ldl.png" class="img-fluid"></p>
+<figcaption><span class="orange">LDL cluster of SNPs</span></figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="bjornson-2024-supplement-gwas-effect-size-lpa.png" class="img-fluid"></p>
+<figcaption><span class="blue">Lp(a) cluster of SNPs</span></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-gwas-effect-sizes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: Supplemental table of GWAS findings
+</figcaption>
+</figure>
+</div>
+<div class="attribution">
+<p><span class="citation" data-cites="Bjornson2024">Björnson et al. (<a href="#/references" role="doc-biblioref" onclick="">2024</a>)</span> (supplement)</p>
 </div>
 </section>
 <section class="slide level2">
 
 
-<img data-src="bjornson-2024-snp-clusters-lpa.png" class="img-fluid r-stretch quarto-figure-center"><p class="caption">
-Figure&nbsp;5: Effect of SNP clusters on plasma apoB and Lp(a) levels
-</p><div class="attribution">
+<img data-src="bjornson-2024-snp-clusters-lpa.png" class="img-fluid r-stretch quarto-figure-center"><p class="caption">Plot of effect of SNP clusters on plasma apoB and Lp(a) levels</p><div class="attribution">
 <p><span class="citation" data-cites="Bjornson2024">Björnson et al. (<a href="#/references" role="doc-biblioref" onclick="">2024</a>)</span></p>
 </div>
 </section>
@@ -568,7 +705,7 @@ Figure&nbsp;5: Effect of SNP clusters on plasma apoB and Lp(a) levels
 
 
 <img data-src="bjornson-2024-chd-risk-by-apob-type.png" class="img-fluid r-stretch quarto-figure-center"><p class="caption">
-Figure&nbsp;6: Relationship of CHD risk to apoB from LDL and Lp(a)
+Figure&nbsp;7: Table of predicted relationship of CHD risk to apoB from LDL and Lp(a) clusters
 </p><div class="attribution">
 <p><span class="citation" data-cites="Bjornson2024">Björnson et al. (<a href="#/references" role="doc-biblioref" onclick="">2024</a>)</span></p>
 </div>
@@ -577,16 +714,25 @@ Figure&nbsp;6: Relationship of CHD risk to apoB from LDL and Lp(a)
 
 
 <img data-src="bjornson-2024-odds-ratio.png" class="img-fluid r-stretch quarto-figure-center"><p class="caption">
-Figure&nbsp;7: Odds for CVD by genetic prediction of variation in apoB
+Figure&nbsp;8: Table of odds for CVD by genetic prediction of variation in apoB
 </p><div class="attribution">
 <p><span class="citation" data-cites="Bjornson2024">Björnson et al. (<a href="#/references" role="doc-biblioref" onclick="">2024</a>)</span></p>
+</div>
+</section>
+<section class="slide level2">
+
+
+<img data-src="bjornson-2024-supplement-mr-analysis.png" class="img-fluid r-stretch quarto-figure-center"><p class="caption">
+Figure&nbsp;9: Supplemental table of potential biases in MR analysis, primarily inverse-variance weighting methods (simple, penalized, weighted)
+</p><div class="attribution">
+<p><span class="citation" data-cites="Bjornson2024">Björnson et al. (<a href="#/references" role="doc-biblioref" onclick="">2024</a>)</span> (supplement)</p>
 </div>
 </section>
 <section class="slide level2">
 
 
 <img data-src="bjornson-2024-relative-atherogenicity.png" class="img-fluid r-stretch quarto-figure-center"><p class="caption">
-Figure&nbsp;8: Relative atherogenicity of Lp(a) and LDL associated apoB
+Figure&nbsp;10: Table of MR analysis results using one-sample and two-sample approach, along with validation cohort. Relative atherogenecity defined by risk per unit difference between Lp(a) and LDL particle numbers.
 </p><div class="attribution">
 <p><span class="citation" data-cites="Bjornson2024">Björnson et al. (<a href="#/references" role="doc-biblioref" onclick="">2024</a>)</span></p>
 </div>
@@ -594,11 +740,65 @@ Figure&nbsp;8: Relative atherogenicity of Lp(a) and LDL associated apoB
 <section class="slide level2">
 
 
-<img data-src="bjornson-2024-chd-risk-pgs.png" class="img-fluid r-stretch quarto-figure-center"><p class="caption">
-Figure&nbsp;9: ApoB and CHD risk by polygenic scores
+<img data-src="bjornson-2024-chd-risk-pgs.png" class="img-fluid r-stretch quarto-figure-center"><p class="caption">Plot of relative atherogenicity of <span class="blue">Lp(a)</span> and <span class="orange">LDL</span> based on SNPs <span class="math inline">\(\rightarrow\)</span> PGS</p><div class="attribution">
+<p><span class="citation" data-cites="Bjornson2024">Björnson et al. (<a href="#/references" role="doc-biblioref" onclick="">2024</a>)</span></p>
+</div>
+</section></section>
+<section>
+<section id="discussion" class="title-slide slide level1 center">
+<h1>Discussion</h1>
+
+</section>
+<section class="slide level2">
+
+
+<img data-src="bjornson-2024-central-illustration.png" class="img-fluid r-stretch quarto-figure-center"><p class="caption">
+Figure&nbsp;11: Relative atherogenicity of Lp(a) and LDL particles
 </p><div class="attribution">
 <p><span class="citation" data-cites="Bjornson2024">Björnson et al. (<a href="#/references" role="doc-biblioref" onclick="">2024</a>)</span></p>
 </div>
+</section>
+<section id="key-findings" class="slide level2">
+<h2>Key findings</h2>
+<ol type="1">
+<li class="fragment">Genetic variants in SNPs were be separated into <span class="orange">LDL</span> and <span class="blue">Lp(a)</span> clusters</li>
+<li class="fragment">Changes in apoB can be attributed to differences by SNP clusters, which were then associated with CHD risk</li>
+<li class="fragment">Comparative CHD risk suggests <em>per particle</em>, Lp(a) is 4-12 times more atherogenic than LDL</li>
+<li class="fragment">Provides causal evidence based on study design</li>
+</ol>
+</section>
+<section class="slide level2">
+
+
+<img data-src="sanderson-2022-mr-rct.png" class="img-fluid r-stretch quarto-figure-center"><p class="caption">
+Figure&nbsp;12: Comparison of MR and RCT approaches
+</p><div class="attribution">
+<p><span class="citation" data-cites="Sanderson2022">Sanderson et al. (<a href="#/references" role="doc-biblioref" onclick="">2022</a>)</span></p>
+</div>
+</section>
+<section id="study-design-considerations" class="slide level2">
+<h2>Study design considerations</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="strengths">Strengths</h3>
+<ul>
+<li class="fragment">Lp(a)-apoB translates to apo(a) levels in 1:1 fashion</li>
+<li class="fragment">ApoB served as a <em>common denominator</em> to directly compare Lp(a) and LDL risk</li>
+<li class="fragment">ApoB is a standardized test, compared to the variability in Lp(a) testing</li>
+<li class="fragment">Enrollment cohort included those with and without CHD at baseline</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h3 id="limitations">Limitations</h3>
+<ul>
+<li class="fragment">Variable nature of Lp(a) particles (e.g.&nbsp;number of <strong>kringle 4</strong> copy numbers) could not be assessed</li>
+<li class="fragment">SNPs used for Lp(a) were located in a small region of chromosome 6 at the <em>LPA</em> locus (although attempted stringent linkage disequilibrium for SNP pruning)</li>
+<li class="fragment">Primarily European ancestry</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="questions" class="slide level2 center">
+<h2>Questions?</h2>
 </section>
 <section id="references" class="slide level2 smallest smaller scrollable">
 <h2>References</h2>
@@ -630,7 +830,6 @@ Sanderson, E., Glymour, M. M., Holmes, M. V., Kang, H., Morrison, J., Munafò, M
   <script src="../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
   <script src="../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
   <script src="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="../../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
   <script src="../../site_libs/revealjs/plugin/reveal-attribution/attribution.js"></script>
   <script src="../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
@@ -652,8 +851,7 @@ Sanderson, E., Glymour, M. M., Holmes, M. V., Kang, H., Morrison, J., Munafò, M
 'autoAnimateEasing': "ease-in-out",
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': false,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
-'chalkboard': {"buttons":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -824,7 +1022,7 @@ Sanderson, E., Glymour, M. M., Holmes, M. V., Kang, H., Morrison, J., Munafò, M
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, RevealAttribution, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealAttribution, QuartoSupport,
 
           RevealMath,
           RevealNotes,
@@ -833,6 +1031,44 @@ Sanderson, E., Glymour, M. M., Holmes, M. V., Kang, H., Morrison, J., Munafò, M
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

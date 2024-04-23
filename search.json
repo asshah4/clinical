@@ -2188,14 +2188,14 @@
     "href": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#outline",
     "title": "Mendelian Randomization in Practice",
     "section": "Outline",
-    "text": "Outline\n\nAn overview of lipids\n\n\nLipid molecules and density\nStructure of Lp(a)\n\n\n(Re)-introduction to mendelian randomization\nReview of the findings from the paper by Björnson et al. (2024)"
+    "text": "Outline\n\n\n\nIntroduction\n\nPurpose\nBackground on lipids\nOverview of Lp(a)\n\nMethods\n\nStatistical approach\nGenetics of ApoB100\n(Re)-introduction to mendelian randomization\n\nResults\n\nMajor findings\nSupplemental findings\n\nConclusions\n\nInnovation of approach\nValidity"
   },
   {
     "objectID": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#basics-of-lipids",
     "href": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#basics-of-lipids",
     "title": "Mendelian Randomization in Practice",
     "section": "Basics of lipids",
-    "text": "Basics of lipids\n\n\n\n\nCholesterol\n\n\n\nTriglycerides\n\n\n\n\nHigh-density lipoprotein (HDL)\nLow-density lipoprotein (LDL)\nVery low-density lipoprotein (VLDL)\n\n\n\n\n\nCholesterols (and triglycerides) are insoluble in water, and must be transported via protein structures called lipoproteins."
+    "text": "Basics of lipids\n\n\n\n\n\nCholesterol\n\n\n\n\n\nTriglycerides\n\n\n\n\nHigh-density lipoprotein (HDL)\nLow-density lipoprotein (LDL)\nVery low-density lipoprotein (VLDL)\n\n\n\n\nCholesterols (and triglycerides) are insoluble in water, and must be transported via protein structures called lipoproteins.\n\n\n\n\n\n\n\n\nFigure 2: Diagram of structure of a lipoprotein particle\n\n\n\n\n\n\n\nhttps://my.clevelandclinic.org/health/articles/23229-lipoprotein"
   },
   {
     "objectID": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#lipoprotein-structures",
@@ -2230,13 +2230,132 @@
     "href": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#lipoprotein-classification",
     "title": "Mendelian Randomization in Practice",
     "section": "Lipoprotein classification",
-    "text": "Lipoprotein classification\n\nLipoproteins have a core of cholesterol esters and triglycerides\nLipoproteins are surrounded by phospholipid layer which contain apolipoproteins\nHDL, usually &lt; 12 nm in size, contain apolipoprotein A1\nLDL, usually 18-25 nm in size, contain apolipoprotein B100\nIDL is &lt; 50 nm and VLDL &gt; 50 nm are similar to LDL, except do not enter arterial intima\n\n\n\n\n\n\n\n\nImportant\n\n\nEach LDL (including IDL & VLDL) contain only one ApoB100 protein"
+    "text": "Lipoprotein classification\n\nCore of cholesterol & triglycerides wrapped in phospholipid layer containing apolipoproteins\n\nHDL (12 nm) contains ApoA1\nLDL (18-25 nm) contains ApoB100\nIDL (&lt; 50 nm) and VLDL (&gt; 50 nm) are similar to LDL, but do not enter arterial intima\n\nLDL (IDL & VLDL) contain only one ApoB100 protein\n\n\n\n\n\n\n\n\nFigure 3: Classification of cholesterol types\n\n\n\n\nHolmes et al. (2019)"
   },
   {
     "objectID": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#what-is-lipoproteina",
     "href": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#what-is-lipoproteina",
     "title": "Mendelian Randomization in Practice",
     "section": "What is lipoprotein(a)?",
-    "text": "What is lipoprotein(a)?\n\nLp(a) is a type of LDL particle\n\n\nContains an additional protein called apolipoprotein (a), which binds directly to ApoB100 via a disulfide bond\n\n\n\nThis means that Apo(a) and ApoB100 exist in a 1:1 molar ratio"
+    "text": "What is lipoprotein(a)?\n\nLp(a) is a type of LDL particle\nContains an additional protein called apolipoprotein (a), which binds directly to ApoB100 via a disulfide bond\nThis means that Apo(a) and ApoB100 exist in a 1:1 molar ratio\nClinical relevance\n\nIncreased atherogenicity\nDriver of CVD mortality\nMay represent clinical benefits of PCSK9i (and future siRNA therapies, e.g. pelacarsen)"
+  },
+  {
+    "objectID": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#why-do-we-care-about-lpa",
+    "href": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#why-do-we-care-about-lpa",
+    "title": "Mendelian Randomization in Practice",
+    "section": "Why do we care about Lp(a)?",
+    "text": "Why do we care about Lp(a)?\n\nIncreased atherogenecity\nDriver of CVD mortality\nMay represent clinical benefits of PCSK9i"
+  },
+  {
+    "objectID": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#fake-outline",
+    "href": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#fake-outline",
+    "title": "Mendelian Randomization in Practice",
+    "section": "Fake outline",
+    "text": "Fake outline\n\nordered list\nitem 2\n\nsub-item 1\n\nsub-sub-item 1"
+  },
+  {
+    "objectID": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#study-populations",
+    "href": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#study-populations",
+    "title": "Mendelian Randomization in Practice",
+    "section": "Study populations",
+    "text": "Study populations\n\n\nUK Biobank\n\n502,000 UK residents (primarily European ancestry)\n487,202 with genetic data\n402,387 not on lipid lowering agents\nGenotyping performed using UK BiLEVE Axiom or UK Biobank Axiom array, which evaluated 805,426 SNPs\n\n\nCARDIoGRAMplusC4D\n\nCoronary ARtery DIsease Genome wide Replication and Meta-analysis plust The Coronary Artery Disease Genetics dataset\nUsed as a replication cohort to test generalizability"
+  },
+  {
+    "objectID": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#approach",
+    "href": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#approach",
+    "title": "Mendelian Randomization in Practice",
+    "section": "Approach",
+    "text": "Approach\n\nIdentify SNPs associated with LDL and Lp(a) by GWAS\n\nLDL cluster of SNPs\nLp(a) cluster of SNPs\n\nEnsure appropriate SNP estimates/weights on LDL/Lp(a)\n\nCheck that LDL-cluster of SNPs not associated with Lp(a) mass\nCheck that Lp(a) cluster of SNPs associated in linear manner with apoB and Lp(a) mass\n\nOutcomes (CHD events) analysis using exposure of LDL-apoB or Lp(a)-apoB"
+  },
+  {
+    "objectID": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#directed-acyclic-graph",
+    "href": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#directed-acyclic-graph",
+    "title": "Mendelian Randomization in Practice",
+    "section": "Directed acyclic graph",
+    "text": "Directed acyclic graph"
+  },
+  {
+    "objectID": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#lipid-measurements",
+    "href": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#lipid-measurements",
+    "title": "Mendelian Randomization in Practice",
+    "section": "Lipid measurements",
+    "text": "Lipid measurements\n\n\nLDL\n\nLDL-c was directly measured\nTriglyceride-rich lipoprotein cholesterol remnants (TRL) = total cholesterol - (HDL + LDL)\nTRL were removed from analysis, including associated SNPs\n\n\nLp(a)\n\nLp(a) mass concentration measured in 377,572 participants\nLp(a) is meausured as a concentration, which is an approximation as Lp(a) has a range of molecular weights\nNot used for MR analysis directly, but for validation of SNP effects\n\n\nApoB\n\nApoB measured in g/L\nConverted to plasma concentrations in nmol/L by assuming molecular weight of 550 kDa"
+  },
+  {
+    "objectID": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#polygenic-scores",
+    "href": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#polygenic-scores",
+    "title": "Mendelian Randomization in Practice",
+    "section": "Polygenic scores",
+    "text": "Polygenic scores\n\nGWAS x2 performed, wadjusting for age, sex, and genomic principal components (PC1 - PC5)\nSNPs meeting threshold of \\(p &lt; 5 \\times 10^{-8}\\) were included\nSNPs pruned for linkage disequilibrium (\\(r^{2} &lt; 0.1\\)) and minor allele frequency (\\(MAF &gt; 0.01\\))\n\nLinkage disequilibrium (LD) is the non-random association of alleles at linked loci\n\\(r^{2}\\) is the correlation coefficient between pairs of loci\n\nPolygenic scores calculated for the Lp(a) SNP cluster and the LDL SNP cluster\nEach SNP was weighted by effect size on apoB\nEach subject received a score as the weighted sum of all the effect sizes present"
+  },
+  {
+    "objectID": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#statistical-approach",
+    "href": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#statistical-approach",
+    "title": "Mendelian Randomization in Practice",
+    "section": "Statistical approach",
+    "text": "Statistical approach\n\nMendelian randomization (MR) using the R package {MendelianRandomization}\nCox proportional hazard for incident CHD outcomes\nCHD outcomes defined as…\n\nNon-fatal myocardial infarction\nFatal MI\nCoronary revascularization\n\nPGS terms scaled according to relationshp between PGS and apoB\nHazard ratio calculated per 50 nmol/L increase in apoB"
+  },
+  {
+    "objectID": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#outline-and-objectives",
+    "href": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#outline-and-objectives",
+    "title": "Mendelian Randomization in Practice",
+    "section": "Outline and objectives",
+    "text": "Outline and objectives\n\n\nOutline\n\n\nIntroduction\n\nPurpose\nBackground on lipids\nOverview of Lp(a)\n\nMethods\n\nStatistical approach\nGenetics of ApoB100\n(Re)-introduction to mendelian randomization\n\nResults\n\nMajor findings\nSupplemental findings\n\nConclusions\n\nInnovation of approach\nValidity\n\n\n\n\nObjectives\n\n\nIntroduction\n\nPurpose\nBackground on lipids\nOverview of Lp(a)\n\nMethods\n\nStatistical approach\nGenetics of ApoB100\n(Re)-introduction to mendelian randomization\n\nResults\n\nMajor findings\nSupplemental findings\n\nConclusions\n\nInnovation of approach\nValidity"
+  },
+  {
+    "objectID": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#overview",
+    "href": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#overview",
+    "title": "Mendelian Randomization in Practice",
+    "section": "Overview",
+    "text": "Overview\n\n\nOutline\n\n\nIntroduction\n\nPurpose\nBackground on lipids\nOverview of Lp(a)\n\nMethods\n\nStatistical approach\nGenetics of ApoB100\n(Re)-introduction to mendelian randomization\n\nResults\n\nMajor findings\nSupplemental findings\n\nConclusions\n\nInnovation of approach\nValidity\n\n\n\n\nObjectives\n\n\nReview the role of lipids in atherosclerosis\nUnderstand the effect of genetic variants on lipid particles\nDescribe the principles of mendelian randomization\nConsider the intersection of epidemiology/causality using this methodology"
+  },
+  {
+    "objectID": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#polygenic-scores-pgs",
+    "href": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#polygenic-scores-pgs",
+    "title": "Mendelian Randomization in Practice",
+    "section": "Polygenic scores (PGS)",
+    "text": "Polygenic scores (PGS)\n\nGWAS x2 performed, adjusting for age, sex, and genomic principal components (PC1 - PC5)\nSNPs meeting threshold of \\(p &lt; 5 \\times 10^{-8}\\) were included\nSNPs pruned for linkage disequilibrium (\\(r^{2} &lt; 0.1\\)) and minor allele frequency (\\(MAF &gt; 0.01\\))\n\nLinkage disequilibrium (LD) is the non-random association of alleles at linked loci\n\\(r^{2}\\) is the correlation coefficient between pairs of loci\n\nPolygenic scores calculated for the Lp(a) SNP cluster and the LDL SNP cluster\nEach SNP was weighted by effect size on apoB\nEach subject received a score as the weighted sum of all the effect sizes present"
+  },
+  {
+    "objectID": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#statistical-analysis",
+    "href": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#statistical-analysis",
+    "title": "Mendelian Randomization in Practice",
+    "section": "Statistical analysis",
+    "text": "Statistical analysis\n\nMendelian randomization (MR) using the R package {MendelianRandomization}\nCox proportional hazard for incident CHD outcomes\nCHD outcomes defined as…\n\nNon-fatal myocardial infarction\nFatal MI\nCoronary revascularization\n\nPGS terms scaled according to relationshp between PGS and apoB\nHazard ratio calculated per 50 nmol/L increase in apoB"
+  },
+  {
+    "objectID": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#mendelian-randomization",
+    "href": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#mendelian-randomization",
+    "title": "Mendelian Randomization in Practice",
+    "section": "Mendelian randomization",
+    "text": "Mendelian randomization\n\nInstrumental variable (IV) analysis\n\nIV related to exposure but not to outcome (except through exposure)\nAvoids bias from unobserved confounding of outcome ~ exposure\n\nUse of genetic variant prediction of Lp(a)-apoB and LDL-apoB as IV\n\nDoes not require actual apo(a) measurement, which is a difficult assay\nCalibrated on measures of apoB"
+  },
+  {
+    "objectID": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#key-findings",
+    "href": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#key-findings",
+    "title": "Mendelian Randomization in Practice",
+    "section": "Key findings",
+    "text": "Key findings\n\nGenetic variants in SNPs were be separated into LDL and Lp(a) clusters\nChanges in apoB can be attributed to differences by SNP clusters, which were then associated with CHD risk\nComparative CHD risk suggests per particle, Lp(a) is 4-12 times more atherogenic than LDL\nProvides causal evidence based on study design"
+  },
+  {
+    "objectID": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#study-strengths-and-limitations",
+    "href": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#study-strengths-and-limitations",
+    "title": "Mendelian Randomization in Practice",
+    "section": "Study strengths and limitations",
+    "text": "Study strengths and limitations\n\n\nStrengths\n\nLp(a)-apoB translates to apo(a) levels in 1:1 fashion\nApoB served as a common denominator to directly compare Lp(a) and LDL risk\nApoB is a standardized test, compared to the variability in Lp(a) testing\n\n\nLimitations\n\nVariable nature of Lp(a) particles (e.g. number of kringle 4 copy numbers) could not be assessed\nSNPs used for Lp(a) were located in a small region of chromosome 6 at the \\(LPA\\) locus"
+  },
+  {
+    "objectID": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#study-design-considerations",
+    "href": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#study-design-considerations",
+    "title": "Mendelian Randomization in Practice",
+    "section": "Study design considerations",
+    "text": "Study design considerations\n\n\nStrengths\n\nLp(a)-apoB translates to apo(a) levels in 1:1 fashion\nApoB served as a common denominator to directly compare Lp(a) and LDL risk\nApoB is a standardized test, compared to the variability in Lp(a) testing\nEnrollment cohort included those with and without CHD at baseline\n\n\nLimitations\n\nVariable nature of Lp(a) particles (e.g. number of kringle 4 copy numbers) could not be assessed\nSNPs used for Lp(a) were located in a small region of chromosome 6 at the LPA locus (although attempted stringent linkage disequilibrium for SNP pruning)\nPrimarily European ancestry"
+  },
+  {
+    "objectID": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#questions",
+    "href": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#questions",
+    "title": "Mendelian Randomization in Practice",
+    "section": "Questions?",
+    "text": "Questions?"
   }
 ]
