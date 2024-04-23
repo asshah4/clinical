@@ -29,7 +29,7 @@ csl: ../../apa.csl
 
 ::: {.callout-important title="Paper"}
 Björnson, Elias, Martin Adiels, Marja-Riitta Taskinen, Stephen Burgess, M. John Chapman, Chris J. Packard, and Jan Borén. 
-[Lipoprotein(a) Is Markedly More Atherogenic Than LDL: An Apolipoprotein B-Based Genetic Analysis]{.red}
+[Lipoprotein(a) Is Markedly More Atherogenic Than LDL: An Apolipoprotein B-Based Genetic Analysis]{.orange}
 Journal of the American College of Cardiology 83, no. 3 (January 23, 2024): 385–95. 
 https://doi.org/10.1016/j.jacc.2023.10.039.
 :::
@@ -69,10 +69,102 @@ a. Consider the intersection of epidemiology/causality using this methodology
 
 ## Basics of lipids
 
-## Lipoprotein structures
+:::: {.columns}
+::: {.column width="35%"}
 
+::: {.fragment fragment-index=1}
+::: {.fragment .highlight-current-red fragment-index=4}
+Cholesterol
+:::
+:::
+
+::: {.fragment fragment-index=2}
+Triglycerides
+:::
+
+:::
+::: {.column width="65%"}
+
+::: {.fragment fragment-index=3}
+::: {.fragment .highlight-current-red fragment-index=4}
+High-density lipoprotein (HDL)  
+Low-density lipoprotein (LDL)  
+Very low-density lipoprotein (VLDL)  
+:::
+:::
+
+:::
+::::
+
+::: {.fragment fragment-index=5}
+Cholesterols (and triglycerides) are insoluble in water, and must be transported via protein structures called [lipoproteins]{.red}.
+:::
+
+---
+
+![Diagram of structure of a lipoprotein particle](cleveland-clinic-lipoprotein.png){#fig-lipoprotein}
+
+::: attribution
+https://my.clevelandclinic.org/health/articles/23229-lipoprotein
+:::
+
+## Lipoprotein classification
+
+- Lipoproteins have a core of cholesterol esters and triglycerides
+- Lipoproteins are surrounded by phospholipid layer which contain [apolipoproteins]{.orange}
+- HDL, usually < 12 nm in size, contain apolipoprotein A1
+- LDL, usually 18-25 nm in size, contain apolipoprotein B100
+- IDL is < 50 nm and VLDL > 50 nm are similar to LDL, except do not enter arterial intima
+
+. . .
+
+::: {.callout-important}
+Each LDL (including IDL & VLDL) contain only [one ApoB100 protein]{.orange}
+:::
+
+---
+
+![Classification of cholesterol types](holmes-2019-cholesterol-types.png){#fig-cholesterol}
+
+::: attribution
+@Holmes2019
+:::
+
+## What is lipoprotein(a)?
+
+. . . 
+
+Lp(a) is a type of LDL particle
+
+. . .
+
+Contains an additional protein called apolipoprotein (a), which binds directly to ApoB100 via a *disulfide bond*
+
+. . .
+
+::: {.fragment .highlight-current-red}
+This means that Apo(a) and ApoB100 exist in a 1:1 molar ratio
+:::
 
 # Mendelian Randomization
+
+## Basic concepts
+
+## Types of MR
+
+- One-sample v. two-sample
+
+::: attribution
+@Sanderson2022
+:::
+
+---
+
+![Comparison of MR and RCT approaches](sanderson-2022-mr-rct.png){#fig-mr-rct}
+
+::: attribution
+@Sanderson2022
+:::
 
 # Findings
 

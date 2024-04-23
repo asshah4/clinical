@@ -2175,5 +2175,68 @@
     "title": "Mendelian Randomization in Practice",
     "section": "References",
     "text": "References\n\n\nBjörnson, E., Adiels, M., Taskinen, M.-R., Burgess, S., Chapman, M. J., Packard, C. J., & Borén, J. (2024). Lipoprotein(a) Is Markedly More Atherogenic Than LDL: An Apolipoprotein B-Based Genetic Analysis. Journal of the American College of Cardiology, 83(3), 385–395. https://doi.org/10.1016/j.jacc.2023.10.039"
+  },
+  {
+    "objectID": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#objectives",
+    "href": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#objectives",
+    "title": "Mendelian Randomization in Practice",
+    "section": "Objectives",
+    "text": "Objectives\n\nReview the role of lipids in atherosclerosis\nUnderstand the effect of genetic variants on lipid particles\nDescribe the principles of mendelian randomization\nConsider the intersection of epidemiology/causality using this methodology"
+  },
+  {
+    "objectID": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#outline",
+    "href": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#outline",
+    "title": "Mendelian Randomization in Practice",
+    "section": "Outline",
+    "text": "Outline\n\nAn overview of lipids\n\n\nLipid molecules and density\nStructure of Lp(a)\n\n\n(Re)-introduction to mendelian randomization\nReview of the findings from the paper by Björnson et al. (2024)"
+  },
+  {
+    "objectID": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#basics-of-lipids",
+    "href": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#basics-of-lipids",
+    "title": "Mendelian Randomization in Practice",
+    "section": "Basics of lipids",
+    "text": "Basics of lipids\n\n\n\n\nCholesterol\n\n\n\nTriglycerides\n\n\n\n\nHigh-density lipoprotein (HDL)\nLow-density lipoprotein (LDL)\nVery low-density lipoprotein (VLDL)\n\n\n\n\n\nCholesterols (and triglycerides) are insoluble in water, and must be transported via protein structures called lipoproteins."
+  },
+  {
+    "objectID": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#lipoprotein-structures",
+    "href": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#lipoprotein-structures",
+    "title": "Mendelian Randomization in Practice",
+    "section": "Lipoprotein structures",
+    "text": "Lipoprotein structures"
+  },
+  {
+    "objectID": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#basic-concepts",
+    "href": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#basic-concepts",
+    "title": "Mendelian Randomization in Practice",
+    "section": "Basic concepts",
+    "text": "Basic concepts"
+  },
+  {
+    "objectID": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#types-of-mr",
+    "href": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#types-of-mr",
+    "title": "Mendelian Randomization in Practice",
+    "section": "Types of MR",
+    "text": "Types of MR\n\nOne-sample v. two-sample\n\n\nSanderson et al. (2022)"
+  },
+  {
+    "objectID": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#references",
+    "href": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#references",
+    "title": "Mendelian Randomization in Practice",
+    "section": "References",
+    "text": "References\n\n\nBjörnson, E., Adiels, M., Taskinen, M.-R., Burgess, S., Chapman, M. J., Packard, C. J., & Borén, J. (2024). Lipoprotein(a) Is Markedly More Atherogenic Than LDL: An Apolipoprotein B-Based Genetic Analysis. Journal of the American College of Cardiology, 83(3), 385–395. https://doi.org/10.1016/j.jacc.2023.10.039\n\n\nHolmes, D. N., Piccini, J. P., Allen, L. A., Fonarow, G. C., Gersh, B. J., Kowey, P. R., O’Brien, E. C., Reiffel, J. A., Naccarelli, G. V., Ezekowitz, M. D., Chan, P. S., Singer, D. E., Spertus, J. A., Peterson, E. D., Thomas, L., & null, null. (2019). Defining Clinically Important Difference in the Atrial Fibrillation Effect on Quality-of-Life Score. Circulation: Cardiovascular Quality and Outcomes, 12(5), e005358. https://doi.org/10.1161/CIRCOUTCOMES.118.005358\n\n\nSanderson, E., Glymour, M. M., Holmes, M. V., Kang, H., Morrison, J., Munafò, M. R., Palmer, T., Schooling, C. M., Wallace, C., Zhao, Q., & Davey Smith, G. (2022). Mendelian randomization. Nature Reviews Methods Primers, 2(1, 1), 1–21. https://doi.org/10.1038/s43586-021-00092-5"
+  },
+  {
+    "objectID": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#lipoprotein-classification",
+    "href": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#lipoprotein-classification",
+    "title": "Mendelian Randomization in Practice",
+    "section": "Lipoprotein classification",
+    "text": "Lipoprotein classification\n\nLipoproteins have a core of cholesterol esters and triglycerides\nLipoproteins are surrounded by phospholipid layer which contain apolipoproteins\nHDL, usually &lt; 12 nm in size, contain apolipoprotein A1\nLDL, usually 18-25 nm in size, contain apolipoprotein B100\nIDL is &lt; 50 nm and VLDL &gt; 50 nm are similar to LDL, except do not enter arterial intima\n\n\n\n\n\n\n\n\nImportant\n\n\nEach LDL (including IDL & VLDL) contain only one ApoB100 protein"
+  },
+  {
+    "objectID": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#what-is-lipoproteina",
+    "href": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#what-is-lipoproteina",
+    "title": "Mendelian Randomization in Practice",
+    "section": "What is lipoprotein(a)?",
+    "text": "What is lipoprotein(a)?\n\nLp(a) is a type of LDL particle\n\n\nContains an additional protein called apolipoprotein (a), which binds directly to ApoB100 via a disulfide bond\n\n\n\nThis means that Apo(a) and ApoB100 exist in a 1:1 molar ratio"
   }
 ]
