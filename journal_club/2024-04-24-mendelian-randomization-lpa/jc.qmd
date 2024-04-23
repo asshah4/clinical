@@ -146,6 +146,12 @@ Contains an additional protein called apolipoprotein (a), which binds directly t
 This means that Apo(a) and ApoB100 exist in a 1:1 molar ratio
 :::
 
+## Why do we care about Lp(a)?
+
+- Increased atherogenecity
+- Driver of CVD mortality
+- May represent clinical benefits of PCSK9i
+
 # Mendelian Randomization
 
 ## Basic concepts
@@ -165,8 +171,6 @@ This means that Apo(a) and ApoB100 exist in a 1:1 molar ratio
 ::: attribution
 @Sanderson2022
 :::
-
-# Findings
 
 ---
 
