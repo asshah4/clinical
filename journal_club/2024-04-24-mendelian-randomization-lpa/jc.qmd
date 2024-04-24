@@ -256,9 +256,61 @@ __ApoB__
 - __Instrumental variable (IV)__ analysis
     - IV related to exposure but not to outcome (except *through* exposure)
     - Avoids bias from unobserved confounding of `outcome ~ exposure`
+- IV require three assumptions
+    1. [Relevance]{.red}: IV is associated with exposure
+    1. [Independence]{.red}: IV is independent of confounders
+    1. [Exclusion]{.red}: IV affects outcome only through exposure
+- When using multiple IV (e.g. many SNPs), must account for [weak instrument bias]{.red}, that can be partially mitigated by two-sample approach and/or jackknife resampling
+
+## Example in `R`
+
+. . .
+
+:::: {.columns}
+::: {.column width="40%"}
+
+```{r}
+#| eval: false
+#| echo: true
+#| code-line-numbers: "1|3-9|11-13|15|16"
+#| output-location: fragment
+library(MendelianRandomization)
+
+MRInputObject <-
+  mr_input(
+    bx = ldlc,
+    bxse = ldlcse,
+    by = chdlodds,
+    byse = chdloddsse
+  )
+
+MRAllObject_all <-
+  mr_allmethods(MRInputObject,
+                method = "all")
+
+mr_plot(MVMRInputObject)
+mr_plot(MRAllObject_all)
+```
+
+:::
+::: {.column width="60%"}
+
+:::  {.r-stack}
+![](rplot-mr-object.png){.fragment}
+
+![](rplot-mr-all.png){.fragment}
+:::
+
+:::
+::::
+    
+## Application to this study
+
 - Use of genetic variant prediction of [Lp(a)-apoB]{.blue} and [LDL-apoB]{.orange} as IV
   - Does not require actual apo(a) measurement, which is a *difficult assay*
   - Calibrated on measures of apoB
+- Use summary-level data and causal-estimation using `{MendelianRandomization}` package in `R`, with variation in weights
+- Use both one-sample and two-sample approach (previously published GWAS)
 
 ---
 
