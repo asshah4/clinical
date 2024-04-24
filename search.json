@@ -2328,7 +2328,7 @@
     "href": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#mendelian-randomization",
     "title": "Mendelian Randomization in Practice",
     "section": "Mendelian randomization",
-    "text": "Mendelian randomization\n\nInstrumental variable (IV) analysis\n\nIV related to exposure but not to outcome (except through exposure)\nAvoids bias from unobserved confounding of outcome ~ exposure\n\nUse of genetic variant prediction of Lp(a)-apoB and LDL-apoB as IV\n\nDoes not require actual apo(a) measurement, which is a difficult assay\nCalibrated on measures of apoB"
+    "text": "Mendelian randomization\n\nInstrumental variable (IV) analysis\n\nIV related to exposure but not to outcome (except through exposure)\nAvoids bias from unobserved confounding of outcome ~ exposure\n\nIV require three assumptions\n\nRelevance: IV is associated with exposure\nIndependence: IV is independent of confounders\nExclusion: IV affects outcome only through exposure\n\nWhen using multiple IV (e.g. many SNPs), must account for weak instrument bias, that can be partially mitigated by two-sample approach and/or jackknife resampling"
   },
   {
     "objectID": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#key-findings",
@@ -2357,5 +2357,19 @@
     "title": "Mendelian Randomization in Practice",
     "section": "Questions?",
     "text": "Questions?"
+  },
+  {
+    "objectID": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#application-to-this-study",
+    "href": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#application-to-this-study",
+    "title": "Mendelian Randomization in Practice",
+    "section": "Application to this study",
+    "text": "Application to this study\n\nUse of genetic variant prediction of Lp(a)-apoB and LDL-apoB as IV\n\nDoes not require actual apo(a) measurement, which is a difficult assay\nCalibrated on measures of apoB\n\nUse summary-level data and causal-estimation using {MendelianRandomization} package in R, with variation in weights\nUse both one-sample and two-sample approach (previously published GWAS)"
+  },
+  {
+    "objectID": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#example-in-r",
+    "href": "journal_club/2024-04-24-mendelian-randomization-lpa/jc.html#example-in-r",
+    "title": "Mendelian Randomization in Practice",
+    "section": "Example in R",
+    "text": "Example in R\n\n\n\n\nlibrary(MendelianRandomization)\n\nMRInputObject &lt;-\n  mr_input(\n    bx = ldlc,\n    bxse = ldlcse,\n    by = chdlodds,\n    byse = chdloddsse\n  )\n\nMRAllObject_all &lt;-\n  mr_allmethods(MRInputObject,\n                method = \"all\")\n\nmr_plot(MVMRInputObject)\nmr_plot(MRAllObject_all)"
   }
 ]
