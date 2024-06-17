@@ -13,183 +13,210 @@ library(glue)
 library(clock)
 library(googledrive)
 library(googlesheets4)
+
+# Drive data
+workbook <- googledrive::drive_get("clinical_log") 
+drive_id <- googledrive::as_id(workbook)
+
+# Clinical data is a series of related headings
+# 	Hospital
+# 	MRN
+# 	Date
+# 	Diagnoses
+# 	event
+# 	event_type
+# 	event_subtype
+# 	event_modifier
+# 	event_setting
+# 	event_level
+consults <-
+	workbook |>
+  googlesheets4::read_sheet(drive_id, "consults") |>
+  janitor::clean_names() |>
+  mutate(class = "encounter") |>
+  rename(
+    level = modifier,
+    category = location,
+    system = site,
+  ) |>
+  # If a clinic is likely follow-up
+  mutate(
+    setting = if_else(is.na(level), "outpatient", "inpatient"),
+    category = case_when(
+      category == "clinic" ~ "follow-up",
+      category == "inpatient" ~ "primary",
+      category == "consult" ~ "consultation",
+      TRUE ~ category
+    )
+  ) |>
+  filter(!is.na(category))
+
+procedures <-
+	workbook |>
+  googlesheets4::read_sheet(drive_id, "procedures") |>
+  janitor::clean_names() |>
+  mutate(class = "procedure") |>
+  rename(
+    category = procedure,
+    specification = type,
+    system = site,
+  ) |>
+  filter(!is.na(category)) |>
+  # Clean up modifiers for DCCV and echo parameters
+  mutate(notes = if_else(!is.na(modifier), modifier, notes)) |>
+  mutate(modifier = case_when(
+    str_detect(modifier, " ") & category == "DCCV" ~ NA,
+    str_detect(modifier, " ") & category == "TTE" ~ NA,
+    str_detect(modifier, " ") & category == "TEE" ~ NA,
+    str_detect(modifier, " ") & category %in% c("COR", "LHC", "RHC") ~ NA,
+    TRUE ~ modifier
+  )) |>
+  # Get the important modifiers back
+  mutate(modifier = case_when(
+    notes == "valve study" ~ notes,
+    notes == "vasodilator study" ~ notes,
+    TRUE ~ modifier,
+  )) |>
+  # Remove duplicated information in notes
+  mutate(notes = if_else(notes == modifier, NA, notes)) |>
+	# Add setting back, taking from specification
+	mutate(setting = if_else(specification == "bedside", specification, NA)) |>
+	mutate(specification = if_else(specification == "bedsdie", NA, specification))
+
+# If the log file online is ready, we can just download that directly
+# Else we need to update it from the individual logs
+logReady <- TRUE
+if (logReady) {
+	log <-
+		workbook |>
+	  googlesheets4::read_sheet(drive_id, "log") |>
+		mutate(date = as.Date(date))
+} else {
+	# Merge the files back together
+	log <- 
+		bind_rows(procedures, consults) |>
+		select(system, mrn, date, starts_with("dx"), class, category, specification, modifier, setting, level, special, notes) |>
+		mutate(mrn = as.character(mrn)) |>
+		mutate(date = as.Date(date))
+	
+	# Upload them
+	googlesheets4::write_sheet(
+		data = log,
+		ss = drive_id,
+		sheet = "log"
+	)
+}
 ```
 
 As part of clinical training (internal medicine residency, cardiovascular disease fellowship, clinical cardiac electrophysiology fellowship), clinical and procedural volume are important in the development of skills/competence. The following is a summary of volume received during training thus far: 
 
 ```{r}
-#| label: volume
-#| echo: false
-
-consults <-
-	googledrive::drive_get('clinical_log') |>
-	googlesheets4::read_sheet('consults') |>
-	janitor::clean_names()
-
-procedures <-
-	googledrive::drive_get('clinical_log') |>
-	googlesheets4::read_sheet('procedures') |>
-	janitor::clean_names() |>
-	filter(!is.na(procedure))
-```
-
-
-```{r}
-#| label: download
-#| echo: false
-#source("R/make-anonymous.R", local = knitr::knit_global())
-log <- readr::read_csv("anonymous.csv") 
-
-start <- min(log$date, na.rm = TRUE)
-stop <- max(log$date, na.rm = TRUE)
-
-# Columns = site | mrn | date | dx1:3 | procedure | location | modifier | notes | special
-# Can be broken down into groups based on procedures versus clinical 
-procedures <- subset(log, !is.na(procedure)) |>
-	rename(type = procedure)
-clinical <- subset(log, is.na(procedure))
-```
-
-Below is a summary of procedures that have been performed during training.
-
-```{r}
-#| label: procedures
-#| echo: false
-
-# Master list
-types <- list(
-	cath = c('COR', 'RHC', 'LHC', 'PCI', 'pericardiocentesis', 'MCS'),
-	vascular = c('CVL', 'AL', 'PIV', 'closure'),
-	ep = c('DCCV', 'CIED', 'EPS', 'TVP', 'ACLS', 'defibrillation'),
-	imaging = c('TTE', 'TEE', 'stress', 'MRI', 'CT', 'US')
-)
-
-# Create categories
-cats <- character()
-for (i in seq_along(types)) {
-	cats <- append(cats, rep(names(types[i]), length(types[[i]])))
-}
-
-# Make table
-tbl <- tibble(
-	category = cats,
-	procedure = unlist(types)
-)
-
-# Identifiers of procedure modifiers with categorizations
-log <-
-	procedures |>
-	select(procedure, type, modifier) 
-
-# Master table
-proc <- full_join(tbl, log, by = 'procedure')
-
-# Some procedures need specific modifiers, located in the location name
-	# Caths -> needs modifier for site
-	# TTE -> needs modifier for bedside or not
-	# TEE -> needs modifier for if bedside or not
-	# EPS -> needs modifier for type
-	# DCCV -> modifier for joules, not really needed
-	# TVP -> modifier
-	# AL/CVL -> lines with locations in modifier
-
-```
-
-
-```{r}
-#| label: counts
-#| eval: false
-
-
-proc |>
-	count(procedure) 
-
-proc |>
-	count(category)
-```	
-
-```{r}
 #| label: cocats
 #| echo: false
-# Required COCATS procedures for fellowship
-	# TTE performed (150)
-	# TTE interpreted (300)
-	# Stress echo (100)
-	# TEE performed (50, 100)
-	# Nuclear (300)
-	# Nuclear injections (35)
-	# Cardiac CT interpreted (250)
-	# Cardiac CT performed (65)
-	# CMR performed (50)
-	# CMR interpreted (150)
-	# Caths performed (300)
-	# TVP performed (5)
-	# PPM performed (20, 40)
-	# CIED interrogated (100)
-	# CIED remote interrogated (25)
-	# Cardioversion (20)
-	# PCI
-	# Pericardiocentesis
-	# IABP
-	# Impella
-	# Other
 
-cocats <- 
-	proc |>
-	filter(
-		procedure == "TTE" & type == "bedside" |
-			procedure == "TTE" & is.na(type) |
-			procedure == "stress" & modifier == "echo" |
-			procedure == "TEE" & type == "bedside" |
-			procedure == "TEE" & is.na(type) |
-			procedure == "stress" & (modifier == "technetium" | modifier == "thallium") |
-			procedure == "CT" |
-			procedure == "CMR" & type == "bedside" |
-			procedure == "CMR" & is.na(type) |
-			(procedure == "RHC" | procedure == "LHC" | procedure == "COR") |
-			procedure == "TVP" |
-			procedure == "CIED" & type != "interrogation" |
-			procedure == "CIED" & type == "interrogation" |
-			procedure == "DCCV" |
-			procedure == "PCI" |
-			procedure == "pericardiocentesis" |
-			procedure == "MCS" 
+counts <- log |> group_by(category) |> tally()
+
+# Echo category
+echo <-
+	log |>
+	filter(category %in% c("TTE", "TEE")) |>
+	select(category, specification, modifier, setting) 
+
+tte_performed <- nrow(subset(echo, setting == "bedside"))
+tte_interpreted <- nrow(subset(echo, category == "TTE")) * 2
+tee_performed <- nrow(subset(echo, category == "TEE" & setting == "bedside"))
+tee_interpreted <- nrow(subset(echo, category == "TEE"))
+
+# Stress testing
+stress <-
+	log |>
+	filter(category == "stress") |>
+	select(category, specification, modifier, setting) 
+
+stress_nuclear <- nrow(subset(stress, modifier != "echo"))
+stress_echo <- ceiling(0.15 * tte_interpreted)
+
+# Cath
+cath <-
+	log |>
+	filter(category %in% c("COR", "LHC", "RHC", "PCI", "MCS", "pericardiocentesis")) |>
+	select(category, specification, modifier, setting)
+
+lhc_cor <- nrow(cath)
+rhc <- nrow(subset(cath, category == "RHC"))
+adv <- nrow(subset(cath, category %in% c("PCI", "MCS", "pericardiocentesis")))
+
+# EP
+ep <-
+	log |>
+	filter(category %in% c("ACLS", "DCCV", "defibrillation", "EPS", "CIED", "TVP"))
+
+tvp <- nrow(subset(ep, category == "TVP"))
+ppm <- nrow(subset(ep, category == "CIED"))
+dccv <- nrow(subset(ep, category == "DCCV" | category == "ACLS" | category == "defibrillation"))
+interrogation <- nrow(subset(ep, category == "EPS" | category == "CIED"))
+
+# MRI
+mri <-
+	log |>
+	filter(category == "MRI") |>
+	select(category, specification, modifier, setting)
+
+mri_performed <- nrow(subset(mri, setting == "bedside"))
+mri_interpreted <- nrow(subset(mri))
+
+# Create COCATS table using a tribble() function
+cocats <- tribble(
+	~description, ~count, ~notes,
+	# Echocardiography
+	"Transthoracic echocardiography (performed)", tte_performed, NA,
+	"Transthoracic echocardiography (interpreted)", tte_interpreted, NA,
+	"Transesophageal echocardiography", tee_performed, NA,
+	"Stress echocardiography", stress_echo, "Dobutamine and treadmill",
+	# Catheterization
+	"Diagnostic left heart catheterization", lhc_cor, "Coronary angiography, aortic valve studies",
+	"Right heart catheterization", rhc, NA,
+	"Advanced catheterization procedures", adv, "PCI, MCS, pericardiocentesis, IVUS, OCT",
+	# Electrophysiology
+	"Cardioversion or defibrillation", dccv, NA,
+	"Transvenous pacemaker insertion", tvp, NA,
+	"Device interrogation", interrogation, NA,
+	"Permanent pacemaker insertion", ppm, NA,
+	# Nuclear imaging
+	"Stress myocardial perfusion imaging", stress_nuclear, "Thallium, technetium, ammonium (SPECT/PET)",
+	# MRI
+	"Cardiac MRI (performed)", mri_performed, NA,
+	"Cardiac MRI (interpreted)", mri_interpreted, NA
+)
+
+# Then visualize the table using gt()
+gt(cocats, rowname_col = "description") |>
+	tab_header(title = "Procedure Log") |>
+	sub_missing() |>
+	cols_label(
+		description = "Description", 
+		count = "Total", 
+		notes = "Notes"
 	) |>
-	mutate(modifier = case_when(
-		procedure == "COR" ~ NA_character_,
-		procedure == "RHC" ~ NA_character_,
-		procedure == "LHC" ~ NA_character_,
-		procedure == "PCI" ~ NA_character_,
-		procedure == "DCCV" ~ NA_character_,
-		procedure == "MCS" ~ NA_character_,
-		procedure == "CIED" & type == "interrogation" ~ NA_character_,
-		procedure == "CIED" & !type == "interrogation" ~ NA_character_,
-		procedure == "TTE" ~ NA_character_,
-		procedure == "TEE" ~ NA_character_,
-		procedure == "stress" & modifier == "technetium" ~ "nuclear",
-		procedure == "stress" & modifier == "thallium" ~ "nuclear",
-		TRUE ~ modifier
-	)) |>
-	mutate(type = case_when(
-		procedure == "COR" ~ NA_character_,
-		procedure == "RHC" ~ NA_character_,
-		procedure == "LHC" ~ NA_character_,
-		procedure == "PCI" ~ NA_character_,
-		procedure == "pericardiocentesis" ~ NA_character_,
-		procedure == "DCCV" ~ NA_character_,
-		procedure == "MCS" ~ NA_character_,
-		procedure == "CIED" & !type == "interrogation" ~ NA_character_,
-		procedure == "TVP" ~ NA_character_,
-		procedure == "stress" & modifier == "echo" ~ NA_character_,
-		procedure == "stress" & modifier == "nuclear" ~ NA_character_,
-		TRUE ~ type
-	)) |>
-	mutate(procedure = case_when(
-		procedure %in% c("COR", "RHC", "LHC") ~ "CATH",
-		TRUE ~ procedure
-	)) |>
-	count(procedure, type, modifier) 
+	tab_row_group(
+		label = "Echocardiography",
+		rows = contains("echo")
+	) |>
+	tab_row_group(
+		label = "Cardiac Catheterization",
+		rows = contains("cath")
+	) |>
+	tab_row_group(
+		label = "Electrophysiology",
+		rows = contains(c("cardioversion", "pacemaker", "device"))
+	) |>
+	tab_row_group(
+		label = "Nuclear Imaging",
+		rows = "Stress myocardial perfusion imaging"
+	) |>
+	tab_row_group(
+		label = "Magnetic Resonance Imaging",
+		rows = contains("MRI")
+	) 
 
-gt(cocats)
 ```
-
