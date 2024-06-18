@@ -12,6 +12,8 @@ website:
     left:
       - icon: house-door
         href: https://shah-in-boots.github.io
+      - text: Procedure Log
+        href: https://shah-in-boots.github.io/clinical/log.html
     right:
       - text: github
         icon: github
