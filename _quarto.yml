@@ -13,6 +13,7 @@ website:
       - icon: house-door
         href: https://shah-in-boots.github.io
       - text: Procedure Log
+        icon: journal-medical
         href: https://shah-in-boots.github.io/clinical/log.html
     right:
       - text: github
